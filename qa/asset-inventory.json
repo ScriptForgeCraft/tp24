@@ -1,0 +1,469 @@
+[
+  {
+    "path": "prospect24-design-reference.png",
+    "width": 1024,
+    "height": 1536,
+    "format": "PNG",
+    "bytes": 2294279
+  },
+  {
+    "path": "assets/hero-after-generated.png",
+    "width": 1536,
+    "height": 1024,
+    "format": "PNG",
+    "bytes": 2748521
+  },
+  {
+    "path": "assets/hero-before-generated.png",
+    "width": 1536,
+    "height": 1024,
+    "format": "PNG",
+    "bytes": 2641412
+  },
+  {
+    "path": "assets/home-01-408f0b6d35.png",
+    "width": 700,
+    "height": 103,
+    "format": "PNG",
+    "bytes": 27381
+  },
+  {
+    "path": "assets/home-02-00e68e293c.jpg",
+    "width": 1440,
+    "height": 1440,
+    "format": "JPEG",
+    "bytes": 281140
+  },
+  {
+    "path": "assets/home-03-fe8baa2dca.jpg",
+    "width": 1440,
+    "height": 1800,
+    "format": "JPEG",
+    "bytes": 341238
+  },
+  {
+    "path": "assets/home-04-fc903aa067.png",
+    "width": 736,
+    "height": 548,
+    "format": "PNG",
+    "bytes": 576581
+  },
+  {
+    "path": "assets/home-05-cc988f98b4.png",
+    "width": 736,
+    "height": 552,
+    "format": "PNG",
+    "bytes": 890470
+  },
+  {
+    "path": "assets/home-06-5ad9bfc11a.png",
+    "width": 732,
+    "height": 550,
+    "format": "PNG",
+    "bytes": 762099
+  },
+  {
+    "path": "assets/home-07-5240f15ead.png",
+    "width": 1406,
+    "height": 1400,
+    "format": "PNG",
+    "bytes": 2914652
+  },
+  {
+    "path": "assets/home-08-097200a6b5.png",
+    "width": 227,
+    "height": 60,
+    "format": "PNG",
+    "bytes": 12362
+  },
+  {
+    "path": "assets/brand/favicon-32x32.png",
+    "width": 32,
+    "height": 32,
+    "format": "PNG",
+    "bytes": 340
+  },
+  {
+    "path": "assets/brand/prospect24-icon.png",
+    "width": 427,
+    "height": 427,
+    "format": "PNG",
+    "bytes": 3616
+  },
+  {
+    "path": "assets/icons/chevron-exact.svg",
+    "format": "SVG",
+    "bytes": 323
+  },
+  {
+    "path": "assets/news/architects.jpg",
+    "width": 1400,
+    "height": 750,
+    "format": "JPEG",
+    "bytes": 275104
+  },
+  {
+    "path": "assets/news/chakhruk.jpg",
+    "width": 1400,
+    "height": 750,
+    "format": "JPEG",
+    "bytes": 234043
+  },
+  {
+    "path": "assets/news/cooperation.jpg",
+    "width": 1400,
+    "height": 750,
+    "format": "JPEG",
+    "bytes": 200609
+  },
+  {
+    "path": "assets/packages/inquiry-towers.png",
+    "width": 928,
+    "height": 1160,
+    "format": "PNG",
+    "bytes": 330890
+  },
+  {
+    "path": "assets/pages/app.png",
+    "width": 672,
+    "height": 416,
+    "format": "PNG",
+    "bytes": 96862
+  },
+  {
+    "path": "assets/pages/balconies.jpg",
+    "width": 1440,
+    "height": 1396,
+    "format": "JPEG",
+    "bytes": 210809
+  },
+  {
+    "path": "assets/pages/consulting.png",
+    "width": 1536,
+    "height": 1024,
+    "format": "PNG",
+    "bytes": 2240293
+  },
+  {
+    "path": "assets/pages/elevation.jpg",
+    "width": 1440,
+    "height": 1063,
+    "format": "JPEG",
+    "bytes": 80030
+  },
+  {
+    "path": "assets/pages/finance.png",
+    "width": 1408,
+    "height": 1056,
+    "format": "PNG",
+    "bytes": 2326659
+  },
+  {
+    "path": "assets/pages/interior.jpg",
+    "width": 1440,
+    "height": 1440,
+    "format": "JPEG",
+    "bytes": 186520
+  },
+  {
+    "path": "assets/pages/memorandum.png",
+    "width": 2062,
+    "height": 1048,
+    "format": "PNG",
+    "bytes": 1854165
+  },
+  {
+    "path": "assets/pages/plan.jpg",
+    "width": 1440,
+    "height": 1064,
+    "format": "JPEG",
+    "bytes": 103221
+  },
+  {
+    "path": "assets/pages/regulatory.png",
+    "width": 1536,
+    "height": 1024,
+    "format": "PNG",
+    "bytes": 2914592
+  },
+  {
+    "path": "assets/pages/servicesHero.jpg",
+    "width": 1440,
+    "height": 1440,
+    "format": "JPEG",
+    "bytes": 241632
+  },
+  {
+    "path": "assets/pages/strategy.jpg",
+    "width": 1440,
+    "height": 1063,
+    "format": "JPEG",
+    "bytes": 238573
+  },
+  {
+    "path": "assets/pages/villa.jpg",
+    "width": 1440,
+    "height": 810,
+    "format": "JPEG",
+    "bytes": 131079
+  },
+  {
+    "path": "assets/partners/ador.png",
+    "width": 500,
+    "height": 500,
+    "format": "PNG",
+    "bytes": 51886
+  },
+  {
+    "path": "assets/partners/agl-projects.png",
+    "width": 500,
+    "height": 500,
+    "format": "PNG",
+    "bytes": 33534
+  },
+  {
+    "path": "assets/partners/alt-architectural-studio.png",
+    "width": 500,
+    "height": 500,
+    "format": "PNG",
+    "bytes": 14477
+  },
+  {
+    "path": "assets/partners/amio-bank.png",
+    "width": 500,
+    "height": 500,
+    "format": "PNG",
+    "bytes": 53848
+  },
+  {
+    "path": "assets/partners/anarch.png",
+    "width": 500,
+    "height": 500,
+    "format": "PNG",
+    "bytes": 61604
+  },
+  {
+    "path": "assets/partners/anz-facade.png",
+    "width": 500,
+    "height": 500,
+    "format": "PNG",
+    "bytes": 58907
+  },
+  {
+    "path": "assets/partners/araratbank.png",
+    "width": 500,
+    "height": 487,
+    "format": "PNG",
+    "bytes": 24627
+  },
+  {
+    "path": "assets/partners/architects-palace.png",
+    "width": 500,
+    "height": 500,
+    "format": "PNG",
+    "bytes": 49802
+  },
+  {
+    "path": "assets/partners/art-deco-armenia.png",
+    "width": 500,
+    "height": 500,
+    "format": "PNG",
+    "bytes": 24019
+  },
+  {
+    "path": "assets/partners/asedl.png",
+    "width": 500,
+    "height": 500,
+    "format": "PNG",
+    "bytes": 18783
+  },
+  {
+    "path": "assets/partners/atrium.png",
+    "width": 500,
+    "height": 500,
+    "format": "PNG",
+    "bytes": 153441
+  },
+  {
+    "path": "assets/partners/byblos-bank-armenia.png",
+    "width": 500,
+    "height": 500,
+    "format": "PNG",
+    "bytes": 77002
+  },
+  {
+    "path": "assets/partners/cerama-casa.png",
+    "width": 500,
+    "height": 500,
+    "format": "PNG",
+    "bytes": 84428
+  },
+  {
+    "path": "assets/partners/chakhruk-ngo.png",
+    "width": 500,
+    "height": 500,
+    "format": "PNG",
+    "bytes": 185245
+  },
+  {
+    "path": "assets/partners/cup-bureau.png",
+    "width": 500,
+    "height": 500,
+    "format": "PNG",
+    "bytes": 13558
+  },
+  {
+    "path": "assets/partners/decoree-holding.png",
+    "width": 500,
+    "height": 500,
+    "format": "PNG",
+    "bytes": 53780
+  },
+  {
+    "path": "assets/partners/domus.png",
+    "width": 340,
+    "height": 340,
+    "format": "PNG",
+    "bytes": 61002
+  },
+  {
+    "path": "assets/partners/exterior-group.png",
+    "width": 500,
+    "height": 500,
+    "format": "PNG",
+    "bytes": 48706
+  },
+  {
+    "path": "assets/partners/futuris-architects.png",
+    "width": 500,
+    "height": 500,
+    "format": "PNG",
+    "bytes": 44859
+  },
+  {
+    "path": "assets/partners/graphit.png",
+    "width": 500,
+    "height": 500,
+    "format": "PNG",
+    "bytes": 38732
+  },
+  {
+    "path": "assets/partners/inecobank.png",
+    "width": 500,
+    "height": 500,
+    "format": "PNG",
+    "bytes": 44703
+  },
+  {
+    "path": "assets/partners/kult-home.png",
+    "width": 500,
+    "height": 500,
+    "format": "PNG",
+    "bytes": 17622
+  },
+  {
+    "path": "assets/partners/mek-furniture.png",
+    "width": 500,
+    "height": 500,
+    "format": "PNG",
+    "bytes": 39616
+  },
+  {
+    "path": "assets/partners/mer-ankyun.png",
+    "width": 500,
+    "height": 500,
+    "format": "PNG",
+    "bytes": 38916
+  },
+  {
+    "path": "assets/partners/nine-architects.png",
+    "width": 500,
+    "height": 500,
+    "format": "PNG",
+    "bytes": 40453
+  },
+  {
+    "path": "assets/partners/petro-stone.png",
+    "width": 500,
+    "height": 500,
+    "format": "PNG",
+    "bytes": 72825
+  },
+  {
+    "path": "assets/partners/storaket-studio.png",
+    "width": 500,
+    "height": 500,
+    "format": "PNG",
+    "bytes": 52110
+  },
+  {
+    "path": "assets/partners/tognana.png",
+    "width": 500,
+    "height": 500,
+    "format": "PNG",
+    "bytes": 28048
+  },
+  {
+    "path": "assets/partners/valan-decor.png",
+    "width": 500,
+    "height": 500,
+    "format": "PNG",
+    "bytes": 25410
+  },
+  {
+    "path": "assets/partners/zigzag.png",
+    "width": 500,
+    "height": 500,
+    "format": "PNG",
+    "bytes": 65743
+  },
+  {
+    "path": "assets/projects/architecture-design.jpg",
+    "width": 1300,
+    "height": 1000,
+    "format": "JPEG",
+    "bytes": 110770
+  },
+  {
+    "path": "assets/projects/avet-avetisyan-20.jpg",
+    "width": 1300,
+    "height": 1000,
+    "format": "JPEG",
+    "bytes": 271156
+  },
+  {
+    "path": "assets/projects/garden-hill-residence.jpg",
+    "width": 1300,
+    "height": 1000,
+    "format": "JPEG",
+    "bytes": 281667
+  },
+  {
+    "path": "assets/projects/khachaturian-architects.jpg",
+    "width": 1300,
+    "height": 1000,
+    "format": "JPEG",
+    "bytes": 236365
+  },
+  {
+    "path": "assets/state-property/abovyan.jpg",
+    "width": 1300,
+    "height": 1000,
+    "format": "JPEG",
+    "bytes": 219208
+  },
+  {
+    "path": "assets/state-property/masis.jpg",
+    "width": 1300,
+    "height": 1000,
+    "format": "JPEG",
+    "bytes": 253574
+  },
+  {
+    "path": "assets/state-property/parakar.jpg",
+    "width": 1300,
+    "height": 1000,
+    "format": "JPEG",
+    "bytes": 214669
+  }
+]

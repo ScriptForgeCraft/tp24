@@ -1,0 +1,46 @@
+/* Client presentation refinement: use the supplied brand artwork throughout. */
+.logo{flex:none;line-height:1}
+.logo img{width:205px;height:auto;max-width:none;filter:invert(1)}
+.header.scrolled .logo img{filter:none}
+.footer-brand .logo img{width:225px}
+.menu-header .logo img{width:190px}
+
+/* Each package has its own architectural background and a legible ink overlay. */
+.package-card{min-height:510px;color:var(--paper)}
+.package-photo{filter:saturate(.65);object-position:center}
+.package-card.image:after{background:linear-gradient(100deg,rgba(9,20,26,.82),rgba(9,20,26,.28)),linear-gradient(0deg,rgba(6,15,20,.88),transparent 65%)}
+.package-card:nth-child(1):after{background:linear-gradient(110deg,rgba(18,25,23,.88),rgba(18,25,23,.37)),linear-gradient(0deg,rgba(11,19,17,.94),transparent 72%)}
+.package-card:nth-child(3):after{background:linear-gradient(110deg,rgba(18,21,21,.88),rgba(18,21,21,.36)),linear-gradient(0deg,rgba(10,15,15,.95),transparent 72%)}
+.package-card:nth-child(1) .package-photo{object-position:40% center}
+.package-card:nth-child(3) .package-photo{object-position:60% center}
+.package-index{color:#dac1a2}
+.package-content{padding:32px}
+.package-content h3{max-width:255px;min-height:56px}
+.package-content>p{min-height:44px;color:#eeeee8}
+.package-content ul{color:#f0f0e9;line-height:1.6}
+.package-content li>span{color:#cfb597;opacity:1}
+.package-price{letter-spacing:-.02em;font-size:27px}
+.package-price>small{margin-right:4px}
+.package-price>span{margin-left:3px}
+.package-content>.action{max-width:none;min-height:45px;border-color:#ffffff80;background:#10181636}
+.package-card:hover .action .arrow{transform:translate(3px,-3px)}
+.pricing-note{font-size:10px}
+
+/* Align the complete wordmark on one baseline and give contact details room. */
+.footer-top{grid-template-columns:1.35fr .85fr 1fr auto;gap:6%;padding-top:63px;padding-bottom:55px}
+.footer-brand>p{font-size:12px;line-height:1.8;color:#b5b9ae;margin-top:25px}
+.footer-label{display:block;text-transform:uppercase;letter-spacing:.12em;font-size:9px;color:#ad9476;margin-bottom:10px}
+.footer-nav{gap:12px}
+.footer-nav a{font-size:12px;line-height:1.7}
+.footer-contact{gap:15px;font-size:14px}
+.footer-contact .footer-label{font-size:9px;margin-bottom:7px}
+.footer-contact p{font-size:12px;color:#b5b9ae}
+.footer-wordmark{font-size:inherit;font-family:Manrope,Arial,sans-serif;letter-spacing:normal;line-height:1;margin:0;padding:0 4.2vw 28px;color:#40473d;white-space:normal}
+.footer-wordmark svg{display:block;width:100%;height:auto;overflow:visible;font-family:Manrope,Arial,sans-serif;font-weight:500;letter-spacing:-.03em}
+.footer-legal{font-size:10px;padding-top:23px;padding-bottom:23px;color:#a5aa9f}
+.footer-legal button{font-size:10px;min-height:25px}
+.back-top{width:44px;height:44px}
+@media(min-width:1700px){.package-card{min-height:565px}.package-content{padding:35px}.package-content h3{min-height:68px}.package-content>p{min-height:50px}.package-price{font-size:31px}.footer-nav a{font-size:13px}.footer-contact{font-size:15px}}
+@media(max-width:1100px){.logo img{width:177px}.package-content{padding:25px}.package-content h3{min-height:48px}.package-price{font-size:23px}.footer-top{gap:30px}.footer-brand .logo img{width:195px}.footer-contact{font-size:12px}}
+@media(max-width:850px){.package-card{min-height:500px}.package-content{padding:23px 18px}.package-content h3{font-size:17px;min-height:48px}.package-content>p{font-size:12px;min-height:57px}.package-content ul{font-size:10px}.package-price{font-size:21px}.footer-top{grid-template-columns:1.2fr 1fr 1.1fr;gap:28px}.footer-brand .logo img{width:170px}.footer-nav a{font-size:11px}.footer-contact{font-size:11px}.footer-contact p{font-size:10px}.footer-contact a:nth-child(2){gap:12px}.footer-legal{font-size:9px}.footer-legal button{font-size:9px}}
+@media(max-width:600px){.logo img{width:178px}.header{gap:18px}.footer-brand .logo img{width:210px}.package-card{min-height:470px}.package-content{padding:29px 27px}.package-content h3{font-size:21px;min-height:58px}.package-content>p{font-size:13px;min-height:43px}.package-content ul{font-size:12px;gap:11px}.package-price{font-size:27px}.package-content>.action{min-height:45px}.pricing-note{font-size:9px}.footer-top{grid-template-columns:1fr 1fr;gap:37px 22px;padding-top:43px;padding-bottom:37px}.footer-brand{grid-column:1/-1}.footer-brand>p{font-size:12px;margin-top:23px}.footer-label,.footer-contact .footer-label{font-size:8px;margin-bottom:9px}.footer-nav{gap:14px}.footer-nav a{font-size:11px}.footer-contact{font-size:11px;gap:18px}.footer-contact a:nth-child(2){font-size:10px;gap:8px;white-space:nowrap}.footer-contact p{font-size:10px}.footer-wordmark{margin:0;padding:5px 18px 24px;color:#50584b;font-size:inherit;letter-spacing:normal;line-height:1}.footer-legal{padding:18px 23px;gap:14px;font-size:9px}.footer-legal>span:nth-child(2){display:block;width:100%;order:3;font-size:8px;color:#7e8577}.footer-legal>div{gap:16px}.footer-legal button{font-size:9px;min-height:20px}}
