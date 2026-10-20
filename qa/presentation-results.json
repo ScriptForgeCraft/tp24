@@ -4,6 +4,7 @@
   "networkRequests": 0,
   "errors": [],
   "checks": [
+    "Only the first homepage design is present",
     "Supplied logo loads",
     "All three architectural card backgrounds load",
     "Package details work offline",

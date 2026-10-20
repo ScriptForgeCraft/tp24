@@ -32,9 +32,10 @@ try {
   await slider.focus(); await page.keyboard.press('Home'); check('Comparison Home key',await slider.getAttribute('aria-valuenow')==='4');
   await page.keyboard.press('End'); check('Comparison End key',await slider.getAttribute('aria-valuenow')==='96');
   await page.keyboard.press('Home'); for(let i=0;i<23;i++) await page.keyboard.press('ArrowRight');
-  await page.locator('.desktop-nav a').first().click(); await pause(1000);
-  check('Navigation scrolls to development', Math.abs(await page.locator('#development').evaluate(el=>el.getBoundingClientRect().top)-90)<10);
+  await page.locator('.desktop-nav a').filter({hasText: /^About$/}).click(); await pause(1000);
+  check('About navigation scrolls to introduction', Math.abs(await page.locator('#approach').evaluate(el=>el.getBoundingClientRect().top)-await page.evaluate(()=>parseFloat(getComputedStyle(document.documentElement).scrollPaddingTop)))<10);
   check('Header changes on scroll', await page.locator('.header').evaluate(el=>el.classList.contains('scrolled')));
+  await page.locator('.desktop-nav a').filter({hasText: /^Services$/}).click(); await pause(1000);
   await page.locator('.service-trigger').nth(2).hover(); await pause(600);
   check('Service rows remain revealed after selection',await page.locator('.service').evaluateAll(els=>els.every(el=>getComputedStyle(el).opacity==='1')));
   check('Service hover changes image', await page.locator('.service-visual>img.active').getAttribute('src') === '/images/finance.webp');
@@ -84,7 +85,7 @@ try {
   await page.locator('.mobile-menu .language button').last().click(); check('Mobile language switch',await page.locator('html').getAttribute('lang')==='hy');
   await page.locator('.mobile-menu .language button').first().click();
   await page.locator('.mobile-menu nav a').nth(1).click(); await pause(1300);
-  check('Mobile menu links navigate and close',!(await page.locator('.mobile-menu').evaluate(el=>el.open))&&Math.abs(await page.locator('#packages').evaluate(el=>el.getBoundingClientRect().top)-76)<10);
+  check('Mobile menu links navigate and close',!(await page.locator('.mobile-menu').evaluate(el=>el.open))&&Math.abs(await page.locator('#packages').evaluate(el=>el.getBoundingClientRect().top)-await page.evaluate(()=>parseFloat(getComputedStyle(document.documentElement).scrollPaddingTop)))<10);
   await page.locator('.menu-toggle').click(); await pause(650); await page.keyboard.press('Escape'); await pause(400);
   check('Mobile menu Escape',!(await page.locator('.mobile-menu').evaluate(el=>el.open)));
   await page.locator('#development').scrollIntoViewIfNeeded(); await pause(500);

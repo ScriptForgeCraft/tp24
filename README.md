@@ -24,7 +24,7 @@ The production preview runs at **http://localhost:4173/**. The complete static b
 
 The homepage follows the supplied section order: navigation, before/after hero, introduction, development services, packages, selected projects, process, expertise and partnership, final CTA, and footer.
 
-- Transparent-to-stone sticky header, underline navigation and smooth anchor scrolling.
+- Only the first homepage design is retained. The header, mobile menu and footer provide section navigation. State property, Podcast & Media and News remain non-interactive text until those pages are designed.
 - Full-screen mobile menu with staggered entries, focus trapping, Escape close and scroll lock.
 - Matched architectural before/after comparison: mouse, pointer, touch, click positioning, arrow keys, Home and End.
 - Masked hero heading entrance, image scale, restrained parallax, scroll reveals and image hovers.
@@ -60,6 +60,12 @@ npm run test:ui
 The development server must be running. The browser verification script uses Playwright and an installed Google Chrome (`channel: 'chrome'`). It checks interactions, image sources, error logs and overflow, and captures viewport and full-page screenshots at 1440×900, 1920×1080, 768×1024 and 390×844. Additional overflow checks cover 375px and 430px. Results and screenshots are in `qa/`.
 
 `PREVIEW_URL` can point the checks at a production preview. A configured mail application is needed to actually open the composed enquiry draft; no external message is sent by the tests.
+
+### Accessibility refinement
+
+`src/presentation.css` defines the retained graphite and paper design. Supporting text is darker on light backgrounds and lighter on dark backgrounds; buttons invert these two colors on hover. The final conversation section follows the page grid on a paper background, with a large heading, contact action and direct email instead of a repeated hero photograph. Photograph overlays and caption backplates protect text contrast. All process steps stay fully opaque, focus rings work on both palettes, and the footer signature is capped at 560px on desktop and 260px on phones.
+
+With the dev server running, use `npm run test:a11y` for axe checks of the home page, both languages, mobile navigation and six dialog types. `npm run test:contrast` samples actual rendered backgrounds under text over photographs at desktop and mobile sizes in the retained design; axe leaves many photo and gradient backgrounds for manual review. Results are in `qa/accessibility-results.json` and `qa/photo-contrast-results.json`. The automated checks and visual review are focused verification, not a complete accessibility certification.
 # tp24
 # tp24
 

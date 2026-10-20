@@ -21,7 +21,7 @@ Website versions are optimized to WebP in `public/images/`. Font files are bundl
 
 ## Generated imagery
 
-Generated using the built-in image generation tool. Original PNGs are retained in `assets/`; the website consumes optimized local WebP versions. The final CTA reuses the illustrative after image.
+Generated using the built-in image generation tool. Original PNGs are retained in `assets/`; the website consumes optimized local WebP versions. The final CTA uses the page’s paper background and typographic layout; it has no photographic backdrop.
 
 **After — final prompt:**
 

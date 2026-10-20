@@ -1,0 +1,157 @@
+{
+  "results": [
+    {
+      "name": "EN 1440 home / dark header",
+      "violations": [],
+      "passedRules": 26,
+      "manualReviewRules": [
+        "aria-prohibited-attr",
+        "color-contrast"
+      ]
+    },
+    {
+      "name": "EN 1440 home / light header",
+      "violations": [],
+      "passedRules": 26,
+      "manualReviewRules": [
+        "aria-prohibited-attr",
+        "color-contrast"
+      ]
+    },
+    {
+      "name": "EN 1440 compare dialog",
+      "violations": [],
+      "passedRules": 15,
+      "manualReviewRules": [
+        "color-contrast"
+      ]
+    },
+    {
+      "name": "EN 1440 package dialog",
+      "violations": [],
+      "passedRules": 16,
+      "manualReviewRules": [
+        "color-contrast"
+      ]
+    },
+    {
+      "name": "EN 1440 project dialog",
+      "violations": [],
+      "passedRules": 15,
+      "manualReviewRules": []
+    },
+    {
+      "name": "EN 1440 contact dialog",
+      "violations": [],
+      "passedRules": 21,
+      "manualReviewRules": []
+    },
+    {
+      "name": "EN 1440 privacy dialog",
+      "violations": [],
+      "passedRules": 14,
+      "manualReviewRules": [
+        "color-contrast"
+      ]
+    },
+    {
+      "name": "EN 1440 terms dialog",
+      "violations": [],
+      "passedRules": 14,
+      "manualReviewRules": [
+        "color-contrast"
+      ]
+    },
+    {
+      "name": "AM 1440 home",
+      "violations": [],
+      "passedRules": 26,
+      "manualReviewRules": [
+        "aria-prohibited-attr",
+        "color-contrast"
+      ]
+    },
+    {
+      "name": "EN 390 home / dark header",
+      "violations": [],
+      "passedRules": 26,
+      "manualReviewRules": [
+        "color-contrast"
+      ]
+    },
+    {
+      "name": "EN 390 home / light header",
+      "violations": [],
+      "passedRules": 26,
+      "manualReviewRules": [
+        "color-contrast"
+      ]
+    },
+    {
+      "name": "EN 390 compare dialog",
+      "violations": [],
+      "passedRules": 16,
+      "manualReviewRules": []
+    },
+    {
+      "name": "EN 390 package dialog",
+      "violations": [],
+      "passedRules": 17,
+      "manualReviewRules": []
+    },
+    {
+      "name": "EN 390 project dialog",
+      "violations": [],
+      "passedRules": 15,
+      "manualReviewRules": []
+    },
+    {
+      "name": "EN 390 contact dialog",
+      "violations": [],
+      "passedRules": 21,
+      "manualReviewRules": []
+    },
+    {
+      "name": "EN 390 privacy dialog",
+      "violations": [],
+      "passedRules": 14,
+      "manualReviewRules": [
+        "color-contrast"
+      ]
+    },
+    {
+      "name": "EN 390 terms dialog",
+      "violations": [],
+      "passedRules": 14,
+      "manualReviewRules": [
+        "color-contrast"
+      ]
+    },
+    {
+      "name": "EN 390 mobile menu",
+      "violations": [],
+      "passedRules": 17,
+      "manualReviewRules": [
+        "aria-prohibited-attr"
+      ]
+    },
+    {
+      "name": "AM 390 mobile menu",
+      "violations": [],
+      "passedRules": 17,
+      "manualReviewRules": [
+        "aria-prohibited-attr",
+        "color-contrast"
+      ]
+    },
+    {
+      "name": "AM 390 home",
+      "violations": [],
+      "passedRules": 26,
+      "manualReviewRules": [
+        "color-contrast"
+      ]
+    }
+  ],
+  "errors": []
+}

@@ -12,6 +12,8 @@ page.on('request', r => { if (/^https?:/.test(r.url())) requests.push(r.url()); 
 try {
   await page.goto(pathToFileURL(path.resolve('output/Prospect24-Preview.html')).href);
   await page.evaluate(() => document.fonts.ready);
+  assert.equal(await page.getByRole('radio').count(), 0);
+  assert.equal(await page.locator('main').count(), 1);
   assert.equal(await page.locator('.header .logo img').evaluate(el=>el.complete&&el.naturalWidth===700),true);
   await page.waitForTimeout(200);
   await page.screenshot({path:'qa/client-hero-desktop.png'});
@@ -40,7 +42,7 @@ try {
   await page.locator('#contact').scrollIntoViewIfNeeded(); await page.waitForTimeout(200);
   await page.locator('#contact').screenshot({path:'qa/client-footer-mobile.png'});
   assert.deepEqual(errors,[]); assert.deepEqual(requests,[]);
-  const result={status:'passed',portableHtml:true,networkRequests:requests.length,errors,checks:['Supplied logo loads','All three architectural card backgrounds load','Package details work offline','Footer wordmark fits its bounds','No overflow at all requested widths','Fonts and images bundled locally']};
+  const result={status:'passed',portableHtml:true,networkRequests:requests.length,errors,checks:['Only the first homepage design is present','Supplied logo loads','All three architectural card backgrounds load','Package details work offline','Footer wordmark fits its bounds','No overflow at all requested widths','Fonts and images bundled locally']};
   await fs.writeFile('qa/presentation-results.json',JSON.stringify(result,null,2));
   console.log(JSON.stringify(result,null,2));
 } finally { await browser.close(); }

@@ -1,11 +1,11 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useLayoutEffect, useRef, useState } from 'react';
 import { createRoot } from 'react-dom/client';
 import '@fontsource/cormorant-garamond/latin-400.css';
 import '@fontsource/manrope/latin-400.css';
 import '@fontsource/manrope/latin-500.css';
 import '@fontsource/manrope/latin-600.css';
 import './styles.css';
-import { contact, packages, services, projects, stages, translations } from './data';
+import { contact, packages, services, projects, stages, translations, navigation } from './data';
 
 const asset = path => window.__PROSPECT_ASSETS__?.[path] || path;
 const img = name => asset(`/images/${name}.webp`);
@@ -30,7 +30,26 @@ function App() {
   const [draft, setDraft] = useState(false);
   const heroRef = useRef(null), timelineRef = useRef(null), dialogRef = useRef(null), menuRef = useRef(null);
   const drag = useRef(false), touched = useRef(false), swipeStart = useRef(null), closeTimer = useRef(null);
-  const links = ['#development', '#packages', '#projects', '#about', '#contact'];
+  const navItems = navigation.map(item => ({ ...item, label: item[lang] }));
+  const navItem = (item, mobile = false, i = 0) => item.href ? <a key={item.en} href={item.href} style={mobile ? { '--i': i } : undefined} onClick={mobile ? e => { e.preventDefault(); closeMenu(item.href); } : undefined}>{item.label}{mobile && <Arrow />}</a> : <span key={item.en} className="nav-unavailable" aria-disabled="true" style={mobile ? { '--i': i } : undefined}>{item.label}</span>;
+
+  // Clear settings from the retired design chooser, including already-open tabs.
+  useLayoutEffect(() => {
+    const root = document.documentElement;
+    delete root.dataset.design;
+    delete root.dataset.palette;
+    ['ink', 'deep', 'paper', 'panel', 'stone', 'text-on-light', 'text-on-dark', 'accent-on-light', 'accent-on-dark', 'bronze', 'overlay-rgb'].forEach(key => root.style.removeProperty(`--${key}`));
+    try {
+      localStorage.removeItem('prospect24-design');
+      localStorage.removeItem('prospect24-palette');
+      const url = new URL(window.location.href);
+      if (url.searchParams.has('design') || url.searchParams.has('palette')) {
+        url.searchParams.delete('design');
+        url.searchParams.delete('palette');
+        history.replaceState(history.state, '', url);
+      }
+    } catch { /* The local presentation also works with storage disabled. */ }
+  }, []);
 
   useEffect(() => {
     document.documentElement.lang = lang === 'am' ? 'hy' : 'en';
@@ -84,14 +103,14 @@ function App() {
   const current = projects[project];
 
   return <>
-    <a className="skip-link" href="#approach">Skip to content</a>
+    <a className="skip-link" href="#main">Skip to content</a>
     <header className={`header ${scrolled ? 'scrolled' : ''}`}>
       <Logo />
-      <nav className="desktop-nav" aria-label="Main navigation">{t.nav.slice(0, 4).map((name, i) => <a key={i} href={links[i]}>{name}</a>)}</nav>
-      <div className="header-actions">{languageButtons()}<Action className="header-talk" onClick={() => openModal({ type: 'contact' })}>{t.talk}</Action><button className="menu-toggle" aria-label="Open navigation menu" aria-expanded={menu} onClick={() => setMenu(true)}><span /><span /></button></div>
+      <nav className="desktop-nav" aria-label="Main navigation">{navItems.map(item => navItem(item))}</nav>
+      <div className="header-actions">{languageButtons()}<button className="menu-toggle" aria-label="Open navigation menu" aria-expanded={menu} aria-controls="site-menu" onClick={() => setMenu(true)}><span /><span /></button></div>
     </header>
 
-    <main>
+    <main id="main" tabIndex="-1" data-design-layout="atelier">
       <section id="home" ref={heroRef} className={`hero ${heroReady ? 'ready' : ''}`} style={{ '--split': `${split}%` }} onPointerDown={e => { if (e.target.closest('a,button,[role="slider"],.hero-copy')) return; touched.current = true; setPosition(e); }}>
         <div className="hero-visual" aria-hidden="true"><img className="hero-after" src={img('hero-after')} alt="" fetchPriority="high" /><div className="hero-before"><img src={img('hero-before')} alt="" fetchPriority="high" /></div></div>
         <div className="hero-shade" />
@@ -121,7 +140,7 @@ function App() {
         <div className="development-grid"><div><div className="reveal"><Label>02 / End-to-end Development</Label><Heading lines={t.development} /><p className="section-subtitle">{t.devSub}</p></div>
           <div className="service-list">{services.map((service, i) => <div key={service.title} className={`service reveal ${activeService === i ? 'selected' : ''} ${expanded === i ? 'expanded' : ''}`} style={{ '--delay': `${i * 70}ms` }} onMouseEnter={() => setActiveService(i)}>
             <button className="service-trigger" aria-expanded={expanded === i} aria-controls={`service-${i}`} onFocus={() => setActiveService(i)} onClick={() => { setActiveService(i); setExpanded(expanded === i ? null : i); }}><span className="service-number">0{i + 1}</span><span className="service-heading"><strong>{lang === 'am' ? service.am : service.title}</strong><span>{service.description}</span></span><Arrow direction="right" /><span className="accordion-mark">{expanded === i ? '−' : '+'}</span></button>
-            <div className="service-expansion" id={`service-${i}`} inert={expanded !== i ? true : undefined}><div><p>{service.detail}</p><img loading="lazy" src={img(service.image)} alt={service.imageLabel} /></div></div>
+            <div className="service-expansion" id={`service-${i}`} aria-hidden={expanded !== i} inert={expanded !== i ? true : undefined}><div><p>{service.detail}</p><img loading="lazy" src={img(service.image)} alt={service.imageLabel} /></div></div>
           </div>)}</div>
         </div><div className="service-visual reveal"><div className="service-visual-label"><span>{services[activeService].title}</span><span>0{activeService + 1} / 04</span></div>{services.map((s, i) => <img loading="lazy" key={s.image} className={activeService === i ? 'active' : ''} src={img(s.image)} alt={activeService === i ? s.imageLabel : ''} />)}<span className="service-caption">Intelligence. Architecture. Strategy.</span></div></div>
       </section>
@@ -155,12 +174,17 @@ function App() {
         <figure className="partnership-photo reveal"><div className="image-clip"><img loading="lazy" src={img('partnership')} alt="Professional collaboration in the supplied Prospect24 photography" /></div><figcaption><strong>A shared perspective</strong><p>Bringing complementary disciplines to the same table.</p><a className="text-link" href="#development">{t.learn}<Arrow /></a></figcaption></figure></div>
       </section>
 
-      <section className="final-cta dark"><img loading="lazy" src={img('hero-after')} alt="" className="cta-background" /><div className="cta-shade" /><div className="cta-content section reveal"><Label>07 / The Next Chapter</Label><Heading lines={t.cta} /><div className="cta-bottom"><p>{t.ctaText}</p><Action filled onClick={() => openModal({ type: 'contact' })}>{t.discuss}</Action></div></div></section>
+      <section className="final-cta light">
+        <div className="cta-content section">
+          <div className="cta-heading reveal"><Label>07 / The Next Chapter</Label><Heading lines={t.cta} /></div>
+          <div className="cta-bottom reveal"><p>{t.ctaText}</p><Action filled onClick={() => openModal({ type: 'contact' })}>{t.discuss}</Action><a className="cta-email" href={`mailto:${contact.email}`}>{contact.email}<Arrow /></a></div>
+        </div>
+      </section>
     </main>
 
-    <footer id="contact" className="footer dark"><div className="footer-top section"><div className="footer-brand reveal"><Logo /><p>Real Estate Development<br />& Investment Advisory</p></div><nav className="footer-nav reveal" aria-label="Footer navigation"><span className="footer-label">Explore</span>{t.nav.map((name, i) => <a key={i} href={links[i]}>{name}</a>)}</nav><div className="footer-contact reveal"><span className="footer-label">Start a conversation</span><a href={`tel:${contact.phoneHref}`}>{contact.phone}</a><a href={`mailto:${contact.email}`}>{contact.email}<Arrow /></a><p>{contact.location}</p></div><button className="back-top" aria-label="Back to top" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}><Arrow /></button></div><div className="footer-wordmark reveal" aria-hidden="true"><svg viewBox="0 -24 1440 256" fill="currentColor"><text x="20" y="175" fontSize="185" textLength="1400" lengthAdjust="spacingAndGlyphs">PROSPECT24</text></svg></div><div className="footer-legal"><span>© {new Date().getFullYear()} Prospect24</span><span>Design concept · For presentation</span><div><button onClick={() => openModal({ type: 'privacy' })}>Privacy Policy</button><button onClick={() => openModal({ type: 'terms' })}>Terms of Use</button></div></div></footer>
+    <footer id="contact" className="footer dark"><div className="footer-top section"><div className="footer-brand reveal"><Logo /><p>Real Estate Development<br />& Investment Advisory</p></div><nav className="footer-nav reveal" aria-label="Footer navigation"><span className="footer-label">Explore</span>{navItems.map(item => navItem(item))}</nav><div className="footer-contact reveal"><span className="footer-label">Start a conversation</span><a href={`tel:${contact.phoneHref}`}>{contact.phone}</a><a href={`mailto:${contact.email}`}>{contact.email}<Arrow /></a><p>{contact.location}</p></div><button className="back-top" aria-label="Back to top" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}><Arrow /></button></div><div className="footer-wordmark reveal" aria-hidden="true"><svg viewBox="0 -24 1440 256" fill="currentColor"><text x="20" y="175" fontSize="185" textLength="1400" lengthAdjust="spacingAndGlyphs">PROSPECT24</text></svg></div><div className="footer-legal"><span>© {new Date().getFullYear()} Prospect24</span><span>Design concept · For presentation</span><div><button onClick={() => openModal({ type: 'privacy' })}>Privacy Policy</button><button onClick={() => openModal({ type: 'terms' })}>Terms of Use</button></div></div></footer>
 
-    <dialog ref={menuRef} className="mobile-menu" aria-label="Site navigation" onCancel={e => { e.preventDefault(); closeMenu(); }}><div className="menu-header"><Logo onClick={e => { e.preventDefault(); closeMenu('#home'); }} /><button className="close-button" aria-label="Close navigation menu" onClick={() => closeMenu()}>×</button></div><nav aria-label="Mobile navigation">{t.nav.map((name, i) => <a key={i} style={{ '--i': i }} href={links[i]} onClick={e => { e.preventDefault(); closeMenu(links[i]); }}>{name}<Arrow /></a>)}</nav><div className="menu-bottom">{languageButtons()}<a href={`tel:${contact.phoneHref}`}>{contact.phone}</a><a href={`mailto:${contact.email}`}>{contact.email}</a><p>{contact.location}</p></div></dialog>
+    <dialog id="site-menu" ref={menuRef} className="mobile-menu" aria-label="Site navigation" onCancel={e => { e.preventDefault(); closeMenu(); }}><div className="menu-header"><Logo onClick={e => { e.preventDefault(); closeMenu('#home'); }} /><button className="close-button" aria-label="Close navigation menu" onClick={() => closeMenu()}>×</button></div><nav aria-label="Mobile navigation">{navItems.map((item, i) => navItem(item, true, i))}</nav><div className="menu-bottom">{languageButtons()}<a href={`tel:${contact.phoneHref}`}>{contact.phone}</a><a href={`mailto:${contact.email}`}>{contact.email}</a><p>{contact.location}</p></div></dialog>
 
     <dialog ref={dialogRef} className={`modal ${closing ? 'closing' : ''} ${modal?.type === 'compare' ? 'wide-modal' : ''}`} onCancel={e => { e.preventDefault(); closeModal(); }} onClick={e => { if (e.target === e.currentTarget) closeModal(); }} aria-labelledby="modal-title"><div className="modal-shell"><button className="close-button" autoFocus aria-label="Close dialog" onClick={closeModal}>×</button>
       {modal?.type === 'package' && (() => { const p = packages[modal.index]; return <><div className="modal-image"><img src={img(p.image)} alt="Architectural and planning perspective" /></div><div className="modal-body"><Label>Development Packages / 0{modal.index + 1}</Label><h2 id="modal-title" className="display">{lang === 'am' ? p.am : p.name}</h2><p>{p.detail}</p><ul className="modal-services">{p.items.map(item => <li key={item}><Arrow />{item}</li>)}</ul><div className="modal-price">{modal.index > 0 && <small>from </small>}{p.price} AMD<span>Illustrative concept pricing · {p.area}</span></div><Action filled onClick={() => openModal({ type: 'contact', interest: p.name })}>{t.discuss}</Action></div></>; })()}
