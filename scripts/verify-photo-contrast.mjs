@@ -69,7 +69,7 @@ try {
     console.log(`${width}px: ${samples.length} photo text ranges, ${results.at(-1).failures.length} contrast failures`);
   }
 } finally {
-  await fs.writeFile('qa/photo-contrast-results.json', JSON.stringify(results, null, 2));
+  await fs.writeFile(process.env.CONTRAST_REPORT || 'qa/photo-contrast-results.json', JSON.stringify(results, null, 2));
   await browser.close();
 }
 assert.equal(results.flatMap(result => result.failures).length, 0, 'Photo contrast failures; see qa/photo-contrast-results.json');

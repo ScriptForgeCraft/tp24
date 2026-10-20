@@ -1,0 +1,65 @@
+{
+  "results": [
+    {
+      "theme": "Graphite & Ivory",
+      "heroEntrance": true,
+      "comparisonDrag": true,
+      "navigation": true,
+      "serviceCrossfade": true,
+      "projectCarousel": true,
+      "modalEscape": true,
+      "mobileNavigation": true
+    },
+    {
+      "theme": "Stone & Forest",
+      "heroEntrance": true,
+      "comparisonDrag": true,
+      "navigation": true,
+      "serviceCrossfade": true,
+      "projectCarousel": true,
+      "modalEscape": true,
+      "mobileNavigation": true
+    },
+    {
+      "theme": "Slate & Ice",
+      "heroEntrance": true,
+      "comparisonDrag": true,
+      "navigation": true,
+      "serviceCrossfade": true,
+      "projectCarousel": true,
+      "modalEscape": true,
+      "mobileNavigation": true
+    },
+    {
+      "theme": "Espresso & Porcelain",
+      "heroEntrance": true,
+      "comparisonDrag": true,
+      "navigation": true,
+      "serviceCrossfade": true,
+      "projectCarousel": true,
+      "modalEscape": true,
+      "mobileNavigation": true
+    },
+    {
+      "theme": "Sage & Charcoal",
+      "heroEntrance": true,
+      "comparisonDrag": true,
+      "navigation": true,
+      "serviceCrossfade": true,
+      "projectCarousel": true,
+      "modalEscape": true,
+      "mobileNavigation": true
+    },
+    {
+      "theme": "White & Terracotta",
+      "heroEntrance": true,
+      "comparisonDrag": true,
+      "navigation": true,
+      "serviceCrossfade": true,
+      "projectCarousel": true,
+      "modalEscape": true,
+      "mobileNavigation": true
+    }
+  ],
+  "errors": []
+}

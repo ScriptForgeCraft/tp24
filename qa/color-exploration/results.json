@@ -1,0 +1,313 @@
+{
+  "preservation": [
+    {
+      "viewport": "desktop",
+      "geometryIdentical": true,
+      "screenshotIdentical": true,
+      "imageOnlyAnimationDifference": false,
+      "rasterDifferencePixels": 0
+    },
+    {
+      "viewport": "mobile",
+      "geometryIdentical": true,
+      "screenshotIdentical": true,
+      "imageOnlyAnimationDifference": false,
+      "rasterDifferencePixels": 0
+    }
+  ],
+  "checks": [
+    "01 desktop: complete content, identical geometry, interactions, refresh, contrast and responsive layout",
+    "01 mobile: complete content, identical geometry, interactions, refresh, contrast and responsive layout",
+    "02 desktop: complete content, identical geometry, interactions, refresh, contrast and responsive layout",
+    "02 mobile: complete content, identical geometry, interactions, refresh, contrast and responsive layout",
+    "03 desktop: complete content, identical geometry, interactions, refresh, contrast and responsive layout",
+    "03 mobile: complete content, identical geometry, interactions, refresh, contrast and responsive layout",
+    "04 desktop: complete content, identical geometry, interactions, refresh, contrast and responsive layout",
+    "04 mobile: complete content, identical geometry, interactions, refresh, contrast and responsive layout",
+    "05 desktop: complete content, identical geometry, interactions, refresh, contrast and responsive layout",
+    "05 mobile: complete content, identical geometry, interactions, refresh, contrast and responsive layout",
+    "06 desktop: complete content, identical geometry, interactions, refresh, contrast and responsive layout",
+    "06 mobile: complete content, identical geometry, interactions, refresh, contrast and responsive layout"
+  ],
+  "scans": [
+    {
+      "name": "01 desktop home",
+      "violations": [],
+      "manualReview": [
+        "aria-prohibited-attr",
+        "color-contrast"
+      ]
+    },
+    {
+      "name": "01 desktop contact dialog",
+      "violations": [],
+      "manualReview": []
+    },
+    {
+      "name": "01 desktop package comparison",
+      "violations": [],
+      "manualReview": [
+        "color-contrast"
+      ]
+    },
+    {
+      "name": "01 mobile home",
+      "violations": [],
+      "manualReview": [
+        "color-contrast"
+      ]
+    },
+    {
+      "name": "01 mobile contact dialog",
+      "violations": [],
+      "manualReview": []
+    },
+    {
+      "name": "01 mobile package comparison",
+      "violations": [],
+      "manualReview": []
+    },
+    {
+      "name": "01 mobile menu",
+      "violations": [],
+      "manualReview": [
+        "aria-prohibited-attr"
+      ]
+    },
+    {
+      "name": "02 desktop home",
+      "violations": [],
+      "manualReview": [
+        "aria-prohibited-attr",
+        "color-contrast"
+      ]
+    },
+    {
+      "name": "02 desktop contact dialog",
+      "violations": [],
+      "manualReview": []
+    },
+    {
+      "name": "02 desktop package comparison",
+      "violations": [],
+      "manualReview": [
+        "color-contrast"
+      ]
+    },
+    {
+      "name": "02 mobile home",
+      "violations": [],
+      "manualReview": [
+        "color-contrast"
+      ]
+    },
+    {
+      "name": "02 mobile contact dialog",
+      "violations": [],
+      "manualReview": []
+    },
+    {
+      "name": "02 mobile package comparison",
+      "violations": [],
+      "manualReview": []
+    },
+    {
+      "name": "02 mobile menu",
+      "violations": [],
+      "manualReview": [
+        "aria-prohibited-attr"
+      ]
+    },
+    {
+      "name": "03 desktop home",
+      "violations": [],
+      "manualReview": [
+        "aria-prohibited-attr",
+        "color-contrast"
+      ]
+    },
+    {
+      "name": "03 desktop contact dialog",
+      "violations": [],
+      "manualReview": []
+    },
+    {
+      "name": "03 desktop package comparison",
+      "violations": [],
+      "manualReview": [
+        "color-contrast"
+      ]
+    },
+    {
+      "name": "03 mobile home",
+      "violations": [],
+      "manualReview": [
+        "color-contrast"
+      ]
+    },
+    {
+      "name": "03 mobile contact dialog",
+      "violations": [],
+      "manualReview": []
+    },
+    {
+      "name": "03 mobile package comparison",
+      "violations": [],
+      "manualReview": []
+    },
+    {
+      "name": "03 mobile menu",
+      "violations": [],
+      "manualReview": [
+        "aria-prohibited-attr"
+      ]
+    },
+    {
+      "name": "04 desktop home",
+      "violations": [],
+      "manualReview": [
+        "aria-prohibited-attr",
+        "color-contrast"
+      ]
+    },
+    {
+      "name": "04 desktop contact dialog",
+      "violations": [],
+      "manualReview": []
+    },
+    {
+      "name": "04 desktop package comparison",
+      "violations": [],
+      "manualReview": [
+        "color-contrast"
+      ]
+    },
+    {
+      "name": "04 mobile home",
+      "violations": [],
+      "manualReview": [
+        "color-contrast"
+      ]
+    },
+    {
+      "name": "04 mobile contact dialog",
+      "violations": [],
+      "manualReview": []
+    },
+    {
+      "name": "04 mobile package comparison",
+      "violations": [],
+      "manualReview": []
+    },
+    {
+      "name": "04 mobile menu",
+      "violations": [],
+      "manualReview": [
+        "aria-prohibited-attr"
+      ]
+    },
+    {
+      "name": "05 desktop home",
+      "violations": [],
+      "manualReview": [
+        "aria-prohibited-attr",
+        "color-contrast"
+      ]
+    },
+    {
+      "name": "05 desktop contact dialog",
+      "violations": [],
+      "manualReview": []
+    },
+    {
+      "name": "05 desktop package comparison",
+      "violations": [],
+      "manualReview": [
+        "color-contrast"
+      ]
+    },
+    {
+      "name": "05 mobile home",
+      "violations": [],
+      "manualReview": [
+        "color-contrast"
+      ]
+    },
+    {
+      "name": "05 mobile contact dialog",
+      "violations": [],
+      "manualReview": []
+    },
+    {
+      "name": "05 mobile package comparison",
+      "violations": [],
+      "manualReview": []
+    },
+    {
+      "name": "05 mobile menu",
+      "violations": [],
+      "manualReview": [
+        "aria-prohibited-attr"
+      ]
+    },
+    {
+      "name": "06 desktop home",
+      "violations": [],
+      "manualReview": [
+        "aria-prohibited-attr",
+        "color-contrast"
+      ]
+    },
+    {
+      "name": "06 desktop contact dialog",
+      "violations": [],
+      "manualReview": []
+    },
+    {
+      "name": "06 desktop package comparison",
+      "violations": [],
+      "manualReview": [
+        "color-contrast"
+      ]
+    },
+    {
+      "name": "06 mobile home",
+      "violations": [],
+      "manualReview": [
+        "color-contrast"
+      ]
+    },
+    {
+      "name": "06 mobile contact dialog",
+      "violations": [],
+      "manualReview": []
+    },
+    {
+      "name": "06 mobile package comparison",
+      "violations": [],
+      "manualReview": []
+    },
+    {
+      "name": "06 mobile menu",
+      "violations": [],
+      "manualReview": [
+        "aria-prohibited-attr"
+      ]
+    },
+    {
+      "name": "Overview desktop",
+      "violations": [],
+      "manualReview": [
+        "color-contrast"
+      ]
+    },
+    {
+      "name": "Overview mobile",
+      "violations": [],
+      "manualReview": [
+        "color-contrast"
+      ]
+    }
+  ],
+  "errors": []
+}

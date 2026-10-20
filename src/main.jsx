@@ -6,6 +6,8 @@ import '@fontsource/manrope/latin-500.css';
 import '@fontsource/manrope/latin-600.css';
 import './styles.css';
 import { contact, packages, services, projects, stages, translations, navigation } from './data';
+import { PreviewHost, PreviewOverview } from './preview/PreviewHost';
+import { previewRoute } from './preview/themes';
 
 const asset = path => window.__PROSPECT_ASSETS__?.[path] || path;
 const img = name => asset(`/images/${name}.webp`);
@@ -196,6 +198,7 @@ function App() {
   </>;
 }
 
-createRoot(document.getElementById('root')).render(<App />);
+const preview = previewRoute();
+createRoot(document.getElementById('root')).render(preview === 'overview' ? <PreviewOverview /> : preview ? <PreviewHost theme={preview}><App /></PreviewHost> : <App />);
 
 import './presentation.css';

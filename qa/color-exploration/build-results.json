@@ -1,0 +1,47 @@
+{
+  "routes": [
+    {
+      "entry": "dist/design-preview/01/index.html",
+      "url": "http://localhost:4173/design-preview/01/",
+      "refresh": true,
+      "interactions": true,
+      "overviewLink": true
+    },
+    {
+      "entry": "dist/design-preview/02/index.html",
+      "url": "http://localhost:4173/design-preview/02/",
+      "refresh": true,
+      "interactions": true,
+      "overviewLink": true
+    },
+    {
+      "entry": "dist/design-preview/03/index.html",
+      "url": "http://localhost:4173/design-preview/03/",
+      "refresh": true,
+      "interactions": true,
+      "overviewLink": true
+    },
+    {
+      "entry": "dist/design-preview/04/index.html",
+      "url": "http://localhost:4173/design-preview/04/",
+      "refresh": true,
+      "interactions": true,
+      "overviewLink": true
+    },
+    {
+      "entry": "dist/design-preview/05/index.html",
+      "url": "http://localhost:4173/design-preview/05/",
+      "refresh": true,
+      "interactions": true,
+      "overviewLink": true
+    },
+    {
+      "entry": "dist/design-preview/06/index.html",
+      "url": "http://localhost:4173/design-preview/06/",
+      "refresh": true,
+      "interactions": true,
+      "overviewLink": true
+    }
+  ],
+  "errors": []
+}

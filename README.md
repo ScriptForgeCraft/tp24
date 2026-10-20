@@ -24,7 +24,7 @@ The production preview runs at **http://localhost:4173/**. The complete static b
 
 The homepage follows the supplied section order: navigation, before/after hero, introduction, development services, packages, selected projects, process, expertise and partnership, final CTA, and footer.
 
-- Only the first homepage design is retained. The header, mobile menu and footer provide section navigation. State property, Podcast & Media and News remain non-interactive text until those pages are designed.
+- The original homepage remains at `/`. Six isolated color-system previews are available at `/design-preview/01`–`06`, with an overview at `/design-preview`. The header, mobile menu and footer retain section navigation. State property, Podcast & Media and News remain non-interactive text until those pages are designed.
 - Full-screen mobile menu with staggered entries, focus trapping, Escape close and scroll lock.
 - Matched architectural before/after comparison: mouse, pointer, touch, click positioning, arrow keys, Home and End.
 - Masked hero heading entrance, image scale, restrained parallax, scroll reveals and image hovers.
@@ -72,3 +72,11 @@ With the dev server running, use `npm run test:a11y` for axe checks of the home 
 ## Client presentation export
 
 After `npm run build`, run `node scripts/package-preview.mjs` to create `output/Prospect24-Preview.html`. This self-contained file embeds fonts, imagery, styles and JavaScript and opens directly from disk without a server. `node scripts/verify-presentation.mjs` checks the offline export. The ready-to-send ZIP includes this file, a short Russian opening guide and desktop/mobile screenshots.
+
+## Six color-system previews
+
+Open `http://localhost:5173/design-preview` while `npm run dev` is running. The six preview URLs preserve the original home page's content, imagery, geometry and interactions. Only preview-scoped color roles differ. No preview selector or new colors appear on `/`.
+
+`npm run build` emits real `index.html` entries for the overview and all six variants under `dist/design-preview/`, including preview-only `noindex` metadata. `npm run preview` serves the built version at `http://localhost:4173/design-preview`. The existing portable HTML/ZIP above still presents the original homepage; the new color exploration uses these dedicated URLs.
+
+See [COLOR_PREVIEWS.md](COLOR_PREVIEWS.md) for theme names, implementation files, preservation evidence and validation commands.

@@ -9,7 +9,11 @@
     "preview": "vite preview --host 0.0.0.0",
     "test:ui": "node scripts/verify.mjs",
     "test:a11y": "node scripts/verify-accessibility.mjs",
-    "test:contrast": "node scripts/verify-photo-contrast.mjs"
+    "test:contrast": "node scripts/verify-photo-contrast.mjs",
+    "test:preview-colors": "node scripts/verify-color-previews.mjs",
+    "test:preview-contrast": "node scripts/verify-preview-photo-contrast.mjs",
+    "test:preview-build": "node scripts/verify-preview-build.mjs",
+    "test:preview-motion": "node scripts/verify-preview-motion.mjs"
   },
   "dependencies": {
     "@fontsource/cormorant-garamond": "^5.2.5",
