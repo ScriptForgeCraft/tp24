@@ -95,13 +95,13 @@
       {
         "selector": ".package-index",
         "index": 0,
-        "minimum": 11.96,
+        "minimum": 11.82,
         "required": 4.5
       },
       {
         "selector": ".package-index",
         "index": 1,
-        "minimum": 10.92,
+        "minimum": 10.63,
         "required": 4.5
       },
       {
@@ -119,13 +119,13 @@
       {
         "selector": ".package-content h3",
         "index": 1,
-        "minimum": 11.27,
+        "minimum": 11.31,
         "required": 4.5
       },
       {
         "selector": ".package-content h3",
         "index": 2,
-        "minimum": 11.41,
+        "minimum": 11.45,
         "required": 4.5
       },
       {
@@ -137,25 +137,43 @@
       {
         "selector": ".package-content > p",
         "index": 1,
-        "minimum": 10.23,
+        "minimum": 14.24,
         "required": 4.5
       },
       {
         "selector": ".package-content > p",
         "index": 2,
-        "minimum": 10.86,
+        "minimum": 9.93,
+        "required": 4.5
+      },
+      {
+        "selector": ".package-content > p",
+        "index": 3,
+        "minimum": 10.08,
+        "required": 4.5
+      },
+      {
+        "selector": ".package-content > p",
+        "index": 4,
+        "minimum": 10.37,
+        "required": 4.5
+      },
+      {
+        "selector": ".package-content > p",
+        "index": 5,
+        "minimum": 11.15,
         "required": 4.5
       },
       {
         "selector": ".package-content li",
         "index": 0,
-        "minimum": 14.06,
+        "minimum": 9.95,
         "required": 4.5
       },
       {
         "selector": ".package-content li",
         "index": 1,
-        "minimum": 14.23,
+        "minimum": 9.93,
         "required": 4.5
       },
       {
@@ -167,61 +185,43 @@
       {
         "selector": ".package-content li",
         "index": 3,
-        "minimum": 13.72,
+        "minimum": 10.13,
         "required": 4.5
       },
       {
         "selector": ".package-content li",
         "index": 4,
-        "minimum": 11.37,
+        "minimum": 10.93,
         "required": 4.5
       },
       {
         "selector": ".package-content li",
         "index": 5,
-        "minimum": 11.01,
+        "minimum": 11.38,
         "required": 4.5
       },
       {
         "selector": ".package-content li",
         "index": 6,
-        "minimum": 11.58,
+        "minimum": 10.86,
         "required": 4.5
       },
       {
         "selector": ".package-content li",
         "index": 7,
-        "minimum": 11.58,
+        "minimum": 10.86,
         "required": 4.5
       },
       {
         "selector": ".package-content li",
         "index": 8,
-        "minimum": 10.86,
-        "required": 4.5
-      },
-      {
-        "selector": ".package-content li",
-        "index": 9,
-        "minimum": 10.86,
-        "required": 4.5
-      },
-      {
-        "selector": ".package-content li",
-        "index": 10,
-        "minimum": 11.02,
-        "required": 4.5
-      },
-      {
-        "selector": ".package-content li",
-        "index": 11,
-        "minimum": 11.02,
+        "minimum": 10.99,
         "required": 4.5
       },
       {
         "selector": ".package-price",
         "index": 0,
-        "minimum": 14.43,
+        "minimum": 14.33,
         "required": 3
       },
       {
@@ -239,19 +239,37 @@
       {
         "selector": ".package-price > p",
         "index": 0,
-        "minimum": 11.11,
+        "minimum": 11.4,
         "required": 4.5
       },
       {
         "selector": ".package-price > p",
         "index": 1,
-        "minimum": 10.26,
+        "minimum": 11.03,
         "required": 4.5
       },
       {
         "selector": ".package-price > p",
         "index": 2,
-        "minimum": 9.76,
+        "minimum": 10.12,
+        "required": 4.5
+      },
+      {
+        "selector": ".package-price > p",
+        "index": 3,
+        "minimum": 10.59,
+        "required": 4.5
+      },
+      {
+        "selector": ".package-price > p",
+        "index": 4,
+        "minimum": 10.05,
+        "required": 4.5
+      },
+      {
+        "selector": ".package-price > p",
+        "index": 5,
+        "minimum": 9.48,
         "required": 4.5
       },
       {
@@ -281,13 +299,13 @@
       {
         "selector": ".project-info h3",
         "index": 0,
-        "minimum": 9.12,
+        "minimum": 9.08,
         "required": 3
       },
       {
         "selector": ".project-info > p:not(.eyebrow)",
         "index": 0,
-        "minimum": 12.46,
+        "minimum": 12.63,
         "required": 4.5
       },
       {
@@ -419,19 +437,19 @@
       {
         "selector": ".package-index",
         "index": 0,
-        "minimum": 11.85,
+        "minimum": 12.26,
         "required": 4.5
       },
       {
         "selector": ".package-index",
         "index": 1,
-        "minimum": 10.63,
+        "minimum": 10.94,
         "required": 4.5
       },
       {
         "selector": ".package-index",
         "index": 2,
-        "minimum": 9.28,
+        "minimum": 9.18,
         "required": 4.5
       },
       {
@@ -449,7 +467,7 @@
       {
         "selector": ".package-content h3",
         "index": 2,
-        "minimum": 11.41,
+        "minimum": 11.46,
         "required": 4.5
       },
       {
@@ -461,37 +479,55 @@
       {
         "selector": ".package-content > p",
         "index": 1,
-        "minimum": 9.93,
+        "minimum": 14.4,
         "required": 4.5
       },
       {
         "selector": ".package-content > p",
         "index": 2,
-        "minimum": 10.82,
+        "minimum": 9.93,
+        "required": 4.5
+      },
+      {
+        "selector": ".package-content > p",
+        "index": 3,
+        "minimum": 10.08,
+        "required": 4.5
+      },
+      {
+        "selector": ".package-content > p",
+        "index": 4,
+        "minimum": 10.09,
+        "required": 4.5
+      },
+      {
+        "selector": ".package-content > p",
+        "index": 5,
+        "minimum": 10.85,
         "required": 4.5
       },
       {
         "selector": ".package-content li",
         "index": 0,
-        "minimum": 12.97,
+        "minimum": 9.93,
         "required": 4.5
       },
       {
         "selector": ".package-content li",
         "index": 1,
-        "minimum": 11.67,
+        "minimum": 9.93,
         "required": 4.5
       },
       {
         "selector": ".package-content li",
         "index": 2,
-        "minimum": 10.84,
+        "minimum": 10.22,
         "required": 4.5
       },
       {
         "selector": ".package-content li",
         "index": 3,
-        "minimum": 14.07,
+        "minimum": 9.93,
         "required": 4.5
       },
       {
@@ -503,49 +539,31 @@
       {
         "selector": ".package-content li",
         "index": 5,
-        "minimum": 10.12,
+        "minimum": 9.94,
         "required": 4.5
       },
       {
         "selector": ".package-content li",
         "index": 6,
-        "minimum": 11.95,
+        "minimum": 11.02,
         "required": 4.5
       },
       {
         "selector": ".package-content li",
         "index": 7,
-        "minimum": 11.38,
+        "minimum": 11.32,
         "required": 4.5
       },
       {
         "selector": ".package-content li",
         "index": 8,
-        "minimum": 10.86,
-        "required": 4.5
-      },
-      {
-        "selector": ".package-content li",
-        "index": 9,
-        "minimum": 10.86,
-        "required": 4.5
-      },
-      {
-        "selector": ".package-content li",
-        "index": 10,
-        "minimum": 11.14,
-        "required": 4.5
-      },
-      {
-        "selector": ".package-content li",
-        "index": 11,
-        "minimum": 12.01,
+        "minimum": 11.61,
         "required": 4.5
       },
       {
         "selector": ".package-price",
         "index": 0,
-        "minimum": 14.46,
+        "minimum": 14.84,
         "required": 3
       },
       {
@@ -557,25 +575,43 @@
       {
         "selector": ".package-price",
         "index": 2,
-        "minimum": 12.32,
+        "minimum": 11.95,
         "required": 3
       },
       {
         "selector": ".package-price > p",
         "index": 0,
-        "minimum": 11.26,
+        "minimum": 11.56,
         "required": 4.5
       },
       {
         "selector": ".package-price > p",
         "index": 1,
-        "minimum": 10.41,
+        "minimum": 11.42,
         "required": 4.5
       },
       {
         "selector": ".package-price > p",
         "index": 2,
-        "minimum": 9.49,
+        "minimum": 10.41,
+        "required": 4.5
+      },
+      {
+        "selector": ".package-price > p",
+        "index": 3,
+        "minimum": 10.41,
+        "required": 4.5
+      },
+      {
+        "selector": ".package-price > p",
+        "index": 4,
+        "minimum": 9.48,
+        "required": 4.5
+      },
+      {
+        "selector": ".package-price > p",
+        "index": 5,
+        "minimum": 9.62,
         "required": 4.5
       },
       {
@@ -605,13 +641,13 @@
       {
         "selector": ".project-info h3",
         "index": 0,
-        "minimum": 6.71,
+        "minimum": 6.69,
         "required": 3
       },
       {
         "selector": ".project-info > p:not(.eyebrow)",
         "index": 0,
-        "minimum": 8.31,
+        "minimum": 8.28,
         "required": 4.5
       },
       {
@@ -623,7 +659,7 @@
       {
         "selector": ".project-counter",
         "index": 0,
-        "minimum": 16.26,
+        "minimum": 16.25,
         "required": 4.5
       },
       {

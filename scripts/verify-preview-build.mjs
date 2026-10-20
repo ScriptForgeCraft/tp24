@@ -18,7 +18,7 @@ try {
     assert.equal((await page.goto(url)).ok(), true);
     await page.evaluate(() => document.fonts.ready);
     assert.equal(await page.locator('[data-preview-theme]').getAttribute('data-preview-theme'), theme.slug);
-    assert.equal(await page.locator('main>section').count(), 8);
+    assert.equal(await page.locator('main>section').count(), 9);
     await page.reload();
     assert.equal(await page.locator('[data-preview-theme]').getAttribute('data-preview-theme'), theme.slug);
     await page.locator('.hero-buttons .filled').click();
@@ -31,7 +31,7 @@ try {
     routes.push({ entry, url, refresh: true, interactions: true, overviewLink: true });
   }
   await page.goto(base);
-  assert.equal(await page.locator('.preview-selector').count(), 0);
+  assert.equal(await page.locator('.navbar-design-options>button').count(), 6);
   await page.getByRole('slider').focus(); await page.keyboard.press('End');
   assert.equal(await page.getByRole('slider').getAttribute('aria-valuenow'), '96');
   assert.deepEqual(errors, []);

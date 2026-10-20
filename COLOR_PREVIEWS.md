@@ -4,7 +4,7 @@ The supplied “Шесть палитр — один архитектурный 
 
 ## Preview URLs
 
-The overview is `/design-preview`.
+Open `/` and use **01–06 in the navbar** to switch the full page instantly. On phones, use the **Design** disclosure. Selection preserves scroll, language, carousel and other app state. The selected variant is stored in the URL (`/?theme=03`) for refresh and sharing. The overview is `/design-preview`; the direct routes below also remain available.
 
 | Route | Theme | Main colors |
 | --- | --- | --- |
@@ -17,27 +17,25 @@ The overview is `/design-preview`.
 
 Run `npm run dev` and open `http://localhost:5173/design-preview`. The production build is created with `npm run build`, then served with `npm run preview` at `http://localhost:4173/design-preview`. Each variant has a real static HTML entry and supports direct access and refresh. No deployment was performed.
 
-## Shared implementation and isolation
+## Shared implementation
 
-- `src/preview/themes.js` defines the six palettes and semantic roles for section surfaces, text, cards, primary/inverse/secondary buttons, hover colors, links, borders, focus, header, footer and photographic overlays.
-- `src/preview/preview.css` scopes all homepage color overrides beneath `[data-preview-theme]`. No preview rule changes the home page's typography, spacing, dimensions, border radii, image selection or transition timing. The terracotta hero has a neutral light veil and dark text; the other themes use neutral dark veils and light text. Photographs receive no new filters.
-- `src/preview/PreviewHost.jsx` wraps the existing homepage on preview routes and supplies the compact numbered selector. Existing navigation and language controls remain. On phones the selector opens an accessible disclosure; Escape closes it and returns focus. The overview uses lightweight HTML/CSS miniature compositions and swatches, with links to the full working pages.
-- `src/main.jsx` adds imports and chooses between the existing `App`, its preview wrapper and the overview. The `App` component itself remains unchanged.
-- `vite.config.js` emits `/design-preview/index.html` and six variant entries using the same compiled app. Preview entries receive `noindex, nofollow`; the original entry's metadata remains unchanged.
+- `src/preview/themes.js` defines six coordinated color systems with semantic roles for text, sections, cards, buttons, borders, focus, headers, footers and overlays.
+- `src/preview/preview.css` scopes color overrides to `[data-preview-theme]`. The same homepage content, imagery, dimensions, typography and animations are shared by all variants.
+- `src/preview/PreviewHost.jsx` manages the selected palette without remounting the homepage. The root URL retains its original colors until a variant is chosen. Selection updates the query parameter on the root page or the path on a direct preview route, without navigation.
+- `src/preview/navbar-design.css` fits the selector into the existing navbar. Desktop shows six numbered buttons with an active state. Mobile shows a disclosure with theme names and swatches, outside-click dismissal, Escape handling and focus restoration. Existing navigation and language controls remain available.
+- `src/main.jsx` places the selector inside the header and shares the same App across all variants. Content, bilingual presentation and dialogs are maintained in the existing implementation.
+- `vite.config.js` emits the overview and six static preview entries. Direct preview entries have `noindex, nofollow` metadata.
 
-The original `/`, its stylesheet files and content data remain unchanged. Preview variables are on a `display: contents` wrapper, not on `html` or `body`; the underlying homepage component is shared rather than copied six times. Its before/after control, service selection, project carousel, dialogs, bilingual content and existing animation code are retained.
+## Verification
 
-## Executed verification
+Run the development server, then:
 
-- `npm run build`: completed; all seven preview HTML entry points generated.
-- `npm run test:ui`: 67 existing interface checks passed on the original page.
-- `npm run test:preview-colors`: 12 desktop/mobile complete-page comparisons passed. Section order, text, image paths, component dimensions, fonts, spacing and border radii match the original. Button normal/hover contrast, required preview links, refresh, service accordion, project navigation, dialogs, language controls, disclosure keyboard handling and overflow checks from 320px to 1920px passed.
-- The same command ran 44 axe WCAG A/AA scans across all themes, contact/comparison dialogs, mobile menus and the overview: zero reported violations. Some photographic/gradient contrast requires additional review; this is not a complete accessibility certification.
-- `npm run test:preview-contrast`: 660 rendered text-area contrast checks across the six complete homepages at desktop/mobile sizes passed. This samples backgrounds beneath hidden text paint to check photo/gradient areas that axe cannot resolve. Normal text targets 4.5:1 and large text 3:1.
-- `npm run test:preview-build`: every built route, reload, overview link, package dialog and the original homepage passed without resource or JavaScript errors.
-- `npm run test:preview-motion`: tests the ordinary-motion hero entrance, drag comparison, navigation, service crossfade, project carousel, dialog Escape and mobile navigation on all six themes. Machine-readable results are in `qa/color-exploration/motion-results.json`.
-- Full desktop and mobile screenshots of every complete preview were generated and visually reviewed. The original CSS/data hashes and deterministic desktop/mobile original-page screenshots match the saved pre-change baseline. Geometry matches on both viewports.
+- `npm run test:design-switcher`: all six palettes through the root navbar at desktop/mobile sizes, retained scroll and carousel state, no reload, selected URL and refresh, direct-route switching, keyboard selection, mobile dismissal and axe WCAG A/AA scans. Header/page overflow checks cover 320–1920px in English and Armenian. Results and screenshots: `qa/navbar-design/`.
+- `npm run test:preview-colors`: shared content, images and geometry, buttons, dialogs, mobile menu, overview, keyboard controls and responsive checks for all six palettes. Baseline is the current homepage with the navbar selector.
+- `npm run test:preview-contrast`: rendered photo/gradient text-area contrast checks.
+- `npm run test:preview-motion`: ordinary-motion interactions on all six variants.
+- `npm run build`, then `npm run test:preview-build`: static entries, refresh, overview links and dialog checks against the production preview.
 
-Detailed results live in `qa/color-exploration/results.json`, `photo-contrast-results.json`, `motion-results.json` and `build-results.json`; full-page screenshots are under `qa/color-exploration/after/`.
+Earlier color-exploration evidence is in `qa/color-exploration/`. The navbar-specific results are in `qa/navbar-design/results.json`. Automated accessibility scans complement visual review; they are not a full accessibility certification.
 
-The existing form behavior is preserved: validation prepares a mail draft, without sending or storing an enquiry. Commercial details and legal text retain their existing prototype limitations. No CMS, API, backend, original image, production URL or deployment setting was changed.
+The enquiry form continues to prepare a mail draft. No deployment was performed. The existing standalone HTML/ZIP export predates the navbar switcher; use the running site or current static build to present variants.

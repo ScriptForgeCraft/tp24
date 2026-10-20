@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "visibility": {
+    "news": false
+  },
+  "overrides": {
+    "hero.heading": {
+      "color": "#cc3333"
+    },
+    "hero.explore": {
+      "backgroundColor": "#145834"
+    },
+    "intro.section": {
+      "backgroundColor": "#ddeebb"
+    },
+    "packages.card.pre-investment-package": {
+      "backgroundColor": "#123456",
+      "borderColor": "#cc5511",
+      "color": "#ffffff"
+    }
+  },
+  "exportedAt": "2026-10-20T22:42:56.024Z"
+}

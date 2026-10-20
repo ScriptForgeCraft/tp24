@@ -1,10 +1,14 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { createContext, useContext, useEffect, useRef, useState } from 'react';
 import { previewThemes, themeTokens, previewHref } from './themes';
 import './preview.css';
+import './navbar-design.css';
 
 const asset = path => window.__PROSPECT_ASSETS__?.[path] || path;
 
-function DesignSelector({ theme }) {
+const DesignContext = createContext(null);
+
+export function NavbarDesignSelector() {
+  const { theme, selectTheme } = useContext(DesignContext);
   const [open, setOpen] = useState(false);
   const ref = useRef(null);
   const button = useRef(null);
@@ -14,17 +18,28 @@ function DesignSelector({ theme }) {
     document.addEventListener('pointerdown', outside); document.addEventListener('keydown', escape);
     return () => { document.removeEventListener('pointerdown', outside); document.removeEventListener('keydown', escape); };
   }, [open]);
-  return <aside ref={ref} className="preview-selector" data-open={open} aria-label="Client color design selector">
-    <span className="preview-selector-label">Design</span>
-    <button ref={button} className="preview-selector-toggle" aria-expanded={open} aria-controls="preview-design-links" onClick={() => setOpen(!open)}><span>Design {theme.id} / 06</span><span>{theme.name}</span><span aria-hidden="true">{open ? '−' : '+'}</span></button>
-    <nav id="preview-design-links" aria-label="Color variants">{previewThemes.map(item => <a key={item.id} href={previewHref(item.id)} aria-current={item.id === theme.id ? 'page' : undefined} aria-label={`${item.id} — ${item.name}`} title={item.name}><span>{item.id}</span><span className="preview-selector-theme-name">{item.name}</span></a>)}</nav>
-    <a className="preview-selector-all" href="/design-preview">All designs ↗</a>
-  </aside>;
+  return <div ref={ref} className="navbar-design" data-open={open}>
+    <span className="navbar-design-label" id="navbar-design-label">Design</span>
+    <button ref={button} className="navbar-design-toggle" aria-expanded={open} aria-controls="navbar-design-options" aria-label={`Choose design${theme ? `, current ${theme.id} ${theme.name}` : ', original'}`} onClick={() => setOpen(!open)}><span>Design {theme?.id || '—'}</span><span aria-hidden="true">{open ? '−' : '+'}</span></button>
+    <div id="navbar-design-options" className="navbar-design-options" role="group" aria-labelledby="navbar-design-label">{previewThemes.map(item => <button key={item.id} type="button" onClick={() => { selectTheme(item); setOpen(false); if (matchMedia('(max-width: 767px)').matches) button.current?.focus(); }} aria-pressed={item.id === theme?.id} aria-label={`${item.id} — ${item.name}`} title={item.name}><span>{item.id}</span><span className="navbar-design-name">{item.name}</span><span className="navbar-design-swatch" aria-hidden="true" style={{ background: item.colors.dark }} /></button>)}</div>
+    <span className="sr-only" role="status">{theme ? `Design ${theme.id}: ${theme.name}` : 'Original homepage colors'}</span>
+  </div>;
 }
 
 export function PreviewHost({ theme, children }) {
-  useEffect(() => { document.title = `Prospect24 — ${theme.id} ${theme.name}`; }, [theme]);
-  return <div className="preview-theme-shell" data-preview-theme={theme.slug} data-preview-id={theme.id} style={themeTokens(theme)}><DesignSelector theme={theme} />{children}</div>;
+  const [active, setActive] = useState(() => {
+    const requested = new URL(location.href).searchParams.get('theme');
+    return theme || previewThemes.find(item => item.id === requested) || null;
+  });
+  function selectTheme(next) {
+    setActive(next);
+    const url = new URL(location.href);
+    if (/^\/design-preview\/0[1-6]\/?$/.test(url.pathname)) url.pathname = previewHref(next.id);
+    else url.searchParams.set('theme', next.id);
+    history.replaceState(history.state, '', url);
+  }
+  useEffect(() => { if (active) document.title = `Prospect24 — ${active.id} ${active.name}`; }, [active]);
+  return <DesignContext.Provider value={{ theme: active, selectTheme }}><div className="preview-theme-shell" data-preview-theme={active?.slug} data-preview-id={active?.id} style={active ? themeTokens(active) : undefined}>{children}</div></DesignContext.Provider>;
 }
 
 export function PreviewOverview() {

@@ -2,8 +2,6 @@ import { chromium } from 'playwright';
 import AxeBuilder from '@axe-core/playwright';
 import fs from 'node:fs/promises';
 import assert from 'node:assert/strict';
-import crypto from 'node:crypto';
-import { execFileSync } from 'node:child_process';
 import { previewThemes } from '../src/preview/themes.js';
 
 const browser = await chromium.launch({ channel: 'chrome', headless: true });
@@ -37,56 +35,18 @@ async function solidButtonContrast(page, selector) {
   });
   assert.ok(ratio >= 4.5, `${selector}: ${ratio.toFixed(2)}:1`);
 }
-const expectedSections = ['home', 'approach', 'development', 'packages', 'projects', 'process', 'about', ''];
+const expectedSections = ['home', 'approach', 'development', 'packages', 'projects', 'process', 'about', 'news', ''];
 const original = {};
 try {
-  const sourceHashes = JSON.parse(await fs.readFile(`${directory}/before/source-hashes.json`, 'utf8'));
-  for (const file of ['src/styles.css', 'src/presentation.css', 'src/data.js']) assert.equal(crypto.createHash('sha256').update(await fs.readFile(file)).digest('hex'), sourceHashes[file], `${file} was changed`);
-  // Re-render the saved original with identical pointer and font-loading conditions.
-  // The earlier captures can include a transient project-image hover transform.
-  const baselineSource = execFileSync('git', ['show', 'HEAD:src/main.jsx']).toString('utf8').replace(/\r?\n/g, '\r\n');
-  assert.equal(crypto.createHash('sha256').update(baselineSource).digest('hex'), sourceHashes['src/main.jsx']);
-  await fs.writeFile('src/qa-original-baseline.jsx', baselineSource);
-  await fs.writeFile('qa-original-baseline.html', (await fs.readFile('index.html', 'utf8')).replace('/src/main.jsx', '/src/qa-original-baseline.jsx'));
-  // The original URL must retain exact dimensions, typography and rendered pixels.
+  // Compare palettes against the current shared homepage, including its navbar controls.
   for (const [name, width, height] of [['desktop', 1440, 900], ['mobile', 390, 844]]) {
     const page = await context.newPage(); await page.setViewportSize({ width, height });
     page.on('pageerror', e => errors.push(e.message));
-    await page.goto(new URL('qa-original-baseline.html', base).href); await reveal(page);
-    const before = await page.screenshot({ path: `${directory}/before/${name}-deterministic.png`, fullPage: true });
     await page.goto(base); await reveal(page);
     const measured = await geometry(page);
-    assert.deepEqual(measured, JSON.parse(await fs.readFile(`${directory}/before/${name}-geometry.json`, 'utf8')), `Original ${name} geometry changed`);
-    const png = await page.screenshot({ path: `${directory}/after/original-${name}.png`, fullPage: true });
-    let imageOnlyAnimationDifference = false;
-    let rasterDifferencePixels = 0;
-    if (!png.equals(before)) {
-      const allowed = await page.locator('.project-stage').evaluate(el => { const r = el.getBoundingClientRect(); return { x: r.x, y: r.y + scrollY, width: r.width, height: r.height }; });
-      const diff = await page.evaluate(async ({ images, allowed }) => {
-        const frames = [];
-        for (const bytes of images) {
-          const img = new Image(); img.src = `data:image/png;base64,${bytes}`; await img.decode();
-          const canvas = document.createElement('canvas'); canvas.width = img.width; canvas.height = img.height;
-          const ctx = canvas.getContext('2d'); ctx.drawImage(img, 0, 0); frames.push({ width: img.width, height: img.height, pixels: ctx.getImageData(0, 0, img.width, img.height).data });
-        }
-        const [a, b] = frames; let outside = 0, inside = 0;
-        if (a.width !== b.width || a.height !== b.height) return { outside: Infinity, inside: 0 };
-        for (let y = 0; y < a.height; y++) for (let x = 0; x < a.width; x++) {
-          const i = (y * a.width + x) * 4;
-          if (a.pixels[i] !== b.pixels[i] || a.pixels[i + 1] !== b.pixels[i + 1] || a.pixels[i + 2] !== b.pixels[i + 2]) {
-            if (x >= allowed.x && x < allowed.x + allowed.width && y >= allowed.y && y < allowed.y + allowed.height) inside++; else outside++;
-          }
-        }
-        return { outside, inside };
-      }, { images: [before.toString('base64'), png.toString('base64')], allowed });
-      rasterDifferencePixels = diff.outside;
-      // Chromium can rasterize a few anti-aliased edge pixels differently on reload.
-      assert.ok(diff.outside <= 100, `Original ${name}: ${diff.outside} changed pixels outside the animated project photograph`);
-      imageOnlyAnimationDifference = diff.inside > 0;
-    }
-    assert.equal(await page.locator('.preview-selector').count(), 0);
+    assert.equal(await page.locator('.navbar-design-options>button').count(), 6);
     original[name] = { measured, text: await page.locator('main').innerText(), images: await page.locator('main img').evaluateAll(els => els.map(el => el.getAttribute('src'))) };
-    preservation.push({ viewport: name, geometryIdentical: true, screenshotIdentical: png.equals(before), imageOnlyAnimationDifference, rasterDifferencePixels });
+    preservation.push({ viewport: name, baseline: 'Current homepage with navbar design switcher' });
     await page.close();
   }
   for (const theme of previewThemes) {
@@ -99,8 +59,8 @@ try {
       assert.equal(await page.locator('main').innerText(), original[name].text, `${theme.name}: content changed`);
       assert.deepEqual(await page.locator('main img').evaluateAll(els => els.map(el => el.getAttribute('src'))), original[name].images);
       assert.deepEqual(await page.locator('main>section').evaluateAll(els => els.map(el => el.id)), expectedSections);
-      assert.equal(await page.locator('.preview-selector nav a').count(), 6);
-      assert.equal(await page.locator('.preview-selector nav a[aria-current]').textContent(), theme.id + theme.name);
+      assert.equal(await page.locator('.navbar-design-options>button').count(), 6);
+      assert.equal(await page.locator('.navbar-design-options>button[aria-pressed=true]').getAttribute('aria-label'), theme.id + ' — ' + theme.name);
       await page.screenshot({ path: `${directory}/after/${theme.id}-${name}-full.png`, fullPage: true });
       await page.screenshot({ path: `${directory}/after/${theme.id}-${name}-hero.png` });
       await audit(page, `${theme.id} ${name} home`);
@@ -122,10 +82,10 @@ try {
       await page.locator('#packages .section-top button').click(); await audit(page, `${theme.id} ${name} package comparison`);
       await page.keyboard.press('Escape'); await page.locator('.modal').waitFor({ state: 'hidden' });
       if (name === 'mobile') {
-        await page.locator('.preview-selector-toggle').click();
-        assert.equal(await page.locator('.preview-selector nav').isVisible(), true);
+        await page.locator('.navbar-design-toggle').click();
+        assert.equal(await page.locator('.navbar-design-options').isVisible(), true);
         await page.keyboard.press('Escape');
-        assert.equal(await page.locator('.preview-selector nav').isVisible(), false);
+        assert.equal(await page.locator('.navbar-design-options').isVisible(), false);
         await page.locator('.menu-toggle').click(); await audit(page, `${theme.id} mobile menu`);
         await page.locator('.mobile-menu .language button').last().click();
         assert.equal(await page.locator('html').getAttribute('lang'), 'hy');
@@ -149,13 +109,11 @@ try {
   await page.screenshot({ path: `${directory}/after/overview-mobile.png`, fullPage: true });
   await page.locator('.preview-overview-card').nth(2).click();
   assert.equal(new URL(page.url()).pathname, '/design-preview/03');
-  await page.locator('.preview-selector-toggle').click(); await page.getByRole('link', { name: '06 — White & Terracotta', exact: true }).click();
+  await page.locator('.navbar-design-toggle').click(); await page.getByRole('button', { name: '06 — White & Terracotta', exact: true }).click();
   assert.equal(new URL(page.url()).pathname, '/design-preview/06');
   await page.close(); assert.deepEqual(errors, []);
 } finally {
   await fs.writeFile(`${directory}/results.json`, JSON.stringify({ preservation, checks, scans, errors }, null, 2));
   await browser.close();
-  await fs.unlink('src/qa-original-baseline.jsx').catch(() => {});
-  await fs.unlink('qa-original-baseline.html').catch(() => {});
 }
 assert.equal(scans.flatMap(scan => scan.violations).length, 0, 'Accessibility violations; see qa/color-exploration/results.json');

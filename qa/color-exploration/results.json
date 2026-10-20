@@ -2,17 +2,11 @@
   "preservation": [
     {
       "viewport": "desktop",
-      "geometryIdentical": true,
-      "screenshotIdentical": true,
-      "imageOnlyAnimationDifference": false,
-      "rasterDifferencePixels": 0
+      "baseline": "Current homepage with navbar design switcher"
     },
     {
       "viewport": "mobile",
-      "geometryIdentical": true,
-      "screenshotIdentical": true,
-      "imageOnlyAnimationDifference": false,
-      "rasterDifferencePixels": 0
+      "baseline": "Current homepage with navbar design switcher"
     }
   ],
   "checks": [
@@ -46,9 +40,7 @@
     {
       "name": "01 desktop package comparison",
       "violations": [],
-      "manualReview": [
-        "color-contrast"
-      ]
+      "manualReview": []
     },
     {
       "name": "01 mobile home",
@@ -90,9 +82,7 @@
     {
       "name": "02 desktop package comparison",
       "violations": [],
-      "manualReview": [
-        "color-contrast"
-      ]
+      "manualReview": []
     },
     {
       "name": "02 mobile home",
@@ -134,9 +124,7 @@
     {
       "name": "03 desktop package comparison",
       "violations": [],
-      "manualReview": [
-        "color-contrast"
-      ]
+      "manualReview": []
     },
     {
       "name": "03 mobile home",
@@ -178,9 +166,7 @@
     {
       "name": "04 desktop package comparison",
       "violations": [],
-      "manualReview": [
-        "color-contrast"
-      ]
+      "manualReview": []
     },
     {
       "name": "04 mobile home",
@@ -222,9 +208,7 @@
     {
       "name": "05 desktop package comparison",
       "violations": [],
-      "manualReview": [
-        "color-contrast"
-      ]
+      "manualReview": []
     },
     {
       "name": "05 mobile home",
@@ -266,9 +250,7 @@
     {
       "name": "06 desktop package comparison",
       "violations": [],
-      "manualReview": [
-        "color-contrast"
-      ]
+      "manualReview": []
     },
     {
       "name": "06 mobile home",

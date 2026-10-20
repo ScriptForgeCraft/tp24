@@ -30,3 +30,11 @@ Generated using the built-in image generation tool. Original PNGs are retained i
 **Before — final edit prompt (after image used as the edit target):**
 
 > Use case: precise-object-edit. This image is the edit target. Create the BEFORE image for an architectural before-after slider. Keep the camera position, exact crop, image dimensions, perspective, sunset sky, distant skyline on left, road alignment and foreground tree on bottom left unchanged. Replace ONLY the finished luxury apartment building and its landscaping on the right with an undeveloped excavated construction site at the exact same location: exposed earth, gray rock, graded terraces and a few low concrete foundations, perhaps a small parked excavator. Remove building, windows, facade, balcony trees, finished paths and landscaping, leaving an open ground-level construction site. Preserve the road along bottom and all distant elements precisely, so two images align convincingly for a comparison slider. Muted blue hour colors, photographic realism, no text, no logos.
+
+# Content integration asset reuse — 21 October 2026
+
+The existing `assets/partners/*.png` collection is now used for a 12-logo selection and the full 30-logo network dialog. Source image titles were checked against the official [partners page](https://prospect24.am/en/partners/). Original proportions and colors are retained; no implementing-company logos were fabricated.
+
+Existing `assets/news/cooperation.jpg`, `chakhruk.jpg` and `architects.jpg` support the corresponding official memorandum records. Vite bundles these local files; no remote image hosting is required. Existing optimized architectural imagery, fonts, wordmark and generated illustrative hero pair are preserved. The Garden Hill supplementary `market` image association was removed because it was not verified as another view of that project.
+
+The business-source audit and remaining image attribution/use-rights confirmations are documented in [CONTENT_AUDIT.md](CONTENT_AUDIT.md).

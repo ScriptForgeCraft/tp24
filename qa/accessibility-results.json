@@ -6,7 +6,8 @@
       "passedRules": 26,
       "manualReviewRules": [
         "aria-prohibited-attr",
-        "color-contrast"
+        "color-contrast",
+        "link-in-text-block"
       ]
     },
     {
@@ -15,43 +16,50 @@
       "passedRules": 26,
       "manualReviewRules": [
         "aria-prohibited-attr",
-        "color-contrast"
+        "color-contrast",
+        "link-in-text-block"
       ]
     },
     {
       "name": "EN 1440 compare dialog",
       "violations": [],
-      "passedRules": 15,
+      "passedRules": 16,
       "manualReviewRules": [
-        "color-contrast"
+        "link-in-text-block"
       ]
     },
     {
       "name": "EN 1440 package dialog",
       "violations": [],
-      "passedRules": 16,
+      "passedRules": 18,
       "manualReviewRules": [
-        "color-contrast"
+        "link-in-text-block"
       ]
     },
     {
       "name": "EN 1440 project dialog",
       "violations": [],
       "passedRules": 15,
-      "manualReviewRules": []
+      "manualReviewRules": [
+        "color-contrast",
+        "link-in-text-block"
+      ]
     },
     {
       "name": "EN 1440 contact dialog",
       "violations": [],
-      "passedRules": 21,
-      "manualReviewRules": []
+      "passedRules": 22,
+      "manualReviewRules": [
+        "link-in-text-block"
+      ]
     },
     {
       "name": "EN 1440 privacy dialog",
       "violations": [],
       "passedRules": 14,
       "manualReviewRules": [
-        "color-contrast"
+        "color-contrast",
+        "link-in-text-block"
       ]
     },
     {
@@ -59,7 +67,8 @@
       "violations": [],
       "passedRules": 14,
       "manualReviewRules": [
-        "color-contrast"
+        "color-contrast",
+        "link-in-text-block"
       ]
     },
     {
@@ -68,7 +77,8 @@
       "passedRules": 26,
       "manualReviewRules": [
         "aria-prohibited-attr",
-        "color-contrast"
+        "color-contrast",
+        "link-in-text-block"
       ]
     },
     {
@@ -96,19 +106,19 @@
     {
       "name": "EN 390 package dialog",
       "violations": [],
-      "passedRules": 17,
+      "passedRules": 18,
       "manualReviewRules": []
     },
     {
       "name": "EN 390 project dialog",
       "violations": [],
-      "passedRules": 15,
+      "passedRules": 16,
       "manualReviewRules": []
     },
     {
       "name": "EN 390 contact dialog",
       "violations": [],
-      "passedRules": 21,
+      "passedRules": 22,
       "manualReviewRules": []
     },
     {
@@ -132,7 +142,8 @@
       "violations": [],
       "passedRules": 17,
       "manualReviewRules": [
-        "aria-prohibited-attr"
+        "aria-prohibited-attr",
+        "color-contrast"
       ]
     },
     {

@@ -53,7 +53,7 @@ try {
   check('Project keyboard navigation',(await page.locator('.project-info h3').textContent()).includes('Khachaturian'));
   await page.getByRole('button',{name:'Previous project',exact:true}).click(); await pause(900);
   await page.getByRole('button',{name:'Explore Project',exact:true}).click();
-  check('Project preview opens',await page.locator('.modal #modal-title').textContent()==='Avet Avetisyan 20');
+  check('Project preview opens',await page.locator('.modal #modal-title').textContent()==='Avet Avetisyan, 20');
   await page.mouse.click(5,5); await pause(400);
   check('Outside click closes dialog',!(await page.locator('.modal').evaluate(el=>el.open)));
   await page.locator('#process').scrollIntoViewIfNeeded(); await pause(400);
