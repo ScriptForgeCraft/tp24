@@ -8,19 +8,21 @@ import './styles.css';
 import { contact, packages as packageData, services as serviceData, projects as projectData, stages, translations, navigation, implementingCompanies, partners, news as newsData, videos as videoData, officialUrl } from './data';
 import { PreviewHost, PreviewOverview, NavbarDesignSelector } from './preview/PreviewHost';
 import { previewRoute } from './preview/themes';
-import { EditorProvider, EditorToggle } from './editor/EditorProvider';
+import { EditorElement } from './editor/EditorElement';
+import { EditorProvider, EditorToggle, useComparisonSplit } from './editor/EditorProvider';
 import { edit, sectionEdit, semanticId } from './editor/editorConfig';
 
 const asset = path => window.__PROSPECT_ASSETS__?.[path] || path;
 const img = name => asset(`/images/${name}.webp`);
 const Arrow = ({ direction = 'up', ...props }) => <svg {...props} className={`arrow ${direction}`} width="21" height="21" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14" stroke="currentColor" strokeWidth="1.2" /></svg>;
-const Logo = ({ onClick, label = 'Prospect24 home' }) => <a onClick={onClick} href="#home" className="logo" aria-label={label}><img src={asset('/images/brand-wordmark.png')} alt="PROSPECT24" width="700" height="103" /></a>;
-const Heading = ({ lines, hero, className = '', editId }) => { const Tag = hero ? 'h1' : 'h2'; return <Tag {...(editId ? edit(editId) : {})} className={`display ${hero ? 'hero-title' : ''} ${className}`}>{lines.map((line, i) => <span className="line-mask" key={i}><span style={{ '--line': i }}>{line}</span></span>)}</Tag>; };
-const Label = ({ children, editId }) => <p {...(editId ? edit(editId) : {})} className="eyebrow">{children}</p>;
-const Action = ({ children, onClick, href, filled, className = '', editId, ...rest }) => href ? <a {...(editId ? edit(editId) : {})} href={href} className={`action ${filled ? 'filled' : ''} ${className}`} {...rest}>{children}<Arrow /></a> : <button {...(editId ? edit(editId) : {})} onClick={onClick} className={`action ${filled ? 'filled' : ''} ${className}`} {...rest}>{children}<Arrow /></button>;
+Arrow.editorIcon = true;
+const Logo = ({ onClick, editId, label = 'Prospect24 home' }) => <a onClick={onClick} href="#home" className="logo" aria-label={label}><EditorElement as="img" {...(editId ? edit(editId) : {})} src={asset('/images/brand-wordmark.png')} alt="PROSPECT24" width="700" height="103" /></a>;
+const Heading = ({ lines, hero, className = '', editId }) => { const Tag = hero ? 'h1' : 'h2'; return <EditorElement as={Tag} {...(editId ? edit(editId) : {})} className={`display ${hero ? 'hero-title' : ''} ${className}`}>{lines.map((line, i) => <span className="line-mask" key={i}><span style={{ '--line': i }}>{line}</span></span>)}</EditorElement>; };
+const Label = ({ children, editId }) => <EditorElement as="p" {...(editId ? edit(editId) : {})} className="eyebrow">{children}</EditorElement>;
+const Action = ({ children, onClick, href, filled, className = '', editId, ...rest }) => href ? <EditorElement as="a" {...(editId ? edit(editId) : {})} href={href} className={`action ${filled ? 'filled' : ''} ${className}`} {...rest}>{children}<Arrow /></EditorElement> : <EditorElement as="button" {...(editId ? edit(editId) : {})} onClick={onClick} className={`action ${filled ? 'filled' : ''} ${className}`} {...rest}>{children}<Arrow /></EditorElement>;
 
 function App() {
-  const [lang, setLang] = useState('en');
+  const [lang, setLang] = useState(() => new URLSearchParams(window.location.search).get('editorLanguage') === 'am' ? 'am' : 'en');
   const t = translations[lang];
   const localize = item => ({ ...item, ...(lang === 'am' ? item.hy : {}), editKey: semanticId(item.name || item.title || item.slug || item.id || '') });
   const packages = packageData.map(localize), services = serviceData.map(localize), projects = projectData.map(localize);
@@ -28,7 +30,7 @@ function App() {
   const location = lang === 'am' ? contact.amLocation : contact.location;
   const date = value => { const [year, month, day] = value.split('-'); return `${Number(day)} ${t.months[Number(month) - 1]} ${year}`; };
   const price = p => <>{p.from && <small>{t.from} </small>}{p.price}<span> {t.currency}</span></>;
-  const partnerGrid = all => <div className="network-grid">{(all ? partners : partners.slice(0, 12)).map(p => <div className="network-logo" key={p.name}><img loading="lazy" src={p.image} alt={p.name} width="150" height="90" /></div>)}</div>;
+  const partnerGrid = all => <EditorElement as="div" {...(!all ? edit("partners.layout") : {})} className="network-grid">{(all ? partners : partners.slice(0, 12)).map(p => <div className="network-logo" key={p.name}><EditorElement as="img" {...(!all ? edit(`partners.logo.${semanticId(p.name)}`) : {})} loading="lazy" src={p.image} alt={p.name} width="150" height="90" /></div>)}</EditorElement>;
   const articleLink = item => officialUrl(item.slug, lang);
   const [scrolled, setScrolled] = useState(false);
   const [menu, setMenu] = useState(false);
@@ -37,13 +39,13 @@ function App() {
   const [activeService, setActiveService] = useState(0);
   const [expanded, setExpanded] = useState(null);
   const [project, setProject] = useState(0);
-  const [split, setSplit] = useState(50);
+  const [split, setSplit] = useComparisonSplit();
   const [heroReady, setHeroReady] = useState(false);
   const [draft, setDraft] = useState(false);
   const heroRef = useRef(null), timelineRef = useRef(null), dialogRef = useRef(null), menuRef = useRef(null);
   const drag = useRef(false), touched = useRef(false), swipeStart = useRef(null), closeTimer = useRef(null);
   const navItems = navigation.map(item => ({ ...item, label: item[lang] }));
-  const navItem = (item, mobile = false, i = 0, place = mobile ? 'mobile' : 'header') => item.href ? <a {...edit(`${place}.nav.${semanticId(item.en)}`)} key={item.en} href={item.href} style={mobile ? { '--i': i } : undefined} onClick={mobile ? e => { e.preventDefault(); closeMenu(item.href); } : undefined}>{item.label}{mobile && <Arrow />}</a> : <span key={item.en} className="nav-unavailable" aria-disabled="true" style={mobile ? { '--i': i } : undefined}>{item.label}</span>;
+  const navItem = (item, mobile = false, i = 0, place = mobile ? 'mobile' : 'header') => item.href ? <EditorElement as="a" {...edit(`${place}.nav.${semanticId(item.en)}`)} key={item.en} href={item.href} style={mobile ? { '--i': i } : undefined} onClick={mobile ? e => { e.preventDefault(); closeMenu(item.href); } : undefined}>{item.label}{mobile && <Arrow />}</EditorElement> : <span key={item.en} className="nav-unavailable" aria-disabled="true" style={mobile ? { '--i': i } : undefined}>{item.label}</span>;
 
   // Clear settings from the retired design chooser, including already-open tabs.
   useLayoutEffect(() => {
@@ -66,6 +68,24 @@ function App() {
   useEffect(() => {
     document.documentElement.lang = lang === 'am' ? 'hy' : 'en';
   }, [lang]);
+  useEffect(() => {
+    const revealEditorLayer = event => {
+      const id = event.detail;
+      if (id.startsWith('projects.')) {
+        const index = projectData.findIndex(item => id.includes(semanticId(item.name)));
+        if (index >= 0) setProject(index);
+      }
+      if (id.startsWith('development.')) {
+        const index = serviceData.findIndex(item => id.includes(semanticId(item.title)));
+        if (index >= 0) {
+          setActiveService(index);
+          if (id.endsWith('.image') || id.endsWith('.detail')) setExpanded(index);
+        }
+      }
+    };
+    window.addEventListener('p24-editor-reveal', revealEditorLayer);
+    return () => window.removeEventListener('p24-editor-reveal', revealEditorLayer);
+  }, []);
   useEffect(() => {
     let raf = 0;
     const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -116,95 +136,95 @@ function App() {
 
   return <>
     <a className="skip-link" href="#main">{t.skip}</a>
-    <header {...edit("header.navigation")} className={`header ${scrolled ? 'scrolled' : ''}`}>
-      <Logo label={t.logoHome} />
+    <EditorElement as="header" {...edit("header.navigation")} className={`header ${scrolled ? 'scrolled' : ''}`}>
+      <Logo editId="header.logo" label={t.logoHome} />
       <nav className="desktop-nav" aria-label={t.mainNav}>{navItems.map(item => navItem(item))}</nav>
       <div className="header-actions"><NavbarDesignSelector />{languageButtons()}<EditorToggle /><button className="menu-toggle" aria-label={t.openMenu} aria-expanded={menu} aria-controls="site-menu" onClick={() => setMenu(true)}><span /><span /></button></div>
-    </header>
+    </EditorElement>
 
     <main id="main" tabIndex="-1" data-design-layout="atelier">
-      <section {...sectionEdit("hero")} id="home" ref={heroRef} className={`hero ${heroReady ? 'ready' : ''}`} style={{ '--split': `${split}%` }} onPointerDown={e => { if (e.target.closest('a,button,[role="slider"],.hero-copy')) return; touched.current = true; setPosition(e); }}>
-        <div className="hero-visual" aria-hidden="true"><img className="hero-after" src={img('hero-after')} alt="" fetchPriority="high" /><div className="hero-before"><img src={img('hero-before')} alt="" fetchPriority="high" /></div></div>
-        <div className="hero-shade" />
-        <div className="hero-copy">
+      <EditorElement as="section" {...sectionEdit("hero")} id="home" ref={heroRef} className={`hero ${heroReady ? 'ready' : ''}`} style={{ '--split': `${split}%` }} onPointerDown={e => { if (e.target.closest('a,button,[role="slider"],.hero-copy')) return; touched.current = true; setPosition(e); }}>
+        <div className="hero-visual" aria-hidden="true"><EditorElement as="img" {...edit("hero.afterImage")} className="hero-after" src={img('hero-after')} alt="" fetchPriority="high" /><div className="hero-before"><EditorElement as="img" {...edit("hero.beforeImage")} src={img('hero-before')} alt="" fetchPriority="high" /></div></div>
+        <EditorElement as="div" {...edit("hero.overlay")} className="hero-shade" />
+        <EditorElement as="div" {...edit("hero.content")} className="hero-copy">
           <Heading hero editId="hero.heading" lines={t.hero} />
-          <p {...edit("hero.tagline")} className="hero-tagline">{t.tagline}</p>
-          <p {...edit("hero.description")} className="hero-description">{t.heroText}</p>
-          <div className="hero-buttons"><Action editId="hero.explore" filled href="#development">{t.explore}</Action><Action editId="hero.projects" href="#projects">{t.view}</Action></div>
-        </div>
+          <EditorElement as="p" {...edit("hero.tagline")} className="hero-tagline">{t.tagline}</EditorElement>
+          <EditorElement as="p" {...edit("hero.description")} className="hero-description">{t.heroText}</EditorElement>
+          <EditorElement as="div" {...edit("hero.buttons")} className="hero-buttons"><Action editId="hero.explore" filled href="#development">{t.explore}</Action><Action editId="hero.projects" href="#projects">{t.view}</Action></EditorElement>
+        </EditorElement>
         <div className="compare-divider" style={{ left: `${split}%` }}>
           <div className="compare-handle" role="slider" tabIndex="0" aria-label={t.slider} aria-valuemin="4" aria-valuemax="96" aria-valuenow={Math.round(split)} aria-valuetext={`${Math.round(split)}% ${t.beforeValue}`} onPointerDown={e => { e.preventDefault(); touched.current = true; drag.current = true; e.currentTarget.setPointerCapture(e.pointerId); e.currentTarget.focus(); }} onPointerMove={e => { if (drag.current) setPosition(e); }} onPointerUp={() => { drag.current = false; }} onPointerCancel={() => { drag.current = false; }} onKeyDown={e => { const keys = ['ArrowLeft', 'ArrowRight', 'Home', 'End']; if (keys.includes(e.key)) { e.preventDefault(); touched.current = true; setSplit(v => e.key === 'Home' ? 4 : e.key === 'End' ? 96 : Math.max(4, Math.min(96, v + (e.key === 'ArrowRight' ? 2 : -2)))); } }}><span>‹</span><span>›</span></div>
         </div>
         <div className="comparison-labels"><span>{t.before}</span><span>{t.after}</span></div>
-        <div className="hero-bottom"><a {...edit("hero.scroll")} href="#approach" className="scroll-hint"><span /> {t.scroll}</a><span {...edit("hero.perspective")}>{t.perspective}</span><span {...edit("hero.note")} className="visual-note">{t.illustrative}</span></div>
-      </section>
+        <div className="hero-bottom"><EditorElement as="a" {...edit("hero.scroll")} href="#approach" className="scroll-hint"><span /> {t.scroll}</EditorElement><EditorElement as="span" {...edit("hero.perspective")}>{t.perspective}</EditorElement><EditorElement as="span" {...edit("hero.note")} className="visual-note">{t.illustrative}</EditorElement></div>
+      </EditorElement>
 
-      <section {...sectionEdit("intro")} id="approach" className="intro section light">
+      <EditorElement as="section" {...sectionEdit("intro")} id="approach" className="intro section light">
         <Label editId="intro.label">01 <span>/</span> {t.approachLabel}</Label>
-        <div className="intro-grid">
-          <div className="reveal"><Heading editId="intro.heading" lines={t.intro} /><a {...edit("intro.learn")} className="text-link" href="#about">{t.learn}<Arrow /></a></div>
-          <div className="intro-composition reveal" style={{ '--delay': '100ms' }}><div className="intro-main image-clip"><img loading="lazy" src={img('intro')} alt={t.introImage} /></div><div className="intro-detail image-clip"><img loading="lazy" src={img('intro-detail')} alt={t.introDetailImage} /></div><span {...edit("intro.caption")} className="image-caption">{t.caption}</span></div>
-          <div className="intro-text reveal" style={{ '--delay': '200ms' }}><h3 {...edit("intro.subheading")}>{t.introSub}</h3><p {...edit("intro.description")}>{t.introText}</p><span className="small-rule" /></div>
-        </div>
-      </section>
+        <EditorElement as="div" {...edit("intro.layout")} className="intro-grid">
+          <div className="reveal"><Heading editId="intro.heading" lines={t.intro} /><EditorElement as="a" {...edit("intro.learn")} className="text-link" href="#about">{t.learn}<Arrow /></EditorElement></div>
+          <EditorElement as="div" {...edit("intro.composition")} className="intro-composition reveal" style={{ '--delay': '100ms' }}><EditorElement as="div" {...edit("intro.imageContainer")} className="intro-main image-clip"><EditorElement as="img" {...edit("intro.image")} loading="lazy" src={img('intro')} alt={t.introImage} /></EditorElement><EditorElement as="div" {...edit("intro.detailContainer")} className="intro-detail image-clip"><EditorElement as="img" {...edit("intro.detailImage")} loading="lazy" src={img('intro-detail')} alt={t.introDetailImage} /></EditorElement><EditorElement as="span" {...edit("intro.caption")} className="image-caption">{t.caption}</EditorElement></EditorElement>
+          <div className="intro-text reveal" style={{ '--delay': '200ms' }}><EditorElement as="h3" {...edit("intro.subheading")}>{t.introSub}</EditorElement><EditorElement as="p" {...edit("intro.description")}>{t.introText}</EditorElement><span className="small-rule" /></div>
+        </EditorElement>
+      </EditorElement>
 
-      <section {...sectionEdit("development")} id="development" className="development section dark">
-        <div className="development-grid"><div><div className="reveal"><Label editId="development.label">02 / {t.serviceLabel}</Label><Heading editId="development.heading" lines={t.development} /><p {...edit("development.description")} className="section-subtitle">{t.devSub}</p></div>
-          <div className="service-list">{services.map((service, i) => <div {...edit(`development.card.${service.editKey}`)} key={service.title} className={`service reveal ${activeService === i ? 'selected' : ''} ${expanded === i ? 'expanded' : ''}`} style={{ '--delay': `${i * 70}ms` }} onMouseEnter={() => setActiveService(i)}>
-            <button {...edit(`development.card.${service.editKey}.button`)} className="service-trigger" aria-expanded={expanded === i} aria-controls={`service-${i}`} onFocus={() => setActiveService(i)} onClick={() => { setActiveService(i); setExpanded(expanded === i ? null : i); }}><span className="service-number">0{i + 1}</span><span className="service-heading"><strong {...edit(`development.card.${service.editKey}.heading`)}>{lang === 'am' ? service.am : service.title}</strong><span {...edit(`development.card.${service.editKey}.description`)}>{service.description}</span></span><Arrow direction="right" /><span className="accordion-mark">{expanded === i ? '−' : '+'}</span></button>
-            <div className="service-expansion" id={`service-${i}`} aria-hidden={expanded !== i} inert={expanded !== i ? true : undefined}><div><p {...edit(`development.card.${service.editKey}.detail`)}>{service.detail}</p><img loading="lazy" src={img(service.image)} alt={service.imageLabel} /></div></div>
-          </div>)}</div>
-        </div><div className="service-visual reveal"><div className="service-visual-label"><span>{lang === 'am' ? services[activeService].am : services[activeService].title}</span><span>0{activeService + 1} / 04</span></div>{services.map((s, i) => <img loading="lazy" key={s.image} className={activeService === i ? 'active' : ''} src={img(s.image)} alt={activeService === i ? s.imageLabel : ''} />)}<span className="service-caption">{t.serviceCaption}</span></div></div>
-      </section>
+      <EditorElement as="section" {...sectionEdit("development")} id="development" className="development section dark">
+        <EditorElement as="div" {...edit("development.layout")} className="development-grid"><div><div className="reveal"><Label editId="development.label">02 / {t.serviceLabel}</Label><Heading editId="development.heading" lines={t.development} /><EditorElement as="p" {...edit("development.description")} className="section-subtitle">{t.devSub}</EditorElement></div>
+          <EditorElement as="div" {...edit("development.list")} className="service-list">{services.map((service, i) => <EditorElement as="div" {...edit(`development.card.${service.editKey}`)} key={service.title} className={`service reveal ${activeService === i ? 'selected' : ''} ${expanded === i ? 'expanded' : ''}`} style={{ '--delay': `${i * 70}ms` }} onMouseEnter={() => setActiveService(i)}>
+            <EditorElement as="button" {...edit(`development.card.${service.editKey}.button`)} className="service-trigger" aria-expanded={expanded === i} aria-controls={`service-${i}`} onFocus={() => setActiveService(i)} onClick={() => { setActiveService(i); setExpanded(expanded === i ? null : i); }}><span className="service-number">0{i + 1}</span><span className="service-heading"><EditorElement as="strong" {...edit(`development.card.${service.editKey}.heading`)}>{lang === 'am' ? service.am : service.title}</EditorElement><EditorElement as="span" {...edit(`development.card.${service.editKey}.description`)}>{service.description}</EditorElement></span><Arrow direction="right" /><span className="accordion-mark">{expanded === i ? '−' : '+'}</span></EditorElement>
+            <div className="service-expansion" id={`service-${i}`} aria-hidden={expanded !== i} inert={expanded !== i ? true : undefined}><div><EditorElement as="p" {...edit(`development.card.${service.editKey}.detail`)}>{service.detail}</EditorElement><EditorElement as="img" {...edit(`development.card.${service.editKey}.image`)} loading="lazy" src={img(service.image)} alt={service.imageLabel} /></div></div>
+          </EditorElement>)}</EditorElement>
+        </div><EditorElement as="div" {...edit("development.visual")} className="service-visual reveal"><div className="service-visual-label"><span>{lang === 'am' ? services[activeService].am : services[activeService].title}</span><span>0{activeService + 1} / 04</span></div>{services.map((s, i) => <EditorElement as="img" {...edit(`development.image.${s.editKey}`)} loading="lazy" key={s.image} className={activeService === i ? 'active' : ''} src={img(s.image)} alt={activeService === i ? s.imageLabel : ''} />)}<span className="service-caption">{t.serviceCaption}</span></EditorElement></EditorElement>
+      </EditorElement>
 
-      <section {...sectionEdit("packages")} id="packages" className="packages section light">
+      <EditorElement as="section" {...sectionEdit("packages")} id="packages" className="packages section light">
         <div className="section-top reveal"><div><Label editId="packages.label">03 / {t.packageLabel}</Label><Heading editId="packages.heading" lines={t.packages} /></div><Action editId="packages.compare" className="dark-button" onClick={() => openModal({ type: 'compare' })}>{t.compare}</Action></div>
-        <div className="package-grid">{packages.map((p, i) => <article {...edit(`packages.card.${p.editKey}`)} className={`package-card ${p.tone} reveal`} key={p.name} style={{ '--delay': `${i * 100}ms` }}>
-          {<img className="package-photo" loading="lazy" src={img(p.image)} alt="" />}
-          <div className="package-content"><span className="package-index">0{i + 1} /</span><h3 {...edit(`packages.card.${p.editKey}.heading`)}>{lang === 'am' ? p.am : p.name}</h3><p {...edit(`packages.card.${p.editKey}.description`)}>{p.description}</p><ul>{p.items.map(item => <li key={item}><span>↗</span>{item}</li>)}</ul><p {...edit(`packages.card.${p.editKey}.inheritance`)} className="package-inheritance">{p.inheritance}</p><div {...edit(`packages.card.${p.editKey}.price`)} className="package-price">{price(p)}<p>{t.area}</p><p className="area-caption">{t.referenceArea}</p></div><Action editId={`packages.card.${p.editKey}.button`} onClick={() => openModal({ type: 'package', index: i })}>{t.package}</Action></div>
-        </article>)}</div><p {...edit("packages.note")} className="pricing-note">{t.pricingNote}</p>
-      </section>
+        <EditorElement as="div" {...edit("packages.layout")} className="package-grid">{packages.map((p, i) => <EditorElement as="article" {...edit(`packages.card.${p.editKey}`)} className={`package-card ${p.tone} reveal`} key={p.name} style={{ '--delay': `${i * 100}ms` }}>
+          {<EditorElement as="img" {...edit(`packages.card.${p.editKey}.image`)} className="package-photo" loading="lazy" src={img(p.image)} alt="" />}
+          <div className="package-content"><span className="package-index">0{i + 1} /</span><EditorElement as="h3" {...edit(`packages.card.${p.editKey}.heading`)}>{lang === 'am' ? p.am : p.name}</EditorElement><EditorElement as="p" {...edit(`packages.card.${p.editKey}.description`)}>{p.description}</EditorElement><ul>{p.items.map(item => <li key={item}><span>↗</span>{item}</li>)}</ul><EditorElement as="p" {...edit(`packages.card.${p.editKey}.inheritance`)} className="package-inheritance">{p.inheritance}</EditorElement><EditorElement as="div" {...edit(`packages.card.${p.editKey}.price`)} className="package-price">{price(p)}<p>{t.area}</p><p className="area-caption">{t.referenceArea}</p></EditorElement><Action editId={`packages.card.${p.editKey}.button`} onClick={() => openModal({ type: 'package', index: i })}>{t.package}</Action></div>
+        </EditorElement>)}</EditorElement><EditorElement as="p" {...edit("packages.note")} className="pricing-note">{t.pricingNote}</EditorElement>
+      </EditorElement>
 
-      <section {...sectionEdit("projects")} id="projects" className="projects section dark">
-        <div className="section-top reveal"><div><Label editId="projects.label">04 / {t.projectLabel}</Label><Heading editId="projects.heading" lines={t.project} /></div><span {...edit("projects.note")} className="section-side-note">{t.portfolioNote}</span></div>
-        <div className="project-stage reveal" tabIndex="0" role="region" aria-roledescription="carousel" aria-label={t.projectLabel} onKeyDown={e => { if (e.key === 'ArrowLeft' || e.key === 'ArrowRight') { e.preventDefault(); changeProject(e.key === 'ArrowRight' ? 1 : -1); } }} onTouchStart={e => { swipeStart.current = e.touches[0].clientX; }} onTouchEnd={e => { const distance = e.changedTouches[0].clientX - swipeStart.current; if (Math.abs(distance) > 45) changeProject(distance < 0 ? 1 : -1); }}>
-          {projects.map((p, i) => <div className={`project-image ${project === i ? 'active' : ''}`} key={p.name}><img loading="lazy" src={img(p.image)} alt={project === i ? p.name : ''} /></div>)}
-          <div className="project-shade" /><div {...edit("projects.counter")} className="project-counter" aria-live="polite">0{project + 1}<span>/ 0{projects.length}</span></div>
-          <div {...edit(`projects.card.${current.editKey}`)} key={project} className="project-info"><p className="eyebrow">{t.selected}</p><h3 {...edit(`projects.card.${current.editKey}.heading`)} className="display">{current.name}</h3><p {...edit(`projects.card.${current.editKey}.category`)}>{current.category}</p><Action editId={`projects.card.${current.editKey}.button`} onClick={() => openModal({ type: 'project', index: project })}>{t.exploreProject}</Action></div>
-          <div className="project-nav"><button {...edit("projects.previous")} aria-label={t.previousProject} onClick={() => changeProject(-1)}><Arrow direction="left" /></button><button {...edit("projects.next")} aria-label={t.nextProject} onClick={() => changeProject(1)}><Arrow direction="right" /></button></div>
-          <span {...edit("projects.source")} className="project-source">{t.projectSource}</span>
-        </div>
-      </section>
+      <EditorElement as="section" {...sectionEdit("projects")} id="projects" className="projects section dark">
+        <div className="section-top reveal"><div><Label editId="projects.label">04 / {t.projectLabel}</Label><Heading editId="projects.heading" lines={t.project} /></div><EditorElement as="span" {...edit("projects.note")} className="section-side-note">{t.portfolioNote}</EditorElement></div>
+        <EditorElement as="div" {...edit("projects.viewport")} className="project-stage reveal" tabIndex="0" role="region" aria-roledescription="carousel" aria-label={t.projectLabel} onKeyDown={e => { if (e.key === 'ArrowLeft' || e.key === 'ArrowRight') { e.preventDefault(); changeProject(e.key === 'ArrowRight' ? 1 : -1); } }} onTouchStart={e => { swipeStart.current = e.touches[0].clientX; }} onTouchEnd={e => { const distance = e.changedTouches[0].clientX - swipeStart.current; if (Math.abs(distance) > 45) changeProject(distance < 0 ? 1 : -1); }}>
+          {projects.map((p, i) => <EditorElement as="div" {...edit(`projects.visual.${p.editKey}`)} className={`project-image ${project === i ? 'active' : ''}`} key={p.name}><EditorElement as="img" {...edit(`projects.visual.${p.editKey}.image`)} loading="lazy" src={img(p.image)} alt={project === i ? p.name : ''} /></EditorElement>)}
+          <EditorElement as="div" {...edit("projects.overlay")} className="project-shade" /><EditorElement as="div" {...edit("projects.counter")} className="project-counter" aria-live="polite">0{project + 1}<span>/ 0{projects.length}</span></EditorElement>
+          <EditorElement as="div" {...edit(`projects.card.${current.editKey}`)} key={project} className="project-info"><p className="eyebrow">{t.selected}</p><EditorElement as="h3" {...edit(`projects.card.${current.editKey}.heading`)} className="display">{current.name}</EditorElement><EditorElement as="p" {...edit(`projects.card.${current.editKey}.category`)}>{current.category}</EditorElement><Action editId={`projects.card.${current.editKey}.button`} onClick={() => openModal({ type: 'project', index: project })}>{t.exploreProject}</Action></EditorElement>
+          <div className="project-nav"><EditorElement as="button" {...edit("projects.previous")} aria-label={t.previousProject} onClick={() => changeProject(-1)}><Arrow direction="left" /></EditorElement><EditorElement as="button" {...edit("projects.next")} aria-label={t.nextProject} onClick={() => changeProject(1)}><Arrow direction="right" /></EditorElement></div>
+          <EditorElement as="span" {...edit("projects.source")} className="project-source">{t.projectSource}</EditorElement>
+        </EditorElement>
+      </EditorElement>
 
-      <section {...sectionEdit("process")} id="process" className="process section light" ref={timelineRef}>
+      <EditorElement as="section" {...sectionEdit("process")} id="process" className="process section light" ref={timelineRef}>
         <div className="reveal"><Label editId="process.label">05 / {t.processLabel}</Label><Heading editId="process.heading" lines={t.process} /></div>
-        <p {...edit("process.note")} className="process-note">{t.processNote}</p><div className="timeline"><div className="timeline-track"><span /></div>{stages.map(([title, text, amTitle, amText], i) => <div {...edit(`process.card.${semanticId(title)}`)} className="stage" key={title}><span className="stage-dot" /><div className="stage-content"><span className="stage-number">0{i + 1}</span><div><h3 {...edit(`process.card.${semanticId(title)}.heading`)}>{lang === 'am' ? amTitle : title}</h3><p {...edit(`process.card.${semanticId(title)}.description`)}>{lang === 'am' ? amText : text}</p></div></div></div>)}</div>
-      </section>
+        <EditorElement as="p" {...edit("process.note")} className="process-note">{t.processNote}</EditorElement><EditorElement as="div" {...edit("process.layout")} className="timeline"><div className="timeline-track"><span /></div>{stages.map(([title, text, amTitle, amText], i) => <EditorElement as="div" {...edit(`process.card.${semanticId(title)}`)} className="stage" key={title}><span className="stage-dot" /><div className="stage-content"><span className="stage-number">0{i + 1}</span><div><EditorElement as="h3" {...edit(`process.card.${semanticId(title)}.heading`)}>{lang === 'am' ? amTitle : title}</EditorElement><EditorElement as="p" {...edit(`process.card.${semanticId(title)}.description`)}>{lang === 'am' ? amText : text}</EditorElement></div></div></EditorElement>)}</EditorElement>
+      </EditorElement>
 
-      <section {...sectionEdit("expertise")} id="about" className="expertise section light">
-        <div className="expertise-grid"><div><div className="reveal"><Label editId="expertise.label">06 / {t.expertiseLabel}</Label><Heading editId="expertise.heading" lines={t.expertise} /><p {...edit("expertise.description")} className="expertise-description">{t.expertiseText}</p></div><div className="partners">{implementingCompanies.map(localize).map((company, i) => <div {...edit(`expertise.card.${company.editKey}`)} className="partner reveal" key={company.name} style={{ '--delay': `${i * 100}ms` }}><h3 {...edit(`expertise.card.${company.editKey}.heading`)} className={`partner-name partner-${i}`}>{company.name}</h3><p {...edit(`expertise.card.${company.editKey}.role`)} className="company-role">{company.role}</p><p {...edit(`expertise.card.${company.editKey}.description`)}>{company.description}</p></div>)}</div></div>
-        <figure className="partnership-photo reveal"><div className="image-clip"><img loading="lazy" src={news[0].image} alt={news[0].organization} /></div><figcaption><span className="evidence-date">{t.signed} <time dateTime={news[0].signed}>{date(news[0].signed)}</time></span><h3 {...edit("expertise.evidence.heading")}>{news[0].title}</h3><p {...edit("expertise.evidence.description")}>{news[0].description}</p><span className="evidence-date">{t.published} <time dateTime={news[0].published}>{date(news[0].published)}</time></span><a {...edit("expertise.article")} className="text-link" href={articleLink(news[0])} target="_blank" rel="noopener noreferrer">{t.article}<Arrow /></a></figcaption></figure></div>
-        <div {...sectionEdit("partners")} id="partners" className="partner-network reveal"><div className="network-top"><div><h3 {...edit("partners.heading")}>{t.network}</h3><p {...edit("partners.description")}>{t.networkText}</p></div><Action editId="partners.all" onClick={() => openModal({ type: 'partners' })}>{t.allPartners}</Action></div>{partnerGrid(false)}</div>
-      </section>
+      <EditorElement as="section" {...sectionEdit("expertise")} id="about" className="expertise section light">
+        <EditorElement as="div" {...edit("expertise.layout")} className="expertise-grid"><div><div className="reveal"><Label editId="expertise.label">06 / {t.expertiseLabel}</Label><Heading editId="expertise.heading" lines={t.expertise} /><EditorElement as="p" {...edit("expertise.description")} className="expertise-description">{t.expertiseText}</EditorElement></div><div className="partners">{implementingCompanies.map(localize).map((company, i) => <EditorElement as="div" {...edit(`expertise.card.${company.editKey}`)} className="partner reveal" key={company.name} style={{ '--delay': `${i * 100}ms` }}><EditorElement as="h3" {...edit(`expertise.card.${company.editKey}.heading`)} className={`partner-name partner-${i}`}>{company.name}</EditorElement><EditorElement as="p" {...edit(`expertise.card.${company.editKey}.role`)} className="company-role">{company.role}</EditorElement><EditorElement as="p" {...edit(`expertise.card.${company.editKey}.description`)}>{company.description}</EditorElement></EditorElement>)}</div></div>
+        <figure className="partnership-photo reveal"><EditorElement as="div" {...edit("expertise.imageContainer")} className="image-clip"><EditorElement as="img" {...edit("expertise.image")} loading="lazy" src={news[0].image} alt={news[0].organization} /></EditorElement><figcaption><span className="evidence-date">{t.signed} <time dateTime={news[0].signed}>{date(news[0].signed)}</time></span><EditorElement as="h3" {...edit("expertise.evidence.heading")}>{news[0].title}</EditorElement><EditorElement as="p" {...edit("expertise.evidence.description")}>{news[0].description}</EditorElement><span className="evidence-date">{t.published} <time dateTime={news[0].published}>{date(news[0].published)}</time></span><EditorElement as="a" {...edit("expertise.article")} className="text-link" href={articleLink(news[0])} target="_blank" rel="noopener noreferrer">{t.article}<Arrow /></EditorElement></figcaption></figure></EditorElement>
+        <EditorElement as="div" {...sectionEdit("partners")} id="partners" className="partner-network reveal"><div className="network-top"><div><EditorElement as="h3" {...edit("partners.heading")}>{t.network}</EditorElement><EditorElement as="p" {...edit("partners.description")}>{t.networkText}</EditorElement></div><Action editId="partners.all" onClick={() => openModal({ type: 'partners' })}>{t.allPartners}</Action></div>{partnerGrid(false)}</EditorElement>
+      </EditorElement>
 
-      <section {...sectionEdit("news")} id="news" className="news section light">
-        <div className="section-top reveal"><div><Label editId="news.label">07 / {t.newsLabel}</Label><Heading editId="news.heading" lines={t.newsTitle} /></div><p {...edit("news.description")} className="section-side-note">{t.newsIntro}</p></div>
-        <div className="news-media-grid"><div className="news-list">{news.slice(1).reverse().map(item => <article {...edit(`news.card.${item.slug}`)} className="news-item reveal" key={item.slug}><img loading="lazy" src={item.image} alt={item.organization} width="160" height="120" /><div><p className="evidence-date">{t.signed} <time dateTime={item.signed}>{date(item.signed)}</time></p><h3 {...edit(`news.card.${item.slug}.heading`)}>{item.title}</h3><p {...edit(`news.card.${item.slug}.description`)}>{item.description}</p><p className="evidence-date">{t.published} <time dateTime={item.published}>{date(item.published)}</time></p><a {...edit(`news.card.${item.slug}.button`)} className="text-link" href={articleLink(item)} target="_blank" rel="noopener noreferrer">{t.article}<Arrow /></a></div></article>)}</div>
-          <aside className="media-list reveal"><h3 {...edit("news.media.heading")}>{t.mediaTitle}</h3><p {...edit("news.media.description")}>{t.mediaLanguage}</p>{videos.map(video => <a {...edit(`news.video.${video.id}`)} key={video.id} href={`https://www.youtube.com/watch?v=${video.id}`} target="_blank" rel="noopener noreferrer"><span className="video-play" aria-hidden="true">▷</span><span><small>DIGNISI NEWS</small><strong {...edit(`news.video.${video.id}.heading`)}>{video.title}</strong><span>{t.watch} ↗</span></span></a>)}</aside>
-        </div>
-      </section>
+      <EditorElement as="section" {...sectionEdit("news")} id="news" className="news section light">
+        <div className="section-top reveal"><div><Label editId="news.label">07 / {t.newsLabel}</Label><Heading editId="news.heading" lines={t.newsTitle} /></div><EditorElement as="p" {...edit("news.description")} className="section-side-note">{t.newsIntro}</EditorElement></div>
+        <EditorElement as="div" {...edit("news.layout")} className="news-media-grid"><div className="news-list">{news.slice(1).reverse().map(item => <EditorElement as="article" {...edit(`news.card.${item.slug}`)} className="news-item reveal" key={item.slug}><EditorElement as="img" {...edit(`news.card.${item.slug}.image`)} loading="lazy" src={item.image} alt={item.organization} width="160" height="120" /><div><p className="evidence-date">{t.signed} <time dateTime={item.signed}>{date(item.signed)}</time></p><EditorElement as="h3" {...edit(`news.card.${item.slug}.heading`)}>{item.title}</EditorElement><EditorElement as="p" {...edit(`news.card.${item.slug}.description`)}>{item.description}</EditorElement><p className="evidence-date">{t.published} <time dateTime={item.published}>{date(item.published)}</time></p><EditorElement as="a" {...edit(`news.card.${item.slug}.button`)} className="text-link" href={articleLink(item)} target="_blank" rel="noopener noreferrer">{t.article}<Arrow /></EditorElement></div></EditorElement>)}</div>
+          <aside className="media-list reveal"><EditorElement as="h3" {...edit("news.media.heading")}>{t.mediaTitle}</EditorElement><EditorElement as="p" {...edit("news.media.description")}>{t.mediaLanguage}</EditorElement>{videos.map(video => <EditorElement as="a" {...edit(`news.video.${video.id}`)} key={video.id} href={`https://www.youtube.com/watch?v=${video.id}`} target="_blank" rel="noopener noreferrer"><span className="video-play" aria-hidden="true">▷</span><span><small>DIGNISI NEWS</small><EditorElement as="strong" {...edit(`news.video.${video.id}.heading`)}>{video.title}</EditorElement><span>{t.watch} ↗</span></span></EditorElement>)}</aside>
+        </EditorElement>
+      </EditorElement>
 
-      <section {...sectionEdit("cta")} id="conversation" className="final-cta light">
-        <div className="cta-content section">
+      <EditorElement as="section" {...sectionEdit("cta")} id="conversation" className="final-cta light">
+        <EditorElement as="div" {...edit("cta.content")} className="cta-content section">
           <div className="cta-heading reveal"><Label editId="cta.label">08 / {t.nextLabel}</Label><Heading editId="cta.heading" lines={t.cta} /></div>
-          <div className="cta-bottom reveal"><p {...edit("cta.description")}>{t.ctaText}</p><Action editId="cta.discuss" filled onClick={() => openModal({ type: 'contact' })}>{t.discuss}</Action><a {...edit("cta.email")} className="cta-email" href={`mailto:${contact.email}`}>{contact.email}<Arrow /></a></div>
-        </div>
-      </section>
+          <div className="cta-bottom reveal"><EditorElement as="p" {...edit("cta.description")}>{t.ctaText}</EditorElement><Action editId="cta.discuss" filled onClick={() => openModal({ type: 'contact' })}>{t.discuss}</Action><EditorElement as="a" {...edit("cta.email")} className="cta-email" href={`mailto:${contact.email}`}>{contact.email}<Arrow /></EditorElement></div>
+        </EditorElement>
+      </EditorElement>
     </main>
 
-    <footer {...sectionEdit("footer")} id="contact" className="footer dark"><div className="footer-top section"><div className="footer-brand reveal"><Logo label={t.logoHome} /><p {...edit("footer.tagline")}>{t.tagline}</p></div><nav className="footer-nav reveal" aria-label={t.footerNav}><span {...edit("footer.explore")} className="footer-label">{t.exploreFooter}</span>{navItems.map(item => navItem(item, false, 0, 'footer'))}</nav><div className="footer-contact reveal"><span {...edit("footer.conversation")} className="footer-label">{t.conversation}</span><a {...edit("footer.phone")} href={`tel:${contact.phoneHref}`}>{contact.phone}</a><a {...edit("footer.email")} href={`mailto:${contact.email}`}>{contact.email}<Arrow /></a><p {...edit("footer.location")}>{location}</p></div><button {...edit("footer.top")} className="back-top" aria-label={t.backTop} onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}><Arrow /></button></div><div {...edit("footer.wordmark")} className="footer-wordmark reveal" aria-hidden="true"><svg viewBox="0 -24 1440 256" fill="currentColor"><text x="20" y="175" fontSize="185" textLength="1400" lengthAdjust="spacingAndGlyphs">PROSPECT24</text></svg></div><div className="footer-legal"><span {...edit("footer.copyright")}>© {new Date().getFullYear()} Prospect24</span><span {...edit("footer.note")}>{t.prototype}</span><div><button {...edit("footer.privacy")} onClick={() => openModal({ type: 'privacy' })}>{t.privacy}</button><button {...edit("footer.terms")} onClick={() => openModal({ type: 'terms' })}>{t.terms}</button></div></div></footer>
+    <EditorElement as="footer" {...sectionEdit("footer")} id="contact" className="footer dark"><EditorElement as="div" {...edit("footer.layout")} className="footer-top section"><div className="footer-brand reveal"><Logo editId="footer.logo" label={t.logoHome} /><EditorElement as="p" {...edit("footer.tagline")}>{t.tagline}</EditorElement></div><nav className="footer-nav reveal" aria-label={t.footerNav}><EditorElement as="span" {...edit("footer.explore")} className="footer-label">{t.exploreFooter}</EditorElement>{navItems.map(item => navItem(item, false, 0, 'footer'))}</nav><div className="footer-contact reveal"><EditorElement as="span" {...edit("footer.conversation")} className="footer-label">{t.conversation}</EditorElement><EditorElement as="a" {...edit("footer.phone")} href={`tel:${contact.phoneHref}`}>{contact.phone}</EditorElement><EditorElement as="a" {...edit("footer.email")} href={`mailto:${contact.email}`}>{contact.email}<Arrow /></EditorElement><EditorElement as="p" {...edit("footer.location")}>{location}</EditorElement></div><EditorElement as="button" {...edit("footer.top")} className="back-top" aria-label={t.backTop} onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}><Arrow /></EditorElement></EditorElement><EditorElement as="div" {...edit("footer.wordmark")} className="footer-wordmark reveal" aria-hidden="true"><svg viewBox="0 -24 1440 256" fill="currentColor"><text x="20" y="175" fontSize="185" textLength="1400" lengthAdjust="spacingAndGlyphs">PROSPECT24</text></svg></EditorElement><div className="footer-legal"><EditorElement as="span" {...edit("footer.copyright")}>© {new Date().getFullYear()} Prospect24</EditorElement><EditorElement as="span" {...edit("footer.note")}>{t.prototype}</EditorElement><div><EditorElement as="button" {...edit("footer.privacy")} onClick={() => openModal({ type: 'privacy' })}>{t.privacy}</EditorElement><EditorElement as="button" {...edit("footer.terms")} onClick={() => openModal({ type: 'terms' })}>{t.terms}</EditorElement></div></div></EditorElement>
 
-    <dialog id="site-menu" ref={menuRef} className="mobile-menu" aria-label={t.siteNav} onCancel={e => { e.preventDefault(); closeMenu(); }}><div className="menu-header"><Logo label={t.logoHome} onClick={e => { e.preventDefault(); closeMenu('#home'); }} /><button className="close-button" aria-label={t.closeMenu} onClick={() => closeMenu()}>×</button></div><nav aria-label={t.siteNav}>{navItems.map((item, i) => navItem(item, true, i))}</nav><div className="menu-bottom">{languageButtons()}<a href={`tel:${contact.phoneHref}`}>{contact.phone}</a><a href={`mailto:${contact.email}`}>{contact.email}</a><p>{location}</p></div></dialog>
+    <dialog id="site-menu" ref={menuRef} className="mobile-menu" aria-label={t.siteNav} onCancel={e => { e.preventDefault(); closeMenu(); }}><div className="menu-header"><Logo editId="mobile.logo" label={t.logoHome} onClick={e => { e.preventDefault(); closeMenu('#home'); }} /><button className="close-button" aria-label={t.closeMenu} onClick={() => closeMenu()}>×</button></div><nav aria-label={t.siteNav}>{navItems.map((item, i) => navItem(item, true, i))}</nav><div className="menu-bottom">{languageButtons()}<a href={`tel:${contact.phoneHref}`}>{contact.phone}</a><a href={`mailto:${contact.email}`}>{contact.email}</a><p>{location}</p></div></dialog>
 
     <dialog ref={dialogRef} className={['modal', closing ? 'closing' : '', ['compare', 'partners'].includes(modal?.type) ? 'wide-modal' : ''].join(' ')} onCancel={e => { e.preventDefault(); closeModal(); }} onClick={e => { if (e.target === e.currentTarget) closeModal(); }} aria-labelledby="modal-title"><div className="modal-shell"><button className="close-button" autoFocus aria-label={t.closeDialog} onClick={closeModal}>×</button>
       {modal?.type === 'package' && (() => { const p = packages[modal.index]; return <><div className="modal-image"><img src={img(p.image)} alt="" /></div><div className="modal-body"><Label>{t.packageLabel} / 0{modal.index + 1}</Label><h2 id="modal-title" className="display">{lang === 'am' ? p.am : p.name}</h2><p>{p.detail}</p><p className="scope-inheritance">{p.inheritance}{modal.index > 0 && <>. {t.inherited}</>}</p><h3 className="scope-heading">{t.scopeTitle}</h3><div className="scope-groups">{p.scope.map(localize).map(group => <section key={group.title}><h4>{group.title}</h4><ul>{group.items.map(item => <li key={item}>{item}</li>)}</ul></section>)}</div><div className="modal-price">{price(p)}<span>{p.from ? t.startingPrice : t.fixedPrice} · {t.area}</span></div><p className="pricing-note">{t.pricingNote}</p><div className="modal-actions"><Action filled onClick={() => openModal({ type: 'contact', packageIndex: modal.index })}>{t.discuss}</Action><a className="text-link" href={officialUrl('investment-packages', lang)} target="_blank" rel="noopener noreferrer">{t.sourceScope}<Arrow /></a></div></div></>; })()}
