@@ -45,6 +45,18 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible,
 .text-link { font-size: 12px; min-height: 44px; }
 .eyebrow { font-size: 12px; }
 .hero-shade { background: linear-gradient(90deg, rgb(var(--overlay-rgb) / .78), rgb(var(--overlay-rgb) / .58) 55%, rgb(var(--overlay-rgb) / .2)), linear-gradient(0deg, rgb(var(--overlay-rgb) / .72), transparent 40%); }
+/* Keep the hero copy on the left guide shared with the scroll indicator. */
+@media (min-width: 601px) {
+  .hero-copy { left: 4.2%; width: 600px; }
+  .hero-title { font-size: clamp(56px, 5.4vw, 100px); }
+  html[lang=hy] .hero-title { font-size: clamp(32px, 3.5vw, 62px); }
+}
+@media (min-width: 851px) and (max-width: 1100px) {
+  .hero-title { font-size: 6.4vw; }
+}
+@media (min-width: 601px) and (max-width: 850px) {
+  .hero-title { font-size: 8.3vw; }
+}
 .hero-description { color: #f0f1ec; font-size: 14px; }
 .hero-buttons .action { font-size: 12px; }
 .hero-buttons .action:not(.filled) { background: #141615; border-color: #d7d9d1; }

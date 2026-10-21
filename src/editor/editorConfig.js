@@ -45,7 +45,7 @@ sections.forEach((section) =>
   add(`${section.id}.section`, "section", section.label),
 );
 const textTargets = {
-  hero: ["heading", "tagline", "description", "perspective", "note"],
+  hero: ["heading", "tagline", "description"],
   intro: ["label", "heading", "subheading", "description", "caption"],
   development: ["label", "heading", "description"],
   packages: ["label", "heading", "note"],

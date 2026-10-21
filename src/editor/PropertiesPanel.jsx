@@ -599,7 +599,7 @@ export function PropertiesPanel({ id, onClose }) {
                 }
               />
             </div>
-            {["labels", "divider"].map((key) => (
+            {["divider"].map((key) => (
               <label className="p24-check" key={key}>
                 <input
                   type="checkbox"
@@ -610,9 +610,7 @@ export function PropertiesPanel({ id, onClose }) {
                     commit();
                   }}
                 />
-                {key === "labels"
-                  ? "Show before / after labels"
-                  : "Show divider while editing"}
+                Show divider while editing
               </label>
             ))}
             <button

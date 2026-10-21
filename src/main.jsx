@@ -155,8 +155,7 @@ function App() {
         <div className="compare-divider" style={{ left: `${split}%` }}>
           <div className="compare-handle" role="slider" tabIndex="0" aria-label={t.slider} aria-valuemin="4" aria-valuemax="96" aria-valuenow={Math.round(split)} aria-valuetext={`${Math.round(split)}% ${t.beforeValue}`} onPointerDown={e => { e.preventDefault(); touched.current = true; drag.current = true; e.currentTarget.setPointerCapture(e.pointerId); e.currentTarget.focus(); }} onPointerMove={e => { if (drag.current) setPosition(e); }} onPointerUp={() => { drag.current = false; }} onPointerCancel={() => { drag.current = false; }} onKeyDown={e => { const keys = ['ArrowLeft', 'ArrowRight', 'Home', 'End']; if (keys.includes(e.key)) { e.preventDefault(); touched.current = true; setSplit(v => e.key === 'Home' ? 4 : e.key === 'End' ? 96 : Math.max(4, Math.min(96, v + (e.key === 'ArrowRight' ? 2 : -2)))); } }}><span>‹</span><span>›</span></div>
         </div>
-        <div className="comparison-labels"><span>{t.before}</span><span>{t.after}</span></div>
-        <div className="hero-bottom"><EditorElement as="a" {...edit("hero.scroll")} href="#approach" className="scroll-hint"><span /> {t.scroll}</EditorElement><EditorElement as="span" {...edit("hero.perspective")}>{t.perspective}</EditorElement><EditorElement as="span" {...edit("hero.note")} className="visual-note">{t.illustrative}</EditorElement></div>
+        <div className="hero-bottom"><EditorElement as="a" {...edit("hero.scroll")} href="#approach" className="scroll-hint"><span /> {t.scroll}</EditorElement></div>
       </EditorElement>
 
       <EditorElement as="section" {...sectionEdit("intro")} id="approach" className="intro section light">
