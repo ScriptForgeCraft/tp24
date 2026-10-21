@@ -1,0 +1,136 @@
+import { chromium } from "playwright";
+import assert from "node:assert/strict";
+import fs from "node:fs/promises";
+
+const browser = await chromium.launch({ channel: "chrome", headless: true });
+const page = await browser.newPage({ viewport: { width: 1600, height: 1000 }, reducedMotion: "reduce" });
+const url = process.env.PREVIEW_URL || "http://localhost:5173/";
+const errors = [];
+page.on("pageerror", error => errors.push(error.message));
+let frame;
+const toolbar = name => page.locator(".p24-toolbar").getByRole("button", { name, exact: true });
+const target = id => frame.locator(`[data-edit-id="${id}"]`);
+async function canvas() {
+  await page.waitForFunction(() => document.querySelector("iframe")?.contentDocument?.querySelector('[data-edit-id="news.layout"]'));
+  frame = page.frames().find(f => f.url().includes("editorCanvas=1"));
+}
+async function select(id) {
+  await toolbar("Layers").click();
+  await page.locator(`[data-layer-id="${id}"]`).click();
+  await page.locator(".p24-properties").waitFor();
+}
+async function number(label, value) {
+  await page.getByLabel(label, { exact: true }).fill(String(value));
+  await page.getByLabel(label, { exact: true }).blur();
+}
+async function size(id) { return target(id).evaluate(el => ({ width: el.offsetWidth, height: el.offsetHeight })); }
+const check = (name, value) => { assert.ok(value, name); console.log("PASS", name); };
+try {
+  await page.goto(`${url}?editor=1`);
+  await canvas();
+  const card = "packages.card.investment-package";
+  await select(card);
+  await number("Darkening strength value", 0);
+  await page.waitForFunction(id => getComputedStyle(document.querySelector("iframe").contentDocument.querySelector(`[data-edit-id="${id}"]`), "::after").opacity === "0", card);
+  check("Card darkening can be removed without fading its text", await target(`${card}.heading`).evaluate(el => getComputedStyle(el).opacity === "1"));
+  await page.getByLabel("Overlay color hex", { exact: true }).fill("#142536");
+  await page.getByLabel("Overlay color hex", { exact: true }).blur();
+  await number("Darkening strength value", 45);
+  await toolbar("Preview").click();
+  check("Preview uses the chosen overlay color and strength", await target(card).evaluate(el => {
+    const style = getComputedStyle(el, "::after");
+    return style.backgroundColor === "rgb(20, 37, 54)" && style.opacity === "0.45";
+  }));
+  await toolbar("Return to editing").click();
+  await toolbar("Layers").click();
+  const imageID = await page.locator('[data-layer-id^="news.card."][data-layer-id$=".image"]').first().getAttribute("data-layer-id");
+  const newsCard = imageID.slice(0, -6);
+  await select(imageID);
+  await page.getByLabel("Lock aspect ratio", { exact: true }).uncheck();
+  await number("Width", 260);
+  await number("Height", 320);
+  check("News photo width and height can grow past its original column", (await size(imageID)).width === 260 && (await size(imageID)).height === 320);
+  check("News copy moves with the resized photo", await target(imageID).evaluate(el => el.nextElementSibling.getBoundingClientRect().left >= el.getBoundingClientRect().right));
+  await page.getByLabel("Width", { exact: true }).fill("");
+  check("Dimension input can be cleared while typing", await page.getByLabel("Width", { exact: true }).inputValue() === "");
+  await number("Width", 200);
+  await page.getByLabel("Lock aspect ratio", { exact: true }).check();
+  await number("Width", 250);
+  check("Locked dimensions retain the photo ratio", Math.abs((await size(imageID)).height - 400) <= 1);
+  await toolbar("Undo").click();
+  check("One undo restores both dimensions", (await size(imageID)).width === 200 && (await size(imageID)).height === 320);
+  await page.waitForTimeout(100);
+  const handle = await frame.getByRole("button", { name: "Resize width", exact: true }).boundingBox();
+  await page.mouse.move(handle.x + handle.width / 2, handle.y + handle.height / 2);
+  await page.mouse.down();
+  await page.mouse.move(handle.x + handle.width / 2 + 40, handle.y + handle.height / 2, { steps: 6 });
+  await page.mouse.up();
+  check("Dragging the width handle grows the news grid track", (await size(imageID)).width > 230);
+  await toolbar("Undo").click();
+  await page.waitForTimeout(100);
+  const cancelHandle = await frame.getByRole("button", { name: "Resize width", exact: true }).boundingBox();
+  await page.mouse.move(cancelHandle.x + 3, cancelHandle.y + 3);
+  await page.mouse.down();
+  await page.mouse.move(cancelHandle.x + 50, cancelHandle.y + 3, { steps: 5 });
+  await page.keyboard.press("Escape");
+  await page.mouse.up();
+  check("Escape cancels the whole resize", (await size(imageID)).width === 200 && (await size(imageID)).height === 320);
+  const heading = `${newsCard}.heading`;
+  await select(heading);
+  await page.getByRole("button", { name: "Delete element", exact: true }).click();
+  await target(heading).waitFor({ state: "hidden" });
+  check("Deleting a nested heading leaves its photo and card", await target(imageID).isVisible() && await target(newsCard).isVisible());
+  await toolbar("Undo").click();
+  await target(heading).waitFor({ state: "visible" });
+  await toolbar("Redo").click();
+  await target(heading).waitFor({ state: "hidden" });
+  await page.waitForTimeout(400);
+  await page.reload();
+  await canvas();
+  await target(heading).waitFor({ state: "hidden" });
+  await select(card);
+  check("Darkening survives reload", await page.getByLabel("Darkening strength value", { exact: true }).inputValue() === "45");
+  await toolbar("Layers").click();
+  await page.locator(`[data-layer-id="${heading}"]`).locator("..").getByRole("button", { name: /^Restore element:/ }).click();
+  await target(heading).waitFor({ state: "visible" });
+  check("Deleted elements can be restored from Layers after reload", true);
+  await select(imageID);
+  await fs.mkdir("output/editor-controls", { recursive: true });
+  await page.screenshot({ path: "output/editor-controls/news-resize.png" });
+  const downloadEvent = page.waitForEvent("download");
+  await page.getByRole("button", { name: "Settings JSON", exact: true }).click();
+  const download = await downloadEvent;
+  const settings = JSON.parse(await fs.readFile(await download.path(), "utf8"));
+  check("New settings export uses a versioned, validated format", settings.version === 3 && settings.overrides[card].overlayOpacity === 0.45);
+  await page.getByRole("button", { name: "Delete element", exact: true }).click();
+  await target(imageID).waitFor({ state: "hidden" });
+  check("Deleting a news photo also removes its grid track", await target(newsCard).evaluate(el => getComputedStyle(el).gridTemplateColumns.split(" ").length === 1));
+  await toolbar("Undo").click();
+  await target(imageID).waitFor({ state: "visible" });
+  await select(imageID);
+  await toolbar("Mobile").click();
+  await page.getByLabel("Lock aspect ratio", { exact: true }).uncheck();
+  await number("Width", 120);
+  check("Mobile photo width overrides desktop", (await size(imageID)).width === 120);
+  await toolbar("Desktop").click();
+  check("Desktop photo width survives mobile edits", (await size(imageID)).width === 200);
+  await select(`${card}.description`);
+  await page.getByRole("button", { name: "Delete element", exact: true }).click();
+  const deletedDownloadEvent = page.waitForEvent("download");
+  await page.getByRole("button", { name: "Settings JSON", exact: true }).click();
+  const deletedDownload = await deletedDownloadEvent;
+  const deletedFile = await fs.readFile(await deletedDownload.path());
+  await toolbar("Undo").click();
+  await target(`${card}.description`).waitFor({ state: "visible" });
+  await page.getByLabel("Import design file").setInputFiles({ name: "controls.json", mimeType: "application/json", buffer: deletedFile });
+  await target(`${card}.description`).waitFor({ state: "hidden" });
+  check("Settings import preserves deleted elements and overlay controls", await target(card).evaluate(el => getComputedStyle(el, "::after").opacity === "0.45"));
+  await toolbar("Layers").click();
+  await page.locator(`[data-layer-id="${card}"]`).click();
+  await page.getByRole("button", { name: "Reset Section", exact: true }).click();
+  await target(`${card}.description`).waitFor({ state: "visible" });
+  check("Section reset restores deleted descendants", true);
+  check("No browser runtime errors", errors.length === 0);
+} finally {
+  await browser.close();
+}

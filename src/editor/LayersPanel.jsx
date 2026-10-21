@@ -4,7 +4,7 @@ import { useEditor } from "./EditorProvider";
 import { targets } from "./editorConfig";
 export function LayersPanel() {
   const t = useUi();
-  const { tree, selected, select, frameRef } = useEditor();
+  const { tree, selected, select, frameRef, design, setRemoved } = useEditor();
   const pick = (id) => {
     select(id);
     frameRef.current?.contentWindow?.postMessage(
@@ -19,6 +19,11 @@ export function LayersPanel() {
         const children = tree.some((c) => c.parent === layer.id);
         return (
           <div className="p24-layer-branch" key={layer.id}>
+            {design.removed?.[layer.id] && (
+              <button className="p24-restore-layer" aria-label={`${t("Restore element")}: ${t(targets[layer.id]?.label, layer.id)}`} onClick={() => setRemoved(layer.id, false)}>
+                ↶ {t("Restore element")}
+              </button>
+            )}
             {children ? (
               <details open>
                 <summary>

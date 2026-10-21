@@ -96,6 +96,9 @@ export function CanvasEditing() {
       } else if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === "z") {
         e.preventDefault();
         e.shiftKey ? api.current.redo() : api.current.undo();
+      } else if (["Delete", "Backspace"].includes(e.key) && api.current.selected) {
+        e.preventDefault();
+        api.current.setRemoved(api.current.selected, true);
       } else if (!ui(e.target)) {
         if (["Enter", " "].includes(e.key)) click(e);
         else if (
@@ -179,25 +182,30 @@ function Outline({ id, selected }) {
       start = {
         x: event.clientX,
         y: event.clientY,
-        width: target.getBoundingClientRect().width,
-        height: target.getBoundingClientRect().height,
+        width: target.offsetWidth,
+        height: target.offsetHeight,
+        scaleX: target.getBoundingClientRect().width / target.offsetWidth || 1,
+        scaleY: target.getBoundingClientRect().height / target.offsetHeight || 1,
       };
     const handle = event.currentTarget,
       pointer = event.pointerId;
     handle.focus({ preventScroll: true });
     handle.setPointerCapture(pointer);
     document.documentElement.classList.add("p24-resizing");
-    const locked = editor.design.locks?.[id] ?? targets[id].kind === "image";
+    const locked = (editor.design.locks?.[id] ?? targets[id].kind === "image") && start.width > 0 && start.height > 0;
     const ratio = start.width / start.height;
     let pending, frame;
     const apply = () => {
       if (!pending) return;
       const { x, y } = pending;
-      let width = Math.max(24, Math.min(5000, start.width + x - start.x)),
-        height = Math.max(24, Math.min(5000, start.height + y - start.y));
+      let width = Math.max(24, Math.min(5000, start.width + (x - start.x) / start.scaleX)),
+        height = Math.max(24, Math.min(5000, start.height + (y - start.y) / start.scaleY));
       if (locked) {
-        if (axis === "y") width = height * ratio;
+        if (axis === "y" || (axis === "xy" && Math.abs(height / start.height - 1) > Math.abs(width / start.width - 1))) width = height * ratio;
         else height = width / ratio;
+        const factor = Math.min(1, 5000 / width, 5000 / height);
+        width *= factor;
+        height *= factor;
       }
       const scope = editor.device;
       if (axis !== "y" || locked)
@@ -229,13 +237,17 @@ function Outline({ id, selected }) {
       pending = { x: e.clientX, y: e.clientY };
       if (!frame) frame = requestAnimationFrame(apply);
     };
+    let finished = false;
     const finish = (cancel) => {
+      if (finished) return;
+      finished = true;
       ignoreClicksUntil = performance.now() + 250;
       if (frame) cancelAnimationFrame(frame);
       if (!cancel) apply();
       handle.removeEventListener("pointermove", move);
       handle.removeEventListener("pointerup", up);
       handle.removeEventListener("pointercancel", abort);
+      handle.removeEventListener("lostpointercapture", abort);
       document.removeEventListener("keydown", key, true);
       if (handle.hasPointerCapture(pointer))
         handle.releasePointerCapture(pointer);
@@ -256,6 +268,7 @@ function Outline({ id, selected }) {
     handle.addEventListener("pointermove", move);
     handle.addEventListener("pointerup", up);
     handle.addEventListener("pointercancel", abort);
+    handle.addEventListener("lostpointercapture", abort);
     document.addEventListener("keydown", key, true);
   };
   return (

@@ -1,5 +1,5 @@
 import { useUi } from "../localization";
-import React, { useEffect, useLayoutEffect, useState } from "react";
+import React, { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { useEditor, elementSelector } from "./EditorProvider";
 import {
   targets,
@@ -35,6 +35,11 @@ export function PropertiesPanel({ id, onClose }) {
     { design, device, lang, frameRef, updateStyle, select, commit, tree } =
       editor,
     target = targets[id];
+  const overlayOwner = id.startsWith("packages.card.")
+    ? target.kind === "card" ? id : target.kind === "image" ? id.slice(0, -6) : null
+    : null;
+  const dimensionGesture = useRef(null);
+  const [dimensionDraft, setDimensionDraft] = useState({});
   const [computed, setComputed] = useState({}),
     [ancestors, setAncestors] = useState([]),
     [overflow, setOverflow] = useState(false),
@@ -80,6 +85,14 @@ export function PropertiesPanel({ id, onClose }) {
     next.objectPositionX = parseFloat(pos[0]) || 50;
     next.objectPositionY = parseFloat(pos[1]) || 50;
     next.zoom = 1;
+    if (overlayOwner) {
+      const owner = el.ownerDocument.querySelector(elementSelector(overlayOwner));
+      const overlay = win.getComputedStyle(owner, "::after");
+      next.overlayColor = overlay.backgroundColor === "rgba(0, 0, 0, 0)"
+        ? "#141615" : overlay.backgroundColor;
+      const alpha = overlay.backgroundColor.match(/^rgba\([^,]+,[^,]+,[^,]+,\s*([\d.]+)\)$/)?.[1];
+      next.overlayOpacity = Number(overlay.opacity) * (alpha === undefined || Number(alpha) === 0 ? 1 : Number(alpha));
+    }
     next.lineHeight =
       style.lineHeight === "normal"
         ? 1.5
@@ -115,14 +128,20 @@ export function PropertiesPanel({ id, onClose }) {
     device === "base" || !responsiveKeys.includes(key)
       ? design.overrides
       : design.responsive[device];
-  const changed = (key) => Object.hasOwn(currentMap(key)[id] || {}, key);
-  const value = (key) => styles[key] ?? computed[key];
+  const propertyOwner = (key) => key.startsWith("overlay") ? overlayOwner : id;
+  const changed = (key) => Object.hasOwn(currentMap(key)[propertyOwner(key)] || {}, key);
+  const value = (key) => (key.startsWith("overlay")
+    ? design.overrides[overlayOwner]?.[key] : styles[key]) ?? computed[key];
   function set(key, v) {
-    updateStyle(id, key, v);
+    if (key === "overlayOpacity" && !changed("overlayColor"))
+      updateStyle(overlayOwner, "overlayColor", hex(value("overlayColor")));
+    if (key === "overlayColor" && !changed("overlayOpacity"))
+      updateStyle(overlayOwner, "overlayOpacity", Number(value("overlayOpacity")));
+    updateStyle(propertyOwner(key), key, v);
   }
   function reset(key) {
     commit();
-    updateStyle(id, key, null, false);
+    updateStyle(propertyOwner(key), key, null, false);
   }
   const resetButton = (key) =>
     changed(key) && (
@@ -158,6 +177,7 @@ export function PropertiesPanel({ id, onClose }) {
               key,
               [
                 "opacity",
+                "overlayOpacity",
                 "zoom",
                 "objectPositionX",
                 "objectPositionY",
@@ -275,10 +295,19 @@ export function PropertiesPanel({ id, onClose }) {
           disabled={unit === "auto"}
           min="0"
           max={unit === "px" ? 5000 : 100}
-          value={unit === "auto" ? "" : Math.round(number * 100) / 100}
+          value={dimensionDraft[key] ?? (unit === "auto" ? "" : Math.round(number * 100) / 100)}
           placeholder={t("Auto")}
-          {...inputEvents}
+          onFocus={() => {
+            commit();
+            dimensionGesture.current = parseFloat(computed.width) / parseFloat(computed.height);
+          }}
+          onBlur={() => {
+            setDimensionDraft({});
+            dimensionGesture.current = null;
+            commit();
+          }}
           onChange={(e) => {
+            setDimensionDraft({ [key]: e.target.value });
             if (e.target.value === "") return;
             const n = Math.max(
               0,
@@ -290,8 +319,7 @@ export function PropertiesPanel({ id, onClose }) {
               ["width", "height"].includes(key) &&
               unit === "px"
             ) {
-              const ratio =
-                parseFloat(computed.width) / parseFloat(computed.height);
+              const ratio = dimensionGesture.current;
               if (ratio > 0 && Number.isFinite(ratio))
                 set(
                   key === "width" ? "height" : "width",
@@ -420,6 +448,11 @@ export function PropertiesPanel({ id, onClose }) {
           ? t("Base values apply to every screen unless overridden.")
           : t(`${title(device)} changes override inherited sizes and spacing. Colors stay global.`)}
       </p>
+      <div className="p24-inline-buttons">
+        <button onClick={() => editor.setRemoved(id, !design.removed?.[id])}>
+          {t(design.removed?.[id] ? "Restore element" : "Delete element")}
+        </button>
+      </div>
       {target.textEditable &&
         group(
           t("Text"),
@@ -469,6 +502,14 @@ export function PropertiesPanel({ id, onClose }) {
           true,
         )}
       {imageIDs.length > 0 && <ImageSourceControls key={id} ids={imageIDs} owner={id} />}
+      {overlayOwner && group(
+        t("Image darkening"),
+        <>
+          {color("overlayColor", t("Overlay color"))}
+          {range("overlayOpacity", t("Darkening strength"), 0, 1, 0.01, 100)}
+        </>,
+        true,
+      )}
       {id.startsWith("hero.") &&
         ["section", "image", "overlay", "container"].includes(target.kind) &&
         group(
@@ -623,7 +664,7 @@ export function PropertiesPanel({ id, onClose }) {
               <p className="p24-hint">{t("Use Minimum height to give content room to grow. Auto height preserves the content flow.")}</p>
             )}
             {target.kind === "card" && (
-              <p className="p24-hint">{t("Width stays within its grid column. Select the parent layout to change columns.")}</p>
+              <p className="p24-hint">{t("Select the parent layout to adjust columns and spacing around this card.")}</p>
             )}
             {id.startsWith("hero.") && target.kind === "image" && (
               <p className="p24-hint">{t("Both images share the Hero viewport. Use viewport dimensions to resize the comparison together.")}</p>

@@ -11,7 +11,7 @@ import {
 } from "../data.js";
 
 export const STORAGE_KEY = "prospect24-client-editor-v1";
-export const VERSION = 2;
+export const VERSION = 3;
 export const semanticId = (value) =>
   value
     .toLowerCase()
@@ -315,6 +315,8 @@ export const globalKeys = [
   "borderRadius",
   "boxShadow",
   "opacity",
+  "overlayColor",
+  "overlayOpacity",
 ];
 export const responsiveKeys = [
   ...dimensionKeys,
@@ -368,6 +370,7 @@ export function sectionEdit(id) {
 export const emptyDesign = () => ({
   version: VERSION,
   visibility: {},
+  removed: {},
   overrides: {},
   responsive: { tablet: {}, mobile: {} },
   images: {},
@@ -379,13 +382,14 @@ const record = (v) => v !== null && typeof v === "object" && !Array.isArray(v);
 export function validateProperty(key, value) {
   if (!allowedKeys.includes(key))
     throw new Error(`Unsupported property: ${key}.`);
-  if (["color", "backgroundColor", "borderColor"].includes(key))
+  if (["color", "backgroundColor", "borderColor", "overlayColor"].includes(key))
     return typeof value === "string" && /^#[\da-f]{6}$/i.test(value);
   if (choices[key]) return choices[key].includes(value);
   if (key === "boxShadow") return Object.values(shadows).includes(value);
   if (
     [
       "opacity",
+      "overlayOpacity",
       "objectPositionX",
       "objectPositionY",
       "zoom",
@@ -397,7 +401,7 @@ export function validateProperty(key, value) {
       Number.isFinite(value) &&
       value >= (key === "zoom" ? 1 : 0) &&
       value <=
-        (key === "opacity"
+        (["opacity", "overlayOpacity"].includes(key)
           ? 1
           : key === "zoom"
             ? 3
@@ -419,7 +423,7 @@ export function validateProperty(key, value) {
   return Math.abs(n) <= (unit === "px" ? 5000 : 100);
 }
 export function validateDesign(input) {
-  if (!record(input) || ![1, 2].includes(input.version))
+  if (!record(input) || ![1, 2, 3].includes(input.version))
     throw new Error("Unsupported design version.");
   const result = emptyDesign();
   const readMap = (map, out, scope) => {
@@ -441,6 +445,14 @@ export function validateDesign(input) {
     }
   };
   readMap(input.overrides, result.overrides);
+  if (input.removed !== undefined) {
+    if (!record(input.removed)) throw new Error("Invalid removed elements.");
+    for (const [id, value] of Object.entries(input.removed)) {
+      if (!Object.hasOwn(targets, id) || typeof value !== "boolean")
+        throw new Error("Invalid removed element.");
+      if (value) result.removed[id] = true;
+    }
+  }
   if (input.visibility !== undefined) {
     if (!record(input.visibility))
       throw new Error("Invalid section visibility.");
@@ -513,8 +525,8 @@ export function loadDesign(storage) {
 }
 export const isSectionHidden = (design, section) =>
   section &&
-  (design.visibility[section.id] === false ||
-    (section.parent && design.visibility[section.parent] === false));
+  (design.visibility[section.id] === false || design.removed?.[`${section.id}.section`] ||
+    (section.parent && (design.visibility[section.parent] === false || design.removed?.[`${section.parent}.section`])));
 const kebab = (name) => name.replace(/[A-Z]/g, (c) => `-${c.toLowerCase()}`);
 export function designCSS(design) {
   const rules = sections
@@ -530,7 +542,9 @@ export function designCSS(design) {
         let body = "",
           extra = "";
         for (const [key, v] of Object.entries(styles)) {
-          if (["objectPositionX", "objectPositionY", "zoom"].includes(key)) {
+          if (["overlayColor", "overlayOpacity"].includes(key)) {
+            continue;
+          } else if (["objectPositionX", "objectPositionY", "zoom"].includes(key)) {
             body +=
               key === "zoom"
                 ? `scale:${v}!important;`
@@ -552,6 +566,13 @@ export function designCSS(design) {
         }
         if (parseFloat(styles.borderWidth) > 0)
           body += "border-style:solid!important;";
+        if (id.startsWith("packages.card.") && targets[id].kind === "card") {
+          const overlay = [
+            styles.overlayColor !== undefined ? `background:${styles.overlayColor}!important;` : "",
+            styles.overlayOpacity !== undefined ? `opacity:${styles.overlayOpacity}!important;` : "",
+          ].join("");
+          if (overlay) extra += `${sel}::after{${overlay}}`;
+        }
         if (styles.width || styles.height)
           extra += `${sel}:is(span,strong,small){display:inline-block!important}`;
         // Content-bearing elements expand rather than clipping a client's copy.
@@ -568,18 +589,19 @@ export function designCSS(design) {
           (styles.height || styles.maxHeight)
         )
           body += "overflow:visible!important;";
-        if (
-          styles.width &&
-          [
-            "card",
-            "text",
-            "button",
-            "section",
-            "container",
-            "navigation",
-          ].includes(targets[id].kind)
-        )
-          body += "min-width:0;max-width:100%;flex-shrink:0;";
+        if (styles.width && styles.width !== "auto") {
+          if (!styles.minWidth) body += "min-width:0!important;";
+          if (!styles.maxWidth) body += "max-width:none!important;";
+          body += "flex-basis:auto!important;flex-shrink:0!important;";
+          // News thumbnails occupy a fixed grid track in the original layout.
+          // Resize that track with the photo so copy moves out of its way.
+          if (id.startsWith("news.card.") && targets[id].kind === "image")
+            extra += `[data-edit-id="${id.slice(0, -6)}"]{grid-template-columns:minmax(0,${styles.width}) minmax(0,1fr)!important}`;
+        }
+        if (styles.height && styles.height !== "auto") {
+          if (!styles.minHeight) body += "min-height:0!important;";
+          if (!styles.maxHeight) body += "max-height:none!important;";
+        }
         return `${sel}{${body}}${extra}`;
       })
       .join("\n");
@@ -592,5 +614,13 @@ export function designCSS(design) {
     rules.push(".comparison-labels{display:none!important}");
   if (design.comparison.divider === false)
     rules.push(".p24-editing .compare-divider{visibility:hidden!important}");
+  for (const [id, removed] of Object.entries(design.removed || {})) {
+    if (!removed) continue;
+    rules.push(`:root [data-edit-id="${id}"]{display:none!important}`);
+    if (id.startsWith("news.card.") && targets[id].kind === "image") {
+      const card = `[data-edit-id="${id.slice(0, -6)}"]`;
+      rules.push(`${card}{grid-template-columns:minmax(0,1fr)!important}${card}>div>*{grid-column:1/-1!important}`);
+    }
+  }
   return rules.join("\n");
 }

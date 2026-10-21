@@ -217,6 +217,7 @@ function CanvasProvider({ children }) {
       remote("style", { id, key, value, continuous, scope }),
     cancelResize: () => remote("cancelResize"),
     setVisibility: (id, visible) => remote("visibility", { id, visible }),
+    setRemoved: (id, removed) => remote("removed", { id, removed }),
     undo: () => remote("undo"),
     redo: () => remote("redo"),
   };
@@ -349,6 +350,18 @@ function HostProvider({ children }) {
       `${sections.find((s) => s.id === id)?.label} ${visible ? "restored" : "hidden"}.`,
     );
   };
+  const setRemoved = (id, removed) => {
+    if (!Object.hasOwn(targets, id)) return;
+    commit();
+    change((current) => {
+      const next = { ...current, removed: { ...current.removed } };
+      if (removed) next.removed[id] = true;
+      else delete next.removed[id];
+      return next;
+    });
+    setSelected(null);
+    setNotice(removed ? "Element deleted. Undo or restore it from Layers." : "Element restored.");
+  };
   function resetElement(id, section = false) {
     commit();
     change((current) => {
@@ -369,6 +382,7 @@ function HostProvider({ children }) {
         next.texts.en,
         next.texts.am,
         next.locks,
+        next.removed,
       ])
         Object.keys(map)
           .filter(match)
@@ -511,7 +525,7 @@ function HostProvider({ children }) {
       location.origin,
     );
   }, [design, mode, selected, device, assetURLs, ready]);
-  apiRef.current = { select, setMode, updateStyle, setVisibility, commit };
+  apiRef.current = { select, setMode, updateStyle, setVisibility, setRemoved, commit };
   useEffect(() => {
     const receive = (e) => {
       if (
@@ -530,6 +544,7 @@ function HostProvider({ children }) {
       else if (d.type === "style")
         api.updateStyle(d.id, d.key, d.value, d.continuous, d.scope);
       else if (d.type === "visibility") api.setVisibility(d.id, d.visible);
+      else if (d.type === "removed") api.setRemoved(d.id, d.removed);
       else if (d.type === "mode") api.setMode(d.mode);
       else if (d.type === "commit") api.commit();
       else if (["undo", "redo", "cancelResize"].includes(d.type))
@@ -574,6 +589,7 @@ function HostProvider({ children }) {
     updateText,
     comparison,
     setVisibility,
+    setRemoved,
     resetElement,
     uploadImage,
     frameRef,

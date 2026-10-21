@@ -16,6 +16,7 @@
     "test:preview-build": "node scripts/verify-preview-build.mjs",
     "test:preview-motion": "node scripts/verify-preview-motion.mjs",
     "test:editor": "node scripts/verify-editor.mjs",
+    "test:editor-controls": "node scripts/verify-editor-controls.mjs",
     "test:armenian": "node scripts/verify-armenian.mjs",
     "audit:armenian": "node scripts/write-localization-audit.mjs"
   },

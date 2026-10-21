@@ -1,5 +1,10 @@
 // English UI copy is the lookup key; stored editor identifiers remain unchanged.
 export const uiTranslations = {
+  'Image darkening': 'Պատկերի մգացում', 'Darkening strength': 'Մգացման ուժգնություն',
+  'Delete element': 'Ջնջել տարրը', 'Restore element': 'Վերականգնել տարրը',
+  'Element deleted. Undo or restore it from Layers.': 'Տարրը ջնջված է։ Հետարկեք կամ վերականգնեք այն շերտերի ցանկից։',
+  'Element restored.': 'Տարրը վերականգնված է։',
+  'Select the parent layout to adjust columns and spacing around this card.': 'Ընտրեք վերադաս դասավորությունը՝ սյունակներն ու այս քարտի շուրջ բացատները կարգավորելու համար։',
   'Image in this block': 'Պատկերն այս բլոկում', 'No image. Upload or choose an image to add one.': 'Պատկեր չկա։ Պատկեր ավելացնելու համար վերբեռնեք նորը կամ ընտրեք առկաներից։',
   'Add Image': 'Ավելացնել պատկեր', 'Remove Image': 'Հեռացնել պատկերը', 'Edit Image Settings': 'Խմբագրել պատկերի կարգավորումները',
   'drag': 'քաշել',
