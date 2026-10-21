@@ -11,6 +11,7 @@ import { previewRoute } from './preview/themes';
 import { EditorElement } from './editor/EditorElement';
 import { EditorProvider, EditorToggle, useComparisonSplit } from './editor/EditorProvider';
 import { edit, sectionEdit, semanticId } from './editor/editorConfig';
+import { SelectedPortfolio } from './components/SelectedPortfolio';
 
 const asset = path => window.__PROSPECT_ASSETS__?.[path] || path;
 const img = name => asset(`/images/${name}.webp`);
@@ -38,12 +39,11 @@ function App() {
   const [closing, setClosing] = useState(false);
   const [activeService, setActiveService] = useState(0);
   const [expanded, setExpanded] = useState(null);
-  const [project, setProject] = useState(0);
   const [split, setSplit] = useComparisonSplit();
   const [heroReady, setHeroReady] = useState(false);
   const [draft, setDraft] = useState(false);
   const heroRef = useRef(null), timelineRef = useRef(null), dialogRef = useRef(null), menuRef = useRef(null);
-  const drag = useRef(false), touched = useRef(false), swipeStart = useRef(null), closeTimer = useRef(null);
+  const drag = useRef(false), touched = useRef(false), closeTimer = useRef(null);
   const navItems = navigation.map(item => ({ ...item, label: item[lang] }));
   const navItem = (item, mobile = false, i = 0, place = mobile ? 'mobile' : 'header') => item.href ? <EditorElement as="a" {...edit(`${place}.nav.${semanticId(item.en)}`)} key={item.en} href={item.href} style={mobile ? { '--i': i } : undefined} onClick={mobile ? e => { e.preventDefault(); closeMenu(item.href); } : undefined}>{item.label}{mobile && <Arrow />}</EditorElement> : <span key={item.en} className="nav-unavailable" aria-disabled="true" style={mobile ? { '--i': i } : undefined}>{item.label}</span>;
 
@@ -71,10 +71,6 @@ function App() {
   useEffect(() => {
     const revealEditorLayer = event => {
       const id = event.detail;
-      if (id.startsWith('projects.')) {
-        const index = projectData.findIndex(item => id.includes(semanticId(item.name)));
-        if (index >= 0) setProject(index);
-      }
       if (id.startsWith('development.')) {
         const index = serviceData.findIndex(item => id.includes(semanticId(item.title)));
         if (index >= 0) {
@@ -130,9 +126,7 @@ function App() {
     const rect = heroRef.current.getBoundingClientRect();
     setSplit(Math.max(4, Math.min(96, (event.clientX - rect.left) / rect.width * 100)));
   }
-  function changeProject(delta) { setProject(p => (p + delta + projects.length) % projects.length); }
   function languageButtons() { return <div className="language" aria-label={t.language}><button className={lang === 'en' ? 'active' : ''} onClick={() => setLang('en')} aria-pressed={lang === 'en'}>EN</button><span>/</span><button className={lang === 'am' ? 'active' : ''} onClick={() => setLang('am')} aria-pressed={lang === 'am'}>AM</button></div>; }
-  const current = projects[project];
 
   return <>
     <a className="skip-link" href="#main">{t.skip}</a>
@@ -184,16 +178,7 @@ function App() {
         </EditorElement>)}</EditorElement><EditorElement as="p" {...edit("packages.note")} className="pricing-note">{t.pricingNote}</EditorElement>
       </EditorElement>
 
-      <EditorElement as="section" {...sectionEdit("projects")} id="projects" className="projects section dark">
-        <div className="section-top reveal"><div><Label editId="projects.label">04 / {t.projectLabel}</Label><Heading editId="projects.heading" lines={t.project} /></div><EditorElement as="span" {...edit("projects.note")} className="section-side-note">{t.portfolioNote}</EditorElement></div>
-        <EditorElement as="div" {...edit("projects.viewport")} className="project-stage reveal" tabIndex="0" role="region" aria-roledescription="carousel" aria-label={t.projectLabel} onKeyDown={e => { if (e.key === 'ArrowLeft' || e.key === 'ArrowRight') { e.preventDefault(); changeProject(e.key === 'ArrowRight' ? 1 : -1); } }} onTouchStart={e => { swipeStart.current = e.touches[0].clientX; }} onTouchEnd={e => { const distance = e.changedTouches[0].clientX - swipeStart.current; if (Math.abs(distance) > 45) changeProject(distance < 0 ? 1 : -1); }}>
-          {projects.map((p, i) => <EditorElement as="div" {...edit(`projects.visual.${p.editKey}`)} className={`project-image ${project === i ? 'active' : ''}`} key={p.name}><EditorElement as="img" {...edit(`projects.visual.${p.editKey}.image`)} loading="lazy" src={img(p.image)} alt={project === i ? p.name : ''} /></EditorElement>)}
-          <EditorElement as="div" {...edit("projects.overlay")} className="project-shade" /><EditorElement as="div" {...edit("projects.counter")} className="project-counter" aria-live="polite">0{project + 1}<span>/ 0{projects.length}</span></EditorElement>
-          <EditorElement as="div" {...edit(`projects.card.${current.editKey}`)} key={project} className="project-info"><p className="eyebrow">{t.selected}</p><EditorElement as="h3" {...edit(`projects.card.${current.editKey}.heading`)} className="display">{current.name}</EditorElement><EditorElement as="p" {...edit(`projects.card.${current.editKey}.category`)}>{current.category}</EditorElement><Action editId={`projects.card.${current.editKey}.button`} onClick={() => openModal({ type: 'project', index: project })}>{t.exploreProject}</Action></EditorElement>
-          <div className="project-nav"><EditorElement as="button" {...edit("projects.previous")} aria-label={t.previousProject} onClick={() => changeProject(-1)}><Arrow direction="left" /></EditorElement><EditorElement as="button" {...edit("projects.next")} aria-label={t.nextProject} onClick={() => changeProject(1)}><Arrow direction="right" /></EditorElement></div>
-          <EditorElement as="span" {...edit("projects.source")} className="project-source">{t.projectSource}</EditorElement>
-        </EditorElement>
-      </EditorElement>
+      <SelectedPortfolio projects={projects} t={t} lang={lang} img={img} onOpen={index => openModal({ type: 'project', index })} />
 
       <EditorElement as="section" {...sectionEdit("process")} id="process" className="process section light" ref={timelineRef}>
         <div className="reveal"><Label editId="process.label">05 / {t.processLabel}</Label><Heading editId="process.heading" lines={t.process} /></div>

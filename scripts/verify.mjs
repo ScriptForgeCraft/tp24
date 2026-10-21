@@ -48,11 +48,11 @@ try {
   for(let i=0;i<3;i++) { await page.locator('.package-card button').nth(i).click(); check(`Package ${i+1} details`,await page.locator('.modal').evaluate(el=>el.open)); await close(); }
   await page.locator('#projects').scrollIntoViewIfNeeded(); await pause(900);
   await page.getByRole('button',{name:'Next project',exact:true}).click(); await pause(900);
-  check('Project next navigation', (await page.locator('.project-info h3').textContent()).includes('Avet'));
+  check('Project next navigation', (await page.locator('.project-card.active .project-info h3').textContent()).includes('Avet'));
   await page.locator('.project-stage').focus(); await page.keyboard.press('ArrowRight'); await pause(900);
-  check('Project keyboard navigation',(await page.locator('.project-info h3').textContent()).includes('Khachaturian'));
+  check('Project keyboard navigation',(await page.locator('.project-card.active .project-info h3').textContent()).includes('Khachaturian'));
   await page.getByRole('button',{name:'Previous project',exact:true}).click(); await pause(900);
-  await page.getByRole('button',{name:'Explore Project',exact:true}).click();
+  await page.locator('.project-card.active .portfolio-explore').click();
   check('Project preview opens',await page.locator('.modal #modal-title').textContent()==='Avet Avetisyan, 20');
   await page.mouse.click(5,5); await pause(400);
   check('Outside click closes dialog',!(await page.locator('.modal').evaluate(el=>el.open)));
@@ -99,9 +99,9 @@ try {
   await page.locator('.service-trigger').nth(1).click(); await pause(500); check('Accordion collapses',await page.locator('.service-trigger').nth(1).getAttribute('aria-expanded')==='false');
   await page.locator('#packages button').first().click(); await pause(450); await page.screenshot({path:'qa/mobile-comparison.png'}); await overflow('mobile comparison'); await close();
   await page.locator('#projects').scrollIntoViewIfNeeded(); await pause(700);
-  const before=await page.locator('.project-info h3').textContent();
+  const before=await page.locator('.project-card.active .project-info h3').textContent();
   const projectRect=await page.locator('.project-stage').boundingBox(); const touch=await page.context().newCDPSession(page); await touch.send('Input.dispatchTouchEvent',{type:'touchStart',touchPoints:[{x:310,y:projectRect.y+150}]}); await touch.send('Input.dispatchTouchEvent',{type:'touchMove',touchPoints:[{x:70,y:projectRect.y+150}]}); await touch.send('Input.dispatchTouchEvent',{type:'touchEnd',touchPoints:[]}); await touch.detach(); await pause(900);
-  check('Project swipe',await page.locator('.project-info h3').textContent()!==before);
+  check('Project swipe',await page.locator('.project-card.active .project-info h3').textContent()!==before);
   await page.evaluate(()=>window.scrollTo({top:0,behavior:'instant'})); await pause(700);
   const mobileSlider=await slider.boundingBox();
   await page.context().newCDPSession(page).then(async cdp=>{await cdp.send('Input.dispatchTouchEvent',{type:'touchStart',touchPoints:[{x:mobileSlider.x+22,y:mobileSlider.y+22}]});await cdp.send('Input.dispatchTouchEvent',{type:'touchMove',touchPoints:[{x:300,y:mobileSlider.y+22}]});await cdp.send('Input.dispatchTouchEvent',{type:'touchEnd',touchPoints:[]});await cdp.detach();});

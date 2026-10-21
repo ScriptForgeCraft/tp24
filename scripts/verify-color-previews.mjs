@@ -67,7 +67,7 @@ try {
       const slider = page.getByRole('slider'); await slider.focus(); await page.keyboard.press('ArrowRight');
       assert.equal(await slider.getAttribute('aria-valuenow'), '52');
       await page.getByRole('button', { name: 'Next project', exact: true }).click();
-      assert.match(await page.locator('.project-info h3').innerText(), /Avet/i);
+      assert.match(await page.locator('.project-card.active .project-info h3').innerText(), /Avet/i);
       await page.locator('.service-trigger').nth(1).click();
       assert.equal(await page.locator('.service-trigger').nth(1).getAttribute('aria-expanded'), 'true');
       for (const selector of ['.hero-buttons .filled', '#packages .section-top .action', '.package-content>.action', '.final-cta .action']) {

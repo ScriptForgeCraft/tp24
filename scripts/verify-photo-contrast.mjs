@@ -13,8 +13,8 @@ const selectors = [
   '.service-visual-label > span', '.service-caption', '.package-index',
   '.package-content h3', '.package-content > p', '.package-content li',
   '.package-price', '.package-price > p', '.package-content > .action',
-  '.project-info > .eyebrow', '.project-info h3', '.project-info > p:not(.eyebrow)',
-  '.project-info > .action', '.project-counter', '.project-source',
+  '.project-card.active .portfolio-card-number', '.project-card.active .project-info h3', '.project-card.active .portfolio-category',
+  '.project-card.active .portfolio-explore', '.portfolio-count', '.portfolio-source',
   '.cta-content .eyebrow', '.cta-content .line-mask > span', '.cta-bottom > p', '.cta-bottom > .action',
 ];
 try {

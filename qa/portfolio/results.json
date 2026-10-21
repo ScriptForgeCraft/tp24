@@ -1,0 +1,132 @@
+{
+  "results": [
+    {
+      "reducedMotion": "reduce",
+      "arrows": true,
+      "keyboard": true,
+      "mouseDrag": true,
+      "modalFocusRestoration": true,
+      "editorReveal": true
+    },
+    {
+      "lang": "en",
+      "width": 320,
+      "overflow": false,
+      "navigation": true
+    },
+    {
+      "lang": "en",
+      "width": 390,
+      "overflow": false,
+      "navigation": true
+    },
+    {
+      "lang": "en",
+      "width": 700,
+      "overflow": false,
+      "navigation": true
+    },
+    {
+      "lang": "en",
+      "width": 768,
+      "overflow": false,
+      "navigation": true
+    },
+    {
+      "lang": "en",
+      "width": 1024,
+      "overflow": false,
+      "navigation": true
+    },
+    {
+      "lang": "en",
+      "width": 1440,
+      "overflow": false,
+      "navigation": true
+    },
+    {
+      "lang": "en",
+      "width": 1920,
+      "overflow": false,
+      "navigation": true
+    },
+    {
+      "lang": "am",
+      "width": 320,
+      "overflow": false,
+      "navigation": true
+    },
+    {
+      "lang": "am",
+      "width": 390,
+      "overflow": false,
+      "navigation": true
+    },
+    {
+      "lang": "am",
+      "width": 700,
+      "overflow": false,
+      "navigation": true
+    },
+    {
+      "lang": "am",
+      "width": 768,
+      "overflow": false,
+      "navigation": true
+    },
+    {
+      "lang": "am",
+      "width": 1024,
+      "overflow": false,
+      "navigation": true
+    },
+    {
+      "lang": "am",
+      "width": 1440,
+      "overflow": false,
+      "navigation": true
+    },
+    {
+      "lang": "am",
+      "width": 1920,
+      "overflow": false,
+      "navigation": true
+    },
+    {
+      "theme": 1,
+      "navigation": true
+    },
+    {
+      "theme": 2,
+      "navigation": true
+    },
+    {
+      "theme": 3,
+      "navigation": true
+    },
+    {
+      "theme": 4,
+      "navigation": true
+    },
+    {
+      "theme": 5,
+      "navigation": true
+    },
+    {
+      "theme": 6,
+      "navigation": true
+    },
+    {
+      "reducedMotion": "no-preference",
+      "arrows": true,
+      "keyboard": true,
+      "mouseDrag": true,
+      "modalFocusRestoration": true,
+      "editorReveal": true
+    },
+    {
+      "nativeTouchSwipe": true
+    }
+  ],
+  "errors": []
+}

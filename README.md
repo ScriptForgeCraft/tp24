@@ -30,7 +30,7 @@ The homepage follows the supplied section order: navigation, before/after hero, 
 - Masked hero heading entrance, image scale, restrained parallax, scroll reveals and image hovers.
 - Crossfading service imagery with keyboard focus support; expanding service descriptions and mobile image accordions.
 - Three art-directed architectural package backgrounds, animated details, and responsive comparison.
-- Three supplied portfolio entries with crossfades, previous/next, keyboard navigation, touch swipe and project previews.
+- Selected Portfolio follows an editorial horizontal card layout with the three supplied projects, visible neighboring cards, numbered navigation, previous/next controls, mouse drag, native touch/trackpad scrolling, keyboard arrows/Home/End, progress and project previews. Navigation stops at the first/last project. The official portfolio link opens the complete published gallery.
 - Scroll-driven horizontal/vertical process progress.
 - Contact dialog, accessible native dialogs, backdrop and Escape closing, and focus restoration.
 - EN/AM covers the complete business presentation, package scopes and comparison, company roles, news/media, process, contact form, legal notices and accessibility labels. Proper organization names remain where appropriate.
@@ -67,7 +67,7 @@ The development server must be running. The browser verification script uses Pla
 
 `src/presentation.css` defines the retained graphite and paper design. Supporting text is darker on light backgrounds and lighter on dark backgrounds; buttons invert these two colors on hover. The final conversation section follows the page grid on a paper background, with a large heading, contact action and direct email instead of a repeated hero photograph. Photograph overlays and caption backplates protect text contrast. All process steps stay fully opaque, focus rings work on both palettes, and the footer signature is capped at 560px on desktop and 260px on phones.
 
-With the dev server running, use `npm run test:a11y` for axe checks of the home page, both languages, mobile navigation and six dialog types. `npm run test:contrast` samples actual rendered backgrounds under text over photographs at desktop and mobile sizes in the retained design; axe leaves many photo and gradient backgrounds for manual review. Results are in `qa/accessibility-results.json` and `qa/photo-contrast-results.json`. The automated checks and visual review are focused verification, not a complete accessibility certification.
+With the dev server running, use `npm run test:a11y` for axe checks of the home page, both languages, mobile navigation and six dialog types. `node scripts/verify-portfolio.mjs` checks the project rail at 320–1920px in both languages, mouse/touch/keyboard navigation, focus restoration, theme changes, editor reveal and reduced motion. `npm run test:contrast` samples actual rendered backgrounds under text over photographs at desktop and mobile sizes in the retained design; axe leaves many photo and gradient backgrounds for manual review. Results are in `qa/accessibility-results.json` and `qa/photo-contrast-results.json`. The automated checks and visual review are focused verification, not a complete accessibility certification.
 # tp24
 # tp24
 

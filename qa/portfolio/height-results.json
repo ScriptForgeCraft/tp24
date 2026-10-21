@@ -1,0 +1,394 @@
+[
+  {
+    "lang": "en",
+    "width": 1920,
+    "viewportHeight": 1080,
+    "height": 990,
+    "track": 553,
+    "headerFits": true,
+    "cardOverflow": [
+      0,
+      0,
+      0
+    ],
+    "footerFits": true
+  },
+  {
+    "lang": "en",
+    "width": 1440,
+    "viewportHeight": 900,
+    "height": 810,
+    "track": 454,
+    "headerFits": true,
+    "cardOverflow": [
+      0,
+      0,
+      0
+    ],
+    "footerFits": true
+  },
+  {
+    "lang": "en",
+    "width": 1440,
+    "viewportHeight": 720,
+    "height": 630,
+    "track": 358,
+    "headerFits": true,
+    "cardOverflow": [
+      0,
+      0,
+      0
+    ],
+    "footerFits": true
+  },
+  {
+    "lang": "en",
+    "width": 1366,
+    "viewportHeight": 768,
+    "height": 678,
+    "track": 342,
+    "headerFits": true,
+    "cardOverflow": [
+      0,
+      0,
+      0
+    ],
+    "footerFits": true
+  },
+  {
+    "lang": "en",
+    "width": 1280,
+    "viewportHeight": 600,
+    "height": 510,
+    "track": 268,
+    "headerFits": true,
+    "cardOverflow": [
+      0,
+      0,
+      0
+    ],
+    "footerFits": true
+  },
+  {
+    "lang": "en",
+    "width": 1024,
+    "viewportHeight": 768,
+    "height": 678,
+    "track": 287,
+    "headerFits": true,
+    "cardOverflow": [
+      0,
+      0,
+      0
+    ],
+    "footerFits": true
+  },
+  {
+    "lang": "en",
+    "width": 768,
+    "viewportHeight": 1024,
+    "height": 934,
+    "track": 548,
+    "headerFits": true,
+    "cardOverflow": [
+      0,
+      0,
+      0
+    ],
+    "footerFits": true
+  },
+  {
+    "lang": "en",
+    "width": 390,
+    "viewportHeight": 844,
+    "height": 768,
+    "track": 422,
+    "headerFits": true,
+    "cardOverflow": [
+      0,
+      0,
+      0
+    ],
+    "footerFits": true
+  },
+  {
+    "lang": "en",
+    "width": 390,
+    "viewportHeight": 667,
+    "height": 591,
+    "track": 297,
+    "headerFits": true,
+    "cardOverflow": [
+      0,
+      0,
+      0
+    ],
+    "footerFits": true
+  },
+  {
+    "lang": "en",
+    "width": 375,
+    "viewportHeight": 667,
+    "height": 591,
+    "track": 300,
+    "headerFits": true,
+    "cardOverflow": [
+      0,
+      0,
+      0
+    ],
+    "footerFits": true
+  },
+  {
+    "lang": "en",
+    "width": 320,
+    "viewportHeight": 568,
+    "height": 492,
+    "track": 210,
+    "headerFits": true,
+    "cardOverflow": [
+      0,
+      0,
+      0
+    ],
+    "footerFits": true
+  },
+  {
+    "lang": "en",
+    "width": 844,
+    "viewportHeight": 390,
+    "height": 300,
+    "track": 164,
+    "headerFits": true,
+    "cardOverflow": [
+      0,
+      0,
+      0
+    ],
+    "footerFits": true
+  },
+  {
+    "lang": "en",
+    "width": 667,
+    "viewportHeight": 375,
+    "height": 285,
+    "track": 148,
+    "headerFits": true,
+    "cardOverflow": [
+      0,
+      0,
+      0
+    ],
+    "footerFits": true
+  },
+  {
+    "lang": "en",
+    "width": 568,
+    "viewportHeight": 320,
+    "height": 244,
+    "track": 107,
+    "headerFits": true,
+    "cardOverflow": [
+      0,
+      0,
+      0
+    ],
+    "footerFits": true
+  },
+  {
+    "lang": "am",
+    "width": 1920,
+    "viewportHeight": 1080,
+    "height": 990,
+    "track": 601,
+    "headerFits": true,
+    "cardOverflow": [
+      0,
+      0,
+      0
+    ],
+    "footerFits": true
+  },
+  {
+    "lang": "am",
+    "width": 1440,
+    "viewportHeight": 900,
+    "height": 810,
+    "track": 465,
+    "headerFits": true,
+    "cardOverflow": [
+      0,
+      0,
+      0
+    ],
+    "footerFits": true
+  },
+  {
+    "lang": "am",
+    "width": 1440,
+    "viewportHeight": 720,
+    "height": 630,
+    "track": 363,
+    "headerFits": true,
+    "cardOverflow": [
+      0,
+      0,
+      0
+    ],
+    "footerFits": true
+  },
+  {
+    "lang": "am",
+    "width": 1366,
+    "viewportHeight": 768,
+    "height": 678,
+    "track": 346,
+    "headerFits": true,
+    "cardOverflow": [
+      0,
+      0,
+      0
+    ],
+    "footerFits": true
+  },
+  {
+    "lang": "am",
+    "width": 1280,
+    "viewportHeight": 600,
+    "height": 510,
+    "track": 266,
+    "headerFits": true,
+    "cardOverflow": [
+      0,
+      0,
+      0
+    ],
+    "footerFits": true
+  },
+  {
+    "lang": "am",
+    "width": 1024,
+    "viewportHeight": 768,
+    "height": 678,
+    "track": 242,
+    "headerFits": true,
+    "cardOverflow": [
+      0,
+      0,
+      0
+    ],
+    "footerFits": true
+  },
+  {
+    "lang": "am",
+    "width": 768,
+    "viewportHeight": 1024,
+    "height": 934,
+    "track": 483,
+    "headerFits": true,
+    "cardOverflow": [
+      0,
+      0,
+      0
+    ],
+    "footerFits": true
+  },
+  {
+    "lang": "am",
+    "width": 390,
+    "viewportHeight": 844,
+    "height": 768,
+    "track": 438,
+    "headerFits": true,
+    "cardOverflow": [
+      0,
+      0,
+      0
+    ],
+    "footerFits": true
+  },
+  {
+    "lang": "am",
+    "width": 390,
+    "viewportHeight": 667,
+    "height": 591,
+    "track": 311,
+    "headerFits": true,
+    "cardOverflow": [
+      0,
+      0,
+      0
+    ],
+    "footerFits": true
+  },
+  {
+    "lang": "am",
+    "width": 375,
+    "viewportHeight": 667,
+    "height": 591,
+    "track": 311,
+    "headerFits": true,
+    "cardOverflow": [
+      0,
+      0,
+      0
+    ],
+    "footerFits": true
+  },
+  {
+    "lang": "am",
+    "width": 320,
+    "viewportHeight": 568,
+    "height": 492,
+    "track": 217,
+    "headerFits": true,
+    "cardOverflow": [
+      0,
+      0,
+      0
+    ],
+    "footerFits": true
+  },
+  {
+    "lang": "am",
+    "width": 844,
+    "viewportHeight": 390,
+    "height": 300,
+    "track": 152,
+    "headerFits": true,
+    "cardOverflow": [
+      0,
+      0,
+      0
+    ],
+    "footerFits": true
+  },
+  {
+    "lang": "am",
+    "width": 667,
+    "viewportHeight": 375,
+    "height": 285,
+    "track": 140,
+    "headerFits": true,
+    "cardOverflow": [
+      0,
+      0,
+      0
+    ],
+    "footerFits": true
+  },
+  {
+    "lang": "am",
+    "width": 568,
+    "viewportHeight": 320,
+    "height": 244,
+    "track": 104,
+    "headerFits": true,
+    "cardOverflow": [
+      0,
+      0,
+      0
+    ],
+    "footerFits": true
+  }
+]

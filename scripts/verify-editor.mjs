@@ -515,7 +515,7 @@ try {
     .click();
   check(
     "Preview restores project carousel",
-    (await frame.locator(".project-info h3").textContent()).includes("Avet"),
+    (await frame.locator(".project-card.active .project-info h3").textContent()).includes("Avet"),
   );
   await frame
     .getByRole("button", { name: "Compare Packages", exact: true })

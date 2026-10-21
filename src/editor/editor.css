@@ -1044,7 +1044,7 @@
 .package-card:nth-child(3) .package-photo {
   --p24-original-x: 60%;
 }
-.project-image img {
+.portfolio-image img {
   --p24-original-x: 50%;
   --p24-original-y: 47%;
 }
@@ -1058,8 +1058,8 @@
     --p24-original-x: 65%;
     --p24-original-y: 50%;
   }
-  .project-image img {
-    --p24-original-x: 54%;
-    --p24-original-y: 50%;
+  .portfolio-image img {
+    --p24-original-x: 50%;
+    --p24-original-y: 47%;
   }
 }

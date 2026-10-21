@@ -18,7 +18,7 @@ try {
     await page.evaluate(() => { window.__designSwitchTest = 'preserve'; });
     assert.equal(await page.locator('.navbar-design-options>button').count(), 6);
     await page.getByRole('button', { name: 'Next project', exact: true }).click();
-    const project = await page.locator('.project-info h3').innerText();
+    const project = await page.locator('.project-card.active .project-info h3').innerText();
     await page.locator('#packages').scrollIntoViewIfNeeded();
     const position = await page.evaluate(() => scrollY);
     for (let i = 0; i < 6; i++) {
@@ -28,7 +28,7 @@ try {
       assert.equal(await page.locator('[data-preview-id]').getAttribute('data-preview-id'), id);
       assert.equal(await page.evaluate(() => window.__designSwitchTest), 'preserve', 'Switch must not reload the page');
       assert.equal(await page.evaluate(() => scrollY), position, 'Switch must retain scroll');
-      assert.equal(await page.locator('.project-info h3').innerText(), project, 'Switch must retain app state');
+      assert.equal(await page.locator('.project-card.active .project-info h3').innerText(), project, 'Switch must retain app state');
       assert.equal(await page.locator('.navbar-design-options>button[aria-pressed=true]').count(), 1);
       assert.equal(new URL(page.url()).searchParams.get('theme'), id);
       const result = await new AxeBuilder({ page }).withTags(['wcag2a', 'wcag2aa', 'wcag21aa']).analyze();

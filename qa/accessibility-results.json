@@ -3,7 +3,7 @@
     {
       "name": "EN 1440 home / dark header",
       "violations": [],
-      "passedRules": 26,
+      "passedRules": 27,
       "manualReviewRules": [
         "aria-prohibited-attr",
         "color-contrast",
@@ -13,7 +13,7 @@
     {
       "name": "EN 1440 home / light header",
       "violations": [],
-      "passedRules": 26,
+      "passedRules": 27,
       "manualReviewRules": [
         "aria-prohibited-attr",
         "color-contrast",
@@ -74,7 +74,7 @@
     {
       "name": "AM 1440 home",
       "violations": [],
-      "passedRules": 26,
+      "passedRules": 27,
       "manualReviewRules": [
         "aria-prohibited-attr",
         "color-contrast",
@@ -84,7 +84,7 @@
     {
       "name": "EN 390 home / dark header",
       "violations": [],
-      "passedRules": 26,
+      "passedRules": 27,
       "manualReviewRules": [
         "color-contrast"
       ]
@@ -92,7 +92,7 @@
     {
       "name": "EN 390 home / light header",
       "violations": [],
-      "passedRules": 26,
+      "passedRules": 27,
       "manualReviewRules": [
         "color-contrast"
       ]
@@ -158,7 +158,7 @@
     {
       "name": "AM 390 home",
       "violations": [],
-      "passedRules": 26,
+      "passedRules": 27,
       "manualReviewRules": [
         "color-contrast"
       ]

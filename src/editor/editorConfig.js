@@ -102,6 +102,7 @@ Object.entries(textTargets).forEach(([section, names]) =>
   "footer.terms",
   "projects.previous",
   "projects.next",
+  "projects.all",
 ].forEach((id) => add(id, "button", id.replaceAll(".", " · ")));
 add("header.navigation", "navigation", "Navigation background");
 navigation.forEach((item) =>
@@ -236,6 +237,7 @@ services.forEach((s) => {
 projects.forEach((p) => {
   add(`projects.visual.${semanticId(p.name)}`, "container", p.name, []);
   image(`projects.visual.${semanticId(p.name)}.image`, `${p.name} · Image`);
+  add(`projects.visual.${semanticId(p.name)}.overlay`, "overlay", `${p.name} · Overlay`, ["backgroundColor"]);
 });
 news
   .slice(1)

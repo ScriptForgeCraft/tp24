@@ -5,7 +5,7 @@
       {
         "selector": ".hero-title .line-mask > span",
         "index": 0,
-        "minimum": 10.95,
+        "minimum": 10.79,
         "required": 3
       },
       {
@@ -17,25 +17,25 @@
       {
         "selector": ".hero-title .line-mask > span",
         "index": 2,
-        "minimum": 8.08,
+        "minimum": 9.65,
         "required": 3
       },
       {
         "selector": ".hero-title .line-mask > span",
         "index": 3,
-        "minimum": 7.3,
+        "minimum": 9.26,
         "required": 3
       },
       {
         "selector": ".hero-tagline",
         "index": 0,
-        "minimum": 9.29,
+        "minimum": 10.86,
         "required": 4.5
       },
       {
         "selector": ".hero-description",
         "index": 0,
-        "minimum": 8.81,
+        "minimum": 8.46,
         "required": 4.5
       },
       {
@@ -51,27 +51,9 @@
         "required": 4.5
       },
       {
-        "selector": ".comparison-labels > span",
-        "index": 0,
-        "minimum": 16.52,
-        "required": 4.5
-      },
-      {
-        "selector": ".comparison-labels > span",
-        "index": 1,
-        "minimum": 16.52,
-        "required": 4.5
-      },
-      {
         "selector": ".scroll-hint",
         "index": 0,
-        "minimum": 16.67,
-        "required": 4.5
-      },
-      {
-        "selector": ".visual-note",
-        "index": 0,
-        "minimum": 16.5,
+        "minimum": 16.68,
         "required": 4.5
       },
       {
@@ -119,13 +101,13 @@
       {
         "selector": ".package-content h3",
         "index": 1,
-        "minimum": 11.31,
+        "minimum": 11.29,
         "required": 4.5
       },
       {
         "selector": ".package-content h3",
         "index": 2,
-        "minimum": 11.45,
+        "minimum": 11.41,
         "required": 4.5
       },
       {
@@ -215,7 +197,7 @@
       {
         "selector": ".package-content li",
         "index": 8,
-        "minimum": 10.99,
+        "minimum": 11.02,
         "required": 4.5
       },
       {
@@ -291,39 +273,39 @@
         "required": 4.5
       },
       {
-        "selector": ".project-info > .eyebrow",
+        "selector": ".project-card.active .portfolio-card-number",
         "index": 0,
-        "minimum": 9.49,
+        "minimum": 4.54,
         "required": 4.5
       },
       {
-        "selector": ".project-info h3",
+        "selector": ".project-card.active .project-info h3",
         "index": 0,
-        "minimum": 9.08,
+        "minimum": 4,
         "required": 3
       },
       {
-        "selector": ".project-info > p:not(.eyebrow)",
+        "selector": ".project-card.active .portfolio-category",
         "index": 0,
-        "minimum": 12.63,
+        "minimum": 13.96,
         "required": 4.5
       },
       {
-        "selector": ".project-info > .action",
+        "selector": ".project-card.active .portfolio-explore",
         "index": 0,
-        "minimum": 16.52,
+        "minimum": 16.16,
         "required": 4.5
       },
       {
-        "selector": ".project-counter",
+        "selector": ".portfolio-count",
         "index": 0,
-        "minimum": 16.94,
+        "minimum": 17.14,
         "required": 4.5
       },
       {
-        "selector": ".project-source",
+        "selector": ".portfolio-source",
         "index": 0,
-        "minimum": 15.72,
+        "minimum": 9.52,
         "required": 4.5
       },
       {
@@ -371,19 +353,19 @@
       {
         "selector": ".hero-title .line-mask > span",
         "index": 0,
-        "minimum": 7.96,
+        "minimum": 7.94,
         "required": 3
       },
       {
         "selector": ".hero-title .line-mask > span",
         "index": 1,
-        "minimum": 12.97,
+        "minimum": 12.98,
         "required": 3
       },
       {
         "selector": ".hero-title .line-mask > span",
         "index": 2,
-        "minimum": 9.54,
+        "minimum": 9.43,
         "required": 3
       },
       {
@@ -395,7 +377,7 @@
       {
         "selector": ".hero-tagline",
         "index": 0,
-        "minimum": 11.93,
+        "minimum": 11.94,
         "required": 4.5
       },
       {
@@ -411,25 +393,7 @@
         "required": 4.5
       },
       {
-        "selector": ".comparison-labels > span",
-        "index": 0,
-        "minimum": 16.52,
-        "required": 4.5
-      },
-      {
-        "selector": ".comparison-labels > span",
-        "index": 1,
-        "minimum": 16.52,
-        "required": 4.5
-      },
-      {
         "selector": ".scroll-hint",
-        "index": 0,
-        "minimum": 16.63,
-        "required": 4.5
-      },
-      {
-        "selector": ".visual-note",
         "index": 0,
         "minimum": 16.66,
         "required": 4.5
@@ -449,7 +413,7 @@
       {
         "selector": ".package-index",
         "index": 2,
-        "minimum": 9.18,
+        "minimum": 9.28,
         "required": 4.5
       },
       {
@@ -491,7 +455,7 @@
       {
         "selector": ".package-content > p",
         "index": 3,
-        "minimum": 10.08,
+        "minimum": 9.94,
         "required": 4.5
       },
       {
@@ -533,7 +497,7 @@
       {
         "selector": ".package-content li",
         "index": 4,
-        "minimum": 10.08,
+        "minimum": 10.07,
         "required": 4.5
       },
       {
@@ -633,39 +597,33 @@
         "required": 4.5
       },
       {
-        "selector": ".project-info > .eyebrow",
+        "selector": ".project-card.active .portfolio-card-number",
         "index": 0,
-        "minimum": 6.12,
+        "minimum": 10.14,
         "required": 4.5
       },
       {
-        "selector": ".project-info h3",
+        "selector": ".project-card.active .project-info h3",
         "index": 0,
-        "minimum": 6.69,
+        "minimum": 3.9,
         "required": 3
       },
       {
-        "selector": ".project-info > p:not(.eyebrow)",
+        "selector": ".project-card.active .portfolio-category",
         "index": 0,
-        "minimum": 8.28,
+        "minimum": 11.61,
         "required": 4.5
       },
       {
-        "selector": ".project-info > .action",
+        "selector": ".project-card.active .portfolio-explore",
         "index": 0,
-        "minimum": 16.52,
+        "minimum": 15.64,
         "required": 4.5
       },
       {
-        "selector": ".project-counter",
+        "selector": ".portfolio-count",
         "index": 0,
-        "minimum": 16.25,
-        "required": 4.5
-      },
-      {
-        "selector": ".project-source",
-        "index": 0,
-        "minimum": 16.2,
+        "minimum": 17.14,
         "required": 4.5
       },
       {
