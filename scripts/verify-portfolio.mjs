@@ -11,9 +11,19 @@ await fs.mkdir('qa/portfolio', { recursive: true });
 async function selected(page, index) {
   await page.waitForFunction(index => document.querySelector('.portfolio-pagination button[aria-current]')?.textContent.trim() === String(index + 1).padStart(2, '0'), index);
   // Let a native smooth scroll or snap finish before the next interaction.
-  await page.waitForTimeout(700);
+  await page.waitForTimeout(await page.evaluate(() => matchMedia('(prefers-reduced-motion: reduce)').matches) ? 80 : 700);
   assert.equal(await page.locator('.project-card.active').getAttribute('aria-label'), await page.locator('.project-card').nth(index).getAttribute('aria-label'));
   assert.equal(await page.locator('.portfolio-pagination button[aria-current]').innerText(), String(index + 1).padStart(2, '0'));
+}
+
+async function selectProject(page, index) {
+  const number = page.locator('.portfolio-pagination button').nth(index);
+  if (await number.isVisible()) await number.click();
+  else {
+    await page.locator('.portfolio-track').focus();
+    await page.keyboard.press('Home');
+    for (let i = 0; i < index; i++) await page.keyboard.press('ArrowRight');
+  }
 }
 
 try {
@@ -36,7 +46,7 @@ try {
     await selected(page, 1);
     assert.deepEqual(await page.evaluate(() => [...new Set(window.portfolioTransitions)]), ['02'], 'Active number stays stable during the animation');
     await page.evaluate(() => window.portfolioObserver.disconnect());
-    await page.locator('.portfolio-pagination button').first().click();
+    await selectProject(page, 0);
     await selected(page, 0);
     await page.getByRole('button', { name: 'Next project', exact: true }).dblclick({ delay: 60 });
     await selected(page, 2);
@@ -50,7 +60,7 @@ try {
     await selected(page, 0);
     await page.keyboard.press('End');
     await selected(page, 2);
-    await page.locator('.portfolio-pagination button').nth(1).click();
+    await selectProject(page, 1);
     await selected(page, 1);
     await page.locator('.project-card.active .portfolio-explore').click();
     assert.equal(await page.locator('.modal #modal-title').innerText(), 'Avet Avetisyan, 20');
@@ -61,7 +71,7 @@ try {
     assert.match(await link.getAttribute('href'), /projects/);
     assert.equal(await link.getAttribute('target'), '_blank');
 
-    await page.locator('.portfolio-pagination button').first().click();
+    await selectProject(page, 0);
     await selected(page, 0);
     const box = await page.locator('.portfolio-track').boundingBox();
     await page.mouse.move(box.x + 550, box.y + 100);
@@ -87,10 +97,10 @@ try {
           assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true, `${lang} ${width}px document overflow`);
           assert.equal(await page.locator('.portfolio-header').evaluate(el => el.scrollWidth <= el.clientWidth), true, `${lang} ${width}px header fits`);
           for (let index = 0; index < 3; index++) {
-            await page.locator('.portfolio-pagination button').nth(index).click();
+            await selectProject(page, index);
             await selected(page, index);
           }
-          await page.locator('.portfolio-pagination button').first().click();
+          await selectProject(page, 0);
           await selected(page, 0);
           if ([390, 1440].includes(width)) {
             await page.locator('#projects').screenshot({ path: `qa/portfolio/${lang}-${width}.png` });
@@ -104,7 +114,7 @@ try {
         await page.goto(`${base}?theme=0${theme}`);
         await page.setViewportSize({ width: 1440, height: 1000 });
         await page.locator('#projects').scrollIntoViewIfNeeded();
-        await page.locator('.portfolio-pagination button').last().click();
+        await selectProject(page, 2);
         await selected(page, 2);
         assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true);
         results.push({ theme, navigation: true });

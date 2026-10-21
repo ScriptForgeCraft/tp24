@@ -13,14 +13,15 @@ const selectors = [
   '.service-visual-label > span', '.service-caption', '.package-index',
   '.package-content h3', '.package-content > p', '.package-content li',
   '.package-price', '.package-price > p', '.package-content > .action',
-  '.project-card.active .portfolio-card-number', '.project-card.active .project-info h3', '.project-card.active .portfolio-category',
+  '.project-card.active .portfolio-card-number', '.project-card.active .portfolio-mobile-reference', '.project-card.active .project-info h3', '.project-card.active .portfolio-category',
   '.project-card.active .portfolio-explore', '.portfolio-count', '.portfolio-source',
   '.cta-content .eyebrow', '.cta-content .line-mask > span', '.cta-bottom > p', '.cta-bottom > .action',
 ];
 try {
   const context = await browser.newContext({ reducedMotion: 'reduce' });
   const page = await context.newPage();
-  for (const width of [1440, 390]) {
+  const widths = process.env.CONTRAST_WIDTHS ? process.env.CONTRAST_WIDTHS.split(',').map(Number) : [1440, 390];
+  for (const width of widths) {
     await page.setViewportSize({ width, height: 900 });
     const url = new URL(process.env.PREVIEW_URL || 'http://localhost:5173/');
     await page.goto(url.href);

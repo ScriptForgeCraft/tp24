@@ -1,0 +1,163 @@
+{
+  "viewports": [
+    {
+      "lang": "en",
+      "width": 320,
+      "height": 492,
+      "contentOverflow": [
+        0,
+        0,
+        0
+      ],
+      "labelHidden": true
+    },
+    {
+      "lang": "en",
+      "width": 375,
+      "height": 591,
+      "contentOverflow": [
+        0,
+        0,
+        0
+      ],
+      "labelHidden": true
+    },
+    {
+      "lang": "en",
+      "width": 390,
+      "height": 620,
+      "contentOverflow": [
+        0,
+        0,
+        0
+      ],
+      "labelHidden": true
+    },
+    {
+      "lang": "en",
+      "width": 390,
+      "height": 768,
+      "contentOverflow": [
+        0,
+        0,
+        0
+      ],
+      "labelHidden": true
+    },
+    {
+      "lang": "en",
+      "width": 430,
+      "height": 820,
+      "contentOverflow": [
+        0,
+        0,
+        0
+      ],
+      "labelHidden": true
+    },
+    {
+      "lang": "en",
+      "width": 667,
+      "height": 285,
+      "contentOverflow": [
+        0,
+        0,
+        0
+      ],
+      "labelHidden": true
+    },
+    {
+      "lang": "en",
+      "width": 568,
+      "height": 244,
+      "contentOverflow": [
+        0,
+        0,
+        0
+      ],
+      "labelHidden": true
+    },
+    {
+      "lang": "am",
+      "width": 320,
+      "height": 492,
+      "contentOverflow": [
+        0,
+        0,
+        0
+      ],
+      "labelHidden": true
+    },
+    {
+      "lang": "am",
+      "width": 375,
+      "height": 591,
+      "contentOverflow": [
+        0,
+        0,
+        0
+      ],
+      "labelHidden": true
+    },
+    {
+      "lang": "am",
+      "width": 390,
+      "height": 620,
+      "contentOverflow": [
+        0,
+        0,
+        0
+      ],
+      "labelHidden": true
+    },
+    {
+      "lang": "am",
+      "width": 390,
+      "height": 768,
+      "contentOverflow": [
+        0,
+        0,
+        0
+      ],
+      "labelHidden": true
+    },
+    {
+      "lang": "am",
+      "width": 430,
+      "height": 820,
+      "contentOverflow": [
+        0,
+        0,
+        0
+      ],
+      "labelHidden": true
+    },
+    {
+      "lang": "am",
+      "width": 667,
+      "height": 285,
+      "contentOverflow": [
+        0,
+        0,
+        0
+      ],
+      "labelHidden": true
+    },
+    {
+      "lang": "am",
+      "width": 568,
+      "height": 244,
+      "contentOverflow": [
+        0,
+        0,
+        0
+      ],
+      "labelHidden": true
+    }
+  ],
+  "cyclicNavigation": true,
+  "dialogs": true,
+  "nativeTouch": true,
+  "axeViolations": 0,
+  "errors": []
+}

@@ -275,25 +275,25 @@
       {
         "selector": ".project-card.active .portfolio-card-number",
         "index": 0,
-        "minimum": 4.54,
+        "minimum": 3.1,
         "required": 4.5
       },
       {
         "selector": ".project-card.active .project-info h3",
         "index": 0,
-        "minimum": 4,
+        "minimum": 2.94,
         "required": 3
       },
       {
         "selector": ".project-card.active .portfolio-category",
         "index": 0,
-        "minimum": 13.96,
+        "minimum": 11.78,
         "required": 4.5
       },
       {
         "selector": ".project-card.active .portfolio-explore",
         "index": 0,
-        "minimum": 16.16,
+        "minimum": 16.19,
         "required": 4.5
       },
       {
@@ -345,7 +345,20 @@
         "required": 4.5
       }
     ],
-    "failures": []
+    "failures": [
+      {
+        "selector": ".project-card.active .portfolio-card-number",
+        "index": 0,
+        "minimum": 3.1,
+        "required": 4.5
+      },
+      {
+        "selector": ".project-card.active .project-info h3",
+        "index": 0,
+        "minimum": 2.94,
+        "required": 3
+      }
+    ]
   },
   {
     "width": 390,
@@ -597,33 +610,39 @@
         "required": 4.5
       },
       {
-        "selector": ".project-card.active .portfolio-card-number",
+        "selector": ".project-card.active .portfolio-mobile-reference",
         "index": 0,
-        "minimum": 10.14,
+        "minimum": 5.5,
         "required": 4.5
       },
       {
         "selector": ".project-card.active .project-info h3",
         "index": 0,
-        "minimum": 3.9,
+        "minimum": 6.13,
         "required": 3
       },
       {
         "selector": ".project-card.active .portfolio-category",
         "index": 0,
-        "minimum": 11.61,
+        "minimum": 6.64,
         "required": 4.5
       },
       {
         "selector": ".project-card.active .portfolio-explore",
         "index": 0,
-        "minimum": 15.64,
+        "minimum": 16.67,
         "required": 4.5
       },
       {
         "selector": ".portfolio-count",
         "index": 0,
-        "minimum": 17.14,
+        "minimum": 15.8,
+        "required": 4.5
+      },
+      {
+        "selector": ".portfolio-source",
+        "index": 0,
+        "minimum": 15.6,
         "required": 4.5
       },
       {

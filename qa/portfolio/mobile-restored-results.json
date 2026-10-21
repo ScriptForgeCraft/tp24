@@ -1,0 +1,268 @@
+[
+  {
+    "lang": "en",
+    "width": 320,
+    "viewportHeight": 568,
+    "height": 492,
+    "trackWidth": 320,
+    "cardWidths": [
+      320,
+      320,
+      320
+    ],
+    "contentOverflow": [
+      0,
+      0,
+      0
+    ],
+    "arrowsInside": true,
+    "headerFits": true
+  },
+  {
+    "lang": "en",
+    "width": 375,
+    "viewportHeight": 667,
+    "height": 591,
+    "trackWidth": 375,
+    "cardWidths": [
+      375,
+      375,
+      375
+    ],
+    "contentOverflow": [
+      0,
+      0,
+      0
+    ],
+    "arrowsInside": true,
+    "headerFits": true
+  },
+  {
+    "lang": "en",
+    "width": 390,
+    "viewportHeight": 667,
+    "height": 591,
+    "trackWidth": 390,
+    "cardWidths": [
+      390,
+      390,
+      390
+    ],
+    "contentOverflow": [
+      0,
+      0,
+      0
+    ],
+    "arrowsInside": true,
+    "headerFits": true
+  },
+  {
+    "lang": "en",
+    "width": 390,
+    "viewportHeight": 844,
+    "height": 768,
+    "trackWidth": 390,
+    "cardWidths": [
+      390,
+      390,
+      390
+    ],
+    "contentOverflow": [
+      0,
+      0,
+      0
+    ],
+    "arrowsInside": true,
+    "headerFits": true
+  },
+  {
+    "lang": "en",
+    "width": 430,
+    "viewportHeight": 932,
+    "height": 820,
+    "trackWidth": 430,
+    "cardWidths": [
+      430,
+      430,
+      430
+    ],
+    "contentOverflow": [
+      0,
+      0,
+      0
+    ],
+    "arrowsInside": true,
+    "headerFits": true
+  },
+  {
+    "lang": "en",
+    "width": 667,
+    "viewportHeight": 375,
+    "height": 285,
+    "trackWidth": 667,
+    "cardWidths": [
+      667,
+      667,
+      667
+    ],
+    "contentOverflow": [
+      0,
+      0,
+      0
+    ],
+    "arrowsInside": true,
+    "headerFits": true
+  },
+  {
+    "lang": "en",
+    "width": 568,
+    "viewportHeight": 320,
+    "height": 244,
+    "trackWidth": 568,
+    "cardWidths": [
+      568,
+      568,
+      568
+    ],
+    "contentOverflow": [
+      0,
+      0,
+      0
+    ],
+    "arrowsInside": true,
+    "headerFits": true
+  },
+  {
+    "lang": "am",
+    "width": 320,
+    "viewportHeight": 568,
+    "height": 492,
+    "trackWidth": 320,
+    "cardWidths": [
+      320,
+      320,
+      320
+    ],
+    "contentOverflow": [
+      0,
+      0,
+      0
+    ],
+    "arrowsInside": true,
+    "headerFits": true
+  },
+  {
+    "lang": "am",
+    "width": 375,
+    "viewportHeight": 667,
+    "height": 591,
+    "trackWidth": 375,
+    "cardWidths": [
+      375,
+      375,
+      375
+    ],
+    "contentOverflow": [
+      0,
+      0,
+      0
+    ],
+    "arrowsInside": true,
+    "headerFits": true
+  },
+  {
+    "lang": "am",
+    "width": 390,
+    "viewportHeight": 667,
+    "height": 591,
+    "trackWidth": 390,
+    "cardWidths": [
+      390,
+      390,
+      390
+    ],
+    "contentOverflow": [
+      0,
+      0,
+      0
+    ],
+    "arrowsInside": true,
+    "headerFits": true
+  },
+  {
+    "lang": "am",
+    "width": 390,
+    "viewportHeight": 844,
+    "height": 768,
+    "trackWidth": 390,
+    "cardWidths": [
+      390,
+      390,
+      390
+    ],
+    "contentOverflow": [
+      0,
+      0,
+      0
+    ],
+    "arrowsInside": true,
+    "headerFits": true
+  },
+  {
+    "lang": "am",
+    "width": 430,
+    "viewportHeight": 932,
+    "height": 820,
+    "trackWidth": 430,
+    "cardWidths": [
+      430,
+      430,
+      430
+    ],
+    "contentOverflow": [
+      0,
+      0,
+      0
+    ],
+    "arrowsInside": true,
+    "headerFits": true
+  },
+  {
+    "lang": "am",
+    "width": 667,
+    "viewportHeight": 375,
+    "height": 285,
+    "trackWidth": 667,
+    "cardWidths": [
+      667,
+      667,
+      667
+    ],
+    "contentOverflow": [
+      0,
+      0,
+      0
+    ],
+    "arrowsInside": true,
+    "headerFits": true
+  },
+  {
+    "lang": "am",
+    "width": 568,
+    "viewportHeight": 320,
+    "height": 244,
+    "trackWidth": 568,
+    "cardWidths": [
+      568,
+      568,
+      568
+    ],
+    "contentOverflow": [
+      0,
+      0,
+      0
+    ],
+    "arrowsInside": true,
+    "headerFits": true
+  }
+]

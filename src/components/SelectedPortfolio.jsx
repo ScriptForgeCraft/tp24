@@ -5,7 +5,7 @@ import { officialUrl } from '../data';
 import './selected-portfolio.css';
 
 const number = value => String(value + 1).padStart(2, '0');
-const Chevron = ({ previous = false }) => <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d={previous ? 'm14 4-8 8 8 8' : 'm10 4 8 8-8 8'} stroke="currentColor" strokeWidth="1.25" /></svg>;
+const Chevron = ({ previous = false }) => <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d={previous ? 'm14 4-8 8 8 8' : 'm10 4 8 8-8 8'} stroke="currentColor" strokeWidth="1.25" /><path className="portfolio-mobile-arrow-shaft" d={previous ? 'M6 12h14' : 'M4 12h14'} stroke="currentColor" strokeWidth="1.25" /></svg>;
 const ProjectArrow = () => <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14" stroke="currentColor" strokeWidth="1.2" /></svg>;
 ProjectArrow.editorIcon = true;
 
@@ -23,11 +23,24 @@ function nearestProject(track) {
 
 export function SelectedPortfolio({ projects, t, lang, img, onOpen }) {
   const [project, setProject] = useState(0);
+  const [mobile, setMobile] = useState(() => matchMedia('(max-width: 700px)').matches);
   const trackRef = useRef(null);
   const projectRef = useRef(0);
   const pendingScroll = useRef(null);
   const dragRef = useRef(null);
   const scrollFrame = useRef(0);
+
+  useEffect(() => {
+    const media = matchMedia('(max-width: 700px)');
+    const update = () => setMobile(media.matches);
+    media.addEventListener('change', update);
+    return () => media.removeEventListener('change', update);
+  }, []);
+
+  function stepProject(delta) {
+    const next = projectRef.current + delta;
+    goToProject(mobile ? (next + projects.length) % projects.length : next);
+  }
 
   function goToProject(index, behavior) {
     const track = trackRef.current;
@@ -99,8 +112,8 @@ export function SelectedPortfolio({ projects, t, lang, img, onOpen }) {
       <EditorElement as="a" {...edit('projects.all')} className="portfolio-all" href={officialUrl('projects', lang)} target="_blank" rel="noopener noreferrer">{t.allProjects}<svg width="26" height="24" viewBox="0 0 26 24" fill="none" aria-hidden="true"><path d="M2 12h21M16 5l7 7-7 7" stroke="currentColor" strokeWidth="1.1" /></svg></EditorElement>
       <div className="portfolio-controls" role="group" aria-label={t.projectNavigation}>
         <div className="portfolio-arrows">
-          <EditorElement as="button" {...edit('projects.previous')} type="button" aria-label={t.previousProject} aria-controls="portfolio-track" disabled={project === 0} onClick={() => goToProject(projectRef.current - 1)}><Chevron previous /></EditorElement>
-          <EditorElement as="button" {...edit('projects.next')} type="button" aria-label={t.nextProject} aria-controls="portfolio-track" disabled={project === projects.length - 1} onClick={() => goToProject(projectRef.current + 1)}><Chevron /></EditorElement>
+          <EditorElement as="button" {...edit('projects.previous')} type="button" aria-label={t.previousProject} aria-controls="portfolio-track" disabled={!mobile && project === 0} onClick={() => stepProject(-1)}><Chevron previous /></EditorElement>
+          <EditorElement as="button" {...edit('projects.next')} type="button" aria-label={t.nextProject} aria-controls="portfolio-track" disabled={!mobile && project === projects.length - 1} onClick={() => stepProject(1)}><Chevron /></EditorElement>
         </div>
         <div className="portfolio-pagination">{projects.map((p, i) => <button type="button" key={p.editKey} aria-label={`${t.viewProject}: ${p.name}`} aria-current={project === i ? 'true' : undefined} aria-controls="portfolio-track" onClick={() => goToProject(i)}>{number(i)}<span aria-hidden="true" /></button>)}</div>
       </div>
@@ -109,7 +122,8 @@ export function SelectedPortfolio({ projects, t, lang, img, onOpen }) {
       if (event.target !== event.currentTarget) return;
       if (['ArrowLeft', 'ArrowRight', 'Home', 'End'].includes(event.key)) {
         event.preventDefault();
-        goToProject(event.key === 'Home' ? 0 : event.key === 'End' ? projects.length - 1 : projectRef.current + (event.key === 'ArrowRight' ? 1 : -1));
+        if (event.key === 'Home' || event.key === 'End') goToProject(event.key === 'Home' ? 0 : projects.length - 1);
+        else stepProject(event.key === 'ArrowRight' ? 1 : -1);
       }
     }} onPointerDown={startDrag} onPointerMove={event => {
       if (dragRef.current) event.currentTarget.scrollLeft = dragRef.current.left - (event.clientX - dragRef.current.x);
@@ -118,6 +132,7 @@ export function SelectedPortfolio({ projects, t, lang, img, onOpen }) {
         <EditorElement as="div" {...edit(`projects.visual.${p.editKey}`)} className="portfolio-image"><EditorElement as="img" {...edit(`projects.visual.${p.editKey}.image`)} loading="lazy" src={img(p.image)} alt={p.name} draggable={false} /></EditorElement>
         <EditorElement as="div" {...edit(i === 0 ? 'projects.overlay' : `projects.visual.${p.editKey}.overlay`)} className="portfolio-shade" />
         <div className="project-info portfolio-card-info">
+          <p className="portfolio-mobile-reference">{t.selected}</p>
           <span className="portfolio-card-number" aria-hidden="true">{number(i)}<span /></span>
           <EditorElement as="h3" {...edit(`projects.card.${p.editKey}.heading`)} className="display">{p.name}</EditorElement>
           <EditorElement as="p" {...edit(`projects.card.${p.editKey}.category`)} className="portfolio-category">{p.category}</EditorElement>
