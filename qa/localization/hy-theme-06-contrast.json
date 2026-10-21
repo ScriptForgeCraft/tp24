@@ -1,0 +1,681 @@
+[
+  {
+    "width": 1440,
+    "samples": [
+      {
+        "selector": ".hero-title .line-mask > span",
+        "index": 0,
+        "minimum": 14.1,
+        "required": 3
+      },
+      {
+        "selector": ".hero-title .line-mask > span",
+        "index": 1,
+        "minimum": 13.98,
+        "required": 3
+      },
+      {
+        "selector": ".hero-title .line-mask > span",
+        "index": 2,
+        "minimum": 14.09,
+        "required": 3
+      },
+      {
+        "selector": ".hero-title .line-mask > span",
+        "index": 3,
+        "minimum": 13.31,
+        "required": 3
+      },
+      {
+        "selector": ".hero-tagline",
+        "index": 0,
+        "minimum": 13.45,
+        "required": 4.5
+      },
+      {
+        "selector": ".hero-description",
+        "index": 0,
+        "minimum": 5.93,
+        "required": 4.5
+      },
+      {
+        "selector": ".hero-buttons .action",
+        "index": 0,
+        "minimum": 5.52,
+        "required": 4.5
+      },
+      {
+        "selector": ".hero-buttons .action",
+        "index": 1,
+        "minimum": 17.58,
+        "required": 4.5
+      },
+      {
+        "selector": ".scroll-hint",
+        "index": 0,
+        "minimum": 17.5,
+        "required": 4.5
+      },
+      {
+        "selector": ".service-visual-label > span",
+        "index": 0,
+        "minimum": 17.5,
+        "required": 4.5
+      },
+      {
+        "selector": ".service-visual-label > span",
+        "index": 1,
+        "minimum": 17.5,
+        "required": 4.5
+      },
+      {
+        "selector": ".service-caption",
+        "index": 0,
+        "minimum": 17.5,
+        "required": 4.5
+      },
+      {
+        "selector": ".package-index",
+        "index": 0,
+        "minimum": 10.38,
+        "required": 4.5
+      },
+      {
+        "selector": ".package-index",
+        "index": 1,
+        "minimum": 8.96,
+        "required": 4.5
+      },
+      {
+        "selector": ".package-index",
+        "index": 2,
+        "minimum": 9.7,
+        "required": 4.5
+      },
+      {
+        "selector": ".package-content h3",
+        "index": 0,
+        "minimum": 13.77,
+        "required": 4.5
+      },
+      {
+        "selector": ".package-content h3",
+        "index": 1,
+        "minimum": 12.17,
+        "required": 4.5
+      },
+      {
+        "selector": ".package-content h3",
+        "index": 2,
+        "minimum": 13.77,
+        "required": 4.5
+      },
+      {
+        "selector": ".package-content > p",
+        "index": 0,
+        "minimum": 13.77,
+        "required": 4.5
+      },
+      {
+        "selector": ".package-content > p",
+        "index": 1,
+        "minimum": 15.15,
+        "required": 4.5
+      },
+      {
+        "selector": ".package-content > p",
+        "index": 2,
+        "minimum": 12.17,
+        "required": 4.5
+      },
+      {
+        "selector": ".package-content > p",
+        "index": 3,
+        "minimum": 12.36,
+        "required": 4.5
+      },
+      {
+        "selector": ".package-content > p",
+        "index": 4,
+        "minimum": 13.77,
+        "required": 4.5
+      },
+      {
+        "selector": ".package-content > p",
+        "index": 5,
+        "minimum": 14.12,
+        "required": 4.5
+      },
+      {
+        "selector": ".package-content li",
+        "index": 0,
+        "minimum": 13.77,
+        "required": 4.5
+      },
+      {
+        "selector": ".package-content li",
+        "index": 1,
+        "minimum": 13.77,
+        "required": 4.5
+      },
+      {
+        "selector": ".package-content li",
+        "index": 2,
+        "minimum": 13.77,
+        "required": 4.5
+      },
+      {
+        "selector": ".package-content li",
+        "index": 3,
+        "minimum": 12.17,
+        "required": 4.5
+      },
+      {
+        "selector": ".package-content li",
+        "index": 4,
+        "minimum": 12.17,
+        "required": 4.5
+      },
+      {
+        "selector": ".package-content li",
+        "index": 5,
+        "minimum": 12.21,
+        "required": 4.5
+      },
+      {
+        "selector": ".package-content li",
+        "index": 6,
+        "minimum": 14.12,
+        "required": 4.5
+      },
+      {
+        "selector": ".package-content li",
+        "index": 7,
+        "minimum": 14.12,
+        "required": 4.5
+      },
+      {
+        "selector": ".package-content li",
+        "index": 8,
+        "minimum": 14.12,
+        "required": 4.5
+      },
+      {
+        "selector": ".package-price",
+        "index": 0,
+        "minimum": 14.56,
+        "required": 3
+      },
+      {
+        "selector": ".package-price",
+        "index": 1,
+        "minimum": 12.17,
+        "required": 3
+      },
+      {
+        "selector": ".package-price",
+        "index": 2,
+        "minimum": 13.98,
+        "required": 3
+      },
+      {
+        "selector": ".package-price > p",
+        "index": 0,
+        "minimum": 10.24,
+        "required": 4.5
+      },
+      {
+        "selector": ".package-price > p",
+        "index": 1,
+        "minimum": 10.11,
+        "required": 4.5
+      },
+      {
+        "selector": ".package-price > p",
+        "index": 2,
+        "minimum": 8.87,
+        "required": 4.5
+      },
+      {
+        "selector": ".package-price > p",
+        "index": 3,
+        "minimum": 8.71,
+        "required": 4.5
+      },
+      {
+        "selector": ".package-price > p",
+        "index": 4,
+        "minimum": 9.94,
+        "required": 4.5
+      },
+      {
+        "selector": ".package-price > p",
+        "index": 5,
+        "minimum": 9.8,
+        "required": 4.5
+      },
+      {
+        "selector": ".package-content > .action",
+        "index": 0,
+        "minimum": 15.22,
+        "required": 4.5
+      },
+      {
+        "selector": ".package-content > .action",
+        "index": 1,
+        "minimum": 15.22,
+        "required": 4.5
+      },
+      {
+        "selector": ".package-content > .action",
+        "index": 2,
+        "minimum": 15.22,
+        "required": 4.5
+      },
+      {
+        "selector": ".project-card.active .portfolio-card-number",
+        "index": 0,
+        "minimum": 2.93,
+        "required": 4.5
+      },
+      {
+        "selector": ".project-card.active .project-info h3",
+        "index": 0,
+        "minimum": 3.01,
+        "required": 3
+      },
+      {
+        "selector": ".project-card.active .portfolio-category",
+        "index": 0,
+        "minimum": 9.69,
+        "required": 4.5
+      },
+      {
+        "selector": ".project-card.active .portfolio-explore",
+        "index": 0,
+        "minimum": 15.47,
+        "required": 4.5
+      },
+      {
+        "selector": ".portfolio-count",
+        "index": 0,
+        "minimum": 15.91,
+        "required": 4.5
+      },
+      {
+        "selector": ".portfolio-source",
+        "index": 0,
+        "minimum": 11.05,
+        "required": 4.5
+      },
+      {
+        "selector": ".cta-content .eyebrow",
+        "index": 0,
+        "minimum": 6.71,
+        "required": 4.5
+      },
+      {
+        "selector": ".cta-content .line-mask > span",
+        "index": 0,
+        "minimum": 16.82,
+        "required": 3
+      },
+      {
+        "selector": ".cta-content .line-mask > span",
+        "index": 1,
+        "minimum": 16.82,
+        "required": 3
+      },
+      {
+        "selector": ".cta-content .line-mask > span",
+        "index": 2,
+        "minimum": 16.82,
+        "required": 3
+      },
+      {
+        "selector": ".cta-bottom > p",
+        "index": 0,
+        "minimum": 6.71,
+        "required": 4.5
+      },
+      {
+        "selector": ".cta-bottom > .action",
+        "index": 0,
+        "minimum": 5.52,
+        "required": 4.5
+      }
+    ],
+    "failures": [
+      {
+        "selector": ".project-card.active .portfolio-card-number",
+        "index": 0,
+        "minimum": 2.93,
+        "required": 4.5
+      }
+    ]
+  },
+  {
+    "width": 390,
+    "samples": [
+      {
+        "selector": ".hero-title .line-mask > span",
+        "index": 0,
+        "minimum": 13.57,
+        "required": 4.5
+      },
+      {
+        "selector": ".hero-title .line-mask > span",
+        "index": 1,
+        "minimum": 13.7,
+        "required": 4.5
+      },
+      {
+        "selector": ".hero-title .line-mask > span",
+        "index": 2,
+        "minimum": 13.7,
+        "required": 4.5
+      },
+      {
+        "selector": ".hero-title .line-mask > span",
+        "index": 3,
+        "minimum": 13.7,
+        "required": 4.5
+      },
+      {
+        "selector": ".hero-tagline",
+        "index": 0,
+        "minimum": 13.81,
+        "required": 4.5
+      },
+      {
+        "selector": ".hero-buttons .action",
+        "index": 0,
+        "minimum": 5.52,
+        "required": 4.5
+      },
+      {
+        "selector": ".hero-buttons .action",
+        "index": 1,
+        "minimum": 17.58,
+        "required": 4.5
+      },
+      {
+        "selector": ".scroll-hint",
+        "index": 0,
+        "minimum": 17.5,
+        "required": 4.5
+      },
+      {
+        "selector": ".package-index",
+        "index": 0,
+        "minimum": 10.48,
+        "required": 4.5
+      },
+      {
+        "selector": ".package-index",
+        "index": 1,
+        "minimum": 9,
+        "required": 4.5
+      },
+      {
+        "selector": ".package-index",
+        "index": 2,
+        "minimum": 9.7,
+        "required": 4.5
+      },
+      {
+        "selector": ".package-content h3",
+        "index": 0,
+        "minimum": 13.77,
+        "required": 4.5
+      },
+      {
+        "selector": ".package-content h3",
+        "index": 1,
+        "minimum": 12.17,
+        "required": 4.5
+      },
+      {
+        "selector": ".package-content h3",
+        "index": 2,
+        "minimum": 13.79,
+        "required": 4.5
+      },
+      {
+        "selector": ".package-content > p",
+        "index": 0,
+        "minimum": 13.77,
+        "required": 4.5
+      },
+      {
+        "selector": ".package-content > p",
+        "index": 1,
+        "minimum": 14.94,
+        "required": 4.5
+      },
+      {
+        "selector": ".package-content > p",
+        "index": 2,
+        "minimum": 12.17,
+        "required": 4.5
+      },
+      {
+        "selector": ".package-content > p",
+        "index": 3,
+        "minimum": 12.17,
+        "required": 4.5
+      },
+      {
+        "selector": ".package-content > p",
+        "index": 4,
+        "minimum": 13.77,
+        "required": 4.5
+      },
+      {
+        "selector": ".package-content > p",
+        "index": 5,
+        "minimum": 14.17,
+        "required": 4.5
+      },
+      {
+        "selector": ".package-content li",
+        "index": 0,
+        "minimum": 13.77,
+        "required": 4.5
+      },
+      {
+        "selector": ".package-content li",
+        "index": 1,
+        "minimum": 13.77,
+        "required": 4.5
+      },
+      {
+        "selector": ".package-content li",
+        "index": 2,
+        "minimum": 13.98,
+        "required": 4.5
+      },
+      {
+        "selector": ".package-content li",
+        "index": 3,
+        "minimum": 12.17,
+        "required": 4.5
+      },
+      {
+        "selector": ".package-content li",
+        "index": 4,
+        "minimum": 12.17,
+        "required": 4.5
+      },
+      {
+        "selector": ".package-content li",
+        "index": 5,
+        "minimum": 12.36,
+        "required": 4.5
+      },
+      {
+        "selector": ".package-content li",
+        "index": 6,
+        "minimum": 14.17,
+        "required": 4.5
+      },
+      {
+        "selector": ".package-content li",
+        "index": 7,
+        "minimum": 14.31,
+        "required": 4.5
+      },
+      {
+        "selector": ".package-content li",
+        "index": 8,
+        "minimum": 14.37,
+        "required": 4.5
+      },
+      {
+        "selector": ".package-price",
+        "index": 0,
+        "minimum": 14.74,
+        "required": 3
+      },
+      {
+        "selector": ".package-price",
+        "index": 1,
+        "minimum": 12.17,
+        "required": 3
+      },
+      {
+        "selector": ".package-price",
+        "index": 2,
+        "minimum": 13.98,
+        "required": 3
+      },
+      {
+        "selector": ".package-price > p",
+        "index": 0,
+        "minimum": 10.37,
+        "required": 4.5
+      },
+      {
+        "selector": ".package-price > p",
+        "index": 1,
+        "minimum": 10.37,
+        "required": 4.5
+      },
+      {
+        "selector": ".package-price > p",
+        "index": 2,
+        "minimum": 8.87,
+        "required": 4.5
+      },
+      {
+        "selector": ".package-price > p",
+        "index": 3,
+        "minimum": 8.71,
+        "required": 4.5
+      },
+      {
+        "selector": ".package-price > p",
+        "index": 4,
+        "minimum": 9.83,
+        "required": 4.5
+      },
+      {
+        "selector": ".package-price > p",
+        "index": 5,
+        "minimum": 9.83,
+        "required": 4.5
+      },
+      {
+        "selector": ".package-content > .action",
+        "index": 0,
+        "minimum": 15.22,
+        "required": 4.5
+      },
+      {
+        "selector": ".package-content > .action",
+        "index": 1,
+        "minimum": 15.22,
+        "required": 4.5
+      },
+      {
+        "selector": ".package-content > .action",
+        "index": 2,
+        "minimum": 15.22,
+        "required": 4.5
+      },
+      {
+        "selector": ".project-card.active .portfolio-mobile-reference",
+        "index": 0,
+        "minimum": 8.33,
+        "required": 4.5
+      },
+      {
+        "selector": ".project-card.active .project-info h3",
+        "index": 0,
+        "minimum": 8.88,
+        "required": 3
+      },
+      {
+        "selector": ".project-card.active .portfolio-category",
+        "index": 0,
+        "minimum": 9.03,
+        "required": 4.5
+      },
+      {
+        "selector": ".project-card.active .portfolio-explore",
+        "index": 0,
+        "minimum": 10.19,
+        "required": 4.5
+      },
+      {
+        "selector": ".portfolio-count",
+        "index": 0,
+        "minimum": 15.93,
+        "required": 4.5
+      },
+      {
+        "selector": ".portfolio-source",
+        "index": 0,
+        "minimum": 15.75,
+        "required": 4.5
+      },
+      {
+        "selector": ".cta-content .eyebrow",
+        "index": 0,
+        "minimum": 6.71,
+        "required": 4.5
+      },
+      {
+        "selector": ".cta-content .line-mask > span",
+        "index": 0,
+        "minimum": 16.82,
+        "required": 4.5
+      },
+      {
+        "selector": ".cta-content .line-mask > span",
+        "index": 1,
+        "minimum": 16.82,
+        "required": 4.5
+      },
+      {
+        "selector": ".cta-content .line-mask > span",
+        "index": 2,
+        "minimum": 16.82,
+        "required": 4.5
+      },
+      {
+        "selector": ".cta-bottom > p",
+        "index": 0,
+        "minimum": 6.71,
+        "required": 4.5
+      },
+      {
+        "selector": ".cta-bottom > .action",
+        "index": 0,
+        "minimum": 5.52,
+        "required": 4.5
+      }
+    ],
+    "failures": []
+  }
+]

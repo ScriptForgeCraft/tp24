@@ -19,7 +19,7 @@ try {
     await page.goto(process.env.PREVIEW_URL || 'http://localhost:5173/');
     if (lang === 'am') await page.locator('.header .language button').last().click();
     check(`${lang}: no dead navigation`, await page.locator('.desktop-nav a').evaluateAll(els => els.every(el => document.querySelector(el.getAttribute('href')))));
-    check(`${lang}: correct prices and reference area`, await page.locator('.package-price').evaluateAll(els => els.length === 3 && els.every(el => el.textContent.includes('1,200–1,500')) && els[0].textContent.includes('2 400 000') && els[1].textContent.includes('4 800 000') && els[2].textContent.includes('11 200 000')));
+    check(`${lang}: correct prices and reference area`, await page.locator('.package-price').evaluateAll(els => els.length === 3 && els.every(el => /1[ ,]200–1[ ,]500/.test(el.textContent)) && els[0].textContent.includes('2 400 000') && els[1].textContent.includes('4 800 000') && els[2].textContent.includes('11 200 000')));
     check(`${lang}: twelve selected genuine logos`, await page.locator('#partners img').count() === 12);
     check(`${lang}: all homepage images load`, await images());
     check(`${lang}: three dated memoranda`, await page.locator('time').count() === 6);

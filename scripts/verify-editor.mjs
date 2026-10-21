@@ -209,9 +209,9 @@ try {
   await page.locator("#p24-copy-language").selectOption("am");
   await page.waitForTimeout(150);
   await page
-    .getByLabel("Text content", { exact: true })
+    .getByLabel("Տեքստային բովանդակություն", { exact: true })
     .fill("Հայերեն վերնագիր");
-  await page.getByLabel("Text content", { exact: true }).blur();
+  await page.getByLabel("Տեքստային բովանդակություն", { exact: true }).blur();
   check(
     "Armenian copy applies independently",
     (await target("hero.heading").textContent()) === "Հայերեն վերնագիր",
@@ -793,8 +793,8 @@ try {
     (await frame.locator("html").getAttribute("lang")) === "hy",
   );
   await frame.locator(".mobile-menu .close-button").click();
-  await click("Return to editing");
-  await page.getByRole("button", { name: "Close editor", exact: true }).click();
+  await page.getByRole("region", { name: "Դիզայնի խմբագրիչ", exact: true }).getByRole("button", { name: "Վերադառնալ խմբագրմանը", exact: true }).click();
+  await page.getByRole("button", { name: "Փակել խմբագրիչը", exact: true }).click();
   check(
     "Exit restores the presentation",
     (await page.locator(".p24-toolbar,iframe").count()) === 0 &&

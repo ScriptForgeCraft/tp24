@@ -619,6 +619,19 @@
   height: 100%;
   object-fit: contain;
 }
+.p24-image-preview > p {
+  padding: 14px;
+  margin: 0;
+}
+.p24-image-actions {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.p24-image-actions button {
+  min-width: 0;
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
 .p24-upload {
   position: relative;
   display: flex;

@@ -1,0 +1,4043 @@
+{
+  "baseline": "8ea4272e603b83dc1c8eb8ab2579f2164b521f37",
+  "counts": {
+    "reviewed": 672,
+    "corrected": 65,
+    "added": 386,
+    "retained": 221
+  },
+  "rows": [
+    {
+      "key": "translations.talk",
+      "en": "Let’s Talk",
+      "am": "Կապ հաստատել",
+      "file": "src/data.js"
+    },
+    {
+      "key": "translations.hero[0]",
+      "en": "BUILD WITH",
+      "am": "ԿԱՌՈՒՑԵՔ",
+      "file": "src/data.js"
+    },
+    {
+      "key": "translations.hero[1]",
+      "en": "VISION.",
+      "am": "ՏԵՍԼԱԿԱՆՈՎ։",
+      "file": "src/data.js"
+    },
+    {
+      "key": "translations.hero[2]",
+      "en": "INVEST WITH",
+      "am": "ՆԵՐԴՐԵՔ",
+      "file": "src/data.js"
+    },
+    {
+      "key": "translations.hero[3]",
+      "en": "CLARITY.",
+      "am": "ՀԻՄՆԱՎՈՐՎԱԾ ՈՐՈՇՄԱՄԲ։",
+      "file": "src/data.js"
+    },
+    {
+      "key": "translations.tagline",
+      "en": "Real Estate Development & Investment Advisory",
+      "am": "Անշարժ գույքի զարգացում և ներդրումային խորհրդատվություն",
+      "file": "src/data.js"
+    },
+    {
+      "key": "translations.heroText",
+      "en": "From market research and architectural planning to financial analysis and investment preparation — we bring the essential disciplines of real estate development together.",
+      "am": "Շուկայի ուսումնասիրությունից ու ճարտարապետական պլանավորումից մինչև ֆինանսական վերլուծություն և ներդրումային նախապատրաստում՝ մենք համախմբում ենք անշարժ գույքի զարգացման առանցքային մասնագիտական ուղղությունները։",
+      "file": "src/data.js"
+    },
+    {
+      "key": "translations.explore",
+      "en": "Explore Our Expertise",
+      "am": "Ծանոթացեք մեր փորձառությանը",
+      "file": "src/data.js"
+    },
+    {
+      "key": "translations.view",
+      "en": "View Projects",
+      "am": "Դիտել նախագծերը",
+      "file": "src/data.js"
+    },
+    {
+      "key": "translations.intro[0]",
+      "en": "ONE VISION.",
+      "am": "ՄԵԿ ՏԵՍԼԱԿԱՆ։",
+      "file": "src/data.js"
+    },
+    {
+      "key": "translations.intro[1]",
+      "en": "MULTIPLE",
+      "am": "ԲԱԶՄԱԿՈՂՄ",
+      "file": "src/data.js"
+    },
+    {
+      "key": "translations.intro[2]",
+      "en": "DISCIPLINES.",
+      "am": "ՓՈՐՁԱՌՈՒԹՅՈՒՆ։",
+      "file": "src/data.js"
+    },
+    {
+      "key": "translations.introSub",
+      "en": "Successful developments begin long before construction.",
+      "am": "Հաջող կառուցապատման հիմքը դրվում է շինարարության մեկնարկից շատ առաջ։",
+      "file": "src/data.js"
+    },
+    {
+      "key": "translations.introText",
+      "en": "A site’s potential depends on its market, planning constraints and financial assumptions. Prospect24 connects these disciplines so developers can assess the opportunity and prepare a coherent project.",
+      "am": "Տարածքի ներուժը կախված է շուկայական պայմաններից, կառուցապատման սահմանափակումներից և ֆինանսական հաշվարկների հիմքում ընկած ենթադրություններից։ Prospect24-ը համախմբում է այս մասնագիտական ուղղությունները, որպեսզի կառուցապատողները կարողանան գնահատել հնարավորությունն ու պատրաստել փոխկապակցված լուծումներով նախագիծ։",
+      "file": "src/data.js"
+    },
+    {
+      "key": "translations.development[0]",
+      "en": "DEVELOPMENT,",
+      "am": "ԿԱՌՈՒՑԱՊԱՏՈՒՄ՝",
+      "file": "src/data.js"
+    },
+    {
+      "key": "translations.development[1]",
+      "en": "FROM EVERY ANGLE.",
+      "am": "ԲՈԼՈՐ ՏԵՍԱՆԿՅՈՒՆՆԵՐԻՑ։",
+      "file": "src/data.js"
+    },
+    {
+      "key": "translations.devSub",
+      "en": "Integrated expertise for informed real estate decisions.",
+      "am": "Համակցված մասնագիտական փորձառություն՝ անշարժ գույքի ոլորտում հիմնավորված որոշումների համար։",
+      "file": "src/data.js"
+    },
+    {
+      "key": "translations.packages[0]",
+      "en": "STRUCTURED SOLUTIONS.",
+      "am": "ՀԱՄԱԿԱՐԳՎԱԾ ԼՈՒԾՈՒՄՆԵՐ։",
+      "file": "src/data.js"
+    },
+    {
+      "key": "translations.packages[1]",
+      "en": "INFORMED DECISIONS.",
+      "am": "ՀԻՄՆԱՎՈՐՎԱԾ ՈՐՈՇՈՒՄՆԵՐ։",
+      "file": "src/data.js"
+    },
+    {
+      "key": "translations.compare",
+      "en": "Compare Packages",
+      "am": "Համեմատել փաթեթները",
+      "file": "src/data.js"
+    },
+    {
+      "key": "translations.project[0]",
+      "en": "ARCHITECTURAL",
+      "am": "ՃԱՐՏԱՐԱՊԵՏԱԿԱՆ",
+      "file": "src/data.js"
+    },
+    {
+      "key": "translations.project[1]",
+      "en": "PERSPECTIVES.",
+      "am": "ՏԵՍԼԱԿԱՆՆԵՐ։",
+      "file": "src/data.js"
+    },
+    {
+      "key": "translations.process[0]",
+      "en": "FROM POSSIBILITY",
+      "am": "ՀՆԱՐԱՎՈՐՈՒԹՅՈՒՆԻՑ",
+      "file": "src/data.js"
+    },
+    {
+      "key": "translations.process[1]",
+      "en": "TO PREPARATION.",
+      "am": "ԴԵՊԻ ՆԱԽԱՊԱՏՐԱՍՏՈՒՄ։",
+      "file": "src/data.js"
+    },
+    {
+      "key": "translations.expertise[0]",
+      "en": "EXPERTISE,",
+      "am": "ՓՈՐՁԱՌՈՒԹՅՈՒՆ՝",
+      "file": "src/data.js"
+    },
+    {
+      "key": "translations.expertise[1]",
+      "en": "BROUGHT TOGETHER.",
+      "am": "ՄԻԱՎՈՐՎԱԾ։",
+      "file": "src/data.js"
+    },
+    {
+      "key": "translations.expertiseText",
+      "en": "Three implementing companies bring market knowledge, architectural design and business planning into one development package.",
+      "am": "Երեք իրականացնող ընկերություններ մեկ փաթեթում միավորում են շուկայի ուսումնասիրությունը, ճարտարապետությունն ու բիզնես պլանավորումը։",
+      "file": "src/data.js"
+    },
+    {
+      "key": "translations.cta[0]",
+      "en": "THE NEXT",
+      "am": "ՁԵՐ ՀԱՋՈՐԴ",
+      "file": "src/data.js"
+    },
+    {
+      "key": "translations.cta[1]",
+      "en": "DEVELOPMENT",
+      "am": "ԿԱՌՈՒՑԱՊԱՏՈՒՄԸ",
+      "file": "src/data.js"
+    },
+    {
+      "key": "translations.cta[2]",
+      "en": "STARTS HERE.",
+      "am": "ՍԿՍՎՈՒՄ Է ԱՅՍՏԵՂ։",
+      "file": "src/data.js"
+    },
+    {
+      "key": "translations.ctaText",
+      "en": "Let’s explore the potential of your next real estate project.",
+      "am": "Բացահայտենք ձեր հաջորդ անշարժ գույքի նախագծի ներուժը։",
+      "file": "src/data.js"
+    },
+    {
+      "key": "translations.discuss",
+      "en": "Let’s Discuss Your Project",
+      "am": "Քննարկենք ձեր նախագիծը",
+      "file": "src/data.js"
+    },
+    {
+      "key": "translations.learn",
+      "en": "Learn More",
+      "am": "Իմանալ ավելին",
+      "file": "src/data.js"
+    },
+    {
+      "key": "translations.before",
+      "en": "Before",
+      "am": "Մինչև",
+      "file": "src/data.js"
+    },
+    {
+      "key": "translations.after",
+      "en": "After",
+      "am": "Հետո",
+      "file": "src/data.js"
+    },
+    {
+      "key": "translations.package",
+      "en": "Explore Package",
+      "am": "Դիտել փաթեթը",
+      "file": "src/data.js"
+    },
+    {
+      "key": "translations.exploreProject",
+      "en": "Explore Project",
+      "am": "Դիտել նախագիծը",
+      "file": "src/data.js"
+    },
+    {
+      "key": "translations.contact",
+      "en": "Let’s build a conversation.",
+      "am": "Սկսենք զրույցը։",
+      "file": "src/data.js"
+    },
+    {
+      "key": "translations.months[0]",
+      "en": "January",
+      "am": "հունվարի",
+      "file": "src/data.js"
+    },
+    {
+      "key": "translations.months[1]",
+      "en": "February",
+      "am": "փետրվարի",
+      "file": "src/data.js"
+    },
+    {
+      "key": "translations.months[2]",
+      "en": "March",
+      "am": "մարտի",
+      "file": "src/data.js"
+    },
+    {
+      "key": "translations.months[3]",
+      "en": "April",
+      "am": "ապրիլի",
+      "file": "src/data.js"
+    },
+    {
+      "key": "translations.months[4]",
+      "en": "May",
+      "am": "մայիսի",
+      "file": "src/data.js"
+    },
+    {
+      "key": "translations.months[5]",
+      "en": "June",
+      "am": "հունիսի",
+      "file": "src/data.js"
+    },
+    {
+      "key": "translations.months[6]",
+      "en": "July",
+      "am": "հուլիսի",
+      "file": "src/data.js"
+    },
+    {
+      "key": "translations.months[7]",
+      "en": "August",
+      "am": "օգոստոսի",
+      "file": "src/data.js"
+    },
+    {
+      "key": "translations.months[8]",
+      "en": "September",
+      "am": "սեպտեմբերի",
+      "file": "src/data.js"
+    },
+    {
+      "key": "translations.months[9]",
+      "en": "October",
+      "am": "հոկտեմբերի",
+      "file": "src/data.js"
+    },
+    {
+      "key": "translations.months[10]",
+      "en": "November",
+      "am": "նոյեմբերի",
+      "file": "src/data.js"
+    },
+    {
+      "key": "translations.months[11]",
+      "en": "December",
+      "am": "դեկտեմբերի",
+      "file": "src/data.js"
+    },
+    {
+      "key": "translations.introImage",
+      "en": "Sculptural contemporary architecture among trees",
+      "am": "Ժամանակակից ճարտարապետություն ծառերի միջավայրում",
+      "file": "src/data.js"
+    },
+    {
+      "key": "translations.introDetailImage",
+      "en": "Architectural facade and urban streetscape",
+      "am": "Ճարտարապետական ճակատ և քաղաքային փողոց",
+      "file": "src/data.js"
+    },
+    {
+      "key": "translations.approachLabel",
+      "en": "Our Approach",
+      "am": "Մեր մոտեցումը",
+      "file": "src/data.js"
+    },
+    {
+      "key": "translations.serviceLabel",
+      "en": "End-to-end Development",
+      "am": "Կառուցապատման համալիր ուղեկցում",
+      "file": "src/data.js"
+    },
+    {
+      "key": "translations.packageLabel",
+      "en": "Development Packages",
+      "am": "Կառուցապատման նախագծերի փաթեթներ",
+      "file": "src/data.js"
+    },
+    {
+      "key": "translations.projectLabel",
+      "en": "Selected Portfolio",
+      "am": "Ընտրված նախագծեր",
+      "file": "src/data.js"
+    },
+    {
+      "key": "translations.processLabel",
+      "en": "The Development Journey",
+      "am": "Կառուցապատման գործընթացը",
+      "file": "src/data.js"
+    },
+    {
+      "key": "translations.expertiseLabel",
+      "en": "Implementing Companies",
+      "am": "Փաթեթներն իրականացնող ընկերություններ",
+      "file": "src/data.js"
+    },
+    {
+      "key": "translations.nextLabel",
+      "en": "Your Next Project",
+      "am": "Ձեր հաջորդ նախագիծը",
+      "file": "src/data.js"
+    },
+    {
+      "key": "translations.scroll",
+      "en": "Scroll to discover",
+      "am": "Ոլորեք՝ ավելին բացահայտելու համար",
+      "file": "src/data.js"
+    },
+    {
+      "key": "translations.perspective",
+      "en": "From possibility to perspective",
+      "am": "Հնարավորությունից դեպի տեսլական",
+      "file": "src/data.js"
+    },
+    {
+      "key": "translations.illustrative",
+      "en": "Illustrative development vision",
+      "am": "Կառուցապատման պատկերավոր տեսլական",
+      "file": "src/data.js"
+    },
+    {
+      "key": "translations.caption",
+      "en": "A considered perspective.",
+      "am": "Կշռադատված տեսլական։",
+      "file": "src/data.js"
+    },
+    {
+      "key": "translations.serviceCaption",
+      "en": "Intelligence. Architecture. Strategy.",
+      "am": "Գիտելիք։ Ճարտարապետություն։ Ռազմավարություն։",
+      "file": "src/data.js"
+    },
+    {
+      "key": "translations.from",
+      "en": "from",
+      "am": "սկսած",
+      "file": "src/data.js"
+    },
+    {
+      "key": "translations.currency",
+      "en": "AMD",
+      "am": "դրամ",
+      "file": "src/data.js"
+    },
+    {
+      "key": "translations.referenceArea",
+      "en": "Reference construction area",
+      "am": "Կառուցապատման հաշվարկային մակերես",
+      "file": "src/data.js"
+    },
+    {
+      "key": "translations.area",
+      "en": "1,200–1,500 m²",
+      "am": "1 200–1 500 մ²",
+      "file": "src/data.js"
+    },
+    {
+      "key": "translations.pricingNote",
+      "en": "Published reference prices for 1,200–1,500 m² of construction area. Confirm the final scope and commercial offer with the team.",
+      "am": "Հրապարակված հաշվարկային գներ՝ 1 200–1 500 մ² կառուցապատման մակերեսի համար։ Նախաներդրումային փաթեթի համար նշված է փաթեթի գինը, մյուսների համար՝ մեկնարկային գներ։ Ծառայությունների վերջնական ծավալն ու առևտրային առաջարկը ճշտեք թիմի հետ։",
+      "file": "src/data.js"
+    },
+    {
+      "key": "translations.fixedPrice",
+      "en": "Published package price",
+      "am": "Փաթեթի հրապարակված արժեք",
+      "file": "src/data.js"
+    },
+    {
+      "key": "translations.startingPrice",
+      "en": "Published starting price",
+      "am": "Հրապարակված մեկնարկային արժեք",
+      "file": "src/data.js"
+    },
+    {
+      "key": "translations.allProjects",
+      "en": "View all projects",
+      "am": "Դիտել բոլոր նախագծերը",
+      "file": "src/data.js"
+    },
+    {
+      "key": "translations.viewProject",
+      "en": "View project",
+      "am": "Դիտել նախագիծը",
+      "file": "src/data.js"
+    },
+    {
+      "key": "translations.projectNavigation",
+      "en": "Project navigation",
+      "am": "Նախագծերի նավարկում",
+      "file": "src/data.js"
+    },
+    {
+      "key": "translations.scrollProjects",
+      "en": "Scroll to explore",
+      "am": "Ոլորեք՝ նախագծերը դիտելու համար",
+      "file": "src/data.js"
+    },
+    {
+      "key": "translations.dragProjects",
+      "en": "Drag or use the arrows to explore",
+      "am": "Քաշեք կամ օգտագործեք սլաքները՝ նախագծերը դիտելու համար",
+      "file": "src/data.js"
+    },
+    {
+      "key": "translations.swipeProjects",
+      "en": "Swipe to explore",
+      "am": "Սահեցրեք՝ նախագծերը դիտելու համար",
+      "file": "src/data.js"
+    },
+    {
+      "key": "translations.portfolioNote",
+      "en": "Architectural work featured on Prospect24’s official website.",
+      "am": "Prospect24-ի պաշտոնական կայքում ներկայացված ճարտարապետական աշխատանքներ։",
+      "file": "src/data.js"
+    },
+    {
+      "key": "translations.selected",
+      "en": "Portfolio reference",
+      "am": "Պորտֆոլիոյում ներկայացված աշխատանք",
+      "file": "src/data.js"
+    },
+    {
+      "key": "translations.projectSource",
+      "en": "Published architectural imagery",
+      "am": "Հրապարակված ճարտարապետական պատկերներ",
+      "file": "src/data.js"
+    },
+    {
+      "key": "translations.projectLimit",
+      "en": "Portfolio imagery does not establish that Prospect24 developed or delivered the project. The source does not specify completion status or commercial results.",
+      "am": "Պորտֆոլիոյի պատկերները չեն հաստատում, որ Prospect24-ը կառուցապատել կամ իրականացրել է նախագիծը։ Աղբյուրը չի նշում ավարտի կարգավիճակ կամ առևտրային արդյունքներ։",
+      "file": "src/data.js"
+    },
+    {
+      "key": "translations.sourceProject",
+      "en": "View official portfolio",
+      "am": "Դիտել պաշտոնական պորտֆոլիոն",
+      "file": "src/data.js"
+    },
+    {
+      "key": "translations.similar",
+      "en": "Discuss Your Project",
+      "am": "Քննարկեք ձեր նախագիծը",
+      "file": "src/data.js"
+    },
+    {
+      "key": "translations.processNote",
+      "en": "An overview of how the services connect. The scope and sequence are agreed for each project.",
+      "am": "Ծառայությունների փոխկապակցման ընդհանուր նկարագիր։ Ծավալն ու հերթականությունը համաձայնեցվում են յուրաքանչյուր նախագծի համար։",
+      "file": "src/data.js"
+    },
+    {
+      "key": "translations.network",
+      "en": "Partner network",
+      "am": "Գործընկերների ցանց",
+      "file": "src/data.js"
+    },
+    {
+      "key": "translations.networkText",
+      "en": "Organizations listed in the official Prospect24 partner network, across finance, architecture, materials and interiors.",
+      "am": "Prospect24-ի պաշտոնական գործընկերների ցանկում ընդգրկված կազմակերպություններ՝ ֆինանսների, ճարտարապետության, նյութերի և ինտերիերի ոլորտներից։",
+      "file": "src/data.js"
+    },
+    {
+      "key": "translations.allPartners",
+      "en": "View all 30 partners",
+      "am": "Դիտել բոլոր 30 գործընկերներին",
+      "file": "src/data.js"
+    },
+    {
+      "key": "translations.networkNote",
+      "en": "Inclusion reflects the published partner list; the nature of each relationship may differ.",
+      "am": "Ներկայացված է հրապարակված ցանկը․ համագործակցության բնույթը կարող է տարբեր լինել։",
+      "file": "src/data.js"
+    },
+    {
+      "key": "translations.signed",
+      "en": "Signed",
+      "am": "Ստորագրվել է",
+      "file": "src/data.js"
+    },
+    {
+      "key": "translations.published",
+      "en": "Published",
+      "am": "Հրապարակվել է",
+      "file": "src/data.js"
+    },
+    {
+      "key": "translations.article",
+      "en": "Read original article",
+      "am": "Կարդալ սկզբնաղբյուրը",
+      "file": "src/data.js"
+    },
+    {
+      "key": "translations.newsLabel",
+      "en": "Cooperation & Media",
+      "am": "Համագործակցություն և մեդիա",
+      "file": "src/data.js"
+    },
+    {
+      "key": "translations.newsTitle[0]",
+      "en": "WORKING TOGETHER.",
+      "am": "ՀԱՄԱՏԵՂ ԱՇԽԱՏԱՆՔ։",
+      "file": "src/data.js"
+    },
+    {
+      "key": "translations.newsIntro",
+      "en": "Published agreements and conversations about the development process.",
+      "am": "Հրապարակված համաձայնագրեր և քննարկումներ՝ կառուցապատման գործընթացի մասին։",
+      "file": "src/data.js"
+    },
+    {
+      "key": "translations.mediaTitle",
+      "en": "Conversations on Dignisi News",
+      "am": "Զրույցներ Dignisi News-ում",
+      "file": "src/data.js"
+    },
+    {
+      "key": "translations.mediaLanguage",
+      "en": "Armenian-language interviews",
+      "am": "Հայերեն հարցազրույցներ",
+      "file": "src/data.js"
+    },
+    {
+      "key": "translations.watch",
+      "en": "Watch on YouTube",
+      "am": "Դիտել YouTube-ում",
+      "file": "src/data.js"
+    },
+    {
+      "key": "translations.compareTitle",
+      "en": "Compare packages.",
+      "am": "Համեմատեք փաթեթները։",
+      "file": "src/data.js"
+    },
+    {
+      "key": "translations.compareIntro",
+      "en": "Start with feasibility, develop the concept, or prepare detailed documentation. Each level expands the work before it.",
+      "am": "Սկսեք իրագործելիության գնահատումից, մշակեք հայեցակարգը կամ պատրաստեք մանրամասն փաստաթղթերը։ Յուրաքանչյուր փաթեթ ընդլայնում է նախորդի շրջանակում կատարվող աշխատանքները։",
+      "file": "src/data.js"
+    },
+    {
+      "key": "translations.viewDetails",
+      "en": "View Details",
+      "am": "Դիտել մանրամասները",
+      "file": "src/data.js"
+    },
+    {
+      "key": "translations.sourceScope",
+      "en": "View published scope",
+      "am": "Դիտել հրապարակված ծառայությունների ցանկը",
+      "file": "src/data.js"
+    },
+    {
+      "key": "translations.scopeTitle",
+      "en": "What is included",
+      "am": "Ինչ է ներառված",
+      "file": "src/data.js"
+    },
+    {
+      "key": "translations.inherited",
+      "en": "The groups below show the combined scope of this package.",
+      "am": "Ստորև ներկայացված են այս փաթեթի բոլոր ծառայությունները՝ ներառյալ նախորդ փաթեթներից ներառվածները։",
+      "file": "src/data.js"
+    },
+    {
+      "key": "translations.exploreFooter",
+      "en": "Explore",
+      "am": "Բացահայտեք",
+      "file": "src/data.js"
+    },
+    {
+      "key": "translations.conversation",
+      "en": "Start a conversation",
+      "am": "Սկսենք զրույցը",
+      "file": "src/data.js"
+    },
+    {
+      "key": "translations.prototype",
+      "en": "Client presentation",
+      "am": "Հաճախորդի ներկայացման տարբերակ",
+      "file": "src/data.js"
+    },
+    {
+      "key": "translations.privacy",
+      "en": "Privacy Policy",
+      "am": "Գաղտնիության քաղաքականություն",
+      "file": "src/data.js"
+    },
+    {
+      "key": "translations.terms",
+      "en": "Terms of Use",
+      "am": "Օգտագործման պայմաններ",
+      "file": "src/data.js"
+    },
+    {
+      "key": "translations.legalLabel",
+      "en": "Presentation Information",
+      "am": "Ներկայացման մասին",
+      "file": "src/data.js"
+    },
+    {
+      "key": "translations.privacyCopy[0]",
+      "en": "This presentation has no analytics, tracking cookies, accounts or enquiry database. External article and video links open third-party websites.",
+      "am": "Ներկայացման այս տարբերակը չունի վերլուծական գործիքներ, հետևող քուքիներ, հաշիվներ կամ հարցումների տվյալների բազա։ Արտաքին հոդվածներն ու տեսանյութերը բացվում են երրորդ կողմերի կայքերում։",
+      "file": "src/data.js"
+    },
+    {
+      "key": "translations.privacyCopy[1]",
+      "en": "The form opens a draft in your email application. The website does not submit or store the enquiry. Your email provider’s terms apply when you send it.",
+      "am": "Ձևը բացում է սևագիր ձեր էլեկտրոնային փոստի հավելվածում։ Կայքը չի ուղարկում կամ պահպանում հարցումը։ Ուղարկելիս գործում են ձեր էլեկտրոնային փոստի մատակարարի պայմանները։",
+      "file": "src/data.js"
+    },
+    {
+      "key": "translations.privacyCopy[2]",
+      "en": "This notice describes the presentation only. A production privacy policy requires client approval.",
+      "am": "Այս տեղեկությունը վերաբերում է միայն ներկայացմանը։ Գործարկվող կայքի գաղտնիության քաղաքականությունը պետք է հաստատվի պատվիրատուի կողմից։",
+      "file": "src/data.js"
+    },
+    {
+      "key": "translations.termsCopy[0]",
+      "en": "This is a client presentation of Prospect24’s services using published business information.",
+      "am": "Սա Prospect24-ի ծառայությունների՝ հրապարակված գործարար տեղեկությունների վրա հիմնված ներկայացման տարբերակն է։",
+      "file": "src/data.js"
+    },
+    {
+      "key": "translations.termsCopy[1]",
+      "en": "Prices are published reference prices and require commercial confirmation. Portfolio imagery does not establish project completion. The hero comparison is illustrative. Permits, investment and financial outcomes are not guaranteed.",
+      "am": "Գները հրապարակված հաշվարկային արժեքներ են և պահանջում են առևտրային ճշտում։ Պորտֆոլիոյի պատկերները չեն հաստատում նախագծի ավարտը։ Գլխավոր համեմատությունը պատկերավոր օրինակ է։ Թույլտվությունների ստացումը, ներդրումների ներգրավումն ու ֆինանսական արդյունքները երաշխավորված չեն։",
+      "file": "src/data.js"
+    },
+    {
+      "key": "translations.termsCopy[2]",
+      "en": "Production legal terms require client approval before launch.",
+      "am": "Մինչև գործարկումը անհրաժեշտ է պատվիրատուի կողմից հաստատել օգտագործման իրավական պայմանները։",
+      "file": "src/data.js"
+    },
+    {
+      "key": "translations.contactIntro",
+      "en": "Share the location, your idea and the decision you are preparing to make.",
+      "am": "Նշեք տեղանքը, ձեր գաղափարը և այն որոշումը, որին պատրաստվում եք։",
+      "file": "src/data.js"
+    },
+    {
+      "key": "translations.name",
+      "en": "Name and surname",
+      "am": "Անուն, ազգանուն",
+      "file": "src/data.js"
+    },
+    {
+      "key": "translations.emailLabel",
+      "en": "Email address",
+      "am": "Էլ․ հասցե",
+      "file": "src/data.js"
+    },
+    {
+      "key": "translations.phoneLabel",
+      "en": "Phone (optional)",
+      "am": "Հեռախոսահամար (ըստ ցանկության)",
+      "file": "src/data.js"
+    },
+    {
+      "key": "translations.packageSelect",
+      "en": "Package of interest",
+      "am": "Հետաքրքրող փաթեթ",
+      "file": "src/data.js"
+    },
+    {
+      "key": "translations.undecided",
+      "en": "Help me choose",
+      "am": "Օգնեք ընտրել",
+      "file": "src/data.js"
+    },
+    {
+      "key": "translations.message",
+      "en": "Your project",
+      "am": "Ձեր նախագիծը",
+      "file": "src/data.js"
+    },
+    {
+      "key": "translations.messagePlaceholder",
+      "en": "Location, idea, or the decision ahead…",
+      "am": "Տեղանքը, գաղափարը կամ առաջիկա որոշումը…",
+      "file": "src/data.js"
+    },
+    {
+      "key": "translations.prepareEmail",
+      "en": "Prepare Email",
+      "am": "Պատրաստել նամակը",
+      "file": "src/data.js"
+    },
+    {
+      "key": "translations.draftNote",
+      "en": "Opens a draft in your email app. This website does not send or store your enquiry.",
+      "am": "Բացում է սևագիր ձեր փոստի հավելվածում։ Կայքը չի ուղարկում կամ պահպանում հարցումը։",
+      "file": "src/data.js"
+    },
+    {
+      "key": "translations.draftReady",
+      "en": "Email draft requested. If your mail app did not open, contact us directly below.",
+      "am": "Նամակի սևագիրը բացելու հարցումն ուղարկված է։ Եթե փոստի հավելվածը չի բացվել, կապվեք ստորև նշված տվյալներով։",
+      "file": "src/data.js"
+    },
+    {
+      "key": "translations.skip",
+      "en": "Skip to content",
+      "am": "Անցնել բովանդակությանը",
+      "file": "src/data.js"
+    },
+    {
+      "key": "translations.mainNav",
+      "en": "Main navigation",
+      "am": "Հիմնական նավարկում",
+      "file": "src/data.js"
+    },
+    {
+      "key": "translations.footerNav",
+      "en": "Footer navigation",
+      "am": "Ստորին նավարկում",
+      "file": "src/data.js"
+    },
+    {
+      "key": "translations.openMenu",
+      "en": "Open navigation menu",
+      "am": "Բացել ընտրացանկը",
+      "file": "src/data.js"
+    },
+    {
+      "key": "translations.closeMenu",
+      "en": "Close navigation menu",
+      "am": "Փակել ընտրացանկը",
+      "file": "src/data.js"
+    },
+    {
+      "key": "translations.siteNav",
+      "en": "Site navigation",
+      "am": "Կայքի նավարկում",
+      "file": "src/data.js"
+    },
+    {
+      "key": "translations.closeDialog",
+      "en": "Close dialog",
+      "am": "Փակել պատուհանը",
+      "file": "src/data.js"
+    },
+    {
+      "key": "translations.backTop",
+      "en": "Back to top",
+      "am": "Վերադառնալ վերև",
+      "file": "src/data.js"
+    },
+    {
+      "key": "translations.previousProject",
+      "en": "Previous project",
+      "am": "Նախորդ նախագիծ",
+      "file": "src/data.js"
+    },
+    {
+      "key": "translations.nextProject",
+      "en": "Next project",
+      "am": "Հաջորդ նախագիծ",
+      "file": "src/data.js"
+    },
+    {
+      "key": "translations.slider",
+      "en": "Illustrative before and after comparison",
+      "am": "Կառուցապատումից առաջ և հետո՝ պատկերավոր համեմատություն",
+      "file": "src/data.js"
+    },
+    {
+      "key": "translations.beforeValue",
+      "en": "before development",
+      "am": "մինչև կառուցապատումը",
+      "file": "src/data.js"
+    },
+    {
+      "key": "translations.language",
+      "en": "Language",
+      "am": "Լեզու",
+      "file": "src/data.js"
+    },
+    {
+      "key": "translations.logoHome",
+      "en": "Prospect24 home",
+      "am": "Prospect24 գլխավոր էջ",
+      "file": "src/data.js"
+    },
+    {
+      "key": "translations.documentTitle",
+      "en": "Prospect24 — Build with vision. Invest with clarity.",
+      "am": "Prospect24 — Կառուցեք տեսլականով։ Ներդրեք հիմնավորված որոշմամբ։",
+      "file": "src/data.js"
+    },
+    {
+      "key": "translations.metaDescription",
+      "en": "Prospect24 — Real Estate Development & Investment Advisory. An interactive homepage design prototype.",
+      "am": "Prospect24 — անշարժ գույքի զարգացում և ներդրումային խորհրդատվություն։ Գլխավոր էջի ինտերակտիվ նախատիպ։",
+      "file": "src/data.js"
+    },
+    {
+      "key": "translations.enquirySubject",
+      "en": "Project enquiry — Prospect24",
+      "am": "Նախագծի վերաբերյալ հարցում — Prospect24",
+      "file": "src/data.js"
+    },
+    {
+      "key": "translations.requiredField",
+      "en": "Please complete this field.",
+      "am": "Խնդրում ենք լրացնել այս դաշտը։",
+      "file": "src/data.js"
+    },
+    {
+      "key": "translations.invalidEmail",
+      "en": "Please enter a valid email address.",
+      "am": "Խնդրում ենք մուտքագրել վավեր էլ․ հասցե։",
+      "file": "src/data.js"
+    },
+    {
+      "key": "translations.emailPlaceholder",
+      "en": "you@company.com",
+      "am": "օրինակ՝ you@company.com",
+      "file": "src/data.js"
+    },
+    {
+      "key": "packages[0].name",
+      "en": "Pre-Investment Package",
+      "am": "Նախաներդրումային փաթեթ",
+      "file": "src/data.js"
+    },
+    {
+      "key": "packages[0].description",
+      "en": "Evaluate a site before committing to development.",
+      "am": "Գնահատեք տարածքը՝ նախքան կառուցապատման որոշումը։",
+      "file": "src/data.js"
+    },
+    {
+      "key": "packages[0].detail",
+      "en": "Bring location research, an initial planning concept and financial forecasts together to assess a development opportunity.",
+      "am": "Տեղանքի ուսումնասիրությունը, նախնական ճարտարապետական լուծումները և ֆինանսական կանխատեսումները միավորվում են՝ կառուցապատման հնարավորությունը գնահատելու համար։",
+      "file": "src/data.js"
+    },
+    {
+      "key": "packages[0].items[0]",
+      "en": "Market & location research",
+      "am": "Շուկայի և տեղանքի ուսումնասիրություն",
+      "file": "src/data.js"
+    },
+    {
+      "key": "packages[0].items[1]",
+      "en": "Preliminary architectural planning",
+      "am": "Նախնական ճարտարապետական պլանավորում",
+      "file": "src/data.js"
+    },
+    {
+      "key": "packages[0].items[2]",
+      "en": "Five-year financial forecasts",
+      "am": "Հնգամյա ֆինանսական կանխատեսումներ",
+      "file": "src/data.js"
+    },
+    {
+      "key": "packages[0].inheritance",
+      "en": "The starting point",
+      "am": "Մեկնարկային փաթեթ",
+      "file": "src/data.js"
+    },
+    {
+      "key": "packages[0].comparison[0]",
+      "en": "Site research and pricing recommendations",
+      "am": "Տեղանքի ուսումնասիրություն և գնային առաջարկներ",
+      "file": "src/data.js"
+    },
+    {
+      "key": "packages[0].comparison[1]",
+      "en": "Master-plan concept, parking and typical-floor zoning",
+      "am": "Գլխավոր հատակագծի սխեմա, կայանատեղի և տիպային հարկի զոնավորում",
+      "file": "src/data.js"
+    },
+    {
+      "key": "packages[0].comparison[2]",
+      "en": "Five-year forecasts and break-even analysis",
+      "am": "Հնգամյա կանխատեսումներ և ինքնածախսածածկման հաշվարկ",
+      "file": "src/data.js"
+    },
+    {
+      "key": "packages[0].scope[0].title",
+      "en": "Market & location research",
+      "am": "Շուկայի և տեղանքի ուսումնասիրություն",
+      "file": "src/data.js"
+    },
+    {
+      "key": "packages[0].scope[0].items[0]",
+      "en": "Selected location and surrounding infrastructure assessment.",
+      "am": "Ընտրված տարածքի և հարակից ենթակառուցվածքների գնահատում։",
+      "file": "src/data.js"
+    },
+    {
+      "key": "packages[0].scope[0].items[1]",
+      "en": "Nearby residential developments: apartment sizes, pricing and building classification.",
+      "am": "Հարակից բնակելի շենքերի, բնակարանների մակերեսների ու գների ուսումնասիրություն և շենքի դասակարգում։",
+      "file": "src/data.js"
+    },
+    {
+      "key": "packages[0].scope[0].items[2]",
+      "en": "Recommendations informed by Dignisi sales data, including landscaping and green-space opportunities.",
+      "am": "Dignisi-ի վաճառքի տվյալների հիման վրա առաջարկներ, ներառյալ կանաչապատման և բարեկարգման հնարավորությունները։",
+      "file": "src/data.js"
+    },
+    {
+      "key": "packages[0].scope[1].title",
+      "en": "Preliminary architectural planning",
+      "am": "Նախնական ճարտարապետական պլանավորում",
+      "file": "src/data.js"
+    },
+    {
+      "key": "packages[0].scope[1].items[0]",
+      "en": "Master-plan concept considering planning regulations, fire safety and insolation requirements.",
+      "am": "Գլխավոր հատակագծի սխեմա՝ հաշվի առնելով կառուցապատման դրույթները, հակահրդեհային և ինսոլյացիոն նորմերը։",
+      "file": "src/data.js"
+    },
+    {
+      "key": "packages[0].scope[1].items[1]",
+      "en": "Initial underground parking arrangements and typical-floor zoning.",
+      "am": "Ստորգետնյա ավտոկայանատեղիի նախնական սխեմա և տիպային հարկի զոնավորում։",
+      "file": "src/data.js"
+    },
+    {
+      "key": "packages[0].scope[1].items[2]",
+      "en": "Apartment layout considerations, including depth and number of windows.",
+      "am": "Բնակարանների հատակագծային չափորոշիչներ՝ խորություն և պատուհանների քանակ։",
+      "file": "src/data.js"
+    },
+    {
+      "key": "packages[0].scope[2].title",
+      "en": "Five-year financial forecasting",
+      "am": "Հնգամյա ֆինանսական կանխատեսումներ",
+      "file": "src/data.js"
+    },
+    {
+      "key": "packages[0].scope[2].items[0]",
+      "en": "Investment plan over five years.",
+      "am": "Ներդրումային պլան՝ հինգ տարվա կտրվածքով։",
+      "file": "src/data.js"
+    },
+    {
+      "key": "packages[0].scope[2].items[1]",
+      "en": "Cash-flow and financial performance forecasts: monthly in year one, annually in years two to five.",
+      "am": "Դրամական միջոցների հոսքերի և ֆինանսական արդյունքների կանխատեսումներ՝ առաջին տարվա համար ամսական, երկրորդից հինգերորդ տարիների համար՝ տարեկան կտրվածքով։",
+      "file": "src/data.js"
+    },
+    {
+      "key": "packages[0].scope[2].items[2]",
+      "en": "Financial indicators and break-even calculations.",
+      "am": "Ֆինանսական ցուցանիշների և ինքնածախսածածկման հաշվարկներ։",
+      "file": "src/data.js"
+    },
+    {
+      "key": "packages[1].name",
+      "en": "Development Package",
+      "am": "Զարգացման փաթեթ",
+      "file": "src/data.js"
+    },
+    {
+      "key": "packages[1].description",
+      "en": "Develop the architectural concept and business model.",
+      "am": "Մշակեք ճարտարապետական հայեցակարգն ու բիզնես մոդելը։",
+      "file": "src/data.js"
+    },
+    {
+      "key": "packages[1].detail",
+      "en": "Extend the initial feasibility work with deeper market analysis, architectural layouts and a defined business model.",
+      "am": "Իրագործելիության նախնական գնահատումը լրացվում է շուկայի խորացված վերլուծությամբ, ճարտարապետական հատակագծերով և բիզնես մոդելով։",
+      "file": "src/data.js"
+    },
+    {
+      "key": "packages[1].items[0]",
+      "en": "Expanded market analysis",
+      "am": "Շուկայի ընդլայնված վերլուծություն",
+      "file": "src/data.js"
+    },
+    {
+      "key": "packages[1].items[1]",
+      "en": "Architectural layouts & model",
+      "am": "Հատակագծեր և սխեմատիկ մոդել",
+      "file": "src/data.js"
+    },
+    {
+      "key": "packages[1].items[2]",
+      "en": "Business-model development",
+      "am": "Բիզնես մոդելի մշակում",
+      "file": "src/data.js"
+    },
+    {
+      "key": "packages[1].inheritance",
+      "en": "Includes the Pre-Investment Package",
+      "am": "Ներառում է Նախաներդրումային փաթեթը",
+      "file": "src/data.js"
+    },
+    {
+      "key": "packages[1].comparison[0]",
+      "en": "Adds district trends, transactions and price changes",
+      "am": "Ավելանում են վարչական շրջանների շուկայական միտումների, գործարքների և գնային փոփոխությունների տվյալները",
+      "file": "src/data.js"
+    },
+    {
+      "key": "packages[1].comparison[1]",
+      "en": "Adds floor layouts, roads, schematic model and section",
+      "am": "Ավելանում են հարկերի հատակագծերը, ճանապարհները, սխեմատիկ մոդելն ու կտրվածքը",
+      "file": "src/data.js"
+    },
+    {
+      "key": "packages[1].comparison[2]",
+      "en": "Retains forecasts; adds a business model",
+      "am": "Կանխատեսումները լրացվում են բիզնես մոդելով",
+      "file": "src/data.js"
+    },
+    {
+      "key": "packages[1].scope[0].title",
+      "en": "Expanded market analysis",
+      "am": "Շուկայի ընդլայնված վերլուծություն",
+      "file": "src/data.js"
+    },
+    {
+      "key": "packages[1].scope[0].items[0]",
+      "en": "Location, infrastructure, nearby developments, apartment sizes and pricing, building classification and landscaping recommendations.",
+      "am": "Տեղանքի, ենթակառուցվածքների, հարակից կառուցապատման, բնակարանների մակերեսների ու գների ուսումնասիրություն, շենքի դասակարգում և կանաչապատման առաջարկներ։",
+      "file": "src/data.js"
+    },
+    {
+      "key": "packages[1].scope[0].items[1]",
+      "en": "Real estate trends and apartment transaction distribution across Yerevan’s administrative districts.",
+      "am": "Շուկայի միտումներ և Երևանում բնակարանների առքուվաճառքի գործարքների բաշխում՝ ըստ վարչական շրջանների։",
+      "file": "src/data.js"
+    },
+    {
+      "key": "packages[1].scope[0].items[2]",
+      "en": "Transport availability and relevant Dignisi sales data.",
+      "am": "Տրանսպորտի հասանելիություն և Dignisi-ի համապատասխան վաճառքի տվյալներ։",
+      "file": "src/data.js"
+    },
+    {
+      "key": "packages[1].scope[0].items[3]",
+      "en": "Price-per-square-metre comparisons, percentage changes and analytical conclusions.",
+      "am": "Քառակուսի մետրի գների համեմատություն, տոկոսային փոփոխություններ և վերլուծական եզրակացություններ։",
+      "file": "src/data.js"
+    },
+    {
+      "key": "packages[1].scope[1].title",
+      "en": "Expanded architectural planning",
+      "am": "Ընդլայնված ճարտարապետական պլանավորում",
+      "file": "src/data.js"
+    },
+    {
+      "key": "packages[1].scope[1].items[0]",
+      "en": "Master-plan layout with roads and pathways, considering planning, fire safety and insolation requirements.",
+      "am": "Գլխավոր հատակագծի սխեմա՝ ճանապարհներով և ուղիներով, հաշվի առնելով կառուցապատման, հակահրդեհային և ինսոլյացիոն նորմերը։",
+      "file": "src/data.js"
+    },
+    {
+      "key": "packages[1].scope[1].items[1]",
+      "en": "Ground-floor, typical-floor and underground parking layouts.",
+      "am": "Առաջին ու տիպային հարկերի և ստորգետնյա ավտոկայանատեղիի հատակագծեր։",
+      "file": "src/data.js"
+    },
+    {
+      "key": "packages[1].scope[1].items[2]",
+      "en": "Schematic axonometric model in the existing environment and schematic section.",
+      "am": "Սխեմատիկ աքսոնոմետրիկ մոդել՝ գոյություն ունեցող միջավայրում, և սխեմատիկ կտրվածք։",
+      "file": "src/data.js"
+    },
+    {
+      "key": "packages[1].scope[2].title",
+      "en": "Five-year financial forecasting",
+      "am": "Հնգամյա ֆինանսական կանխատեսումներ",
+      "file": "src/data.js"
+    },
+    {
+      "key": "packages[1].scope[2].items[0]",
+      "en": "Investment plan over five years.",
+      "am": "Ներդրումային պլան՝ հինգ տարվա կտրվածքով։",
+      "file": "src/data.js"
+    },
+    {
+      "key": "packages[1].scope[2].items[1]",
+      "en": "Cash-flow and financial performance forecasts: monthly in year one, annually in years two to five.",
+      "am": "Դրամական միջոցների հոսքերի և ֆինանսական արդյունքների կանխատեսումներ՝ առաջին տարվա համար ամսական, երկրորդից հինգերորդ տարիների համար՝ տարեկան կտրվածքով։",
+      "file": "src/data.js"
+    },
+    {
+      "key": "packages[1].scope[2].items[2]",
+      "en": "Financial indicators and break-even calculations.",
+      "am": "Ֆինանսական ցուցանիշների և ինքնածախսածածկման հաշվարկներ։",
+      "file": "src/data.js"
+    },
+    {
+      "key": "packages[1].scope[3].title",
+      "en": "Business model",
+      "am": "Բիզնես մոդել",
+      "file": "src/data.js"
+    },
+    {
+      "key": "packages[1].scope[3].items[0]",
+      "en": "Target-customer profiles and value proposition.",
+      "am": "Թիրախային հաճախորդների նկարագիր և արժեքային առաջարկ։",
+      "file": "src/data.js"
+    },
+    {
+      "key": "packages[1].scope[3].items[1]",
+      "en": "Customer relationships, marketing and communication channels.",
+      "am": "Հաճախորդների հետ հարաբերություններ, մարքեթինգային և հաղորդակցման ուղիներ։",
+      "file": "src/data.js"
+    },
+    {
+      "key": "packages[1].scope[3].items[2]",
+      "en": "Revenue streams, partners, key activities, resources and cost structure.",
+      "am": "Եկամտի հոսքեր, գործընկերներ, հիմնական գործողություններ, ռեսուրսներ և ծախսերի կառուցվածք։",
+      "file": "src/data.js"
+    },
+    {
+      "key": "packages[2].name",
+      "en": "Investment Package",
+      "am": "Ներդրումային փաթեթ",
+      "file": "src/data.js"
+    },
+    {
+      "key": "packages[2].description",
+      "en": "Prepare detailed plans and a complete business case.",
+      "am": "Պատրաստեք մանրամասն նախագիծն ու ամբողջական բիզնես պլանը։",
+      "file": "src/data.js"
+    },
+    {
+      "key": "packages[2].detail",
+      "en": "Combine expanded market research, detailed architecture and a full business plan. The published scope is intended for preparation to obtain the architectural planning assignment (APZ); approval is not guaranteed.",
+      "am": "Միավորում է շուկայի ընդլայնված հետազոտությունը, մանրամասն ճարտարապետական փաստաթղթերն ու ամբողջական բիզնես պլանը։ Հրապարակված փաթեթը նախատեսված է ճարտարապետահատակագծային առաջադրանք (ՃՀԱ, APZ) ստանալուն նախապատրաստվելու համար․ հաստատումը երաշխավորված չէ։",
+      "file": "src/data.js"
+    },
+    {
+      "key": "packages[2].items[0]",
+      "en": "Detailed architectural documentation",
+      "am": "Մանրամասն ճարտարապետական փաստաթղթեր",
+      "file": "src/data.js"
+    },
+    {
+      "key": "packages[2].items[1]",
+      "en": "Full business & financial plan",
+      "am": "Ամբողջական բիզնես և ֆինանսական պլան",
+      "file": "src/data.js"
+    },
+    {
+      "key": "packages[2].items[2]",
+      "en": "Risk assessment & mitigation",
+      "am": "Ռիսկերի գնահատում և նվազեցում",
+      "file": "src/data.js"
+    },
+    {
+      "key": "packages[2].inheritance",
+      "en": "Earlier research & business-model services included",
+      "am": "Ներառում է նախորդ փուլերի ուսումնասիրություններն ու բիզնես մոդելի մշակման ծառայությունները",
+      "file": "src/data.js"
+    },
+    {
+      "key": "packages[2].comparison[0]",
+      "en": "Retains expanded market research",
+      "am": "Պահպանվում է շուկայի ընդլայնված ուսումնասիրությունը",
+      "file": "src/data.js"
+    },
+    {
+      "key": "packages[2].comparison[1]",
+      "en": "Adds detailed plans, facades and 3D visualizations for APZ preparation",
+      "am": "Ավելանում են մանրամասն հատակագծեր, ճակատներ և 3D վիզուալիզացիաներ՝ ճարտարապետահատակագծային առաջադրանքի ստացմանը նախապատրաստվելու համար",
+      "file": "src/data.js"
+    },
+    {
+      "key": "packages[2].comparison[2]",
+      "en": "Extends the business model into a full business plan with risk mitigation",
+      "am": "Բիզնես մոդելը լրացվում է ամբողջական բիզնես պլանով և ռիսկերի նվազեցման միջոցառումներով",
+      "file": "src/data.js"
+    },
+    {
+      "key": "packages[2].scope[0].title",
+      "en": "Expanded market analysis",
+      "am": "Շուկայի ընդլայնված վերլուծություն",
+      "file": "src/data.js"
+    },
+    {
+      "key": "packages[2].scope[0].items[0]",
+      "en": "Location, infrastructure, nearby developments, apartment sizes and pricing, building classification and landscaping recommendations.",
+      "am": "Տեղանքի, ենթակառուցվածքների, հարակից կառուցապատման, բնակարանների մակերեսների ու գների ուսումնասիրություն, շենքի դասակարգում և կանաչապատման առաջարկներ։",
+      "file": "src/data.js"
+    },
+    {
+      "key": "packages[2].scope[0].items[1]",
+      "en": "Real estate trends and apartment transaction distribution across Yerevan’s administrative districts.",
+      "am": "Շուկայի միտումներ և Երևանում բնակարանների առքուվաճառքի գործարքների բաշխում՝ ըստ վարչական շրջանների։",
+      "file": "src/data.js"
+    },
+    {
+      "key": "packages[2].scope[0].items[2]",
+      "en": "Transport availability and relevant Dignisi sales data.",
+      "am": "Տրանսպորտի հասանելիություն և Dignisi-ի համապատասխան վաճառքի տվյալներ։",
+      "file": "src/data.js"
+    },
+    {
+      "key": "packages[2].scope[0].items[3]",
+      "en": "Price-per-square-metre comparisons, percentage changes and analytical conclusions.",
+      "am": "Քառակուսի մետրի գների համեմատություն, տոկոսային փոփոխություններ և վերլուծական եզրակացություններ։",
+      "file": "src/data.js"
+    },
+    {
+      "key": "packages[2].scope[1].title",
+      "en": "Detailed architectural documentation",
+      "am": "Մանրամասն ճարտարապետական փաստաթղթեր",
+      "file": "src/data.js"
+    },
+    {
+      "key": "packages[2].scope[1].items[0]",
+      "en": "Master plan; basement, ground-floor, typical and non-typical floor layouts; underground parking and roof plan.",
+      "am": "Գլխավոր հատակագիծ, ստորգետնյա, առաջին, տիպային ու ոչ տիպային հարկերի, ավտոկայանատեղիի և տանիքի հատակագծեր։",
+      "file": "src/data.js"
+    },
+    {
+      "key": "packages[2].scope[1].items[1]",
+      "en": "Building sections, facades and 3D visualizations integrated into the existing surroundings.",
+      "am": "Շենքի կտրվածքներ, ճակատներ և 3D վիզուալիզացիաներ՝ գոյություն ունեցող միջավայրում ներգծմամբ։",
+      "file": "src/data.js"
+    },
+    {
+      "key": "packages[2].scope[1].items[2]",
+      "en": "Excavation information where necessary; technical and economic indicators.",
+      "am": "Փորվածքներ՝ անհրաժեշտության դեպքում, և տեխնիկատնտեսական ցուցանիշներ։",
+      "file": "src/data.js"
+    },
+    {
+      "key": "packages[2].scope[1].items[3]",
+      "en": "Planning, fire safety, insolation and apartment-layout considerations from the initial package.",
+      "am": "Նախնական փաթեթի կառուցապատման, հակահրդեհային, ինսոլյացիոն և բնակարանների հատակագծման չափորոշիչներ։",
+      "file": "src/data.js"
+    },
+    {
+      "key": "packages[2].scope[2].title",
+      "en": "Five-year financial forecasting",
+      "am": "Հնգամյա ֆինանսական կանխատեսումներ",
+      "file": "src/data.js"
+    },
+    {
+      "key": "packages[2].scope[2].items[0]",
+      "en": "Investment plan over five years.",
+      "am": "Ներդրումային պլան՝ հինգ տարվա կտրվածքով։",
+      "file": "src/data.js"
+    },
+    {
+      "key": "packages[2].scope[2].items[1]",
+      "en": "Cash-flow and financial performance forecasts: monthly in year one, annually in years two to five.",
+      "am": "Դրամական միջոցների հոսքերի և ֆինանսական արդյունքների կանխատեսումներ՝ առաջին տարվա համար ամսական, երկրորդից հինգերորդ տարիների համար՝ տարեկան կտրվածքով։",
+      "file": "src/data.js"
+    },
+    {
+      "key": "packages[2].scope[2].items[2]",
+      "en": "Financial indicators and break-even calculations.",
+      "am": "Ֆինանսական ցուցանիշների և ինքնածախսածածկման հաշվարկներ։",
+      "file": "src/data.js"
+    },
+    {
+      "key": "packages[2].scope[3].title",
+      "en": "Business model",
+      "am": "Բիզնես մոդել",
+      "file": "src/data.js"
+    },
+    {
+      "key": "packages[2].scope[3].items[0]",
+      "en": "Target-customer profiles and value proposition.",
+      "am": "Թիրախային հաճախորդների նկարագիր և արժեքային առաջարկ։",
+      "file": "src/data.js"
+    },
+    {
+      "key": "packages[2].scope[3].items[1]",
+      "en": "Customer relationships, marketing and communication channels.",
+      "am": "Հաճախորդների հետ հարաբերություններ, մարքեթինգային և հաղորդակցման ուղիներ։",
+      "file": "src/data.js"
+    },
+    {
+      "key": "packages[2].scope[3].items[2]",
+      "en": "Revenue streams, partners, key activities, resources and cost structure.",
+      "am": "Եկամտի հոսքեր, գործընկերներ, հիմնական գործողություններ, ռեսուրսներ և ծախսերի կառուցվածք։",
+      "file": "src/data.js"
+    },
+    {
+      "key": "packages[2].scope[4].title",
+      "en": "Full business plan",
+      "am": "Ամբողջական բիզնես պլան",
+      "file": "src/data.js"
+    },
+    {
+      "key": "packages[2].scope[4].items[0]",
+      "en": "Project presentation and construction-sector research.",
+      "am": "Նախագծի ներկայացում և շինարարական ոլորտի հետազոտություն։",
+      "file": "src/data.js"
+    },
+    {
+      "key": "packages[2].scope[4].items[1]",
+      "en": "Marketing plan, operational plan and implementation schedule.",
+      "am": "Մարքեթինգային ու գործառնական պլաններ և իրականացման ժամանակացույց։",
+      "file": "src/data.js"
+    },
+    {
+      "key": "packages[2].scope[4].items[2]",
+      "en": "Five-year financial plan, risk assessment and mitigation measures.",
+      "am": "Հնգամյա ֆինանսական պլան, ռիսկերի գնահատում և նվազեցման միջոցառումներ։",
+      "file": "src/data.js"
+    },
+    {
+      "key": "packages[2].scope[4].items[3]",
+      "en": "Presentation of the project-management team.",
+      "am": "Նախագծի կառավարման թիմի ներկայացում։",
+      "file": "src/data.js"
+    },
+    {
+      "key": "services[0].title",
+      "en": "Market Research & Analysis",
+      "am": "Շուկայի ուսումնասիրություն և վերլուծություն",
+      "file": "src/data.js"
+    },
+    {
+      "key": "services[0].description",
+      "en": "Location, competition, apartment pricing and market trends.",
+      "am": "Տեղանք, մրցակցային միջավայր, բնակարանների գներ և շուկայի միտումներ։",
+      "file": "src/data.js"
+    },
+    {
+      "key": "services[0].detail",
+      "en": "Assess the site, surrounding infrastructure and nearby developments. Study apartment sizes, pricing and transaction trends, supported by relevant Dignisi sales data, to inform positioning and development recommendations.",
+      "am": "Գնահատվում են տարածքը, ենթակառուցվածքներն ու հարակից կառուցապատումը։ Բնակարանների մակերեսները, գները և գործարքների միտումները՝ Dignisi-ի համապատասխան վաճառքի տվյալների հետ, օգնում են մշակել դիրքավորման և կառուցապատման առաջարկներ։",
+      "file": "src/data.js"
+    },
+    {
+      "key": "services[0].imageLabel",
+      "en": "Architectural development study",
+      "am": "Կառուցապատման ճարտարապետական ուսումնասիրություն",
+      "file": "src/data.js"
+    },
+    {
+      "key": "services[1].title",
+      "en": "Architecture & Planning",
+      "am": "Ճարտարապետություն և պլանավորում",
+      "file": "src/data.js"
+    },
+    {
+      "key": "services[1].description",
+      "en": "From master-plan concepts to detailed architectural plans.",
+      "am": "Գլխավոր հատակագծի հայեցակարգից մինչև մանրամասն նախագիծ։",
+      "file": "src/data.js"
+    },
+    {
+      "key": "services[1].detail",
+      "en": "Develop master plans, floor layouts and parking arrangements with planning, fire safety and insolation requirements in view. Depending on the package, the scope extends to building sections, facades, 3D visualizations and contextual integration.",
+      "am": "Մշակվում են գլխավոր հատակագծեր, հարկերի և կայանատեղիների սխեմաներ՝ հաշվի առնելով կառուցապատման, հակահրդեհային և ինսոլյացիոն նորմերը։ Ըստ փաթեթի՝ ավելանում են կտրվածքներ, ճակատներ, 3D վիզուալիզացիաներ և միջավայրում ներգծում։",
+      "file": "src/data.js"
+    },
+    {
+      "key": "services[1].imageLabel",
+      "en": "Facade and architectural detail",
+      "am": "Ճակատ և ճարտարապետական մանրամասներ",
+      "file": "src/data.js"
+    },
+    {
+      "key": "services[2].title",
+      "en": "Financial & Business Planning",
+      "am": "Ֆինանսական և բիզնես պլանավորում",
+      "file": "src/data.js"
+    },
+    {
+      "key": "services[2].description",
+      "en": "Five-year forecasts, cash flow and business planning.",
+      "am": "Հնգամյա կանխատեսումներ, դրամական միջոցների հոսքեր և բիզնես պլանավորում։",
+      "file": "src/data.js"
+    },
+    {
+      "key": "services[2].detail",
+      "en": "Build an investment plan, cash-flow and financial performance forecasts, financial indicators and break-even analysis. Broader packages add a business model, marketing and operational plans, and an implementation schedule.",
+      "am": "Կազմվում են ներդրումային պլան, դրամական միջոցների հոսքերի և ֆինանսական արդյունքների կանխատեսումներ, ֆինանսական ցուցանիշների ու ինքնածախսածածկման հաշվարկներ։ Ընդլայնված փաթեթները ներառում են բիզնես մոդել, մարքեթինգային ու գործառնական պլաններ և ժամանակացույց։",
+      "file": "src/data.js"
+    },
+    {
+      "key": "services[2].imageLabel",
+      "en": "Financial planning and feasibility",
+      "am": "Ֆինանսական պլանավորում և իրագործելիության գնահատում",
+      "file": "src/data.js"
+    },
+    {
+      "key": "services[3].title",
+      "en": "Investment Preparation",
+      "am": "Ներդրումային նախապատրաստում",
+      "file": "src/data.js"
+    },
+    {
+      "key": "services[3].description",
+      "en": "Project documentation, business justification and risk review.",
+      "am": "Նախագծային փաստաթղթեր, բիզնես հիմնավորում և ռիսկերի գնահատում։",
+      "file": "src/data.js"
+    },
+    {
+      "key": "services[3].detail",
+      "en": "Bring architectural documentation, financial and economic justification, and business planning into a coordinated project package. Identify risks and mitigation measures to support evaluation by prospective investors and the relevant authorities.",
+      "am": "Ճարտարապետական փաստաթղթերը, ֆինանսատնտեսական հիմնավորումը և բիզնես պլանավորումը միավորվում են նախագծի փաթեթում։ Սահմանվում են ռիսկերն ու դրանց նվազեցման միջոցառումները՝ ներդրողների և համապատասխան մարմինների կողմից գնահատման համար։",
+      "file": "src/data.js"
+    },
+    {
+      "key": "services[3].imageLabel",
+      "en": "Investment analysis and preparation",
+      "am": "Ներդրումային վերլուծություն և նախապատրաստում",
+      "file": "src/data.js"
+    },
+    {
+      "key": "projects[0].name",
+      "en": "Garden Hill Residence",
+      "am": "Garden Hill Residence",
+      "file": "src/data.js"
+    },
+    {
+      "key": "projects[0].category",
+      "en": "Residential portfolio",
+      "am": "Բնակելի նախագծերի պորտֆոլիո",
+      "file": "src/data.js"
+    },
+    {
+      "key": "projects[0].description",
+      "en": "Garden Hill Residence is featured in the official Prospect24 project gallery. This entry presents its published architectural imagery.",
+      "am": "Garden Hill Residence-ը ներկայացված է Prospect24-ի պաշտոնական նախագծերի պատկերասրահում։ Այստեղ ցուցադրված է հրապարակված ճարտարապետական պատկերը։",
+      "file": "src/data.js"
+    },
+    {
+      "key": "projects[1].name",
+      "en": "Avet Avetisyan, 20",
+      "am": "Ավետ Ավետիսյան, 20",
+      "file": "src/data.js"
+    },
+    {
+      "key": "projects[1].category",
+      "en": "Residential portfolio",
+      "am": "Բնակելի նախագծերի պորտֆոլիո",
+      "file": "src/data.js"
+    },
+    {
+      "key": "projects[1].description",
+      "en": "Listed as “Avet Avetisyan, 20” in the official project gallery. Presented as a portfolio reference, without a claim about delivery or completion.",
+      "am": "Պաշտոնական պատկերասրահում ներկայացված է «Ավետ Ավետիսյան, 20» անվամբ։ Պորտֆոլիոյի այս օրինակը չի հաստատում նախագծի իրականացումը կամ ավարտը։",
+      "file": "src/data.js"
+    },
+    {
+      "key": "projects[2].name",
+      "en": "Khachaturian Architects",
+      "am": "Khachaturian Architects",
+      "file": "src/data.js"
+    },
+    {
+      "key": "projects[2].category",
+      "en": "Architectural studio portfolio",
+      "am": "Ճարտարապետական ստուդիայի պորտֆոլիո",
+      "file": "src/data.js"
+    },
+    {
+      "key": "projects[2].description",
+      "en": "Architectural work published under the Khachaturian Architects label in Prospect24’s gallery. The source identifies the studio, without naming an individual development.",
+      "am": "Prospect24-ի պատկերասրահում՝ Khachaturian Architects անվան ներքո հրապարակված ճարտարապետական աշխատանք։ Աղբյուրը նշում է ստուդիան՝ առանց առանձին կառուցապատման անվան։",
+      "file": "src/data.js"
+    },
+    {
+      "key": "implementingCompanies[0].name",
+      "en": "DIGNISI LLC",
+      "am": "DIGNISI ՍՊԸ",
+      "file": "src/data.js"
+    },
+    {
+      "key": "implementingCompanies[0].description",
+      "en": "Market analysis, property pricing and sales insight from the primary market and resale of newly built properties.",
+      "am": "Շուկայի վերլուծություն, անշարժ գույքի գնագոյացում և վաճառքի տվյալներ՝ առաջնային շուկայից ու նորակառույցների երկրորդային շուկայից։",
+      "file": "src/data.js"
+    },
+    {
+      "key": "implementingCompanies[0].role",
+      "en": "Real estate intelligence",
+      "am": "Անշարժ գույքի շուկայի վերլուծություն",
+      "file": "src/data.js"
+    },
+    {
+      "key": "implementingCompanies[1].name",
+      "en": "KHACHATURIAN ARCHITECTS",
+      "am": "KHACHATURIAN ARCHITECTS",
+      "file": "src/data.js"
+    },
+    {
+      "key": "implementingCompanies[1].description",
+      "en": "Founded in 2012 by Arthur and Zhanna Khachaturyan. Planning and design for residential, mixed-use, hotel, office and interior projects.",
+      "am": "Հիմնադրվել է 2012-ին՝ Արթուր և Ժաննա Խաչատուրյանների կողմից։ Բնակելի շենքերի, բազմաֆունկցիոնալ համալիրների, հյուրանոցների, գրասենյակային շենքերի և ինտերիերների նախագծում։",
+      "file": "src/data.js"
+    },
+    {
+      "key": "implementingCompanies[1].role",
+      "en": "Architecture & design",
+      "am": "Ճարտարապետություն և դիզայն",
+      "file": "src/data.js"
+    },
+    {
+      "key": "implementingCompanies[2].name",
+      "en": "BSC",
+      "am": "«Բի Էս Սի» Բիզնեսի Աջակցման Կենտրոն",
+      "file": "src/data.js"
+    },
+    {
+      "key": "implementingCompanies[2].description",
+      "en": "Business Support Center contributes business plans, strategy, financial and organizational planning, and business development expertise.",
+      "am": "«Բի Էս Սի» Բիզնեսի Աջակցման Կենտրոնը ներդնում է բիզնես պլանների կազմման, ռազմավարության մշակման, ֆինանսական ու կազմակերպական պլանավորման և բիզնեսի զարգացման իր փորձառությունը։",
+      "file": "src/data.js"
+    },
+    {
+      "key": "implementingCompanies[2].role",
+      "en": "Business & financial consulting",
+      "am": "Բիզնես և ֆինանսական խորհրդատվություն",
+      "file": "src/data.js"
+    },
+    {
+      "key": "news[0].title",
+      "en": "State property, considered as an investment opportunity.",
+      "am": "Պետական գույքը՝ որպես ներդրումային հնարավորություն։",
+      "file": "src/data.js"
+    },
+    {
+      "key": "news[0].description",
+      "en": "The State Property Management Committee and Prospect24 signed a memorandum to prepare investment packages for state property intended for disposal, covering development potential, market analysis, architecture and financial planning.",
+      "am": "Պետական գույքի կառավարման կոմիտեն և Prospect24-ը ստորագրել են օտարման ենթակա պետական գույքի ներդրումային փաթեթների կազմման հուշագիր՝ ներառելով կառուցապատման ներուժը, շուկայի վերլուծությունը, ճարտարապետությունն ու ֆինանսական պլանավորումը։",
+      "file": "src/data.js"
+    },
+    {
+      "key": "news[0].organization",
+      "en": "State Property Management Committee",
+      "am": "Պետական գույքի կառավարման կոմիտե",
+      "file": "src/data.js"
+    },
+    {
+      "key": "news[1].title",
+      "en": "Supporting the Chakhruk settlement initiative.",
+      "am": "Աջակցություն «Ճախրուկ բնակուտ» բնակավայրի ստեղծման նախաձեռնությանը։",
+      "file": "src/data.js"
+    },
+    {
+      "key": "news[1].description",
+      "en": "Chakhruk NGO and Prospect24 signed a memorandum supporting the proposed Chakhruk settlement initiative for people with special needs.",
+      "am": "«Ճախրուկ» ՀԿ-ն և Prospect24-ը ստորագրել են հատուկ կարիքներ ունեցող անձանց համար առաջարկված «Ճախրուկ բնակուտ» նախաձեռնությանն աջակցելու հուշագիր։",
+      "file": "src/data.js"
+    },
+    {
+      "key": "news[1].organization",
+      "en": "Chakhruk NGO",
+      "am": "«Ճախրուկ» ՀԿ",
+      "file": "src/data.js"
+    },
+    {
+      "key": "news[2].title",
+      "en": "Connecting property expertise and architecture.",
+      "am": "Անշարժ գույքի և ճարտարապետության փորձի միավորում։",
+      "file": "src/data.js"
+    },
+    {
+      "key": "news[2].description",
+      "en": "The Chamber of Architects of the RA and Prospect24 signed a memorandum to combine real estate knowledge with architectural design experience and technical capabilities.",
+      "am": "ՀՀ ճարտարապետների պալատը և Prospect24-ը ստորագրել են հուշագիր՝ անշարժ գույքի ոլորտի փորձը ճարտարապետական նախագծման ու տեխնիկական կարողությունների հետ համադրելու համար։",
+      "file": "src/data.js"
+    },
+    {
+      "key": "news[2].organization",
+      "en": "Chamber of Architects of the RA",
+      "am": "ՀՀ ճարտարապետների պալատ",
+      "file": "src/data.js"
+    },
+    {
+      "key": "videos[0].title",
+      "en": "Cooperation rather than competition",
+      "am": "Ոչ թե մրցակցել, այլ համագործակցել",
+      "file": "src/data.js"
+    },
+    {
+      "key": "videos[1].title",
+      "en": "Preparing a property’s package from the beginning",
+      "am": "Գույքը ի սկզբանե փաթեթավորվում է Prospect24-ի կողմից",
+      "file": "src/data.js"
+    },
+    {
+      "key": "stages[0].title",
+      "en": "Discover",
+      "am": "Ուսումնասիրել",
+      "file": "src/data.js"
+    },
+    {
+      "key": "stages[0].text",
+      "en": "Define the site and objectives.",
+      "am": "Հստակեցնել տարածքն ու նախագծի նպատակները։",
+      "file": "src/data.js"
+    },
+    {
+      "key": "stages[1].title",
+      "en": "Analyze",
+      "am": "Վերլուծել",
+      "file": "src/data.js"
+    },
+    {
+      "key": "stages[1].text",
+      "en": "Study the location and market.",
+      "am": "Ուսումնասիրել տեղանքն ու շուկան։",
+      "file": "src/data.js"
+    },
+    {
+      "key": "stages[2].title",
+      "en": "Design",
+      "am": "Նախագծել",
+      "file": "src/data.js"
+    },
+    {
+      "key": "stages[2].text",
+      "en": "Develop the planning concept.",
+      "am": "Մշակել կառուցապատման հայեցակարգը։",
+      "file": "src/data.js"
+    },
+    {
+      "key": "stages[3].title",
+      "en": "Evaluate",
+      "am": "Գնահատել",
+      "file": "src/data.js"
+    },
+    {
+      "key": "stages[3].text",
+      "en": "Model finances and assess risks.",
+      "am": "Մոդելավորել ֆինանսական ցուցանիշներն ու գնահատել ռիսկերը։",
+      "file": "src/data.js"
+    },
+    {
+      "key": "stages[4].title",
+      "en": "Prepare",
+      "am": "Նախապատրաստել",
+      "file": "src/data.js"
+    },
+    {
+      "key": "stages[4].text",
+      "en": "Assemble the agreed package.",
+      "am": "Կազմել համաձայնեցված փաթեթը։",
+      "file": "src/data.js"
+    },
+    {
+      "key": "navigation[0]",
+      "en": "About",
+      "am": "Մեր մասին",
+      "file": "src/data.js"
+    },
+    {
+      "key": "navigation[1]",
+      "en": "Packages",
+      "am": "Փաթեթներ",
+      "file": "src/data.js"
+    },
+    {
+      "key": "navigation[2]",
+      "en": "Projects",
+      "am": "Նախագծեր",
+      "file": "src/data.js"
+    },
+    {
+      "key": "navigation[3]",
+      "en": "Services",
+      "am": "Ծառայություններ",
+      "file": "src/data.js"
+    },
+    {
+      "key": "navigation[4]",
+      "en": "Expertise",
+      "am": "Փորձառություն",
+      "file": "src/data.js"
+    },
+    {
+      "key": "navigation[5]",
+      "en": "Partners",
+      "am": "Գործընկերներ",
+      "file": "src/data.js"
+    },
+    {
+      "key": "navigation[6]",
+      "en": "News & Media",
+      "am": "Նորություններ և մեդիա",
+      "file": "src/data.js"
+    },
+    {
+      "key": "navigation[7]",
+      "en": "Contact",
+      "am": "Կապ",
+      "file": "src/data.js"
+    },
+    {
+      "key": "contact.location",
+      "en": "1/61 building, Azatutyan Avenue, Yerevan, Armenia",
+      "am": "Հայաստան, Երևան, Ազատության պողոտա, 1/61 շենք",
+      "file": "src/data.js"
+    },
+    {
+      "key": "uiText(\"Image in this block\")",
+      "en": "Image in this block",
+      "am": "Պատկերն այս բլոկում",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"No image. Upload or choose an image to add one.\")",
+      "en": "No image. Upload or choose an image to add one.",
+      "am": "Պատկեր չկա։ Պատկեր ավելացնելու համար վերբեռնեք նորը կամ ընտրեք առկաներից։",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Add Image\")",
+      "en": "Add Image",
+      "am": "Ավելացնել պատկեր",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Remove Image\")",
+      "en": "Remove Image",
+      "am": "Հեռացնել պատկերը",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Edit Image Settings\")",
+      "en": "Edit Image Settings",
+      "am": "Խմբագրել պատկերի կարգավորումները",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"drag\")",
+      "en": "drag",
+      "am": "քաշել",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Subtle\")",
+      "en": "Subtle",
+      "am": "Նուրբ",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Before\")",
+      "en": "Before",
+      "am": "Մինչև",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"After\")",
+      "en": "After",
+      "am": "Հետո",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"carousel\")",
+      "en": "carousel",
+      "am": "նախագծերի սլայդեր",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"slide\")",
+      "en": "slide",
+      "am": "սլայդ",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Design\")",
+      "en": "Design",
+      "am": "Դիզայն",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Choose design\")",
+      "en": "Choose design",
+      "am": "Ընտրել դիզայնը",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"current\")",
+      "en": "current",
+      "am": "ընտրված",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"original\")",
+      "en": "original",
+      "am": "սկզբնական",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Original Design\")",
+      "en": "Original Design",
+      "am": "Սկզբնական դիզայն",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Original homepage colors\")",
+      "en": "Original homepage colors",
+      "am": "Գլխավոր էջի սկզբնական գույները",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Original Prospect24 homepage\")",
+      "en": "Original Prospect24 homepage",
+      "am": "Prospect24-ի սկզբնական գլխավոր էջ",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"View original homepage ↗\")",
+      "en": "View original homepage ↗",
+      "am": "Դիտել սկզբնական գլխավոր էջը ↗",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Client presentation / Color system exploration\")",
+      "en": "Client presentation / Color system exploration",
+      "am": "Ներկայացում պատվիրատուին / Գունային համակարգերի ուսումնասիրություն",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Six palettes.\")",
+      "en": "Six palettes.",
+      "am": "Վեց գունապնակ։",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"One architectural language.\")",
+      "en": "One architectural language.",
+      "am": "Մեկ ճարտարապետական լեզու։",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"The same homepage, content and interactions. Explore six coordinated color systems, from neutral graphite to a controlled terracotta accent.\")",
+      "en": "The same homepage, content and interactions. Explore six coordinated color systems, from neutral graphite to a controlled terracotta accent.",
+      "am": "Նույն գլխավոր էջը, բովանդակությունն ու գործառույթները։ Ծանոթացեք վեց ներդաշնակ գունային համակարգերի՝ չեզոք գրաֆիտից մինչև զուսպ թրծակավագույն շեշտադրում։",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Architecture / Strategy / Real estate\")",
+      "en": "Architecture / Strategy / Real estate",
+      "am": "Ճարտարապետություն / Ռազմավարություն / Անշարժ գույք",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"BUILD WITH\")",
+      "en": "BUILD WITH",
+      "am": "ԿԱՌՈՒՑԵՔ",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"VISION.\")",
+      "en": "VISION.",
+      "am": "ՏԵՍԼԱԿԱՆՈՎ։",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"INVEST WITH\")",
+      "en": "INVEST WITH",
+      "am": "ՆԵՐԴՐԵՔ",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"CLARITY.\")",
+      "en": "CLARITY.",
+      "am": "ՀԻՄՆԱՎՈՐՎԱԾ ՈՐՈՇՄԱՄԲ։",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Explore our expertise ↗\")",
+      "en": "Explore our expertise ↗",
+      "am": "Ծանոթացեք մեր փորձառությանը ↗",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"ONE VISION.\")",
+      "en": "ONE VISION.",
+      "am": "ՄԵԿ ՏԵՍԼԱԿԱՆ։",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"MULTIPLE DISCIPLINES.\")",
+      "en": "MULTIPLE DISCIPLINES.",
+      "am": "ԲԱԶՄԱԿՈՂՄ ՓՈՐՁԱՌՈՒԹՅՈՒՆ։",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Architecture, strategy and real estate — connected.\")",
+      "en": "Architecture, strategy and real estate — connected.",
+      "am": "Ճարտարապետություն, ռազմավարություն և անշարժ գույք՝ մեկ միասնական մոտեցմամբ։",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"DEVELOPMENT,\")",
+      "en": "DEVELOPMENT,",
+      "am": "ԿԱՌՈՒՑԱՊԱՏՈՒՄ՝",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"FROM EVERY ANGLE.\")",
+      "en": "FROM EVERY ANGLE.",
+      "am": "ԲՈԼՈՐ ՏԵՍԱՆԿՅՈՒՆՆԵՐԻՑ։",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Prospect24 · Private design presentation ·\")",
+      "en": "Prospect24 · Private design presentation ·",
+      "am": "Prospect24 · Դիզայնի մասնավոր ներկայացում ·",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Original homepage\")",
+      "en": "Original homepage",
+      "am": "Սկզբնական գլխավոր էջ",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Color system exploration\")",
+      "en": "Color system exploration",
+      "am": "Գունային համակարգերի ուսումնասիրություն",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Open design\")",
+      "en": "Open design",
+      "am": "Բացել դիզայնը",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Graphite & Ivory\")",
+      "en": "Graphite & Ivory",
+      "am": "Գրաֆիտ և փղոսկրագույն",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Modern, elegant, high contrast\")",
+      "en": "Modern, elegant, high contrast",
+      "am": "Ժամանակակից, նրբագեղ, բարձր հակադրությամբ",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Stone & Forest\")",
+      "en": "Stone & Forest",
+      "am": "Քար և անտառ",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Calm, premium, natural\")",
+      "en": "Calm, premium, natural",
+      "am": "Հանգիստ, բարձրակարգ, բնական",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Slate & Ice\")",
+      "en": "Slate & Ice",
+      "am": "Թերթաքար և սառույց",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Modern, trusted, professional\")",
+      "en": "Modern, trusted, professional",
+      "am": "Ժամանակակից, վստահություն ներշնչող, մասնագիտական",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Espresso & Porcelain\")",
+      "en": "Espresso & Porcelain",
+      "am": "Էսպրեսո և ճենապակի",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Warm, sophisticated, timeless\")",
+      "en": "Warm, sophisticated, timeless",
+      "am": "Ջերմ, նրբաճաշակ, ժամանակից անկախ",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Sage & Charcoal\")",
+      "en": "Sage & Charcoal",
+      "am": "Եղեսպակ և ածխագույն",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Natural, modern, refined\")",
+      "en": "Natural, modern, refined",
+      "am": "Բնական, ժամանակակից, նուրբ",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"White & Terracotta\")",
+      "en": "White & Terracotta",
+      "am": "Սպիտակ և թրծակավագույն",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Clean, contemporary, distinctive\")",
+      "en": "Clean, contemporary, distinctive",
+      "am": "Հստակ, արդիական, ինքնատիպ",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Enable Edit Mode\")",
+      "en": "Enable Edit Mode",
+      "am": "Միացնել խմբագրման ռեժիմը",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Exit Edit Mode\")",
+      "en": "Exit Edit Mode",
+      "am": "Դուրս գալ խմբագրման ռեժիմից",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Edit Mode\")",
+      "en": "Edit Mode",
+      "am": "Խմբագրման ռեժիմ",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Customize this presentation\")",
+      "en": "Customize this presentation",
+      "am": "Հարմարեցնել այս ներկայացումը",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Select anything on the canvas. Changes save on this browser.\")",
+      "en": "Select anything on the canvas. Changes save on this browser.",
+      "am": "Ընտրեք որևէ տարր աշխատանքային տարածքում։ Փոփոխությունները պահպանվում են այս դիտարկիչում։",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Original appearance restored. Undo is available.\")",
+      "en": "Original appearance restored. Undo is available.",
+      "am": "Սկզբնական տեսքը վերականգնված է։ Կարող եք հետարկել փոփոխությունը։",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Image saved in this browser. Export Project to share it.\")",
+      "en": "Image saved in this browser. Export Project to share it.",
+      "am": "Պատկերը պահպանված է այս դիտարկիչում։ Այն փոխանցելու համար արտահանեք նախագիծը։",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Settings exported. Custom images are only included in Export Project ZIP.\")",
+      "en": "Settings exported. Custom images are only included in Export Project ZIP.",
+      "am": "Կարգավորումներն արտահանված են։ Վերբեռնված պատկերները ներառվում են միայն նախագծի ZIP արտահանման մեջ։",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Project exported with all referenced custom images.\")",
+      "en": "Project exported with all referenced custom images.",
+      "am": "Նախագիծն արտահանված է՝ օգտագործված բոլոր վերբեռնված պատկերներով։",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"A saved image is unavailable. Its original is shown; replace it or import its project ZIP.\")",
+      "en": "A saved image is unavailable. Its original is shown; replace it or import its project ZIP.",
+      "am": "Պահպանված պատկերը հասանելի չէ։ Ցուցադրված է սկզբնական պատկերը․ փոխարինեք այն կամ ներմուծեք նախագծի ZIP ֆայլը։",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Design editor\")",
+      "en": "Design editor",
+      "am": "Դիզայնի խմբագրիչ",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Design studio\")",
+      "en": "Design studio",
+      "am": "Դիզայնի ստուդիա",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Editing\")",
+      "en": "Editing",
+      "am": "Խմբագրում",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Live preview\")",
+      "en": "Live preview",
+      "am": "Ընթացիկ նախադիտում",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Preview device\")",
+      "en": "Preview device",
+      "am": "Նախադիտման սարք",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Desktop\")",
+      "en": "Desktop",
+      "am": "Համակարգիչ",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Tablet\")",
+      "en": "Tablet",
+      "am": "Պլանշետ",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Mobile\")",
+      "en": "Mobile",
+      "am": "Հեռախոս",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Layers\")",
+      "en": "Layers",
+      "am": "Շերտեր",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Sections\")",
+      "en": "Sections",
+      "am": "Բաժիններ",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Properties\")",
+      "en": "Properties",
+      "am": "Հատկություններ",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Undo · Ctrl/Cmd+Z\")",
+      "en": "Undo · Ctrl/Cmd+Z",
+      "am": "Հետարկել · Ctrl/Cmd+Z",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Undo\")",
+      "en": "Undo",
+      "am": "Հետարկել",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Redo\")",
+      "en": "Redo",
+      "am": "Կրկնել",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Reset All\")",
+      "en": "Reset All",
+      "am": "Վերակայել բոլորը",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Export Project\")",
+      "en": "Export Project",
+      "am": "Արտահանել նախագիծը",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Import\")",
+      "en": "Import",
+      "am": "Ներմուծել",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Export\")",
+      "en": "Export",
+      "am": "Արտահանել",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Save\")",
+      "en": "Save",
+      "am": "Պահպանել",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Reset\")",
+      "en": "Reset",
+      "am": "Վերակայել",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Preview\")",
+      "en": "Preview",
+      "am": "Նախադիտում",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Return to editing\")",
+      "en": "Return to editing",
+      "am": "Վերադառնալ խմբագրմանը",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Close editor\")",
+      "en": "Close editor",
+      "am": "Փակել խմբագրիչը",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Exit editor\")",
+      "en": "Exit editor",
+      "am": "Դուրս գալ խմբագրիչից",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Working…\")",
+      "en": "Working…",
+      "am": "Ընթացքի մեջ է…",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Browser storage unavailable. Export Project to save your changes.\")",
+      "en": "Browser storage unavailable. Export Project to save your changes.",
+      "am": "Դիտարկիչի պահոցը հասանելի չէ։ Փոփոխությունները պահպանելու համար արտահանեք նախագիծը։",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Import design file\")",
+      "en": "Import design file",
+      "am": "Ներմուծել դիզայնի ֆայլը",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Expand properties panel\")",
+      "en": "Expand properties panel",
+      "am": "Բացել հատկությունների վահանակը",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Collapse properties panel\")",
+      "en": "Collapse properties panel",
+      "am": "Ծալել հատկությունների վահանակը",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Editor panels\")",
+      "en": "Editor panels",
+      "am": "Խմբագրիչի վահանակներ",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Section visibility\")",
+      "en": "Section visibility",
+      "am": "Բաժինների տեսանելիություն",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Hide a section without deleting its content.\")",
+      "en": "Hide a section without deleting its content.",
+      "am": "Թաքցրեք բաժինը՝ պահպանելով դրա բովանդակությունը։",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Hidden with Expertise\")",
+      "en": "Hidden with Expertise",
+      "am": "Թաքցված է «Փորձառություն» բաժնի հետ",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Make it yours\")",
+      "en": "Make it yours",
+      "am": "Հարմարեցրեք ձեր նախընտրությամբ",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Select a section, image or text on the canvas to start designing.\")",
+      "en": "Select a section, image or text on the canvas to start designing.",
+      "am": "Դիզայնի խմբագրումը սկսելու համար ընտրեք բաժին, պատկեր կամ տեքստ աշխատանքային տարածքում։",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Browse layers\")",
+      "en": "Browse layers",
+      "am": "Դիտել շերտերը",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Local to this browser\")",
+      "en": "Local to this browser",
+      "am": "Պահպանվում է այս դիտարկիչում",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Export a project to share your design.\")",
+      "en": "Export a project to share your design.",
+      "am": "Դիզայնը փոխանցելու համար արտահանեք նախագիծը։",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"● Saved locally\")",
+      "en": "● Saved locally",
+      "am": "● Պահպանված է տեղային պահոցում",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Settings JSON\")",
+      "en": "Settings JSON",
+      "am": "Կարգավորումների JSON ֆայլ",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Original presentation restored. Undo is available.\")",
+      "en": "Original presentation restored. Undo is available.",
+      "am": "Սկզբնական ներկայացումը վերականգնված է։ Կարող եք հետարկել փոփոխությունը։",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Prospect24 live design canvas\")",
+      "en": "Prospect24 live design canvas",
+      "am": "Prospect24-ի դիզայնի խմբագրման աշխատանքային տարածք",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Restore original design?\")",
+      "en": "Restore original design?",
+      "am": "Վերականգնե՞լ սկզբնական դիզայնը։",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Restore all images, text, dimensions, styles and sections. You can undo this change.\")",
+      "en": "Restore all images, text, dimensions, styles and sections. You can undo this change.",
+      "am": "Վերականգնել բոլոր սկզբնական պատկերները, տեքստերը, չափերը, ոճերն ու բաժինները։ Կարող եք հետարկել այս փոփոխությունը։",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Cancel\")",
+      "en": "Cancel",
+      "am": "Չեղարկել",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Restore original\")",
+      "en": "Restore original",
+      "am": "Վերականգնել սկզբնականը",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Restore Original\")",
+      "en": "Restore Original",
+      "am": "Վերականգնել սկզբնականը",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Auto\")",
+      "en": "Auto",
+      "am": "Ինքնաշխատ",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Element properties\")",
+      "en": "Element properties",
+      "am": "Տարրի հատկություններ",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Selected hierarchy\")",
+      "en": "Selected hierarchy",
+      "am": "Ընտրված տարրի հիերարխիա",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Base / Desktop\")",
+      "en": "Base / Desktop",
+      "am": "Հիմնական / Համակարգիչ",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Close properties\")",
+      "en": "Close properties",
+      "am": "Փակել հատկությունները",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Base values apply to every screen unless overridden.\")",
+      "en": "Base values apply to every screen unless overridden.",
+      "am": "Հիմնական արժեքները կիրառվում են բոլոր էկրանների համար, եթե առանձին արժեքներ չեն սահմանվել։",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Text\")",
+      "en": "Text",
+      "am": "Տեքստ",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Language\")",
+      "en": "Language",
+      "am": "Լեզու",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"English\")",
+      "en": "English",
+      "am": "Անգլերեն",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Content\")",
+      "en": "Content",
+      "am": "Բովանդակություն",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Text content\")",
+      "en": "Text content",
+      "am": "Տեքստային բովանդակություն",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Restore original text\")",
+      "en": "Restore original text",
+      "am": "Վերականգնել սկզբնական տեքստը",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Image source\")",
+      "en": "Image source",
+      "am": "Պատկերի աղբյուր",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Selected image preview\")",
+      "en": "Selected image preview",
+      "am": "Ընտրված պատկերի նախադիտում",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Upload New Image\")",
+      "en": "Upload New Image",
+      "am": "Վերբեռնել նոր պատկեր",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Upload new image\")",
+      "en": "Upload new image",
+      "am": "Վերբեռնել նոր պատկեր",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Choose Existing Image\")",
+      "en": "Choose Existing Image",
+      "am": "Ընտրել առկա պատկերներից",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Project image gallery\")",
+      "en": "Project image gallery",
+      "am": "Նախագծի պատկերասրահ",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"JPG, PNG, WebP or AVIF · up to 12 MB. Stored on this browser.\")",
+      "en": "JPG, PNG, WebP or AVIF · up to 12 MB. Stored on this browser.",
+      "am": "JPG, PNG, WebP կամ AVIF · մինչև 12 ՄԲ։ Պահպանվում է այս դիտարկիչում։",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Before / After Settings\")",
+      "en": "Before / After Settings",
+      "am": "«Մինչև / Հետո» կարգավորումներ",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Before Image\")",
+      "en": "Before Image",
+      "am": "«Մինչև» պատկեր",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"After Image\")",
+      "en": "After Image",
+      "am": "«Հետո» պատկեր",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Overlay\")",
+      "en": "Overlay",
+      "am": "Ծածկաշերտ",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Before / After Split\")",
+      "en": "Before / After Split",
+      "am": "«Մինչև / Հետո» բաժանման դիրք",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Before image opacity\")",
+      "en": "Before image opacity",
+      "am": "«Մինչև» պատկերի անթափանցիկություն",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"After image opacity\")",
+      "en": "After image opacity",
+      "am": "«Հետո» պատկերի անթափանցիկություն",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Show divider while editing\")",
+      "en": "Show divider while editing",
+      "am": "Ցուցադրել բաժանարարը խմբագրման ընթացքում",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Restore comparison defaults\")",
+      "en": "Restore comparison defaults",
+      "am": "Վերականգնել համեմատության սկզբնական կարգավորումները",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Synchronize image positioning\")",
+      "en": "Synchronize image positioning",
+      "am": "Համաժամեցնել պատկերների դիրքը",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Comparison viewport dimensions\")",
+      "en": "Comparison viewport dimensions",
+      "am": "Համեմատության տեսադաշտի չափեր",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Size & Dimensions\")",
+      "en": "Size & Dimensions",
+      "am": "Չափեր",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Lock aspect ratio\")",
+      "en": "Lock aspect ratio",
+      "am": "Պահպանել կողմերի հարաբերակցությունը",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Use Minimum height to give content room to grow. Auto height preserves the content flow.\")",
+      "en": "Use Minimum height to give content room to grow. Auto height preserves the content flow.",
+      "am": "Օգտագործեք «Նվազագույն բարձրություն» դաշտը՝ բովանդակության ընդլայնման համար տեղ թողնելու նպատակով։ Ինքնաշխատ բարձրությունը պահպանում է բովանդակության բնական դասավորությունը։",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Width stays within its grid column. Select the parent layout to change columns.\")",
+      "en": "Width stays within its grid column. Select the parent layout to change columns.",
+      "am": "Լայնությունը սահմանափակվում է ցանցի սյունակով։ Սյունակները փոխելու համար ընտրեք ծնող դասավորությունը։",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Both images share the Hero viewport. Use viewport dimensions to resize the comparison together.\")",
+      "en": "Both images share the Hero viewport. Use viewport dimensions to resize the comparison together.",
+      "am": "Երկու պատկերներն ունեն գլխավոր հատվածի ընդհանուր տեսադաշտը։ Դրանց չափերը միասին փոխելու համար օգտագործեք տեսադաշտի չափերը։",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"This size is smaller than the content. Text remains visible.\")",
+      "en": "This size is smaller than the content. Text remains visible.",
+      "am": "Այս չափը փոքր է բովանդակությունից։ Տեքստը շարունակում է տեսանելի մնալ։",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Fit content automatically\")",
+      "en": "Fit content automatically",
+      "am": "Ինքնաշխատ հարմարեցնել բովանդակությանը",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Image position\")",
+      "en": "Image position",
+      "am": "Պատկերի դիրք",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Object fit\")",
+      "en": "Object fit",
+      "am": "Պատկերի տեղավորում",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Cover\")",
+      "en": "Cover",
+      "am": "Ծածկել տարածքը",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Contain\")",
+      "en": "Contain",
+      "am": "Տեղավորել ամբողջությամբ",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Fill\")",
+      "en": "Fill",
+      "am": "Լցնել տարածքը",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Horizontal position\")",
+      "en": "Horizontal position",
+      "am": "Հորիզոնական դիրք",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Vertical position\")",
+      "en": "Vertical position",
+      "am": "Ուղղահայաց դիրք",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Zoom\")",
+      "en": "Zoom",
+      "am": "Մասշտաբ",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Reset Image Settings\")",
+      "en": "Reset Image Settings",
+      "am": "Վերակայել պատկերի կարգավորումները",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Appearance\")",
+      "en": "Appearance",
+      "am": "Արտաքին տեսք",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Text color\")",
+      "en": "Text color",
+      "am": "Տեքստի գույն",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Overlay color\")",
+      "en": "Overlay color",
+      "am": "Ծածկաշերտի գույն",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Background color\")",
+      "en": "Background color",
+      "am": "Ֆոնի գույն",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Overlay opacity\")",
+      "en": "Overlay opacity",
+      "am": "Ծածկաշերտի անթափանցիկություն",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Image opacity\")",
+      "en": "Image opacity",
+      "am": "Պատկերի անթափանցիկություն",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Element opacity\")",
+      "en": "Element opacity",
+      "am": "Տարրի անթափանցիկություն",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Border radius\")",
+      "en": "Border radius",
+      "am": "Անկյունների կլորացում",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Border width\")",
+      "en": "Border width",
+      "am": "Եզրագծի հաստություն",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Border color\")",
+      "en": "Border color",
+      "am": "Եզրագծի գույն",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Shadow\")",
+      "en": "Shadow",
+      "am": "Ստվեր",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Low contrast (\")",
+      "en": "Low contrast (",
+      "am": "Ցածր հակադրություն (",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\":1). Aim for 4.5:1 for readable text.\")",
+      "en": ":1). Aim for 4.5:1 for readable text.",
+      "am": ":1)։ Տեքստի ընթեռնելիության համար ապահովեք առնվազն 4.5:1 հակադրություն։",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Typography\")",
+      "en": "Typography",
+      "am": "Տպագրություն",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Font size\")",
+      "en": "Font size",
+      "am": "Տառաչափ",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Line height\")",
+      "en": "Line height",
+      "am": "Տողերի բարձրություն",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Spacing\")",
+      "en": "Spacing",
+      "am": "Բացատներ",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Link sides\")",
+      "en": "Link sides",
+      "am": "Կապակցել կողմերը",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Independent\")",
+      "en": "Independent",
+      "am": "Անկախ",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Opposite sides\")",
+      "en": "Opposite sides",
+      "am": "Հակադիր կողմերը",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"All sides\")",
+      "en": "All sides",
+      "am": "Բոլոր կողմերը",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Layout\")",
+      "en": "Layout",
+      "am": "Դասավորություն",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Gap\")",
+      "en": "Gap",
+      "am": "Միջակայք",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Column gap\")",
+      "en": "Column gap",
+      "am": "Սյունակների միջակայք",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Row gap\")",
+      "en": "Row gap",
+      "am": "Տողերի միջակայք",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Columns\")",
+      "en": "Columns",
+      "am": "Սյունակներ",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"One\")",
+      "en": "One",
+      "am": "Մեկ",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Two\")",
+      "en": "Two",
+      "am": "Երկու",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Three\")",
+      "en": "Three",
+      "am": "Երեք",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Direction\")",
+      "en": "Direction",
+      "am": "Ուղղություն",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Horizontal\")",
+      "en": "Horizontal",
+      "am": "Հորիզոնական",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Vertical\")",
+      "en": "Vertical",
+      "am": "Ուղղահայաց",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Vertical alignment\")",
+      "en": "Vertical alignment",
+      "am": "Ուղղահայաց հավասարեցում",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Horizontal alignment\")",
+      "en": "Horizontal alignment",
+      "am": "Հորիզոնական հավասարեցում",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Start\")",
+      "en": "Start",
+      "am": "Սկիզբ",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Center\")",
+      "en": "Center",
+      "am": "Կենտրոն",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"End\")",
+      "en": "End",
+      "am": "Վերջ",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Space between\")",
+      "en": "Space between",
+      "am": "Բաշխել եզրերի միջև",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Space around\")",
+      "en": "Space around",
+      "am": "Բաշխել շուրջը",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Cross-axis alignment\")",
+      "en": "Cross-axis alignment",
+      "am": "Լայնական առանցքով հավասարեցում",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Stretch\")",
+      "en": "Stretch",
+      "am": "Ձգել",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Select parent\")",
+      "en": "Select parent",
+      "am": "Ընտրել ծնող տարրը",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Select card\")",
+      "en": "Select card",
+      "am": "Ընտրել քարտը",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Select section\")",
+      "en": "Select section",
+      "am": "Ընտրել բաժինը",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Reset Selected\")",
+      "en": "Reset Selected",
+      "am": "Վերակայել ընտրվածը",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Reset Section\")",
+      "en": "Reset Section",
+      "am": "Վերակայել բաժինը",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Hide section\")",
+      "en": "Hide section",
+      "am": "Թաքցնել բաժինը",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Hidden\")",
+      "en": "Hidden",
+      "am": "Թաքցված",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Page layers\")",
+      "en": "Page layers",
+      "am": "Էջի շերտեր",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Select a parent or a nested element.\")",
+      "en": "Select a parent or a nested element.",
+      "am": "Ընտրեք ծնող տարր կամ դրա ներսում գտնվող տարր։",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Resize width\")",
+      "en": "Resize width",
+      "am": "Փոխել լայնությունը",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Resize height\")",
+      "en": "Resize height",
+      "am": "Փոխել բարձրությունը",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Resize width and height\")",
+      "en": "Resize width and height",
+      "am": "Փոխել լայնությունն ու բարձրությունը",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Width\")",
+      "en": "Width",
+      "am": "Լայնություն",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Height\")",
+      "en": "Height",
+      "am": "Բարձրություն",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Min Width\")",
+      "en": "Min Width",
+      "am": "Նվազագույն լայնություն",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Max Width\")",
+      "en": "Max Width",
+      "am": "Առավելագույն լայնություն",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Min Height\")",
+      "en": "Min Height",
+      "am": "Նվազագույն բարձրություն",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Max Height\")",
+      "en": "Max Height",
+      "am": "Առավելագույն բարձրություն",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Padding\")",
+      "en": "Padding",
+      "am": "Ներքին բացատ",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Margin\")",
+      "en": "Margin",
+      "am": "Արտաքին բացատ",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Padding Top\")",
+      "en": "Padding Top",
+      "am": "Վերևի ներքին բացատ",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Padding Right\")",
+      "en": "Padding Right",
+      "am": "Աջ ներքին բացատ",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Padding Bottom\")",
+      "en": "Padding Bottom",
+      "am": "Ներքևի ներքին բացատ",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Padding Left\")",
+      "en": "Padding Left",
+      "am": "Ձախ ներքին բացատ",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Margin Top\")",
+      "en": "Margin Top",
+      "am": "Վերևի արտաքին բացատ",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Margin Right\")",
+      "en": "Margin Right",
+      "am": "Աջ արտաքին բացատ",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Margin Bottom\")",
+      "en": "Margin Bottom",
+      "am": "Ներքևի արտաքին բացատ",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Margin Left\")",
+      "en": "Margin Left",
+      "am": "Ձախ արտաքին բացատ",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"None\")",
+      "en": "None",
+      "am": "Առանց ստվերի",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Soft\")",
+      "en": "Soft",
+      "am": "Մեղմ",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Medium\")",
+      "en": "Medium",
+      "am": "Միջին",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Strong\")",
+      "en": "Strong",
+      "am": "Ուժեղ",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Hero\")",
+      "en": "Hero",
+      "am": "Գլխավոր հատված",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Introduction\")",
+      "en": "Introduction",
+      "am": "Ներածություն",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Development Services\")",
+      "en": "Development Services",
+      "am": "Կառուցապատման ծառայություններ",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Development Packages\")",
+      "en": "Development Packages",
+      "am": "Կառուցապատման նախագծերի փաթեթներ",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Selected Projects\")",
+      "en": "Selected Projects",
+      "am": "Ընտրված նախագծեր",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Process\")",
+      "en": "Process",
+      "am": "Գործընթաց",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Expertise\")",
+      "en": "Expertise",
+      "am": "Փորձառություն",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Partners\")",
+      "en": "Partners",
+      "am": "Գործընկերներ",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"News & Media\")",
+      "en": "News & Media",
+      "am": "Նորություններ և մեդիա",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Start a Conversation\")",
+      "en": "Start a Conversation",
+      "am": "Սկսենք զրույցը",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Contact & Footer\")",
+      "en": "Contact & Footer",
+      "am": "Կապ և էջատակ",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Navigation background\")",
+      "en": "Navigation background",
+      "am": "Նավարկման ֆոն",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"About\")",
+      "en": "About",
+      "am": "Մեր մասին",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Packages\")",
+      "en": "Packages",
+      "am": "Փաթեթներ",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Projects\")",
+      "en": "Projects",
+      "am": "Նախագծեր",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Services\")",
+      "en": "Services",
+      "am": "Ծառայություններ",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Contact\")",
+      "en": "Contact",
+      "am": "Կապ",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Pre-Investment Package\")",
+      "en": "Pre-Investment Package",
+      "am": "Նախաներդրումային փաթեթ",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Development Package\")",
+      "en": "Development Package",
+      "am": "Զարգացման փաթեթ",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Investment Package\")",
+      "en": "Investment Package",
+      "am": "Ներդրումային փաթեթ",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Market Research & Analysis\")",
+      "en": "Market Research & Analysis",
+      "am": "Շուկայի ուսումնասիրություն և վերլուծություն",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Architecture & Planning\")",
+      "en": "Architecture & Planning",
+      "am": "Ճարտարապետություն և պլանավորում",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Financial & Business Planning\")",
+      "en": "Financial & Business Planning",
+      "am": "Ֆինանսական և բիզնես պլանավորում",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Investment Preparation\")",
+      "en": "Investment Preparation",
+      "am": "Ներդրումային նախապատրաստում",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Avet Avetisyan, 20\")",
+      "en": "Avet Avetisyan, 20",
+      "am": "Ավետ Ավետիսյան, 20",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Avet Avetisyan\")",
+      "en": "Avet Avetisyan",
+      "am": "Ավետ Ավետիսյան",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"DIGNISI LLC\")",
+      "en": "DIGNISI LLC",
+      "am": "DIGNISI ՍՊԸ",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"BSC\")",
+      "en": "BSC",
+      "am": "«Բի Էս Սի» Բիզնեսի Աջակցման Կենտրոն",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Discover\")",
+      "en": "Discover",
+      "am": "Ուսումնասիրել",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Analyze\")",
+      "en": "Analyze",
+      "am": "Վերլուծել",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Design stage\")",
+      "en": "Design stage",
+      "am": "Նախագծել",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Evaluate\")",
+      "en": "Evaluate",
+      "am": "Գնահատել",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Prepare\")",
+      "en": "Prepare",
+      "am": "Նախապատրաստել",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Architectural detail\")",
+      "en": "Architectural detail",
+      "am": "Ճարտարապետական մանրամասն",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Market analysis\")",
+      "en": "Market analysis",
+      "am": "Շուկայի վերլուծություն",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Planning\")",
+      "en": "Planning",
+      "am": "Պլանավորում",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Finance\")",
+      "en": "Finance",
+      "am": "Ֆինանսներ",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Investment\")",
+      "en": "Investment",
+      "am": "Ներդրում",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Development package\")",
+      "en": "Development package",
+      "am": "Զարգացման փաթեթ",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Partnership\")",
+      "en": "Partnership",
+      "am": "Գործընկերություն",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Architecture\")",
+      "en": "Architecture",
+      "am": "Ճարտարապետություն",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Prospect24 wordmark\")",
+      "en": "Prospect24 wordmark",
+      "am": "Prospect24-ի բառանշան",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Main Image\")",
+      "en": "Main Image",
+      "am": "Հիմնական պատկեր",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Detail Image\")",
+      "en": "Detail Image",
+      "am": "Մանրամասնի պատկեր",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Partnership Image\")",
+      "en": "Partnership Image",
+      "am": "Համագործակցության պատկեր",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Prospect24 Logo\")",
+      "en": "Prospect24 Logo",
+      "am": "Prospect24-ի տարբերանշան",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Image\")",
+      "en": "Image",
+      "am": "Պատկեր",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Mobile Image\")",
+      "en": "Mobile Image",
+      "am": "Պատկեր հեռախոսի համար",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Background Overlay\")",
+      "en": "Background Overlay",
+      "am": "Ֆոնի ծածկաշերտ",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Project Overlay\")",
+      "en": "Project Overlay",
+      "am": "Նախագծի ծածկաշերտ",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"State Property Management Committee\")",
+      "en": "State Property Management Committee",
+      "am": "Պետական գույքի կառավարման կոմիտե",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Chakhruk NGO\")",
+      "en": "Chakhruk NGO",
+      "am": "«Ճախրուկ» ՀԿ",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Chamber of Architects of the RA\")",
+      "en": "Chamber of Architects of the RA",
+      "am": "ՀՀ ճարտարապետների պալատ",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Connecting property expertise and architecture.\")",
+      "en": "Connecting property expertise and architecture.",
+      "am": "Անշարժ գույքի և ճարտարապետության փորձի միավորում։",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Supporting the Chakhruk settlement initiative.\")",
+      "en": "Supporting the Chakhruk settlement initiative.",
+      "am": "Աջակցություն «Ճախրուկ բնակուտ» բնակավայրի ստեղծման նախաձեռնությանը։",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Cooperation rather than competition\")",
+      "en": "Cooperation rather than competition",
+      "am": "Ոչ թե մրցակցել, այլ համագործակցել",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Preparing a property’s package from the beginning\")",
+      "en": "Preparing a property’s package from the beginning",
+      "am": "Գույքի փաթեթի կազմում՝ հենց սկզբից",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"heading\")",
+      "en": "heading",
+      "am": "վերնագիր",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"tagline\")",
+      "en": "tagline",
+      "am": "կարգախոս",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"description\")",
+      "en": "description",
+      "am": "նկարագրություն",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"subheading\")",
+      "en": "subheading",
+      "am": "ենթավերնագիր",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"label\")",
+      "en": "label",
+      "am": "պիտակ",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"caption\")",
+      "en": "caption",
+      "am": "պատկերի նկարագրություն",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"note\")",
+      "en": "note",
+      "am": "նշում",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"counter\")",
+      "en": "counter",
+      "am": "հաշվիչ",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"source\")",
+      "en": "source",
+      "am": "աղբյուր",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"evidence heading\")",
+      "en": "evidence heading",
+      "am": "համագործակցության վերնագիր",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"evidence description\")",
+      "en": "evidence description",
+      "am": "համագործակցության նկարագրություն",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"media heading\")",
+      "en": "media heading",
+      "am": "մեդիայի վերնագիր",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"media description\")",
+      "en": "media description",
+      "am": "մեդիայի նկարագրություն",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"email\")",
+      "en": "email",
+      "am": "էլ․ հասցե",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"phone\")",
+      "en": "phone",
+      "am": "հեռախոսահամար",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"location\")",
+      "en": "location",
+      "am": "հասցե",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"wordmark\")",
+      "en": "wordmark",
+      "am": "բառանշան",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"copyright\")",
+      "en": "copyright",
+      "am": "հեղինակային իրավունք",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"explore\")",
+      "en": "explore",
+      "am": "բացահայտել",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"conversation\")",
+      "en": "conversation",
+      "am": "զրույց",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"hero\")",
+      "en": "hero",
+      "am": "գլխավոր հատված",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"intro\")",
+      "en": "intro",
+      "am": "ներածություն",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"development\")",
+      "en": "development",
+      "am": "կառուցապատում",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"packages\")",
+      "en": "packages",
+      "am": "փաթեթներ",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"projects\")",
+      "en": "projects",
+      "am": "նախագծեր",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"process\")",
+      "en": "process",
+      "am": "գործընթաց",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"expertise\")",
+      "en": "expertise",
+      "am": "փորձառություն",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"partners\")",
+      "en": "partners",
+      "am": "գործընկերներ",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"news\")",
+      "en": "news",
+      "am": "նորություններ",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"cta\")",
+      "en": "cta",
+      "am": "գործողության կոչ",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"footer\")",
+      "en": "footer",
+      "am": "էջատակ",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"header\")",
+      "en": "header",
+      "am": "վերնամաս",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"mobile\")",
+      "en": "mobile",
+      "am": "հեռախոս",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"scroll\")",
+      "en": "scroll",
+      "am": "ոլորել",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"learn\")",
+      "en": "learn",
+      "am": "մանրամասներ",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"compare\")",
+      "en": "compare",
+      "am": "համեմատել",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"article\")",
+      "en": "article",
+      "am": "հոդված",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"all\")",
+      "en": "all",
+      "am": "բոլորը",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"discuss\")",
+      "en": "discuss",
+      "am": "քննարկել",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"top\")",
+      "en": "top",
+      "am": "վերև",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"privacy\")",
+      "en": "privacy",
+      "am": "գաղտնիության քաղաքականություն",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"terms\")",
+      "en": "terms",
+      "am": "օգտագործման պայմաններ",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"previous\")",
+      "en": "previous",
+      "am": "նախորդ",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"next\")",
+      "en": "next",
+      "am": "հաջորդ",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"inheritance\")",
+      "en": "inheritance",
+      "am": "ներառված ծառայություններ",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"price\")",
+      "en": "price",
+      "am": "գին",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"button\")",
+      "en": "button",
+      "am": "կոճակ",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"detail\")",
+      "en": "detail",
+      "am": "մանրամասներ",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"category\")",
+      "en": "category",
+      "am": "կատեգորիա",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"role\")",
+      "en": "role",
+      "am": "դեր",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"content\")",
+      "en": "content",
+      "am": "բովանդակություն",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"buttons\")",
+      "en": "buttons",
+      "am": "կոճակներ",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"layout\")",
+      "en": "layout",
+      "am": "դասավորություն",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"composition\")",
+      "en": "composition",
+      "am": "կոմպոզիցիա",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"image Container\")",
+      "en": "image Container",
+      "am": "պատկերի տարա",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"detail Container\")",
+      "en": "detail Container",
+      "am": "մանրամասնի տարա",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"list\")",
+      "en": "list",
+      "am": "ցանկ",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"visual\")",
+      "en": "visual",
+      "am": "պատկերային հատված",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"viewport\")",
+      "en": "viewport",
+      "am": "տեսադաշտ",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"text\")",
+      "en": "text",
+      "am": "տեքստ",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"section\")",
+      "en": "section",
+      "am": "բաժին",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"image\")",
+      "en": "image",
+      "am": "պատկեր",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"overlay\")",
+      "en": "overlay",
+      "am": "ծածկաշերտ",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"container\")",
+      "en": "container",
+      "am": "տարա",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"card\")",
+      "en": "card",
+      "am": "քարտ",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"navigation\")",
+      "en": "navigation",
+      "am": "նավարկում",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"properties\")",
+      "en": "properties",
+      "am": "հատկություններ",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"layers\")",
+      "en": "layers",
+      "am": "շերտեր",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"sections\")",
+      "en": "sections",
+      "am": "բաժիններ",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"tablet\")",
+      "en": "tablet",
+      "am": "պլանշետ",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Image storage is unavailable in this browser.\")",
+      "en": "Image storage is unavailable in this browser.",
+      "am": "Այս դիտարկիչում պատկերների պահոցը հասանելի չէ։",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Choose an image smaller than 12 MB.\")",
+      "en": "Choose an image smaller than 12 MB.",
+      "am": "Ընտրեք 12 ՄԲ-ից փոքր պատկեր։",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Use a genuine JPG, PNG, WebP or AVIF image. SVG and HTML are not supported.\")",
+      "en": "Use a genuine JPG, PNG, WebP or AVIF image. SVG and HTML are not supported.",
+      "am": "Օգտագործեք JPG, PNG, WebP կամ AVIF ձևաչափի իրական պատկեր։ SVG և HTML ձևաչափերը չեն աջակցվում։",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"This image cannot be decoded by your browser.\")",
+      "en": "This image cannot be decoded by your browser.",
+      "am": "Ձեր դիտարկիչը չի կարող կարդալ այս պատկերը։",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Image dimensions are too large. Use up to 16,384 pixels per side and 60 megapixels.\")",
+      "en": "Image dimensions are too large. Use up to 16,384 pixels per side and 60 megapixels.",
+      "am": "Պատկերի չափերը չափազանց մեծ են։ Յուրաքանչյուր կողմը պետք է լինի առավելագույնը 16 384 պիքսել, ընդհանուր չափը՝ 60 մեգապիքսել։",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Browser image storage is full or unavailable. The design was not changed. Free browser storage and try again.\")",
+      "en": "Browser image storage is full or unavailable. The design was not changed. Free browser storage and try again.",
+      "am": "Դիտարկիչի պատկերների պահոցը լիքն է կամ հասանելի չէ։ Դիզայնը չի փոփոխվել։ Ազատեք տեղ դիտարկիչի պահոցում և կրկին փորձեք։",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"A custom image is unavailable. Replace or restore it before exporting.\")",
+      "en": "A custom image is unavailable. Replace or restore it before exporting.",
+      "am": "Վերբեռնված պատկերներից մեկը հասանելի չէ։ Փոխարինեք կամ վերականգնեք այն՝ նախքան արտահանումը։",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Project archives must be smaller than 80 MB.\")",
+      "en": "Project archives must be smaller than 80 MB.",
+      "am": "Նախագծի արխիվը պետք է լինի 80 ՄԲ-ից փոքր։",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Settings files must be smaller than 1 MB.\")",
+      "en": "Settings files must be smaller than 1 MB.",
+      "am": "Կարգավորումների ֆայլը պետք է լինի 1 ՄԲ-ից փոքր։",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Some images were unavailable; their originals are shown. Use a ZIP to transfer custom images.\")",
+      "en": "Some images were unavailable; their originals are shown. Use a ZIP to transfer custom images.",
+      "am": "Որոշ պատկերներ հասանելի չէին․ ցուցադրված են սկզբնական պատկերները։ Վերբեռնված պատկերները փոխանցելու համար օգտագործեք ZIP ֆայլ։",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Archive expands beyond the supported size.\")",
+      "en": "Archive expands beyond the supported size.",
+      "am": "Ապասեղմված արխիվի չափը գերազանցում է թույլատրելի սահմանը։",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Unexpected archive path.\")",
+      "en": "Unexpected archive path.",
+      "am": "Արխիվում կա չնախատեսված ֆայլի ուղի։",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"The archive needs a valid design.json.\")",
+      "en": "The archive needs a valid design.json.",
+      "am": "Արխիվը պետք է պարունակի վավեր design.json ֆայլ։",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Invalid image map.\")",
+      "en": "Invalid image map.",
+      "am": "Պատկերների համապատասխանությունների ցանկը վավեր չէ։",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Invalid image reference.\")",
+      "en": "Invalid image reference.",
+      "am": "Պատկերի հղումը վավեր չէ։",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Invalid archive image path.\")",
+      "en": "Invalid archive image path.",
+      "am": "Արխիվում պատկերի ուղին վավեր չէ։",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Image checksum or extension does not match.\")",
+      "en": "Image checksum or extension does not match.",
+      "am": "Պատկերի ստուգիչ գումարը կամ ընդլայնումը չի համապատասխանում։",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Some images were missing from this archive; their originals are shown.\")",
+      "en": "Some images were missing from this archive; their originals are shown.",
+      "am": "Որոշ պատկերներ բացակայում էին արխիվում․ ցուցադրված են սկզբնական պատկերները։",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Unsupported design version.\")",
+      "en": "Unsupported design version.",
+      "am": "Դիզայնի այս տարբերակը չի աջակցվում։",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Invalid style map.\")",
+      "en": "Invalid style map.",
+      "am": "Ոճերի համապատասխանությունների ցանկը վավեր չէ։",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"This property is global.\")",
+      "en": "This property is global.",
+      "am": "Այս հատկությունը ընդհանուր է բոլոր էկրանների համար։",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Invalid section visibility.\")",
+      "en": "Invalid section visibility.",
+      "am": "Բաժնի տեսանելիության կարգավորումը վավեր չէ։",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Invalid breakpoint.\")",
+      "en": "Invalid breakpoint.",
+      "am": "Էկրանի չափի սահմանումը վավեր չէ։",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Invalid language.\")",
+      "en": "Invalid language.",
+      "am": "Լեզվի արժեքը վավեր չէ։",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Invalid text.\")",
+      "en": "Invalid text.",
+      "am": "Տեքստը վավեր չէ։",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Invalid comparison setting.\")",
+      "en": "Invalid comparison setting.",
+      "am": "Համեմատության կարգավորումը վավեր չէ։",
+      "file": "src/uiTranslations.js"
+    },
+    {
+      "key": "uiText(\"Invalid aspect ratio lock.\")",
+      "en": "Invalid aspect ratio lock.",
+      "am": "Կողմերի հարաբերակցության ամրագրման կարգավորումը վավեր չէ։",
+      "file": "src/uiTranslations.js"
+    }
+  ]
+}

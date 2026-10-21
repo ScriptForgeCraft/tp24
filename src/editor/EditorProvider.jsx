@@ -1,3 +1,5 @@
+import { useUi, useLanguage } from "../localization";
+import { uiError } from "../uiTranslations";
 import React, {
   createContext,
   useContext,
@@ -36,14 +38,15 @@ const tellHost = (payload) =>
   window.parent.postMessage({ channel, ...payload }, location.origin);
 export const elementSelector = (id) => `[data-edit-id="${id}"]`;
 export function EditorToggle() {
+  const t = useUi();
   const { mode, setMode } = useEditor();
   return (
     <button
       data-editor-ui
       className="p24-pencil"
-      aria-label={mode === "off" ? "Enable Edit Mode" : "Exit Edit Mode"}
+      aria-label={mode === "off" ? t("Enable Edit Mode") : t("Exit Edit Mode")}
       aria-pressed={mode !== "off"}
-      title="Customize this presentation"
+      title={t("Customize this presentation")}
       onClick={() => setMode(mode === "off" ? "edit" : "off")}
     >
       <svg
@@ -134,7 +137,7 @@ function CanvasProvider({ children }) {
     device: "base",
     assetURLs: {},
   });
-  const [lang, setLang] = useState("en");
+  const { lang, setLang } = useLanguage();
   const remote = (type, payload = {}) => tellHost({ type, ...payload });
   useEffect(() => {
     const receive = (e) => {
@@ -233,6 +236,8 @@ export function EditorProvider({ children }) {
   );
 }
 function HostProvider({ children }) {
+  const { lang, setLang } = useLanguage();
+  const t = useUi();
   const [history, dispatch] = useReducer(editorReducer, undefined, () => {
     try {
       return initialHistory(loadDesign(localStorage));
@@ -255,7 +260,6 @@ function HostProvider({ children }) {
     [storageFailed, setStorageFailed] = useState(false),
     [busy, setBusy] = useState(false),
     [tree, setTree] = useState([]),
-    [lang, setLang] = useState("en"),
     [assetURLs, setAssetURLs] = useState({}),
     [ready, setReady] = useState(0);
   const frameRef = useRef(null),
@@ -596,7 +600,7 @@ function HostProvider({ children }) {
             <div
               className="p24-toolbar"
               role="region"
-              aria-label="Design editor"
+              aria-label={t("Design editor")}
               data-editor-toolbar
             >
               <div className="p24-brand">
@@ -604,18 +608,18 @@ function HostProvider({ children }) {
                   P<span>24</span>
                 </span>
                 <div>
-                  <strong>Design studio</strong>
+                  <strong>{t("Design studio")}</strong>
                   <small>
                     <i />
-                    {mode === "edit" ? "Editing" : "Live preview"}
+                    {mode === "edit" ? t("Editing") : t("Live preview")}
                   </small>
                 </div>
               </div>
-              <div className="p24-devices" aria-label="Preview device">
+              <div className="p24-devices" aria-label={t("Preview device")}>
                 {[
-                  ["base", "Desktop", 1440],
-                  ["tablet", "Tablet", 768],
-                  ["mobile", "Mobile", 390],
+                  ["base", t("Desktop"), 1440],
+                  ["tablet", t("Tablet"), 768],
+                  ["mobile", t("Mobile"), 390],
                 ].map(([id, label, width]) => (
                   <button
                     key={id}
@@ -639,66 +643,48 @@ function HostProvider({ children }) {
                         setView("layers");
                         setCollapsed(false);
                       }}
-                    >
-                      Layers
-                    </button>
+                    >{t("Layers")}</button>
                     <button
                       aria-pressed={view === "sections" && !collapsed}
                       onClick={() => {
                         setView("sections");
                         setCollapsed(false);
                       }}
-                    >
-                      Sections
-                    </button>
+                    >{t("Sections")}</button>
                     <button
                       disabled={!history.past.length && !history.pending}
                       onClick={() => dispatch({ type: "undo" })}
-                      title="Undo · Ctrl/Cmd+Z"
-                    >
-                      Undo
-                    </button>
+                      title={t("Undo · Ctrl/Cmd+Z")}
+                    >{t("Undo")}</button>
                     <button
                       disabled={!history.future.length}
                       onClick={() => dispatch({ type: "redo" })}
-                    >
-                      Redo
-                    </button>
+                    >{t("Redo")}</button>
                     <button
                       onClick={() => {
                         commit();
                         setConfirmReset(true);
                       }}
-                    >
-                      Reset All
-                    </button>
-                    <button disabled={busy} onClick={() => exportDesign()}>
-                      Export Project
-                    </button>
+                    >{t("Reset All")}</button>
+                    <button disabled={busy} onClick={() => exportDesign()}>{t("Export Project")}</button>
                     <button
                       disabled={busy}
                       onClick={() => inputRef.current.click()}
-                    >
-                      Import
-                    </button>
+                    >{t("Import")}</button>
                     <button
                       className="p24-primary"
                       onClick={() => setMode("preview")}
-                    >
-                      Preview
-                    </button>
+                    >{t("Preview")}</button>
                   </>
                 ) : (
                   <button
                     className="p24-primary"
                     onClick={() => setMode("edit")}
-                  >
-                    Return to editing
-                  </button>
+                  >{t("Return to editing")}</button>
                 )}
                 <button
-                  aria-label="Close editor"
-                  title="Exit editor"
+                  aria-label={t("Close editor")}
+                  title={t("Exit editor")}
                   className="p24-icon"
                   onClick={() => setMode("off")}
                 >
@@ -707,17 +693,17 @@ function HostProvider({ children }) {
               </div>
               <p className="p24-status" role="status">
                 {busy
-                  ? "Working…"
+                  ? t("Working…")
                   : storageFailed
-                    ? "Browser storage unavailable. Export Project to save your changes."
-                    : notice}
+                    ? t("Browser storage unavailable. Export Project to save your changes.")
+                    : uiError(notice, lang)}
               </p>
               <input
                 ref={inputRef}
                 type="file"
                 hidden
                 accept=".zip,.json,application/zip,application/json"
-                aria-label="Import design file"
+                aria-label={t("Import design file")}
                 onChange={importDesign}
               />
             </div>
@@ -733,15 +719,15 @@ function HostProvider({ children }) {
                   className="p24-panel-toggle"
                   aria-label={
                     collapsed
-                      ? "Expand properties panel"
-                      : "Collapse properties panel"
+                      ? t("Expand properties panel")
+                      : t("Collapse properties panel")
                   }
                   onClick={() => setCollapsed(!collapsed)}
                 >
                   {collapsed ? "‹" : "›"}
                 </button>
                 {!collapsed && (
-                  <aside className="p24-sidebar" aria-label="Editor panels">
+                  <aside className="p24-sidebar" aria-label={t("Editor panels")}>
                     <div className="p24-tabs">
                       {["properties", "layers", "sections"].map((tab) => (
                         <button
@@ -752,7 +738,7 @@ function HostProvider({ children }) {
                             setView(tab);
                           }}
                         >
-                          {tab}
+                          {t(tab)}
                         </button>
                       ))}
                     </div>
@@ -762,23 +748,23 @@ function HostProvider({ children }) {
                       <div
                         className="p24-sections"
                         role="region"
-                        aria-label="Section visibility"
+                        aria-label={t("Section visibility")}
                       >
-                        <h2>Sections</h2>
-                        <p>Hide a section without deleting its content.</p>
+                        <h2>{t("Sections")}</h2>
+                        <p>{t("Hide a section without deleting its content.")}</p>
                         {sections.map((s) => (
                           <label key={s.id}>
                             <span>
-                              {s.label}
+                              {t(s.label)}
                               {s.parent &&
                                 design.visibility[s.parent] === false && (
-                                  <small>Hidden with Expertise</small>
+                                  <small>{t("Hidden with Expertise")}</small>
                                 )}
                             </span>
                             <input
                               type="checkbox"
                               checked={design.visibility[s.id] !== false}
-                              aria-label={`Show ${s.label}`}
+                              aria-label={t(`Show ${s.label}`)}
                               onChange={(e) =>
                                 setVisibility(s.id, e.target.checked)
                               }
@@ -798,26 +784,15 @@ function HostProvider({ children }) {
                     ) : (
                       <div className="p24-empty">
                         <span>↖</span>
-                        <h2>Make it yours</h2>
-                        <p>
-                          Select a section, image or text on the canvas to start
-                          designing.
-                        </p>
-                        <button onClick={() => setView("layers")}>
-                          Browse layers
-                        </button>
-                        <div>
-                          Local to this browser
-                          <br />
-                          Export a project to share your design.
-                        </div>
+                        <h2>{t("Make it yours")}</h2>
+                        <p>{t("Select a section, image or text on the canvas to start designing.")}</p>
+                        <button onClick={() => setView("layers")}>{t("Browse layers")}</button>
+                        <div>{t("Local to this browser")}<br />{t("Export a project to share your design.")}</div>
                       </div>
                     )}
                     <div className="p24-sidebar-footer">
-                      <span>● Saved locally</span>
-                      <button onClick={() => exportDesign(true)}>
-                        Settings JSON
-                      </button>
+                      <span>{t("● Saved locally")}</span>
+                      <button onClick={() => exportDesign(true)}>{t("Settings JSON")}</button>
                     </div>
                   </aside>
                 )}
@@ -843,6 +818,7 @@ function HostProvider({ children }) {
   );
 }
 function ResponsivePreview({ frameRef, device, collapsed, mode }) {
+  const t = useUi();
   const box = useRef(null),
     [size, setSize] = useState({ width: 800, height: 700 });
   useLayoutEffect(() => {
@@ -876,10 +852,10 @@ function ResponsivePreview({ frameRef, device, collapsed, mode }) {
     <div ref={box} className="p24-workspace">
       <div className="p24-canvas-caption">
         {device === "base"
-          ? "Desktop"
+          ? t("Desktop")
           : device === "tablet"
-            ? "Tablet"
-            : "Mobile"}{" "}
+            ? t("Tablet")
+            : t("Mobile")}{" "}
         <span>
           {width} px · {Math.round(scale * 100)}%
         </span>
@@ -890,7 +866,7 @@ function ResponsivePreview({ frameRef, device, collapsed, mode }) {
       >
         <iframe
           ref={frameRef}
-          title="Prospect24 live design canvas"
+          title={t("Prospect24 live design canvas")}
           src={src}
           style={{ width, height, transform: `scale(${scale})` }}
         />
@@ -899,6 +875,7 @@ function ResponsivePreview({ frameRef, device, collapsed, mode }) {
   );
 }
 function ResetConfirmation({ onCancel, onConfirm }) {
+  const t = useUi();
   const ref = useRef(null);
   useEffect(() => {
     ref.current.showModal();
@@ -915,18 +892,11 @@ function ResetConfirmation({ onCancel, onConfirm }) {
         onCancel();
       }}
     >
-      <h2 id="p24-reset-title">Restore original design?</h2>
-      <p>
-        Restore all images, text, dimensions, styles and sections. You can undo
-        this change.
-      </p>
+      <h2 id="p24-reset-title">{t("Restore original design?")}</h2>
+      <p>{t("Restore all images, text, dimensions, styles and sections. You can undo this change.")}</p>
       <div>
-        <button autoFocus onClick={onCancel}>
-          Cancel
-        </button>
-        <button className="p24-primary" onClick={onConfirm}>
-          Restore original
-        </button>
+        <button autoFocus onClick={onCancel}>{t("Cancel")}</button>
+        <button className="p24-primary" onClick={onConfirm}>{t("Restore original")}</button>
       </div>
     </dialog>
   );

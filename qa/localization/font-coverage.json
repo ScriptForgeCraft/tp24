@@ -1,0 +1,26 @@
+[
+  {
+    "font": "manrope",
+    "armenianGlyphs": 0,
+    "coversAlphabet": false,
+    "file": "node_modules\\@fontsource\\manrope\\files\\manrope-latin-400-normal.woff2"
+  },
+  {
+    "font": "cormorant-garamond",
+    "armenianGlyphs": 0,
+    "coversAlphabet": false,
+    "file": "node_modules\\@fontsource\\cormorant-garamond\\files\\cormorant-garamond-latin-400-normal.woff2"
+  },
+  {
+    "font": "noto-sans-armenian",
+    "armenianGlyphs": 85,
+    "coversAlphabet": true,
+    "file": "node_modules\\@fontsource\\noto-sans-armenian\\files\\noto-sans-armenian-armenian-400-normal.woff2"
+  },
+  {
+    "font": "noto-serif-armenian",
+    "armenianGlyphs": 85,
+    "coversAlphabet": true,
+    "file": "node_modules\\@fontsource\\noto-serif-armenian\\files\\noto-serif-armenian-armenian-400-normal.woff2"
+  }
+]

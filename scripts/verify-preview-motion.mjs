@@ -27,7 +27,7 @@ try {
     await page.locator('#projects').scrollIntoViewIfNeeded(); await page.waitForTimeout(900);
     await page.locator('.project-stage').focus(); await page.keyboard.press('ArrowRight'); await page.waitForTimeout(900);
     assert.match(await page.locator('.project-card.active .project-info h3').innerText(), /Avet/i);
-    await page.getByRole('button', { name: 'Explore Project', exact: true }).click();
+    await page.locator('.project-card.active .portfolio-explore').click();
     assert.equal(await page.locator('.modal').evaluate(el => el.open), true);
     await page.keyboard.press('Escape'); await page.waitForTimeout(400);
     assert.equal(await page.locator('.modal').evaluate(el => el.open), false);

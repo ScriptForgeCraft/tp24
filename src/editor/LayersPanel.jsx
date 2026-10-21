@@ -1,7 +1,9 @@
+import { useUi } from "../localization";
 import React from "react";
 import { useEditor } from "./EditorProvider";
 import { targets } from "./editorConfig";
 export function LayersPanel() {
+  const t = useUi();
   const { tree, selected, select, frameRef } = useEditor();
   const pick = (id) => {
     select(id);
@@ -13,53 +15,53 @@ export function LayersPanel() {
   const branch = (parent) =>
     tree
       .filter((t) => t.parent === parent)
-      .map((t) => {
-        const children = tree.some((c) => c.parent === t.id);
+      .map((layer) => {
+        const children = tree.some((c) => c.parent === layer.id);
         return (
-          <div className="p24-layer-branch" key={t.id}>
+          <div className="p24-layer-branch" key={layer.id}>
             {children ? (
               <details open>
                 <summary>
                   <button
-                    data-layer-id={t.id}
-                    aria-pressed={selected === t.id}
+                    data-layer-id={layer.id}
+                    aria-pressed={selected === layer.id}
                     onClick={(e) => {
                       e.preventDefault();
-                      pick(t.id);
+                      pick(layer.id);
                     }}
                   >
                     <span>
-                      {targets[t.id]?.kind === "section"
+                      {targets[layer.id]?.kind === "section"
                         ? "▤"
-                        : targets[t.id]?.kind === "image"
+                        : targets[layer.id]?.kind === "image"
                           ? "▧"
                           : "◇"}
                     </span>
-                    {targets[t.id]?.label}
-                    {!t.visible && <small>Hidden</small>}
+                    {t(targets[layer.id]?.label, layer.id)}
+                    {!layer.visible && <small>{t("Hidden")}</small>}
                   </button>
                 </summary>
-                <div className="p24-layer-children">{branch(t.id)}</div>
+                <div className="p24-layer-children">{branch(layer.id)}</div>
               </details>
             ) : (
               <button
-                data-layer-id={t.id}
+                data-layer-id={layer.id}
                 className="p24-layer-leaf"
-                aria-pressed={selected === t.id}
-                onClick={() => pick(t.id)}
+                aria-pressed={selected === layer.id}
+                onClick={() => pick(layer.id)}
               >
-                <span>{targets[t.id]?.kind === "image" ? "▧" : "T"}</span>
-                {targets[t.id]?.label}
-                {!t.visible && <small>Hidden</small>}
+                <span>{targets[layer.id]?.kind === "image" ? "▧" : "T"}</span>
+                {t(targets[layer.id]?.label, layer.id)}
+                {!layer.visible && <small>{t("Hidden")}</small>}
               </button>
             )}
           </div>
         );
       });
   return (
-    <div className="p24-layers" role="region" aria-label="Page layers">
-      <h2>Page layers</h2>
-      <p>Select a parent or a nested element.</p>
+    <div className="p24-layers" role="region" aria-label={t("Page layers")}>
+      <h2>{t("Page layers")}</h2>
+      <p>{t("Select a parent or a nested element.")}</p>
       {branch(null)}
     </div>
   );

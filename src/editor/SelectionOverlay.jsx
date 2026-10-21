@@ -1,3 +1,4 @@
+import { useUi } from "../localization";
 import React, { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import { useEditor, elementSelector } from "./EditorProvider";
@@ -40,6 +41,7 @@ export function useElementRect(id) {
   return rect;
 }
 export function CanvasEditing() {
+  const t = useUi();
   const editor = useEditor(),
     api = useRef(editor);
   api.current = editor;
@@ -147,8 +149,8 @@ export function CanvasEditing() {
                 data-editor-ui
                 className="p24-hide"
                 key={s.id}
-                aria-label={`Hide ${s.label}`}
-                title={`Hide ${s.label}`}
+                aria-label={t(`Hide ${s.label}`)}
+                title={t(`Hide ${s.label}`)}
                 onClick={() => editor.setVisibility(s.id, false)}
               >
                 ×
@@ -163,6 +165,7 @@ export function CanvasEditing() {
   );
 }
 function Outline({ id, selected }) {
+  const t = useUi();
   const rect = useElementRect(id),
     editor = useEditor(),
     cleanup = useRef(null);
@@ -262,20 +265,20 @@ function Outline({ id, selected }) {
     >
       {selected && (
         <>
-          <span className="p24-selection-label">{targets[id].label}</span>
+          <span className="p24-selection-label">{t(targets[id].label, id)}</span>
           {targets[id].kind !== "overlay" && (
             <>
               {[
-                ["x", "right", "Resize width"],
-                ["y", "bottom", "Resize height"],
-                ["xy", "corner", "Resize width and height"],
+                ["x", "right", t("Resize width")],
+                ["y", "bottom", t("Resize height")],
+                ["xy", "corner", t("Resize width and height")],
               ].map(([axis, position, label]) => (
                 <button
                   key={axis}
                   data-editor-ui
                   className={`p24-resize ${position}`}
-                  aria-label={label}
-                  title={`${label} · drag`}
+                  aria-label={t(label)}
+                  title={`${t(label)} · ${t("drag")}`}
                   onPointerDown={(e) => begin(e, axis)}
                 />
               ))}

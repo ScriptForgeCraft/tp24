@@ -1,6 +1,6 @@
 import React, { forwardRef } from "react";
 import { useEditor } from "./EditorProvider";
-import { targets, resolveProjectAsset } from "./editorConfig";
+import { targets, resolveProjectAsset, REMOVED_IMAGE } from "./editorConfig";
 
 // The existing tags, children, refs and handlers remain the presentation. Only saved
 // copy and image sources are substituted, directly in React's render tree.
@@ -26,7 +26,7 @@ export const EditorElement = forwardRef(function EditorElement(
         src={
           source?.startsWith("asset:")
             ? assetURLs[source] || props.src
-            : resolveProjectAsset(source) || props.src
+            : (source !== REMOVED_IMAGE && resolveProjectAsset(source)) || props.src
         }
         draggable={editor.mode === "edit" ? false : props.draggable}
       />

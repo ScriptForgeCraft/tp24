@@ -4,6 +4,11 @@ import '@fontsource/cormorant-garamond/latin-400.css';
 import '@fontsource/manrope/latin-400.css';
 import '@fontsource/manrope/latin-500.css';
 import '@fontsource/manrope/latin-600.css';
+import '@fontsource/noto-serif-armenian/armenian-400.css';
+import '@fontsource/noto-sans-armenian/armenian-400.css';
+import '@fontsource/noto-sans-armenian/armenian-500.css';
+import '@fontsource/noto-sans-armenian/armenian-600.css';
+import { LanguageProvider, useLanguage } from './localization';
 import './styles.css';
 import { contact, packages as packageData, services as serviceData, projects as projectData, stages, translations, navigation, implementingCompanies, partners, news as newsData, videos as videoData, officialUrl } from './data';
 import { PreviewHost, PreviewOverview, NavbarDesignSelector } from './preview/PreviewHost';
@@ -23,14 +28,14 @@ const Label = ({ children, editId }) => <EditorElement as="p" {...(editId ? edit
 const Action = ({ children, onClick, href, filled, className = '', editId, ...rest }) => href ? <EditorElement as="a" {...(editId ? edit(editId) : {})} href={href} className={`action ${filled ? 'filled' : ''} ${className}`} {...rest}>{children}<Arrow /></EditorElement> : <EditorElement as="button" {...(editId ? edit(editId) : {})} onClick={onClick} className={`action ${filled ? 'filled' : ''} ${className}`} {...rest}>{children}<Arrow /></EditorElement>;
 
 function App() {
-  const [lang, setLang] = useState(() => new URLSearchParams(window.location.search).get('editorLanguage') === 'am' ? 'am' : 'en');
+  const { lang, setLang } = useLanguage();
   const t = translations[lang];
   const localize = item => ({ ...item, ...(lang === 'am' ? item.hy : {}), editKey: semanticId(item.name || item.title || item.slug || item.id || '') });
   const packages = packageData.map(localize), services = serviceData.map(localize), projects = projectData.map(localize);
   const news = newsData.map(localize), videos = videoData.map(localize);
   const location = lang === 'am' ? contact.amLocation : contact.location;
-  const date = value => { const [year, month, day] = value.split('-'); return `${Number(day)} ${t.months[Number(month) - 1]} ${year}`; };
-  const price = p => <>{p.from && <small>{t.from} </small>}{p.price}<span> {t.currency}</span></>;
+  const date = value => { const [year, month, day] = value.split('-'); return lang === 'am' ? `${year} թ․ ${t.months[Number(month) - 1]} ${Number(day)}` : `${Number(day)} ${t.months[Number(month) - 1]} ${year}`; };
+  const price = p => <>{p.from && <small>{lang === 'am' ? 'Սկսած' : t.from} </small>}{p.price}<span> {t.currency}{lang === 'am' && p.from ? 'ից' : ''}</span></>;
   const partnerGrid = all => <EditorElement as="div" {...(!all ? edit("partners.layout") : {})} className="network-grid">{(all ? partners : partners.slice(0, 12)).map(p => <div className="network-logo" key={p.name}><EditorElement as="img" {...(!all ? edit(`partners.logo.${semanticId(p.name)}`) : {})} loading="lazy" src={p.image} alt={p.name} width="150" height="90" /></div>)}</EditorElement>;
   const articleLink = item => officialUrl(item.slug, lang);
   const [scrolled, setScrolled] = useState(false);
@@ -67,7 +72,16 @@ function App() {
 
   useEffect(() => {
     document.documentElement.lang = lang === 'am' ? 'hy' : 'en';
+    document.querySelector('meta[name="description"]')?.setAttribute('content', t.metaDescription);
   }, [lang]);
+  // Revalidate existing fields after a language change without clearing the draft.
+  useEffect(() => {
+    dialogRef.current?.querySelectorAll('input,textarea').forEach(field => {
+      field.setCustomValidity('');
+      if (field.validity.valueMissing) field.setCustomValidity(t.requiredField);
+      else if (field.validity.typeMismatch) field.setCustomValidity(t.invalidEmail);
+    });
+  }, [lang, modal]);
   useEffect(() => {
     const revealEditorLayer = event => {
       const id = event.detail;
@@ -126,7 +140,12 @@ function App() {
     const rect = heroRef.current.getBoundingClientRect();
     setSplit(Math.max(4, Math.min(96, (event.clientX - rect.left) / rect.width * 100)));
   }
-  function languageButtons() { return <div className="language" aria-label={t.language}><button className={lang === 'en' ? 'active' : ''} onClick={() => setLang('en')} aria-pressed={lang === 'en'}>EN</button><span>/</span><button className={lang === 'am' ? 'active' : ''} onClick={() => setLang('am')} aria-pressed={lang === 'am'}>AM</button></div>; }
+  function switchLanguage(next) {
+    const scroll = window.scrollY;
+    setLang(next);
+    requestAnimationFrame(() => window.scrollTo({ top: scroll, behavior: 'instant' }));
+  }
+  function languageButtons() { return <div className="language" aria-label={t.language}><button className={lang === 'en' ? 'active' : ''} onClick={() => switchLanguage('en')} aria-pressed={lang === 'en'}>EN</button><span>/</span><button className={lang === 'am' ? 'active' : ''} onClick={() => switchLanguage('am')} aria-pressed={lang === 'am'}>AM</button></div>; }
 
   return <>
     <a className="skip-link" href="#main">{t.skip}</a>
@@ -137,8 +156,8 @@ function App() {
     </EditorElement>
 
     <main id="main" tabIndex="-1" data-design-layout="atelier">
-      <EditorElement as="section" {...sectionEdit("hero")} id="home" ref={heroRef} className={`hero ${heroReady ? 'ready' : ''}`} style={{ '--split': `${split}%` }} onPointerDown={e => { if (e.target.closest('a,button,[role="slider"],.hero-copy')) return; touched.current = true; setPosition(e); }}>
-        <div className="hero-visual" aria-hidden="true"><EditorElement as="img" {...edit("hero.afterImage")} className="hero-after" src={img('hero-after')} alt="" fetchPriority="high" /><div className="hero-before"><EditorElement as="img" {...edit("hero.beforeImage")} src={img('hero-before')} alt="" fetchPriority="high" /></div></div>
+      <EditorElement as="section" {...sectionEdit("hero")} id="home" aria-describedby="hero-imagery-note" ref={heroRef} className={`hero ${heroReady ? 'ready' : ''}`} style={{ '--split': `${split}%` }} onPointerDown={e => { if (e.target.closest('a,button,[role="slider"],.hero-copy')) return; touched.current = true; setPosition(e); }}>
+        <span id="hero-imagery-note" className="sr-only">{t.illustrative}</span><div className="hero-visual" aria-hidden="true"><EditorElement as="img" {...edit("hero.afterImage")} className="hero-after" src={img('hero-after')} alt="" fetchPriority="high" /><div className="hero-before"><EditorElement as="img" {...edit("hero.beforeImage")} src={img('hero-before')} alt="" fetchPriority="high" /></div></div>
         <EditorElement as="div" {...edit("hero.overlay")} className="hero-shade" />
         <EditorElement as="div" {...edit("hero.content")} className="hero-copy">
           <Heading hero editId="hero.heading" lines={t.hero} />
@@ -211,18 +230,19 @@ function App() {
     <dialog id="site-menu" ref={menuRef} className="mobile-menu" aria-label={t.siteNav} onCancel={e => { e.preventDefault(); closeMenu(); }}><div className="menu-header"><Logo editId="mobile.logo" label={t.logoHome} onClick={e => { e.preventDefault(); closeMenu('#home'); }} /><button className="close-button" aria-label={t.closeMenu} onClick={() => closeMenu()}>×</button></div><nav aria-label={t.siteNav}>{navItems.map((item, i) => navItem(item, true, i))}</nav><div className="menu-bottom">{languageButtons()}<a href={`tel:${contact.phoneHref}`}>{contact.phone}</a><a href={`mailto:${contact.email}`}>{contact.email}</a><p>{location}</p></div></dialog>
 
     <dialog ref={dialogRef} className={['modal', closing ? 'closing' : '', ['compare', 'partners'].includes(modal?.type) ? 'wide-modal' : ''].join(' ')} onCancel={e => { e.preventDefault(); closeModal(); }} onClick={e => { if (e.target === e.currentTarget) closeModal(); }} aria-labelledby="modal-title"><div className="modal-shell"><button className="close-button" autoFocus aria-label={t.closeDialog} onClick={closeModal}>×</button>
-      {modal?.type === 'package' && (() => { const p = packages[modal.index]; return <><div className="modal-image"><img src={img(p.image)} alt="" /></div><div className="modal-body"><Label>{t.packageLabel} / 0{modal.index + 1}</Label><h2 id="modal-title" className="display">{lang === 'am' ? p.am : p.name}</h2><p>{p.detail}</p><p className="scope-inheritance">{p.inheritance}{modal.index > 0 && <>. {t.inherited}</>}</p><h3 className="scope-heading">{t.scopeTitle}</h3><div className="scope-groups">{p.scope.map(localize).map(group => <section key={group.title}><h4>{group.title}</h4><ul>{group.items.map(item => <li key={item}>{item}</li>)}</ul></section>)}</div><div className="modal-price">{price(p)}<span>{p.from ? t.startingPrice : t.fixedPrice} · {t.area}</span></div><p className="pricing-note">{t.pricingNote}</p><div className="modal-actions"><Action filled onClick={() => openModal({ type: 'contact', packageIndex: modal.index })}>{t.discuss}</Action><a className="text-link" href={officialUrl('investment-packages', lang)} target="_blank" rel="noopener noreferrer">{t.sourceScope}<Arrow /></a></div></div></>; })()}
+      {modal?.type === 'package' && (() => { const p = packages[modal.index]; return <><div className="modal-image"><img src={img(p.image)} alt="" /></div><div className="modal-body"><Label>{t.packageLabel} / 0{modal.index + 1}</Label><h2 id="modal-title" className="display">{lang === 'am' ? p.am : p.name}</h2><p>{p.detail}</p><p className="scope-inheritance">{p.inheritance}{modal.index > 0 && <>{lang === 'am' ? '։ ' : '. '}{t.inherited}</>}</p><h3 className="scope-heading">{t.scopeTitle}</h3><div className="scope-groups">{p.scope.map(localize).map(group => <section key={group.title}><h4>{group.title}</h4><ul>{group.items.map(item => <li key={item}>{item}</li>)}</ul></section>)}</div><div className="modal-price">{price(p)}<span>{p.from ? t.startingPrice : t.fixedPrice} · {t.area}</span></div><p className="pricing-note">{t.pricingNote}</p><div className="modal-actions"><Action filled onClick={() => openModal({ type: 'contact', packageIndex: modal.index })}>{t.discuss}</Action><a className="text-link" href={officialUrl('investment-packages', lang)} target="_blank" rel="noopener noreferrer">{t.sourceScope}<Arrow /></a></div></div></>; })()}
       {modal?.type === 'compare' && <div className="modal-body"><Label>{t.packageLabel}</Label><h2 id="modal-title" className="display">{t.compareTitle}</h2><p>{t.compareIntro}</p><div className="comparison-grid">{packages.map((p, i) => <div className="comparison-column" key={p.name}><span className="eyebrow">0{i + 1}</span><h3>{lang === 'am' ? p.am : p.name}</h3><p>{p.description}</p><p className="scope-inheritance">{p.inheritance}</p><ul>{p.comparison.map(item => <li key={item}>{item}</li>)}</ul><strong>{price(p)}</strong><small>{p.from ? t.startingPrice : t.fixedPrice} · {t.area}</small><Action onClick={() => openModal({ type: 'package', index: i })}>{t.viewDetails}</Action></div>)}</div><p className="pricing-note">{t.pricingNote}</p></div>}
       {modal?.type === 'project' && (() => { const p = projects[modal.index]; return <><div className="modal-image project-modal-image"><img src={img(p.image)} alt={p.name} /></div><div className="modal-body"><Label>{p.category}</Label><h2 id="modal-title" className="display">{p.name}</h2><p>{p.description}</p><p className="muted">{t.projectLimit}</p><div className="modal-actions"><Action filled onClick={() => openModal({ type: 'contact', interest: p.name })}>{t.similar}</Action><a className="text-link" href={officialUrl('projects', lang)} target="_blank" rel="noopener noreferrer">{t.sourceProject}<Arrow /></a></div></div></>; })()}
       {modal?.type === 'partners' && <div className="modal-body"><Label>{t.network}</Label><h2 id="modal-title" className="display">{t.network}</h2><p>{t.networkText}</p>{partnerGrid(true)}<p className="muted">{t.networkNote}</p></div>}
-      {modal?.type === 'contact' && <div className="modal-body contact-body"><Label>{t.nextLabel}</Label><h2 id="modal-title" className="display">{t.contact}</h2><p>{t.contactIntro}</p><form onSubmit={e => { e.preventDefault(); const form = new FormData(e.currentTarget); const body = [t.name + ': ' + form.get('name'), t.emailLabel + ': ' + form.get('email'), t.phoneLabel + ': ' + form.get('phone'), t.packageSelect + ': ' + form.get('package'), '', form.get('message')].join('\n'); window.location.href = 'mailto:' + contact.email + '?subject=' + encodeURIComponent(modal.interest || 'Project enquiry — Prospect24') + '&body=' + encodeURIComponent(body); setDraft(true); }}><label>{t.packageSelect}<select name="package" defaultValue={modal.packageIndex === undefined ? '' : packageData[modal.packageIndex].name}><option value="">{t.undecided}</option>{packages.map(p => <option key={p.name} value={p.name}>{lang === 'am' ? p.am : p.name}</option>)}</select></label><div className="form-row"><label>{t.name}<input name="name" autoComplete="name" required /></label><label>{t.phoneLabel}<input name="phone" type="tel" autoComplete="tel" /></label></div><label>{t.emailLabel}<input name="email" type="email" autoComplete="email" placeholder="you@company.com" required /></label><label>{t.message}<textarea name="message" rows="3" placeholder={t.messagePlaceholder} defaultValue={modal.interest || ''} required /></label><button className="action filled" type="submit">{t.prepareEmail}<Arrow /></button><p className="form-note" role="status">{draft ? t.draftReady : t.draftNote}</p></form><div className="contact-direct"><a href={'tel:' + contact.phoneHref}>{contact.phone}</a><a href={'mailto:' + contact.email}>{contact.email}</a><span>{location}</span></div></div>}
+      {modal?.type === 'contact' && <div className="modal-body contact-body"><Label>{t.nextLabel}</Label><h2 id="modal-title" className="display">{t.contact}</h2><p>{t.contactIntro}</p><form onInvalid={e => { const field = e.target; field.setCustomValidity(''); if (field.validity.valueMissing) field.setCustomValidity(t.requiredField); else if (field.validity.typeMismatch) field.setCustomValidity(t.invalidEmail); }} onInput={e => e.target.setCustomValidity?.('')} onSubmit={e => { e.preventDefault(); const form = new FormData(e.currentTarget); const body = [t.name + ': ' + form.get('name'), t.emailLabel + ': ' + form.get('email'), t.phoneLabel + ': ' + form.get('phone'), t.packageSelect + ': ' + (packages.find(p => p.name === form.get('package'))?.[lang === 'am' ? 'am' : 'name'] || t.undecided), '', form.get('message')].join('\n'); window.location.href = 'mailto:' + contact.email + '?subject=' + encodeURIComponent(modal.interest || t.enquirySubject) + '&body=' + encodeURIComponent(body); setDraft(true); }}><label>{t.packageSelect}<select name="package" defaultValue={modal.packageIndex === undefined ? '' : packageData[modal.packageIndex].name}><option value="">{t.undecided}</option>{packages.map(p => <option key={p.name} value={p.name}>{lang === 'am' ? p.am : p.name}</option>)}</select></label><div className="form-row"><label>{t.name}<input name="name" autoComplete="name" required /></label><label>{t.phoneLabel}<input name="phone" type="tel" autoComplete="tel" /></label></div><label>{t.emailLabel}<input name="email" type="email" autoComplete="email" placeholder={t.emailPlaceholder} required /></label><label>{t.message}<textarea name="message" rows="3" placeholder={t.messagePlaceholder} defaultValue={modal.interest || ''} required /></label><button className="action filled" type="submit">{t.prepareEmail}<Arrow /></button><p className="form-note" role="status">{draft ? t.draftReady : t.draftNote}</p></form><div className="contact-direct"><a href={'tel:' + contact.phoneHref}>{contact.phone}</a><a href={'mailto:' + contact.email}>{contact.email}</a><span>{location}</span></div></div>}
       {(modal?.type === 'privacy' || modal?.type === 'terms') && <div className="modal-body legal-body"><Label>{t.legalLabel}</Label><h2 id="modal-title" className="display">{modal.type === 'privacy' ? t.privacy : t.terms}</h2>{(modal.type === 'privacy' ? t.privacyCopy : t.termsCopy).map(copy => <p key={copy}>{copy}</p>)}<a className="text-link" href={'mailto:' + contact.email}>{contact.email}<Arrow /></a></div>}
     </div></dialog>
   </>;
 }
 
 const preview = previewRoute();
-createRoot(document.getElementById('root')).render(preview === 'overview' ? <PreviewOverview /> : <PreviewHost theme={preview}><EditorProvider><App /></EditorProvider></PreviewHost>);
+createRoot(document.getElementById('root')).render(<LanguageProvider>{preview === 'overview' ? <PreviewOverview /> : <PreviewHost theme={preview}><EditorProvider><App /></EditorProvider></PreviewHost>}</LanguageProvider>);
 
 import './presentation.css';
 import './editor/editor.css';
+import './armenian.css';

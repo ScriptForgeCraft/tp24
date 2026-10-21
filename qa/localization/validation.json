@@ -1,0 +1,92 @@
+{
+  "date": "2026-10-21",
+  "origin": "http://127.0.0.1:4175/",
+  "baselineOrigin": "http://127.0.0.1:4176/",
+  "tests": [
+    {
+      "command": "npm run build",
+      "status": "passed",
+      "detail": "Final Vite production build; Armenian font files bundled locally."
+    },
+    {
+      "command": "npm run test:ui",
+      "status": "passed",
+      "detail": "67 checks; no browser/resource errors."
+    },
+    {
+      "command": "npm run test:a11y",
+      "status": "passed",
+      "detail": "20 scenarios; zero automated WCAG violations."
+    },
+    {
+      "command": "npm run test:contrast",
+      "status": "failed — original baseline also fails",
+      "detail": "1440px portfolio number 3.10:1 < 4.5:1 and English project title 2.94:1 < 3:1. Both match the original revision. 390px passes."
+    },
+    {
+      "command": "npm run test:editor",
+      "status": "passed",
+      "detail": "97 checks, including bilingual copy, import/export, image upload, undo, responsive resizing and accessibility."
+    },
+    {
+      "command": "npm run test:armenian",
+      "status": "passed",
+      "detail": "63 checks; 672 catalog entries; 12 viewport widths; no missing Armenian values, accidental English UI, overflow, runtime or resource errors."
+    },
+    {
+      "command": "npm run test:design-switcher",
+      "status": "failed — original baseline also fails",
+      "detail": "EN 320px header scroll width 336px in a 320px header. Six desktop themes passed their accessibility scans before this assertion."
+    },
+    {
+      "command": "npm run test:preview-colors",
+      "status": "passed",
+      "detail": "12 palette/viewport combinations; 44 accessibility scans; preserved homepage geometry, content and imagery."
+    },
+    {
+      "command": "npm run test:preview-build",
+      "status": "passed",
+      "detail": "Six static routes, refreshes, original homepage, overview links and interactions."
+    },
+    {
+      "command": "npm run test:preview-motion",
+      "status": "passed",
+      "detail": "All six themes retain hero entrance, comparison dragging, navigation, service crossfade, carousel and mobile navigation."
+    },
+    {
+      "command": "npm run test:preview-contrast",
+      "status": "failed — portfolio contrast",
+      "detail": "Suite stops on palette 01 at the original desktop portfolio number/title failures; mobile passes."
+    },
+    {
+      "command": "Armenian photo-contrast checks on palettes 01–06",
+      "status": "failed — portfolio number only",
+      "detail": "All six report the desktop portfolio number at 2.93:1 against 4.5:1. All six mobile checks pass after raising the long scroll badge above the comparison divider."
+    },
+    {
+      "command": "node scripts/verify-content.mjs",
+      "status": "failed — original English heading also clips",
+      "detail": "EN ARCHITECTURAL at 768px is 363px wide in a 352px line in both revisions. Dedicated Armenian scope and viewport tests pass."
+    },
+    {
+      "command": "node scripts/verify-portfolio.mjs",
+      "status": "passed",
+      "detail": "23 checks; all language/viewport navigation cases, arrows, keyboard, mouse drag, focus restoration, editor reveal and native touch swipe."
+    },
+    {
+      "command": "node scripts/verify-editor-images.mjs",
+      "status": "passed",
+      "detail": "20 image-control checks; concurrent image controls preserved, including remove/restore, ZIP transfer and mobile service photos."
+    },
+    {
+      "command": "Font cmap inspection",
+      "status": "passed",
+      "detail": "Manrope/Cormorant Latin files: zero Armenian glyphs. Both Noto Armenian faces: 85 Armenian code points and full Armenian alphabet coverage."
+    },
+    {
+      "command": "git diff --check",
+      "status": "passed",
+      "detail": "No whitespace errors."
+    }
+  ]
+}

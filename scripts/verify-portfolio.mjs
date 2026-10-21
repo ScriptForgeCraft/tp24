@@ -127,7 +127,9 @@ try {
   const page = await touchContext.newPage();
   page.on('pageerror', error => errors.push(error.message));
   await page.goto(base);
+  await page.evaluate(() => document.fonts.ready);
   await page.locator('#projects').scrollIntoViewIfNeeded();
+  await page.waitForTimeout(100);
   const box = await page.locator('.portfolio-track').boundingBox();
   const touch = await touchContext.newCDPSession(page);
   await touch.send('Input.dispatchTouchEvent', { type: 'touchStart', touchPoints: [{ x: 280, y: box.y + 100 }] });

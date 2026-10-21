@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { EditorElement } from '../editor/EditorElement';
 import { edit, sectionEdit } from '../editor/editorConfig';
 import { officialUrl } from '../data';
+import { uiText } from '../uiTranslations';
 import './selected-portfolio.css';
 
 const number = value => String(value + 1).padStart(2, '0');
@@ -118,7 +119,7 @@ export function SelectedPortfolio({ projects, t, lang, img, onOpen }) {
         <div className="portfolio-pagination">{projects.map((p, i) => <button type="button" key={p.editKey} aria-label={`${t.viewProject}: ${p.name}`} aria-current={project === i ? 'true' : undefined} aria-controls="portfolio-track" onClick={() => goToProject(i)}>{number(i)}<span aria-hidden="true" /></button>)}</div>
       </div>
     </div>
-    <EditorElement as="div" {...edit('projects.viewport')} ref={trackRef} id="portfolio-track" className="project-stage portfolio-track reveal" tabIndex={0} role="region" aria-roledescription="carousel" aria-label={t.projectLabel} onScroll={syncProject} onScrollEnd={() => { pendingScroll.current = null; syncProject(); }} onWheel={() => { pendingScroll.current = null; }} onKeyDown={event => {
+    <EditorElement as="div" {...edit('projects.viewport')} ref={trackRef} id="portfolio-track" className="project-stage portfolio-track reveal" tabIndex={0} role="region" aria-roledescription={uiText('carousel', lang)} aria-label={t.projectLabel} onScroll={syncProject} onScrollEnd={() => { pendingScroll.current = null; syncProject(); }} onWheel={() => { pendingScroll.current = null; }} onKeyDown={event => {
       if (event.target !== event.currentTarget) return;
       if (['ArrowLeft', 'ArrowRight', 'Home', 'End'].includes(event.key)) {
         event.preventDefault();
@@ -128,7 +129,7 @@ export function SelectedPortfolio({ projects, t, lang, img, onOpen }) {
     }} onPointerDown={startDrag} onPointerMove={event => {
       if (dragRef.current) event.currentTarget.scrollLeft = dragRef.current.left - (event.clientX - dragRef.current.x);
     }} onPointerUp={endDrag} onPointerCancel={endDrag} onLostPointerCapture={event => { if (dragRef.current) endDrag(event); }}>
-      {projects.map((p, i) => <EditorElement as="article" {...edit(`projects.card.${p.editKey}`)} key={p.editKey} className={`project-card ${project === i ? 'active' : ''}`} role="group" aria-roledescription="slide" aria-label={`${number(i)} / ${number(projects.length - 1)} · ${p.name}`} onFocusCapture={event => { if (!event.currentTarget.contains(event.relatedTarget)) goToProject(i); }}>
+      {projects.map((p, i) => <EditorElement as="article" {...edit(`projects.card.${p.editKey}`)} key={p.editKey} className={`project-card ${project === i ? 'active' : ''}`} role="group" aria-roledescription={uiText('slide', lang)} aria-label={`${number(i)} / ${number(projects.length - 1)} · ${p.name}`} onFocusCapture={event => { if (!event.currentTarget.contains(event.relatedTarget)) goToProject(i); }}>
         <EditorElement as="div" {...edit(`projects.visual.${p.editKey}`)} className="portfolio-image"><EditorElement as="img" {...edit(`projects.visual.${p.editKey}.image`)} loading="lazy" src={img(p.image)} alt={p.name} draggable={false} /></EditorElement>
         <EditorElement as="div" {...edit(i === 0 ? 'projects.overlay' : `projects.visual.${p.editKey}.overlay`)} className="portfolio-shade" />
         <div className="project-info portfolio-card-info">

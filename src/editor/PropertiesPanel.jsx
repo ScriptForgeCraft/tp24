@@ -1,14 +1,14 @@
-import React, { useLayoutEffect, useState } from "react";
+import { useUi } from "../localization";
+import React, { useEffect, useLayoutEffect, useState } from "react";
 import { useEditor, elementSelector } from "./EditorProvider";
 import {
-  assets,
-  resolveProjectAsset,
   targets,
   dimensionKeys,
   spacingKeys,
   responsiveKeys,
   shadows,
 } from "./editorConfig";
+import { ImageSourceControls } from "./ImageSourceControls";
 const title = (key) =>
   key.replace(/([A-Z])/g, " $1").replace(/^./, (c) => c.toUpperCase());
 function hex(value) {
@@ -30,6 +30,7 @@ function luminance(color) {
     .reduce((s, v, i) => s + v * [0.2126, 0.7152, 0.0722][i], 0);
 }
 export function PropertiesPanel({ id, onClose }) {
+  const t = useUi();
   const editor = useEditor(),
     { design, device, lang, frameRef, updateStyle, select, commit, tree } =
       editor,
@@ -38,8 +39,8 @@ export function PropertiesPanel({ id, onClose }) {
     [ancestors, setAncestors] = useState([]),
     [overflow, setOverflow] = useState(false),
     [linkSpacing, setLinkSpacing] = useState("none"),
-    [gallery, setGallery] = useState(false),
     [language, setLanguage] = useState(lang);
+  useEffect(() => { setLanguage(lang); }, [lang]);
   useLayoutEffect(() => {
     const el = frameRef.current?.contentDocument?.querySelector(
       elementSelector(id),
@@ -127,8 +128,8 @@ export function PropertiesPanel({ id, onClose }) {
     changed(key) && (
       <button
         className="p24-property-reset"
-        title={`Reset ${title(key)}`}
-        aria-label={`Reset ${title(key)}`}
+        title={t(`Reset ${title(key)}`)}
+        aria-label={t(`Reset ${title(key)}`)}
         onClick={() => reset(key)}
       >
         ↶
@@ -139,12 +140,12 @@ export function PropertiesPanel({ id, onClose }) {
     return (
       <div className="p24-field" key={key}>
         <label htmlFor={`p24-${key}`}>
-          {label}
+          {t(label)}
           {changed(key) && <i />}
         </label>
         <input
           id={`p24-${key}`}
-          aria-label={label}
+          aria-label={t(label)}
           type="number"
           min={min}
           max={max}
@@ -178,7 +179,7 @@ export function PropertiesPanel({ id, onClose }) {
     return (
       <div className="p24-range" key={key}>
         <label htmlFor={`p24-slider-${key}`}>
-          {label}
+          {t(label)}
           {changed(key) && <i />}
           <output>
             {key === "zoom" ? v.toFixed(2) : Math.round(v * multiplier)}
@@ -194,7 +195,7 @@ export function PropertiesPanel({ id, onClose }) {
         <div>
           <input
             id={`p24-slider-${key}`}
-            aria-label={label}
+            aria-label={t(label)}
             type="range"
             min={min}
             max={max}
@@ -206,7 +207,7 @@ export function PropertiesPanel({ id, onClose }) {
             onChange={(e) => write(Number(e.target.value))}
           />
           <input
-            aria-label={`${label} value`}
+            aria-label={`${t(label)} value`}
             type="number"
             min={min * multiplier}
             max={max * multiplier}
@@ -231,19 +232,19 @@ export function PropertiesPanel({ id, onClose }) {
     return (
       <div className="p24-field" key={key}>
         <label htmlFor={`p24-${key}`}>
-          {label}
+          {t(label)}
           {changed(key) && <i />}
         </label>
         <select
           id={`p24-${key}`}
-          aria-label={label}
+          aria-label={t(label)}
           value={value(key) || options[0][0]}
           {...inputEvents}
           onChange={(e) => set(key, e.target.value)}
         >
           {options.map(([v, l]) => (
             <option key={v} value={v}>
-              {l}
+              {t(l)}
             </option>
           ))}
         </select>
@@ -264,18 +265,18 @@ export function PropertiesPanel({ id, onClose }) {
     return (
       <div className="p24-dimension" key={key}>
         <label htmlFor={`p24-${key}`}>
-          {label}
+          {t(label)}
           {changed(key) && <i />}
         </label>
         <input
           id={`p24-${key}`}
-          aria-label={label}
+          aria-label={t(label)}
           type="number"
           disabled={unit === "auto"}
           min="0"
           max={unit === "px" ? 5000 : 100}
           value={unit === "auto" ? "" : Math.round(number * 100) / 100}
-          placeholder="Auto"
+          placeholder={t("Auto")}
           {...inputEvents}
           onChange={(e) => {
             if (e.target.value === "") return;
@@ -300,7 +301,7 @@ export function PropertiesPanel({ id, onClose }) {
           }}
         />
         <select
-          aria-label={`${label} unit`}
+          aria-label={`${t(label)} unit`}
           value={unit}
           {...inputEvents}
           onChange={(e) => {
@@ -314,7 +315,7 @@ export function PropertiesPanel({ id, onClose }) {
           }}
         >
           {choices.map((u) => (
-            <option key={u}>{u}</option>
+            <option key={u} value={u}>{u === "auto" ? t("Auto") : u}</option>
           ))}
         </select>
         {resetButton(key)}
@@ -326,12 +327,12 @@ export function PropertiesPanel({ id, onClose }) {
     return (
       <div className="p24-color" key={key}>
         <label htmlFor={`p24-${key}`}>
-          {label}
+          {t(label)}
           {changed(key) && <i />}
         </label>
         <input
           id={`p24-${key}`}
-          aria-label={label}
+          aria-label={t(label)}
           type="color"
           value={v}
           {...inputEvents}
@@ -340,7 +341,7 @@ export function PropertiesPanel({ id, onClose }) {
         />
         <input
           className="p24-hex"
-          aria-label={`${label} hex`}
+          aria-label={`${t(label)} hex`}
           defaultValue={v}
           key={v}
           maxLength="7"
@@ -358,10 +359,17 @@ export function PropertiesPanel({ id, onClose }) {
   }
   const group = (label, children, open = false) => (
     <details className="p24-group" open={open}>
-      <summary>{label}</summary>
+      <summary>{t(label)}</summary>
       <div>{children}</div>
     </details>
   );
+  const parents = new Map(tree.map((item) => [item.id, item.parent]));
+  const imageIDs = tree.filter((item) => {
+    if (targets[item.id]?.kind !== "image") return false;
+    for (let key = item.id; key; key = parents.get(key))
+      if (key === id) return true;
+    return false;
+  }).map((item) => item.id);
   const section = id.split(".")[0];
   const sectionID = `${section}.section`;
   const parent = ancestors.at(-1),
@@ -377,31 +385,31 @@ export function PropertiesPanel({ id, onClose }) {
     <div
       className="p24-properties"
       role="region"
-      aria-label="Element properties"
+      aria-label={t("Element properties")}
     >
-      <nav className="p24-breadcrumb" aria-label="Selected hierarchy">
+      <nav className="p24-breadcrumb" aria-label={t("Selected hierarchy")}>
         {[...ancestors, id].map((key) => (
           <button
             key={key}
             disabled={key === id}
-            title={targets[key]?.label}
+            title={t(targets[key]?.label, key)}
             onClick={() => select(key)}
           >
-            {targets[key]?.label}
+            {t(targets[key]?.label, key)}
           </button>
         ))}
       </nav>
       <div className="p24-panel-heading">
         <div>
           <small>
-            {target.kind} ·{" "}
-            {device === "base" ? "Base / Desktop" : title(device)}
+            {t(target.kind)} ·{" "}
+            {device === "base" ? t("Base / Desktop") : t(title(device))}
           </small>
-          <h2>{target.label}</h2>
+          <h2>{t(target.label, id)}</h2>
         </div>
         <button
           className="p24-icon"
-          aria-label="Close properties"
+          aria-label={t("Close properties")}
           onClick={onClose}
         >
           ×
@@ -409,15 +417,15 @@ export function PropertiesPanel({ id, onClose }) {
       </div>
       <p className="p24-scope">
         {device === "base"
-          ? "Base values apply to every screen unless overridden."
-          : `${title(device)} changes override inherited sizes and spacing. Colors stay global.`}
+          ? t("Base values apply to every screen unless overridden.")
+          : t(`${title(device)} changes override inherited sizes and spacing. Colors stay global.`)}
       </p>
       {target.textEditable &&
         group(
-          "Text",
+          t("Text"),
           <>
             <div className="p24-field">
-              <label htmlFor="p24-copy-language">Language</label>
+              <label htmlFor="p24-copy-language">{t("Language")}</label>
               <select
                 id="p24-copy-language"
                 value={language}
@@ -430,16 +438,14 @@ export function PropertiesPanel({ id, onClose }) {
                   button?.click();
                 }}
               >
-                <option value="en">English</option>
+                <option value="en">{t("English")}</option>
                 <option value="am">Հայերեն</option>
               </select>
             </div>
-            <label className="p24-text-label" htmlFor="p24-copy">
-              Content
-            </label>
+            <label className="p24-text-label" htmlFor="p24-copy">{t("Content")}</label>
             <textarea
               id="p24-copy"
-              aria-label="Text content"
+              aria-label={t("Text content")}
               rows="4"
               value={
                 design.texts[language][id] ??
@@ -458,95 +464,25 @@ export function PropertiesPanel({ id, onClose }) {
                   return next;
                 });
               }}
-            >
-              Restore original text
-            </button>
+            >{t("Restore original text")}</button>
           </>,
           true,
         )}
-      {target.kind === "image" &&
-        group(
-          "Image source",
-          <>
-            <div className="p24-image-preview">
-              <img
-                src={
-                  design.images[id]?.startsWith("asset:")
-                    ? editor.assetURLs[design.images[id]]
-                    : resolveProjectAsset(design.images[id]) ||
-                      frameRef.current?.contentDocument?.querySelector(
-                        elementSelector(id),
-                      )?.src
-                }
-                alt="Selected image preview"
-              />
-            </div>
-            <label className="p24-upload">
-              Upload New Image
-              <input
-                type="file"
-                accept="image/jpeg,image/png,image/webp,image/avif"
-                aria-label="Upload new image"
-                disabled={editor.busy}
-                onChange={(e) => {
-                  editor.uploadImage(e.target.files?.[0], id);
-                  e.target.value = "";
-                }}
-              />
-            </label>
-            <div className="p24-inline-buttons">
-              <button onClick={() => setGallery(!gallery)}>
-                Choose Existing Image
-              </button>
-              <button
-                disabled={!design.images[id]}
-                onClick={() => editor.updateImage(id, null)}
-              >
-                Restore Original
-              </button>
-            </div>
-            {gallery && (
-              <div className="p24-gallery" aria-label="Project image gallery">
-                {assets.map((asset) => (
-                  <button
-                    key={asset.src}
-                    title={asset.label}
-                    onClick={() => {
-                      editor.updateImage(id, asset.ref);
-                      setGallery(false);
-                    }}
-                  >
-                    <img src={asset.src} alt="" loading="lazy" />
-                    <span>{asset.label}</span>
-                  </button>
-                ))}
-              </div>
-            )}
-            <p className="p24-hint">
-              JPG, PNG, WebP or AVIF · up to 12 MB. Stored on this browser.
-            </p>
-          </>,
-          true,
-        )}
+      {imageIDs.length > 0 && <ImageSourceControls key={id} ids={imageIDs} owner={id} />}
       {id.startsWith("hero.") &&
         ["section", "image", "overlay", "container"].includes(target.kind) &&
         group(
-          "Before / After Settings",
+          t("Before / After Settings"),
           <>
             <div className="p24-inline-buttons">
-              <button onClick={() => select("hero.beforeImage")}>
-                Before Image
-              </button>
-              <button onClick={() => select("hero.afterImage")}>
-                After Image
-              </button>
-              <button onClick={() => select("hero.overlay")}>Overlay</button>
+              <button onClick={() => select("hero.beforeImage")}>{t("Before Image")}</button>
+              <button onClick={() => select("hero.afterImage")}>{t("After Image")}</button>
+              <button onClick={() => select("hero.overlay")}>{t("Overlay")}</button>
             </div>
-            <label className="p24-range">
-              Before / After Split{" "}
+            <label className="p24-range">{t("Before / After Split")}{" "}
               <output>{design.comparison.initialSplit ?? 50}%</output>
               <input
-                aria-label="Before / After Split"
+                aria-label={t("Before / After Split")}
                 type="range"
                 min="0"
                 max="100"
@@ -560,9 +496,9 @@ export function PropertiesPanel({ id, onClose }) {
               />
             </label>
             <div className="p24-field">
-              <span>Before image opacity</span>
+              <span>{t("Before image opacity")}</span>
               <input
-                aria-label="Before image opacity"
+                aria-label={t("Before image opacity")}
                 type="number"
                 min="0"
                 max="100"
@@ -580,9 +516,9 @@ export function PropertiesPanel({ id, onClose }) {
               />
             </div>
             <div className="p24-field">
-              <span>After image opacity</span>
+              <span>{t("After image opacity")}</span>
               <input
-                aria-label="After image opacity"
+                aria-label={t("After image opacity")}
                 type="number"
                 min="0"
                 max="100"
@@ -609,9 +545,7 @@ export function PropertiesPanel({ id, onClose }) {
                     editor.comparison(key, e.target.checked);
                     commit();
                   }}
-                />
-                Show divider while editing
-              </label>
+                />{t("Show divider while editing")}</label>
             ))}
             <button
               onClick={() => {
@@ -641,9 +575,7 @@ export function PropertiesPanel({ id, onClose }) {
                   return next;
                 });
               }}
-            >
-              Restore comparison defaults
-            </button>
+            >{t("Restore comparison defaults")}</button>
             <button
               onClick={() => {
                 commit();
@@ -665,18 +597,14 @@ export function PropertiesPanel({ id, onClose }) {
                   return next;
                 });
               }}
-            >
-              Synchronize image positioning
-            </button>
-            <button onClick={() => select("hero.section")}>
-              Comparison viewport dimensions
-            </button>
+            >{t("Synchronize image positioning")}</button>
+            <button onClick={() => select("hero.section")}>{t("Comparison viewport dimensions")}</button>
           </>,
           id === "hero.section",
         )}
       {target.kind !== "overlay" &&
         group(
-          "Size & Dimensions",
+          t("Size & Dimensions"),
           <>
             {dimensionKeys.map(dimension)}
             <label className="p24-check">
@@ -690,40 +618,25 @@ export function PropertiesPanel({ id, onClose }) {
                     locks: { ...current.locks, [id]: e.target.checked },
                   }));
                 }}
-              />
-              Lock aspect ratio
-            </label>
+              />{t("Lock aspect ratio")}</label>
             {target.kind === "section" && (
-              <p className="p24-hint">
-                Use Minimum height to give content room to grow. Auto height
-                preserves the content flow.
-              </p>
+              <p className="p24-hint">{t("Use Minimum height to give content room to grow. Auto height preserves the content flow.")}</p>
             )}
             {target.kind === "card" && (
-              <p className="p24-hint">
-                Width stays within its grid column. Select the parent layout to
-                change columns.
-              </p>
+              <p className="p24-hint">{t("Width stays within its grid column. Select the parent layout to change columns.")}</p>
             )}
             {id.startsWith("hero.") && target.kind === "image" && (
-              <p className="p24-hint">
-                Both images share the Hero viewport. Use viewport dimensions to
-                resize the comparison together.
-              </p>
+              <p className="p24-hint">{t("Both images share the Hero viewport. Use viewport dimensions to resize the comparison together.")}</p>
             )}
             {overflow && (
-              <div className="p24-warning" role="status">
-                This size is smaller than the content. Text remains visible.
-                <button
+              <div className="p24-warning" role="status">{t("This size is smaller than the content. Text remains visible.")}<button
                   onClick={() => {
                     commit();
                     set("height", "auto");
                     set("maxHeight", "auto");
                     commit();
                   }}
-                >
-                  Fit content automatically
-                </button>
+                >{t("Fit content automatically")}</button>
               </div>
             )}
           </>,
@@ -731,16 +644,16 @@ export function PropertiesPanel({ id, onClose }) {
         )}
       {target.kind === "image" &&
         group(
-          "Image position",
+          t("Image position"),
           <>
-            {choice("objectFit", "Object fit", [
-              ["cover", "Cover"],
-              ["contain", "Contain"],
-              ["fill", "Fill"],
+            {choice("objectFit", t("Object fit"), [
+              ["cover", t("Cover")],
+              ["contain", t("Contain")],
+              ["fill", t("Fill")],
             ])}
-            {range("objectPositionX", "Horizontal position", 0, 100)}
-            {range("objectPositionY", "Vertical position", 0, 100)}
-            {range("zoom", "Zoom", 1, 3, 0.01)}
+            {range("objectPositionX", t("Horizontal position"), 0, 100)}
+            {range("objectPositionY", t("Vertical position"), 0, 100)}
+            {range("zoom", t("Zoom"), 1, 3, 0.01)}
             <button
               onClick={() => {
                 commit();
@@ -756,28 +669,26 @@ export function PropertiesPanel({ id, onClose }) {
                   return next;
                 });
               }}
-            >
-              Reset Image Settings
-            </button>
+            >{t("Reset Image Settings")}</button>
           </>,
           true,
         )}
       {group(
-        "Appearance",
+        t("Appearance"),
         <>
-          {target.properties.includes("color") && color("color", "Text color")}
+          {target.properties.includes("color") && color("color", t("Text color"))}
           {target.properties.includes("backgroundColor") &&
             color(
               "backgroundColor",
-              target.kind === "overlay" ? "Overlay color" : "Background color",
+              target.kind === "overlay" ? t("Overlay color") : t("Background color"),
             )}
           {range(
             "opacity",
             target.kind === "overlay"
-              ? "Overlay opacity"
+              ? t("Overlay opacity")
               : target.kind === "image"
-                ? "Image opacity"
-                : "Element opacity",
+                ? t("Image opacity")
+                : t("Element opacity"),
             0,
             1,
             0.01,
@@ -785,63 +696,60 @@ export function PropertiesPanel({ id, onClose }) {
           )}
           {target.kind !== "overlay" && (
             <>
-              {range("borderRadius", "Border radius", 0, 500)}
-              {numeric("borderWidth", "Border width", 0, 30)}
-              {color("borderColor", "Border color")}
+              {range("borderRadius", t("Border radius"), 0, 500)}
+              {numeric("borderWidth", t("Border width"), 0, 30)}
+              {color("borderColor", t("Border color"))}
               {choice(
                 "boxShadow",
-                "Shadow",
+                t("Shadow"),
                 Object.entries(shadows).map(([l, v]) => [v, l]),
               )}
             </>
           )}
           {contrast < 4.5 && (
-            <p className="p24-warning" role="status">
-              Low contrast ({contrast.toFixed(2)}:1). Aim for 4.5:1 for readable
-              text.
-            </p>
+            <p className="p24-warning" role="status">{t("Low contrast (")}{contrast.toFixed(2)}{t(":1). Aim for 4.5:1 for readable text.")}</p>
           )}
         </>,
         target.kind !== "image",
       )}
       {target.textEditable &&
         group(
-          "Typography",
+          t("Typography"),
           <>
-            {numeric("fontSize", "Font size", 8, 240)}
-            {numeric("lineHeight", "Line height", 0.7, 3, 0.05)}
+            {numeric("fontSize", t("Font size"), 8, 240)}
+            {numeric("lineHeight", t("Line height"), 0.7, 3, 0.05)}
           </>,
         )}
       {target.kind !== "overlay" &&
         group(
-          "Spacing",
+          t("Spacing"),
           <>
             <div className="p24-field">
-              <label htmlFor="p24-link-spacing">Link sides</label>
+              <label htmlFor="p24-link-spacing">{t("Link sides")}</label>
               <select
                 id="p24-link-spacing"
                 value={linkSpacing}
                 onChange={(e) => setLinkSpacing(e.target.value)}
               >
-                <option value="none">Independent</option>
-                <option value="opposite">Opposite sides</option>
-                <option value="all">All sides</option>
+                <option value="none">{t("Independent")}</option>
+                <option value="opposite">{t("Opposite sides")}</option>
+                <option value="all">{t("All sides")}</option>
               </select>
             </div>
             {["padding", "margin"].map((type) => (
               <div className="p24-spacing" key={type}>
-                <strong>{title(type)}</strong>
+                <strong>{t(title(type))}</strong>
                 {spacingKeys
                   .filter((k) => k.startsWith(type))
                   .map((key) => (
                     <div className="p24-field" key={key}>
                       <label htmlFor={`p24-${key}`}>
-                        {title(key)}
+                        {t(title(key))}
                         {changed(key) && <i />}
                       </label>
                       <input
                         id={`p24-${key}`}
-                        aria-label={title(key)}
+                        aria-label={t(title(key))}
                         type="number"
                         min={type === "margin" ? -500 : 0}
                         max="1000"
@@ -882,43 +790,43 @@ export function PropertiesPanel({ id, onClose }) {
         )}
       {["flex", "inline-flex", "grid"].includes(computed.layout) &&
         group(
-          "Layout",
+          t("Layout"),
           <>
-            {numeric("gap", "Gap", 0, 300)}
+            {numeric("gap", t("Gap"), 0, 300)}
             {computed.layout === "grid" ? (
               <>
-                {numeric("columnGap", "Column gap", 0, 300)}
-                {numeric("rowGap", "Row gap", 0, 300)}
-                {choice("gridTemplateColumns", "Columns", [
-                  ["repeat(1, minmax(0, 1fr))", "One"],
-                  ["repeat(2, minmax(0, 1fr))", "Two"],
-                  ["repeat(3, minmax(0, 1fr))", "Three"],
+                {numeric("columnGap", t("Column gap"), 0, 300)}
+                {numeric("rowGap", t("Row gap"), 0, 300)}
+                {choice("gridTemplateColumns", t("Columns"), [
+                  ["repeat(1, minmax(0, 1fr))", t("One")],
+                  ["repeat(2, minmax(0, 1fr))", t("Two")],
+                  ["repeat(3, minmax(0, 1fr))", t("Three")],
                 ])}
               </>
             ) : (
               <>
-                {choice("flexDirection", "Direction", [
-                  ["row", "Horizontal"],
-                  ["column", "Vertical"],
+                {choice("flexDirection", t("Direction"), [
+                  ["row", t("Horizontal")],
+                  ["column", t("Vertical")],
                 ])}
                 {choice(
                   "justifyContent",
                   computed.flexDirection === "column"
-                    ? "Vertical alignment"
-                    : "Horizontal alignment",
+                    ? t("Vertical alignment")
+                    : t("Horizontal alignment"),
                   [
-                    ["flex-start", "Start"],
-                    ["center", "Center"],
-                    ["flex-end", "End"],
-                    ["space-between", "Space between"],
-                    ["space-around", "Space around"],
+                    ["flex-start", t("Start")],
+                    ["center", t("Center")],
+                    ["flex-end", t("End")],
+                    ["space-between", t("Space between")],
+                    ["space-around", t("Space around")],
                   ],
                 )}
-                {choice("alignItems", "Cross-axis alignment", [
-                  ["stretch", "Stretch"],
-                  ["flex-start", "Start"],
-                  ["center", "Center"],
-                  ["flex-end", "End"],
+                {choice("alignItems", t("Cross-axis alignment"), [
+                  ["stretch", t("Stretch")],
+                  ["flex-start", t("Start")],
+                  ["center", t("Center")],
+                  ["flex-end", t("End")],
                 ])}
               </>
             )}
@@ -926,21 +834,17 @@ export function PropertiesPanel({ id, onClose }) {
         )}
       <div className="p24-panel-actions">
         {parent && (
-          <button onClick={() => select(parent)}>Select parent</button>
+          <button onClick={() => select(parent)}>{t("Select parent")}</button>
         )}
-        {card && <button onClick={() => select(card)}>Select card</button>}
+        {card && <button onClick={() => select(card)}>{t("Select card")}</button>}
         {targets[sectionID] && id !== sectionID && (
-          <button onClick={() => select(sectionID)}>Select section</button>
+          <button onClick={() => select(sectionID)}>{t("Select section")}</button>
         )}
-        <button onClick={() => editor.resetElement(id)}>Reset Selected</button>
+        <button onClick={() => editor.resetElement(id)}>{t("Reset Selected")}</button>
         {targets[sectionID] && (
           <>
-            <button onClick={() => editor.resetElement(sectionID, true)}>
-              Reset Section
-            </button>
-            <button onClick={() => editor.setVisibility(section, false)}>
-              Hide section
-            </button>
+            <button onClick={() => editor.resetElement(sectionID, true)}>{t("Reset Section")}</button>
+            <button onClick={() => editor.setVisibility(section, false)}>{t("Hide section")}</button>
           </>
         )}
       </div>

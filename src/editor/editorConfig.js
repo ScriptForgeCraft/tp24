@@ -215,6 +215,7 @@ export const assets = [
 // Stable aliases avoid saving build-specific hashed URLs in exported designs.
 export const resolveProjectAsset = (ref) =>
   assets.find((asset) => asset.ref === ref)?.src || ref;
+export const REMOVED_IMAGE = "none";
 const image = (id, label) => add(id, "image", label, []);
 image("hero.beforeImage", "Before Image");
 image("hero.afterImage", "After Image");
@@ -468,7 +469,7 @@ export function validateDesign(input) {
     if (
       targets[id]?.kind !== "image" ||
       typeof ref !== "string" ||
-      !(assets.some((a) => a.ref === ref) || /^asset:[a-f0-9]{64}$/.test(ref))
+      !(ref === REMOVED_IMAGE || assets.some((a) => a.ref === ref) || /^asset:[a-f0-9]{64}$/.test(ref))
     )
       throw new Error("Invalid image reference.");
     result.images[id] = ref;
@@ -519,6 +520,9 @@ export function designCSS(design) {
   const rules = sections
     .filter((s) => design.visibility[s.id] === false)
     .map((s) => `[data-edit-section="${s.id}"]{display:none!important}`);
+  for (const [id, ref] of Object.entries(design.images))
+    if (ref === REMOVED_IMAGE)
+      rules.push(`[data-edit-id="${id}"]{visibility:hidden!important}`);
   const emit = (map) =>
     Object.entries(map)
       .map(([id, styles]) => {

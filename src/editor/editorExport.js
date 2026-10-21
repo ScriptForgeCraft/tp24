@@ -1,5 +1,5 @@
 import { zipSync, unzipSync, strToU8, strFromU8 } from "fflate";
-import { assets, targets, validateDesign } from "./editorConfig.js";
+import { assets, targets, validateDesign, REMOVED_IMAGE } from "./editorConfig.js";
 import { getAsset, inspectImage, storeAssets } from "./editorStorage.js";
 export async function exportProject(design) {
   const copy = structuredClone(design),
@@ -79,7 +79,7 @@ export async function importProject(file) {
   for (const [id, ref] of Object.entries(input.images || {})) {
     if (targets[id]?.kind !== "image" || typeof ref !== "string")
       throw new Error("Invalid image reference.");
-    if (assets.some((a) => a.ref === ref)) continue;
+    if (ref === REMOVED_IMAGE || assets.some((a) => a.ref === ref)) continue;
     if (!/^images\/[a-f0-9]{64}\.(jpg|png|webp|avif)$/.test(ref))
       throw new Error("Invalid archive image path.");
     const content = files[`prospect24-client-design/${ref}`];

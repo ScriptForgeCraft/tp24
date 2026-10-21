@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="hy">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+            <link rel="shortcut icon" href="https://prospect24.am/wp-content/uploads/2024/05/favicon.png">
+        <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+
+	<!-- This site is optimized with the Yoast SEO plugin v28.4 - https://yoast.com/product/yoast-seo-wordpress/ -->
+	<title>ՀՈՒՇԱԳԻՐ. «ՃԱԽՐՈՒԿ» ՀԿ ԵՎ «PROSPECT24» - Prospect24</title>
+	<link rel="canonical" href="https://prospect24.am/memorandum-chakhruk-ngo-and-prospect24/" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="ՀՈՒՇԱԳԻՐ. «ՃԱԽՐՈՒԿ» ՀԿ ԵՎ «PROSPECT24» - Prospect24" />
+	<meta property="og:description" content="2025թ․ hունվարի 20-ին կնքվեց հուշագիր «Ճախրուկ» ՀԿ-ի և «Prospect24»-ի միջև։ «Ճախրուկ» ՀԿ-ի գործունեությունը կարևոր քայլ է հատուկ կարիքներ ունեցող անձանց իրավունքների պաշտպանության և նրանց հասարակության լիարժեք անդամ դառնալու ուղղությամբ։ Հաշվի առնելով Հայաստանի Հանրապետության սոցիալական խոցելի խմբերի՝ հատուկ կարիքներ ունեցող անձանց առջև ծառացած խնդիրները՝ Prospect24-ը ձեռնարկեց կարևոր նախաձեռնություն՝ ցուցաբերելով աջակցություն և ջերմ հոգատարություն`«Ճախրուկ» Հկ-ի կողմից առաջարկված [&hellip;]" />
+	<meta property="og:url" content="https://prospect24.am/memorandum-chakhruk-ngo-and-prospect24/" />
+	<meta property="og:site_name" content="Prospect24" />
+	<meta property="article:publisher" content="https://www.facebook.com/profile.php?id=61560750747832" />
+	<meta property="article:published_time" content="2025-02-25T16:19:40+00:00" />
+	<meta property="article:modified_time" content="2025-03-04T14:47:19+00:00" />
+	<meta property="og:image" content="https://prospect24.am/wp-content/uploads/2025/02/Prospect24-Chakhruk-Ngo.jpg" />
+	<meta property="og:image:width" content="1400" />
+	<meta property="og:image:height" content="750" />
+	<meta property="og:image:type" content="image/jpeg" />
+	<meta name="author" content="admin" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:label1" content="Written by" />
+	<meta name="twitter:data1" content="admin" />
+	<meta name="twitter:label2" content="Est. reading time" />
+	<meta name="twitter:data2" content="1 minute" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https:\/\/schema.org","@graph":[{"@type":"Article","@id":"https:\/\/prospect24.am\/memorandum-chakhruk-ngo-and-prospect24\/#article","isPartOf":{"@id":"https:\/\/prospect24.am\/memorandum-chakhruk-ngo-and-prospect24\/"},"author":{"name":"admin","@id":"https:\/\/prospect24.am\/#\/schema\/person\/c3ec8a72801ced0eff64b55c3a2f8b73"},"headline":"ՀՈՒՇԱԳԻՐ. «ՃԱԽՐՈՒԿ» ՀԿ ԵՎ «PROSPECT24»","datePublished":"2025-02-25T16:19:40+00:00","dateModified":"2025-03-04T14:47:19+00:00","mainEntityOfPage":{"@id":"https:\/\/prospect24.am\/memorandum-chakhruk-ngo-and-prospect24\/"},"wordCount":11,"publisher":{"@id":"https:\/\/prospect24.am\/#organization"},"image":{"@id":"https:\/\/prospect24.am\/memorandum-chakhruk-ngo-and-prospect24\/#primaryimage"},"thumbnailUrl":"https:\/\/prospect24.am\/wp-content\/uploads\/2025\/02\/Prospect24-Chakhruk-Ngo.jpg","articleSection":["Prospect24"],"inLanguage":"hy-AM"},{"@type":"WebPage","@id":"https:\/\/prospect24.am\/memorandum-chakhruk-ngo-and-prospect24\/","url":"https:\/\/prospect24.am\/memorandum-chakhruk-ngo-and-prospect24\/","name":"ՀՈՒՇԱԳԻՐ. «ՃԱԽՐՈՒԿ» ՀԿ ԵՎ «PROSPECT24» - Prospect24","isPartOf":{"@id":"https:\/\/prospect24.am\/#website"},"primaryImageOfPage":{"@id":"https:\/\/prospect24.am\/memorandum-chakhruk-ngo-and-prospect24\/#primaryimage"},"image":{"@id":"https:\/\/prospect24.am\/memorandum-chakhruk-ngo-and-prospect24\/#primaryimage"},"thumbnailUrl":"https:\/\/prospect24.am\/wp-content\/uploads\/2025\/02\/Prospect24-Chakhruk-Ngo.jpg","datePublished":"2025-02-25T16:19:40+00:00","dateModified":"2025-03-04T14:47:19+00:00","breadcrumb":{"@id":"https:\/\/prospect24.am\/memorandum-chakhruk-ngo-and-prospect24\/#breadcrumb"},"inLanguage":"hy-AM","potentialAction":[{"@type":"ReadAction","target":["https:\/\/prospect24.am\/memorandum-chakhruk-ngo-and-prospect24\/"]}]},{"@type":"ImageObject","inLanguage":"hy-AM","@id":"https:\/\/prospect24.am\/memorandum-chakhruk-ngo-and-prospect24\/#primaryimage","url":"https:\/\/prospect24.am\/wp-content\/uploads\/2025\/02\/Prospect24-Chakhruk-Ngo.jpg","contentUrl":"https:\/\/prospect24.am\/wp-content\/uploads\/2025\/02\/Prospect24-Chakhruk-Ngo.jpg","width":1400,"height":750},{"@type":"BreadcrumbList","@id":"https:\/\/prospect24.am\/memorandum-chakhruk-ngo-and-prospect24\/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https:\/\/prospect24.am\/"},{"@type":"ListItem","position":2,"name":"ՀՈՒՇԱԳԻՐ. «ՃԱԽՐՈՒԿ» ՀԿ ԵՎ «PROSPECT24»"}]},{"@type":"WebSite","@id":"https:\/\/prospect24.am\/#website","url":"https:\/\/prospect24.am\/","name":"Prospect24","description":"","publisher":{"@id":"https:\/\/prospect24.am\/#organization"},"potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https:\/\/prospect24.am\/?s={search_term_string}"},"query-input":{"@type":"PropertyValueSpecification","valueRequired":true,"valueName":"search_term_string"}}],"inLanguage":"hy-AM"},{"@type":"Organization","@id":"https:\/\/prospect24.am\/#organization","name":"Prospect24","url":"https:\/\/prospect24.am\/","logo":{"@type":"ImageObject","inLanguage":"hy-AM","@id":"https:\/\/prospect24.am\/#\/schema\/logo\/image\/","url":"https:\/\/prospect24.am\/wp-content\/uploads\/2024\/06\/Prosoect24-logo-main.png","contentUrl":"https:\/\/prospect24.am\/wp-content\/uploads\/2024\/06\/Prosoect24-logo-main.png","width":210,"height":243,"caption":"Prospect24"},"image":{"@id":"https:\/\/prospect24.am\/#\/schema\/logo\/image\/"},"sameAs":["https:\/\/www.facebook.com\/profile.php?id=61560750747832"]},{"@type":"Person","@id":"https:\/\/prospect24.am\/#\/schema\/person\/c3ec8a72801ced0eff64b55c3a2f8b73","name":"admin","image":{"@type":"ImageObject","inLanguage":"hy-AM","@id":"https:\/\/secure.gravatar.com\/avatar\/44e06e2737f30830085255b8e080e364e217ddb37c9e5e697575aa02b10e0bb0?s=96&d=mm&r=g","url":"https:\/\/secure.gravatar.com\/avatar\/44e06e2737f30830085255b8e080e364e217ddb37c9e5e697575aa02b10e0bb0?s=96&d=mm&r=g","contentUrl":"https:\/\/secure.gravatar.com\/avatar\/44e06e2737f30830085255b8e080e364e217ddb37c9e5e697575aa02b10e0bb0?s=96&d=mm&r=g","caption":"admin"},"sameAs":["https:\/\/prospect24.am"],"url":"https:\/\/prospect24.am\/author\/prospect24\/"}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel='dns-prefetch' href='//www.googletagmanager.com' />
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='preconnect' href='https://fonts.gstatic.com' crossorigin />
+<link rel="alternate" type="application/rss+xml" title="Prospect24 &rarr; լրահոսը" href="https://prospect24.am/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Prospect24 &rarr; մեկնաբանությունների լրահոսը" href="https://prospect24.am/comments/feed/" />
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://prospect24.am/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fprospect24.am%2Fmemorandum-chakhruk-ngo-and-prospect24%2F" />
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://prospect24.am/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fprospect24.am%2Fmemorandum-chakhruk-ngo-and-prospect24%2F&#038;format=xml" />
+<!-- ERROR: WP-Optimize Minify was not allowed to save its cache on - wp-content/cache/wpo-minify/1789458291/assets/wpo-minify-header-cf7apps-honeypot-frontend1786618876.min.css --><!-- Please check if the path above is correct and ensure your server has write permission there! --><style id="wp-img-auto-sizes-contain-inline-css">
+img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
+/*# sourceURL=wp-img-auto-sizes-contain-inline-css */
+</style>
+<style id="wp-block-library-inline-css">
+:root{--wp-block-synced-color:#7a00df;--wp-block-synced-color--rgb:122,0,223;--wp-bound-block-color:var(--wp-block-synced-color);--wp-editor-canvas-background:#ddd;--wp-admin-theme-color:#007cba;--wp-admin-theme-color--rgb:0,124,186;--wp-admin-theme-color-darker-10:#006ba1;--wp-admin-theme-color-darker-10--rgb:0,107,160.5;--wp-admin-theme-color-darker-20:#005a87;--wp-admin-theme-color-darker-20--rgb:0,90,135;--wp-admin-border-width-focus:2px}@media (min-resolution:192dpi){:root{--wp-admin-border-width-focus:1.5px}}.wp-element-button{cursor:pointer}:root .has-very-light-gray-background-color{background-color:#eee}:root .has-very-dark-gray-background-color{background-color:#313131}:root .has-very-light-gray-color{color:#eee}:root .has-very-dark-gray-color{color:#313131}:root .has-vivid-green-cyan-to-vivid-cyan-blue-gradient-background{background:linear-gradient(135deg,#00d084,#0693e3)}:root .has-purple-crush-gradient-background{background:linear-gradient(135deg,#34e2e4,#4721fb 50%,#ab1dfe)}:root .has-hazy-dawn-gradient-background{background:linear-gradient(135deg,#faaca8,#dad0ec)}:root .has-subdued-olive-gradient-background{background:linear-gradient(135deg,#fafae1,#67a671)}:root .has-atomic-cream-gradient-background{background:linear-gradient(135deg,#fdd79a,#004a59)}:root .has-nightshade-gradient-background{background:linear-gradient(135deg,#330968,#31cdcf)}:root .has-midnight-gradient-background{background:linear-gradient(135deg,#020381,#2874fc)}:root{--wp--preset--font-size--normal:16px;--wp--preset--font-size--huge:42px}.has-regular-font-size{font-size:1em}.has-larger-font-size{font-size:2.625em}.has-normal-font-size{font-size:var(--wp--preset--font-size--normal)}.has-huge-font-size{font-size:var(--wp--preset--font-size--huge)}:root .has-text-align-center{text-align:center}:root .has-text-align-left{text-align:left}:root .has-text-align-right{text-align:right}.has-fit-text{white-space:nowrap!important}#end-resizable-editor-section{display:none}.aligncenter{clear:both}.items-justified-left{justify-content:flex-start}.items-justified-center{justify-content:center}.items-justified-right{justify-content:flex-end}.items-justified-space-between{justify-content:space-between}.screen-reader-text{word-wrap:normal!important;border:0;clip-path:inset(50%);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px}.screen-reader-text:focus{background-color:#ddd;clip-path:none;color:#444;display:block;font-size:1em;height:auto;left:5px;line-height:normal;padding:15px 23px 14px;text-decoration:none;top:5px;width:auto;z-index:100000}html :where(.has-border-color){border-style:solid}html :where([style*=border-color]){border-style:solid}html :where([style*=border-top-color]){border-top-style:solid}html :where([style*=border-right-color]){border-right-style:solid}html :where([style*=border-bottom-color]){border-bottom-style:solid}html :where([style*=border-left-color]){border-left-style:solid}html :where([style*=border-width]){border-style:solid}html :where([style*=border-top-width]){border-top-style:solid}html :where([style*=border-right-width]){border-right-style:solid}html :where([style*=border-bottom-width]){border-bottom-style:solid}html :where([style*=border-left-width]){border-left-style:solid}html :where(img[class*=wp-image-]){height:auto;max-width:100%}:where(figure){margin:0 0 1em}html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:var(--wp-admin--admin-bar--height,0px)}@media screen and (max-width:600px){html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:0px}}
+
+/*# sourceURL=/wp-includes/css/dist/block-library/common.min.css */
+</style>
+<style id="wp-block-separator-inline-css">
+@charset "UTF-8";.wp-block-separator{border:none;border-top:2px solid}:root :where(.wp-block-separator.is-style-dots){height:auto;line-height:1;text-align:center}:root :where(.wp-block-separator.is-style-dots):before{color:currentColor;content:"···";font-family:serif;font-size:1.5em;letter-spacing:2em;padding-left:2em}.wp-block-separator.is-style-dots{background:none!important;border:none!important}
+/*# sourceURL=https://prospect24.am/wp-includes/blocks/separator/style.min.css */
+</style>
+
+<style id="classic-theme-styles-inline-css">
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+/*# sourceURL=/wp-includes/css/classic-themes.min.css */
+</style>
+
+<style id="global-styles-inline-css">
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0);--wp--preset--shadow--crisp: 6px 6px 0px rgb(0, 0, 0);}:where(body) { margin: 0; }:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}body{padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}:root :where(.wp-element-button, .wp-block-button__link){background-color: #32373c;border-width: 0;color: #fff;font-family: inherit;font-size: inherit;font-style: inherit;font-weight: inherit;letter-spacing: inherit;line-height: inherit;padding-top: calc(0.667em + 2px);padding-right: calc(1.333em + 2px);padding-bottom: calc(0.667em + 2px);padding-left: calc(1.333em + 2px);text-decoration: none;text-transform: inherit;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+/*# sourceURL=global-styles-inline-css */
+</style>
+
+<link rel='stylesheet' id='cf7apps-honeypot-frontend-css' href='https://prospect24.am/wp-content/plugins/contact-form-7-honeypot/legacy-honeypot/includes/css/honeypot-frontend.css?ver=3.7.1' media='all' />
+<style id="woocommerce-inline-inline-css">
+.woocommerce form .form-row .required { visibility: visible; }
+/*# sourceURL=woocommerce-inline-inline-css */
+</style>
+<link rel='stylesheet' id='wpo_min-header-0-css' href='https://prospect24.am/wp-content/cache/wpo-minify/1789458291/assets/wpo-minify-header-lvca-animate-styles1774427993.min.css' media='all' />
+<link rel='stylesheet' id='wpo_min-header-1-css' href='https://prospect24.am/wp-content/cache/wpo-minify/1789458291/assets/wpo-minify-header-lvca-frontend-styles1774427993.min.css' media='all' />
+<link rel='stylesheet' id='wpo_min-header-2-css' href='https://prospect24.am/wp-content/cache/wpo-minify/1789458291/assets/wpo-minify-header-lvca-icomoon-styles1774427993.min.css' media='all' />
+<link rel='stylesheet' id='wpo_min-header-4-css' href='https://prospect24.am/wp-content/cache/wpo-minify/1789458291/assets/wpo-minify-header-contact-form-71789458230.min.css' media='all' />
+<link rel='stylesheet' id='wpo_min-header-5-css' href='https://prospect24.am/wp-content/cache/wpo-minify/1789458291/assets/wpo-minify-header-wpa-css1786618899.min.css' media='all' />
+<link rel='stylesheet' id='wpo_min-header-6-css' href='https://prospect24.am/wp-content/cache/wpo-minify/1789458291/assets/wpo-minify-header-mt-shortcodes1772636521.min.css' media='all' />
+<link rel='stylesheet' id='wpo_min-header-7-css' href='https://prospect24.am/wp-content/cache/wpo-minify/1789458291/assets/wpo-minify-header-animations1772636521.min.css' media='all' />
+<link rel='stylesheet' id='wpo_min-header-8-css' href='https://prospect24.am/wp-content/cache/wpo-minify/1789458291/assets/wpo-minify-header-woocommerce-layout1789458273.min.css' media='all' />
+<link rel='stylesheet' id='wpo_min-header-9-css' href='https://prospect24.am/wp-content/cache/wpo-minify/1789458291/assets/wpo-minify-header-woocommerce-smallscreen1789458273.min.css' media='only screen and (max-width: 768px)' />
+<link rel='stylesheet' id='wpo_min-header-10-css' href='https://prospect24.am/wp-content/cache/wpo-minify/1789458291/assets/wpo-minify-header-woocommerce-general1789458273.min.css' media='all' />
+<link rel='stylesheet' id='wpo_min-header-11-css' href='https://prospect24.am/wp-content/cache/wpo-minify/1789458291/assets/wpo-minify-header-trp-language-switcher-style1789458261.min.css' media='all' />
+<link rel='stylesheet' id='wpo_min-header-12-css' href='https://prospect24.am/wp-content/cache/wpo-minify/1789458291/assets/wpo-minify-header-lvca-accordion1774427994.min.css' media='all' />
+<link rel='stylesheet' id='wpo_min-header-13-css' href='https://prospect24.am/wp-content/cache/wpo-minify/1789458291/assets/wpo-minify-header-lvca-slick1774427993.min.css' media='all' />
+<link rel='stylesheet' id='wpo_min-header-14-css' href='https://prospect24.am/wp-content/cache/wpo-minify/1789458291/assets/wpo-minify-header-lvca-carousel1774427994.min.css' media='all' />
+<link rel='stylesheet' id='wpo_min-header-15-css' href='https://prospect24.am/wp-content/cache/wpo-minify/1789458291/assets/wpo-minify-header-lvca-clients1774427994.min.css' media='all' />
+<link rel='stylesheet' id='wpo_min-header-16-css' href='https://prospect24.am/wp-content/cache/wpo-minify/1789458291/assets/wpo-minify-header-lvca-heading1774427994.min.css' media='all' />
+<link rel='stylesheet' id='wpo_min-header-17-css' href='https://prospect24.am/wp-content/cache/wpo-minify/1789458291/assets/wpo-minify-header-lvca-odometers1774427994.min.css' media='all' />
+<link rel='stylesheet' id='wpo_min-header-18-css' href='https://prospect24.am/wp-content/cache/wpo-minify/1789458291/assets/wpo-minify-header-lvca-piecharts1774427994.min.css' media='all' />
+<link rel='stylesheet' id='wpo_min-header-19-css' href='https://prospect24.am/wp-content/cache/wpo-minify/1789458291/assets/wpo-minify-header-lvca-posts-carousel1774427994.min.css' media='all' />
+<link rel='stylesheet' id='wpo_min-header-20-css' href='https://prospect24.am/wp-content/cache/wpo-minify/1789458291/assets/wpo-minify-header-lvca-pricing-table1774427994.min.css' media='all' />
+<link rel='stylesheet' id='wpo_min-header-21-css' href='https://prospect24.am/wp-content/cache/wpo-minify/1789458291/assets/wpo-minify-header-lvca-services1774427994.min.css' media='all' />
+<link rel='stylesheet' id='wpo_min-header-22-css' href='https://prospect24.am/wp-content/cache/wpo-minify/1789458291/assets/wpo-minify-header-lvca-stats-bar1774427994.min.css' media='all' />
+<link rel='stylesheet' id='wpo_min-header-23-css' href='https://prospect24.am/wp-content/cache/wpo-minify/1789458291/assets/wpo-minify-header-lvca-tabs1774427994.min.css' media='all' />
+<link rel='stylesheet' id='wpo_min-header-24-css' href='https://prospect24.am/wp-content/cache/wpo-minify/1789458291/assets/wpo-minify-header-lvca-team-members1774427994.min.css' media='all' />
+<link rel='stylesheet' id='wpo_min-header-25-css' href='https://prospect24.am/wp-content/cache/wpo-minify/1789458291/assets/wpo-minify-header-lvca-testimonials1774427994.min.css' media='all' />
+<link rel='stylesheet' id='wpo_min-header-26-css' href='https://prospect24.am/wp-content/cache/wpo-minify/1789458291/assets/wpo-minify-header-lvca-flexslider1774427993.min.css' media='all' />
+<link rel='stylesheet' id='wpo_min-header-27-css' href='https://prospect24.am/wp-content/cache/wpo-minify/1789458291/assets/wpo-minify-header-lvca-testimonials-slider1774427994.min.css' media='all' />
+<link rel='stylesheet' id='wpo_min-header-28-css' href='https://prospect24.am/wp-content/cache/wpo-minify/1789458291/assets/wpo-minify-header-lvca-portfolio1774427994.min.css' media='all' />
+<link rel='stylesheet' id='wpo_min-header-29-css' href='https://prospect24.am/wp-content/cache/wpo-minify/1789458291/assets/wpo-minify-header-font-awesome1717153740.min.css' media='all' />
+<link rel='stylesheet' id='wpo_min-header-30-css' href='https://prospect24.am/wp-content/cache/wpo-minify/1789458291/assets/wpo-minify-header-trankad-responsive1738148649.min.css' media='all' />
+<link rel='stylesheet' id='wpo_min-header-31-css' href='https://prospect24.am/wp-content/cache/wpo-minify/1789458291/assets/wpo-minify-header-trankad-media-screens1738083594.min.css' media='all' />
+<link rel='stylesheet' id='wpo_min-header-32-css' href='https://prospect24.am/wp-content/cache/wpo-minify/1789458291/assets/wpo-minify-header-owl-carousel1717153740.min.css' media='all' />
+<link rel='stylesheet' id='wpo_min-header-33-css' href='https://prospect24.am/wp-content/cache/wpo-minify/1789458291/assets/wpo-minify-header-animate1717153740.min.css' media='all' />
+<link rel='stylesheet' id='wpo_min-header-34-css' href='https://prospect24.am/wp-content/cache/wpo-minify/1789458291/assets/wpo-minify-header-trankad-styles1742907560.min.css' media='all' />
+<link rel='stylesheet' id='wpo_min-header-35-css' href='https://prospect24.am/wp-content/cache/wpo-minify/1789458291/assets/wpo-minify-header-trankad-style1741098974.min.css' media='all' />
+<link rel='stylesheet' id='wpo_min-header-36-css' href='https://prospect24.am/wp-content/cache/wpo-minify/1789458291/assets/wpo-minify-header-simple-line-icons1717153740.min.css' media='all' />
+<link rel='stylesheet' id='wpo_min-header-37-css' href='https://prospect24.am/wp-content/cache/wpo-minify/1789458291/assets/wpo-minify-header-js-composer1717758228.min.css' media='all' />
+<link rel='stylesheet' id='wpo_min-header-38-css' href='https://prospect24.am/wp-content/cache/wpo-minify/1789458291/assets/wpo-minify-header-trankad-gutenberg-frontend1742908406.min.css' media='all' />
+<link rel='stylesheet' id='wpo_min-header-39-css' href='https://prospect24.am/wp-content/cache/wpo-minify/1789458291/assets/wpo-minify-header-trankad-fonts.min.css' media='all' />
+<link rel='stylesheet' id='wpo_min-header-40-css' href='https://prospect24.am/wp-content/cache/wpo-minify/1789458291/assets/wpo-minify-header-esg-plugin-settings1732549889.min.css' media='all' />
+<link rel='stylesheet' id='wpo_min-header-41-css' href='https://prospect24.am/wp-content/cache/wpo-minify/1789458291/assets/wpo-minify-header-tp-fontello1732549890.min.css' media='all' />
+<link rel='stylesheet' id='wpo_min-header-42-css' href='https://prospect24.am/wp-content/cache/wpo-minify/1789458291/assets/wpo-minify-header-redux-google-fonts-redux_demo.min.css' media='all' />
+<link rel='stylesheet' id='wp-block-paragraph-css' href='https://prospect24.am/wp-includes/blocks/paragraph/style.min.css?ver=7.0.4' media='all' />
+<script id="jquery-core-js" src="https://prospect24.am/wp-includes/js/jquery/jquery.min.js?ver=3.7.1"></script>
+<script id="jquery-migrate-js" src="https://prospect24.am/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1"></script>
+<script data-wp-strategy="defer" id="wc-jquery-blockui-js" src="https://prospect24.am/wp-content/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.min.js?ver=2.7.0-wc.11.1.0"></script>
+<script data-wp-strategy="defer" id="wc-js-cookie-js" src="https://prospect24.am/wp-content/plugins/woocommerce/assets/js/js-cookie/js.cookie.min.js?ver=2.1.4-wc.11.1.0"></script>
+<script id="lvca-waypoints-js" src="https://prospect24.am/wp-content/plugins/addons-for-visual-composer/assets/js/jquery.waypoints.min.js?ver=3.9.4"></script>
+<script id="lvca-frontend-scripts-js-extra">
+var lvca_settings = {"mobile_width":"780","custom_css":""};
+//# sourceURL=lvca-frontend-scripts-js-extra
+</script>
+<script id="lvca-frontend-scripts-js" src="https://prospect24.am/wp-content/plugins/addons-for-visual-composer/assets/js/lvca-frontend.min.js?ver=3.9.4"></script>
+<script id="wpo_min-header-8-js" src="https://prospect24.am/wp-content/cache/wpo-minify/1789458291/assets/wpo-minify-header-trp-frontend-compatibility1789458261.min.js"></script>
+<script id="lvca-accordion-js" src="https://prospect24.am/wp-content/plugins/addons-for-visual-composer/includes/addons/accordion/js/accordion.min.js?ver=3.9.4"></script>
+<script id="lvca-slick-carousel-js" src="https://prospect24.am/wp-content/plugins/addons-for-visual-composer/assets/js/slick.min.js?ver=3.9.4"></script>
+<script id="lvca-stats-js" src="https://prospect24.am/wp-content/plugins/addons-for-visual-composer/assets/js/jquery.stats.min.js?ver=3.9.4"></script>
+<script id="lvca-odometers-js" src="https://prospect24.am/wp-content/plugins/addons-for-visual-composer/includes/addons/odometers/js/odometer.min.js?ver=3.9.4"></script>
+<script id="lvca-piecharts-js" src="https://prospect24.am/wp-content/plugins/addons-for-visual-composer/includes/addons/piecharts/js/piechart.min.js?ver=3.9.4"></script>
+<script id="lvca-post-carousel-js" src="https://prospect24.am/wp-content/plugins/addons-for-visual-composer/includes/addons/posts-carousel/js/posts-carousel.min.js?ver=3.9.4"></script>
+<script id="lvca-spacer-js" src="https://prospect24.am/wp-content/plugins/addons-for-visual-composer/includes/addons/spacer/js/spacer.min.js?ver=3.9.4"></script>
+<script id="lvca-services-js" src="https://prospect24.am/wp-content/plugins/addons-for-visual-composer/includes/addons/services/js/services.min.js?ver=3.9.4"></script>
+<script id="lvca-stats-bar-js" src="https://prospect24.am/wp-content/plugins/addons-for-visual-composer/includes/addons/stats-bar/js/stats-bar.min.js?ver=3.9.4"></script>
+<script id="lvca-tabs-js" src="https://prospect24.am/wp-content/plugins/addons-for-visual-composer/includes/addons/tabs/js/tabs.min.js?ver=3.9.4"></script>
+<script id="lvca-flexslider-js" src="https://prospect24.am/wp-content/plugins/addons-for-visual-composer/assets/js/jquery.flexslider.min.js?ver=3.9.4"></script>
+<script id="lvca-testimonials-slider-js" src="https://prospect24.am/wp-content/plugins/addons-for-visual-composer/includes/addons/testimonials-slider/js/testimonials.min.js?ver=3.9.4"></script>
+<script id="lvca-isotope-js" src="https://prospect24.am/wp-content/plugins/addons-for-visual-composer/assets/js/isotope.pkgd.min.js?ver=3.9.4"></script>
+<script id="lvca-imagesloaded-js" src="https://prospect24.am/wp-content/plugins/addons-for-visual-composer/assets/js/imagesloaded.pkgd.min.js?ver=3.9.4"></script>
+<script id="lvca-portfolio-js" src="https://prospect24.am/wp-content/plugins/addons-for-visual-composer/includes/addons/portfolio/js/portfolio.min.js?ver=3.9.4"></script>
+<script id="wpo_min-header-24-js-extra">
+var wc_add_to_cart_params = {"ajax_url":"/wp-admin/admin-ajax.php","wc_ajax_url":"/?wc-ajax=%%endpoint%%","i18n_view_cart":"View cart","cart_url":"https://prospect24.am/cart/","is_cart":"","cart_redirect_after_add":"no"};
+//# sourceURL=wpo_min-header-24-js-extra
+</script>
+<script id="wpo_min-header-24-js" src="https://prospect24.am/wp-content/cache/wpo-minify/1789458291/assets/wpo-minify-header-wc-add-to-cartvc_woocommerce-add-to-cart-js1741090900.min.js"></script>
+<script async data-wp-strategy="async" id="wpo_min-header-25-js" src="https://prospect24.am/wp-content/cache/wpo-minify/1789458291/assets/wpo-minify-header-tp-tools1732549889.min.js"></script>
+
+<!-- Google tag (gtag.js) snippet added by Site Kit -->
+<!-- Google Analytics snippet added by Site Kit -->
+<script id="google_gtagjs-js" src="https://www.googletagmanager.com/gtag/js?id=GT-NMK22J6W" async></script>
+<script id="google_gtagjs-js-after">
+window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}
+gtag("set","linker",{"domains":["prospect24.am"]});
+gtag("js", new Date());
+gtag("set", "developer_id.dZTNiMT", true);
+gtag("config", "GT-NMK22J6W");
+ window._googlesitekit = window._googlesitekit || {}; window._googlesitekit.throttledEvents = []; window._googlesitekit.gtagEvent = (name, data) => { var key = JSON.stringify( { name, data } ); if ( !! window._googlesitekit.throttledEvents[ key ] ) { return; } window._googlesitekit.throttledEvents[ key ] = true; setTimeout( () => { delete window._googlesitekit.throttledEvents[ key ]; }, 5 ); gtag( "event", name, { ...data, event_source: "site-kit" } ); }; 
+//# sourceURL=google_gtagjs-js-after
+</script>
+<script></script><link rel="https://api.w.org/" href="https://prospect24.am/wp-json/" /><link rel="alternate" title="JSON" type="application/json" href="https://prospect24.am/wp-json/wp/v2/posts/3349" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://prospect24.am/xmlrpc.php?rsd" />
+<meta name="generator" content="WordPress 7.0.4" />
+<meta name="generator" content="WooCommerce 11.1.0" />
+<link rel='shortlink' href='https://prospect24.am/?p=3349' />
+<meta name="generator" content="Redux 4.5.14" />        <script type="text/javascript">
+            (function () {
+                window.lvca_fs = {can_use_premium_code: false};
+            })();
+        </script>
+        <meta name="generator" content="Site Kit by Google 1.187.0" /><!--[if IE 9]> <script>var _gambitParallaxIE9 = true;</script> <![endif]--><style>/* CSS added by WP Meta and Date Remover*/.wp-block-post-author__name{display:none !important;} .wp-block-post-date{display:none !important;} .entry-meta {display:none !important;} .home .entry-meta { display: none; } .entry-footer {display:none !important;} .home .entry-footer { display: none; }</style><link rel="alternate" hreflang="hy" href="https://prospect24.am/memorandum-chakhruk-ngo-and-prospect24/"/>
+<link rel="alternate" hreflang="en-US" href="https://prospect24.am/en/memorandum-chakhruk-ngo-and-prospect24/"/>
+<link rel="alternate" hreflang="en" href="https://prospect24.am/en/memorandum-chakhruk-ngo-and-prospect24/"/>
+	<noscript><style>.woocommerce-product-gallery{ opacity: 1 !important; }</style></noscript>
+	<style>.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style><meta name="generator" content="Powered by WPBakery Page Builder - drag and drop page builder for WordPress."/>
+<style id="wp-custom-css">
+body p {
+	font-family: Arian Amu, Arial, san-serif;
+    margin-top: 14px;
+	  line-height: 24px;
+    font-weight: 400;
+    color: #2a2a2a;
+    font-size: 15px;
+}
+
+h4 {
+	font-family: Arian Amu, Arial, san-serif;
+    line-height: 20px;
+    color: #2a2a2a;
+    font-size: 16px;
+}
+
+.breadcrumb {
+
+  display: none;
+
+}
+
+.section-subtitle {
+        line-height: 26px;
+        color:#ececec;
+}
+
+.text_left .section-subtitle {
+    text-align: left !important;
+    margin: 0;
+	  color:#444444;
+}
+</style>
+<style id="redux_demo-dynamic-css" title="dynamic-css" class="redux-options-output">#navbar .menu-item > a,
+                                .navbar-nav .search_products a,
+                                .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus,
+                                .navbar-default .navbar-nav > li > a{color:#252525;}body #navbar .menu-item.selected > a, body #navbar .menu-item:hover > a, body #navbar .current_page_item > a, .header-infos .header-info-group a:hover, .header-infos .header-info-group a:hover i{color:#E1B507;}#navbar .sub-menu .menu-item > a::before{background-color:#E1B507;}#navbar .sub-menu, .navbar ul li ul.sub-menu{background-color:#FFFFFF;}#navbar ul.sub-menu li a:hover{background-color:transparent;}#navbar ul.sub-menu li a{color:#252525;}body{font-family:Poppins;}h1,h1 span{font-family:Poppins;line-height:32px;font-weight:700;font-size:32px;}h2,h2 span{font-family:Poppins;line-height:28px;font-weight:700;font-size:28px;}h3,h3 span{font-family:Poppins;line-height:24px;font-weight:700;font-size:24px;}h4{line-height:20px;font-size:16px;}h5{font-family:Poppins;line-height:14px;font-size:14px;}h6{font-family:Poppins;line-height:12px;font-size:12px;}input,textarea{font-family:Poppins;}input[type="submit"]{font-family:Poppins;}.navbar-default{background-color:#ffffff;}header .top-header{background-color:#252525;}.fixed-sidebar-menu{background-color:#ffffff;}footer .footer-top{background-color:#efefef;}footer .footer-top h1.widget-title, footer .footer-top h3.widget-title, footer .footer-top .widget-title, footer .footer-top h1.widget-title a{color:#252525;}.footer-row-1{padding-top:50px;padding-bottom:20px;}.footer-row-1{margin-top:0px;margin-bottom:0px;}.footer-row-1{border-top:0px solid #515b5e;border-bottom:0px solid #515b5e;border-left:0px solid #515b5e;border-right:0px solid #515b5e;}footer.footer1 .footer,footer.footer2 .footer-div-parent{background-color:#f7fafd;}footer .footer h1.widget-title, footer .footer h3.widget-title, footer .footer .widget-title{color:#ffffff;}.single article .article-content p,p,.post-excerpt{font-family:Poppins;line-height:27px;font-weight:300;color:#2a2a2a;font-size:16px;}</style><noscript><style> .wpb_animate_when_almost_visible { opacity: 1; }</style></noscript></head>
+
+<body class="wp-singular post-template-default single single-post postid-3349 single-format-standard wp-theme-trankad theme-trankad woocommerce-no-js translatepress-hy nav-submenu-style2 widgets_v1  added-redux-framework         header1   wpb-js-composer js-comp-ver-8.2 vc_responsive">
+    
+        
+
+                            <!-- Fixed Sidebar Overlay -->
+            <div class="fixed-sidebar-menu-overlay"></div>
+            <!-- Fixed Sidebar Menu -->
+            <div class="relative fixed-sidebar-menu-holder header7">
+                <div class="fixed-sidebar-menu">
+                    <!-- Close Sidebar Menu + Close Overlay -->
+                    <i class="icon-close icons"></i>
+                    <!-- Sidebar Menu Holder -->
+                    <div class="header7 sidebar-content">
+                        <!-- RIGHT SIDE -->
+                        <div class="left-side">
+    			                			                  			                <div class="logo">
+    			                    <a href="https://prospect24.am">
+    			                        <img src="https://prospect24.am/wp-content/uploads/2024/06/Prospect24-logo.png" alt="Prospect24" />
+    			                    </a>
+    			                </div>
+    			                  			                                                                </div>
+                    </div>
+                </div>
+            </div>
+            
+
+    <!-- PAGE #page -->
+    <div id="page" class="hfeed site">
+        <header class="header1">
+
+
+  <div class="container">
+    <div class="row">
+      <!-- LOGO -->
+      <div class="navbar-header col-md-3">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+
+                  <div class="logo">
+              <a href="https://prospect24.am">
+                  <img src="https://prospect24.am/wp-content/uploads/2024/06/Prospect24-logo.png" alt="Prospect24" />
+              </a>
+          </div>
+              </div>
+      <div class="col-md-9">
+        <div class="header-infos">
+
+          
+                      <!-- HEADER INFO 2 -->
+            <div class="pull-left header-info-group">
+              <div class="header-info-icon pull-left text-center">
+                                  <i class="fa fa-phone"></i>
+                              </div>
+              <div class="header-info-labels pull-left">
+                <h3>+374 44 41 51 51</h3>
+                <div class="clearfix"></div>
+                <h5>info@prospect24.am</h5>
+              </div>
+            </div>
+            <!-- // HEADER INFO 2 -->
+          
+                      <!-- HEADER INFO 3 -->
+            <div class="pull-left header-info-group">
+              <div class="header-info-icon pull-left text-center">
+                                  <i class="fa fa-map-marker"></i>
+                              </div>
+              <div class="header-info-labels pull-left">
+                <h3>Ազատության պող., 1/61 շենք</h3>
+                <div class="clearfix"></div>
+                <h5>Երևան</h5>
+              </div>
+            </div>
+            <!-- // HEADER INFO 3 -->
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- BOTTOM BAR -->
+  <nav class="navbar navbar-default" id="modeltheme-main-head">
+    <div class="container">
+        <div class="row">
+
+          <!-- NAV MENU -->
+          <div id="navbar" class="navbar-collapse collapse col-md-12">
+            
+            <ul class="menu nav navbar-nav nav-effect nav-menu">
+              <li id="menu-item-3024" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-3024"><a href="https://prospect24.am/">PROSPECT24</a></li>
+<li id="menu-item-3020" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3020"><a href="https://prospect24.am/investment-packages/">ՆԵՐԴՐՈՒՄԱՅԻՆ ՓԱԹԵԹՆԵՐ</a></li>
+<li id="menu-item-3021" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3021"><a href="https://prospect24.am/companies/">ԸՆԿԵՐՈՒԹՅՈՒՆՆԵՐ</a></li>
+<li id="menu-item-3022" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3022"><a href="https://prospect24.am/projects/">ՆԱԽԱԳԾԵՐ</a></li>
+<li id="menu-item-3162" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3162"><a href="https://prospect24.am/partners/">ԳՈՐԾԸՆԿԵՐՆԵՐ</a></li>
+<li id="menu-item-3019" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3019"><a href="https://prospect24.am/videos/">ՏԵՍԱՆՅՈՒԹԵՐ</a></li>
+<li id="menu-item-3298" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3298"><a href="https://prospect24.am/news/">ՆՈՐՈՒԹՅՈՒՆՆԵՐ</a></li>
+<li id="menu-item-3023" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3023"><a href="https://prospect24.am/contact-us/">ԿԱՊ</a></li>
+<li id="menu-item-3339" class="trp-language-switcher-container menu-item menu-item-type-post_type menu-item-object-language_switcher current-language-menu-item menu-item-3339"><a href="https://prospect24.am/memorandum-chakhruk-ngo-and-prospect24/"><span data-no-translation><img class="trp-flag-image" src="https://prospect24.am/wp-content/plugins/translatepress-multilingual/assets/images/flags/hy.png" width="18" height="12" alt="hy" title="Armenian"></span></a></li>
+<li id="menu-item-3340" class="trp-language-switcher-container menu-item menu-item-type-post_type menu-item-object-language_switcher menu-item-3340"><a href="https://prospect24.am/en/memorandum-chakhruk-ngo-and-prospect24/"><span data-no-translation><img class="trp-flag-image" src="https://prospect24.am/wp-content/plugins/translatepress-multilingual/assets/images/flags/en_US.png" width="18" height="12" alt="en_US" title="English"></span></a></li>
+            </ul>
+
+            <div class="header-nav-actions">
+
+              
+                              
+                          
+            </div>
+
+          </div>
+
+
+        </div>
+    </div>
+  </nav>
+</header>
+
+	<div id="primary" class="content-area">
+		<main id="main" class="site-main">
+
+		
+			
+
+<!-- HEADER TITLE BREADCRUBS SECTION -->
+
+
+
+
+<article id="post-3349" class="post high-padding post-3349 type-post status-publish format-standard has-post-thumbnail hentry category-prospect24">
+    <div class="container">
+       <div class="row">
+
+                                                                                                                                                
+
+            <!-- POST CONTENT -->
+            <div class="col-md-12 col-sm-12 status-panel-no-sidebar main-content">
+                
+                <!-- HEADER -->
+                <div class="article-header">
+                    <div class="article-details">
+
+                                                    <img width="1400" height="750" src="https://prospect24.am/wp-content/uploads/2025/02/Prospect24-Chakhruk-Ngo.jpg" class="attachment-trankad_blog_900x550 size-trankad_blog_900x550 wp-post-image" alt="" decoding="async" fetchpriority="high" srcset="https://prospect24.am/wp-content/uploads/2025/02/Prospect24-Chakhruk-Ngo.jpg 1400w, https://prospect24.am/wp-content/uploads/2025/02/Prospect24-Chakhruk-Ngo-300x161.jpg 300w, https://prospect24.am/wp-content/uploads/2025/02/Prospect24-Chakhruk-Ngo-1024x549.jpg 1024w, https://prospect24.am/wp-content/uploads/2025/02/Prospect24-Chakhruk-Ngo-768x411.jpg 768w, https://prospect24.am/wp-content/uploads/2025/02/Prospect24-Chakhruk-Ngo-18x10.jpg 18w, https://prospect24.am/wp-content/uploads/2025/02/Prospect24-Chakhruk-Ngo-600x321.jpg 600w" sizes="(max-width: 1400px) 100vw, 1400px" />                                                <div class="clearfix"></div>
+
+                        <div class="post-category-comment-date row">
+                            <span class="post-date">
+                                <i class="icon-calendar"></i>
+                                25 Փետրվարի, 2025                            </span>
+                            <span class="post-categories">
+                                <i class="icon-tag"></i> <a href="https://prospect24.am/category/prospect24/" rel="tag">Prospect24</a>                            </span>
+                            <span class="post-author">
+                                <i class="icon-user icons"></i>
+                                <a href="https://prospect24.am/author/prospect24/"></a>
+                            </span>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- CONTENT -->
+                <div class="article-content">
+                    
+<p class="wp-block-paragraph"><strong>2025թ․ hունվարի 20-ին կնքվեց հուշագիր «Ճախրուկ» ՀԿ-ի և «Prospect24»-ի միջև։</strong></p>
+
+
+
+<p class="wp-block-paragraph">«Ճախրուկ» ՀԿ-ի գործունեությունը կարևոր քայլ է հատուկ կարիքներ ունեցող անձանց իրավունքների պաշտպանության և նրանց հասարակության լիարժեք անդամ դառնալու ուղղությամբ։</p>
+
+
+
+<p class="wp-block-paragraph">Հաշվի առնելով Հայաստանի Հանրապետության սոցիալական խոցելի խմբերի՝ հատուկ կարիքներ ունեցող անձանց առջև ծառացած խնդիրները՝ Prospect24-ը ձեռնարկեց կարևոր նախաձեռնություն՝ ցուցաբերելով աջակցություն և ջերմ հոգատարություն`«Ճախրուկ» Հկ-ի կողմից առաջարկված «Ճախրուկ բնակուտ»-ի (թաղամասի) ստեղծման աշխատանքներին։</p>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+
+
+
+<iframe src="https://www.youtube.com/embed/nb0W7spJYcM?si=9wlN3_YRT21xTdp0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+
+
+
+<p class="wp-block-paragraph">Մենք հավատում ենք, որ յուրաքանչյուր բարի նախաձեռնություն ունի ուժ փոփոխելու կյանքերը։<br>Աջակցելով նրանց, ովքեր դրա կարիքն առավել շատ ունեն, մենք համատեղ կառուցում ենք ավելի բարեկեցիկ և լուսավոր ապագա։</p>
+
+
+
+<p class="wp-block-paragraph"></p>
+                    <div class="clearfix"></div>
+
+                                        <div class="clearfix"></div>
+
+
+                                        <div class="clearfix"></div>
+
+                    <!-- AUTHOR BIO -->
+                    
+
+                    <div class="clearfix"></div>
+
+                    <!-- COMMENTS -->
+                                    </div>
+            </div>
+
+                                                                                                             
+            
+        </div>
+    </div>
+</article>
+
+
+<div class="row post-details-bottom">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                                
+                <div class="clearfix"></div> 
+            </div>
+        </div>
+    </div>
+</div>
+		
+		</main><!-- #main -->
+	</div><!-- #primary -->
+
+
+                    <!-- BACK TO TOP BUTTON -->
+        <a class="back-to-top modeltheme-is-visible modeltheme-fade-out" href="#0">
+            <i class="fa fa-long-arrow-up" aria-hidden="true"></i>
+        </a>
+            
+
+
+    <!-- FOOTER -->
+        <footer class="footer1">
+
+        <!-- FOOTER TOP -->
+                    <div class="row footer-top">
+                <div class="container">
+                <div class="row"><div class="col-md-12 footer-row-1"><div class="row"><div class="col-md-6 sidebar-1"><aside id="custom_html-1" class="widget_text widget vc_column_vc_container widget_custom_html"><div class="textwidget custom-html-widget"><h1 class="logo">
+	<a href="#"><img src="https://prospect24.am/wp-content/uploads/2024/06/Prospect24-logo.png" alt="logo"></a>
+</h1></div></aside></div><div class="col-md-6 sidebar-2"><aside id="trankad_address_social_icons-4" class="widget vc_column_vc_container widget_trankad_address_social_icons">        <div class="sidebar-social-networks address-social-links">
+                                        <div class="contact-details">
+                                            <p><i class="fa fa-phone" aria-hidden="true"></i>Phone: <a href="tel:+374 44 41 51 51">+374 44 41 51 51</a></p>
+                                                                <p><i class="fa fa-envelope" aria-hidden="true"></i>Email: <a href="mailto:info@prospect24.am">info@prospect24.am</a></p>
+                                                            <p><i class="fa fa-map-marker" aria-hidden="true"></i>Head office: Երևան, Ազատության պող., 1/61 շենք</p>
+                                    </div>
+                                        <ul class="social-links">
+                                    <li><a target="_blank" href="https://www.facebook.com/profile.php?id=61560750747832"><i class="fa fa-facebook"></i></a></li>
+                                                                                                                                    <li><a target="_blank" href="https://www.instagram.com/prospect24.am_"><i class="fa fa-instagram"></i></a></li>
+                                                                                                                                                </ul>
+                        
+        </div>
+        </aside></div></div></div></div><div class="row"><div class="col-md-12 footer-row-2"><div class="row"></div></div></div><div class="row"><div class="col-md-12 footer-row-3"><div class="row"></div></div></div>                </div>
+            </div>
+        
+        <!-- FOOTER BOTTOM -->
+        <div class="row footer-div-parent">
+            <div class="footer">
+                <div class="container">
+                	<p class="copyright">
+                                                    © Prospect24                                            </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+
+
+
+<template id="tp-language" data-tp-language="hy"></template><script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/wp-content/uploads/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/trankad/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+<script>var ajaxRevslider;function rsCustomAjaxContentLoadingFunction(){ajaxRevslider=function(obj){var content='',data={action:'revslider_ajax_call_front',client_action:'get_slider_html',token:'528e02616b',type:obj.type,id:obj.id,aspectratio:obj.aspectratio};jQuery.ajax({type:'post',url:'https://prospect24.am/wp-admin/admin-ajax.php',dataType:'json',data:data,async:false,success:function(ret,textStatus,XMLHttpRequest){if(ret.success==true)content=ret.data;},error:function(e){console.log(e);}});return content;};var ajaxRemoveRevslider=function(obj){return jQuery(obj.selector+' .rev_slider').revkill();};if(jQuery.fn.tpessential!==undefined)if(typeof(jQuery.fn.tpessential.defaults)!=='undefined')jQuery.fn.tpessential.defaults.ajaxTypes.push({type:'revslider',func:ajaxRevslider,killfunc:ajaxRemoveRevslider,openAnimationSpeed:0.3});}var rsCustomAjaxContent_Once=false;if(document.readyState==="loading")document.addEventListener('readystatechange',function(){if((document.readyState==="interactive"||document.readyState==="complete")&&!rsCustomAjaxContent_Once){rsCustomAjaxContent_Once=true;rsCustomAjaxContentLoadingFunction();}});else{rsCustomAjaxContent_Once=true;rsCustomAjaxContentLoadingFunction();}</script>	<script type='text/javascript'>
+		(function () {
+			var c = document.body.className;
+			c = c.replace(/woocommerce-no-js/, 'woocommerce-js');
+			document.body.className = c;
+		})();
+	</script>
+	<script id="wp-hooks-js" src="https://prospect24.am/wp-includes/js/dist/hooks.min.js?ver=7496969728ca0f95732d"></script>
+<script id="wp-i18n-js" src="https://prospect24.am/wp-includes/js/dist/i18n.min.js?ver=781d11515ad3d91786ec"></script>
+<script id="wp-i18n-js-after">
+wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
+//# sourceURL=wp-i18n-js-after
+</script>
+<script id="wpo_min-footer-2-js" src="https://prospect24.am/wp-content/cache/wpo-minify/1789458291/assets/wpo-minify-footer-swv1789458230.min.js"></script>
+<script id="wpo_min-footer-3-js" src="https://prospect24.am/wp-content/cache/wpo-minify/1789458291/assets/wpo-minify-footer-contact-form-71789458230.min.js"></script>
+<script id="wpo_min-footer-4-js-extra">
+var cf7appsHoneypotRefill = {"forceRefillOnInit":"1"};
+//# sourceURL=wpo_min-footer-4-js-extra
+</script>
+<script id="wpo_min-footer-4-js" src="https://prospect24.am/wp-content/cache/wpo-minify/1789458291/assets/wpo-minify-footer-cf7apps-honeypot-refill1786618876.min.js"></script>
+<script id="wpo_min-footer-5-js" src="https://prospect24.am/wp-content/cache/wpo-minify/1789458291/assets/wpo-minify-footer-wpascript1786618899.min.js"></script>
+<script id="wpo_min-footer-6-js" src="https://prospect24.am/wp-content/cache/wpo-minify/1789458291/assets/wpo-minify-footer-classie1772636521.min.js"></script>
+<script id="typed-js" src="https://prospect24.am/wp-content/plugins/modeltheme-framework/js/typed.min.js?ver=1.0.0"></script>
+<script id="wpo_min-footer-8-js" src="https://prospect24.am/wp-content/cache/wpo-minify/1789458291/assets/wpo-minify-footer-percircle1772636521.min.js"></script>
+<script id="wpo_min-footer-9-js" src="https://prospect24.am/wp-content/cache/wpo-minify/1789458291/assets/wpo-minify-footer-js-modeltheme-custom1772636521.min.js"></script>
+<script id="wpo_min-footer-10-js" src="https://prospect24.am/wp-content/cache/wpo-minify/1789458291/assets/wpo-minify-footer-magnific-popup1772636521.min.js"></script>
+<script id="surbma-scrollTo-js" src="https://prospect24.am/wp-content/plugins/surbma-smooth-scroll/js/jquery.scrollTo.min.js?ver=2.1.2"></script>
+<script id="surbma-localScroll-js" src="https://prospect24.am/wp-content/plugins/surbma-smooth-scroll/js/jquery.localScroll.min.js?ver=2.0.0"></script>
+<script id="wpo_min-footer-13-js" src="https://prospect24.am/wp-content/cache/wpo-minify/1789458291/assets/wpo-minify-footer-surbma-smooth-scroll1786618889.min.js"></script>
+<script id="wpo_min-footer-14-js" src="https://prospect24.am/wp-content/cache/wpo-minify/1789458291/assets/wpo-minify-footer-modernizr-custom1717153740.min.js"></script>
+<script id="jquery-form-js" src="https://prospect24.am/wp-includes/js/jquery/jquery.form.min.js?ver=4.3.0"></script>
+<script id="wpo_min-footer-16-js" src="https://prospect24.am/wp-content/cache/wpo-minify/1789458291/assets/wpo-minify-footer-jquery-validation1717153740.min.js"></script>
+<script id="wpo_min-footer-17-js" src="https://prospect24.am/wp-content/cache/wpo-minify/1789458291/assets/wpo-minify-footer-jquery-sticky1717153740.min.js"></script>
+<script id="wpo_min-footer-18-js" src="https://prospect24.am/wp-content/cache/wpo-minify/1789458291/assets/wpo-minify-footer-jquery-appear1717153740.min.js"></script>
+<script id="wpo_min-footer-19-js" src="https://prospect24.am/wp-content/cache/wpo-minify/1789458291/assets/wpo-minify-footer-jquery-countTo1717153740.min.js"></script>
+<script id="wpo_min-footer-20-js" src="https://prospect24.am/wp-content/cache/wpo-minify/1789458291/assets/wpo-minify-footer-owl-carousel1717153740.min.js"></script>
+<script id="wpo_min-footer-21-js" src="https://prospect24.am/wp-content/cache/wpo-minify/1789458291/assets/wpo-minify-footer-modernizr-viewport1717153740.min.js"></script>
+<script id="bootstrap-js" src="https://prospect24.am/wp-content/themes/trankad/js/bootstrap.min.js?ver=3.3.1"></script>
+<script id="wpo_min-footer-23-js" src="https://prospect24.am/wp-content/cache/wpo-minify/1789458291/assets/wpo-minify-footer-animate1717153740.min.js"></script>
+<script id="wpo_min-footer-24-js" src="https://prospect24.am/wp-content/cache/wpo-minify/1789458291/assets/wpo-minify-footer-jquery-countdown1717153740.min.js"></script>
+<script id="wow-js" src="https://prospect24.am/wp-content/themes/trankad/js/wow.min.js?ver=1.0.0"></script>
+<script id="stickykit-js" src="https://prospect24.am/wp-content/themes/trankad/js/jquery.sticky-kit.min.js?ver=1.0.0"></script>
+<script id="wpo_min-footer-27-js" src="https://prospect24.am/wp-content/cache/wpo-minify/1789458291/assets/wpo-minify-footer-loaders1717153740.min.js"></script>
+<script id="wpo_min-footer-28-js" src="https://prospect24.am/wp-content/cache/wpo-minify/1789458291/assets/wpo-minify-footer-trankad-custom-js1717153740.min.js"></script>
+<script id="sourcebuster-js-js" src="https://prospect24.am/wp-content/plugins/woocommerce/assets/js/sourcebuster/sourcebuster.min.js?ver=11.1.0"></script>
+<script id="wc-order-attribution-js-extra">
+var wc_order_attribution = {"params":{"lifetime":1.0e-5,"session":30,"base64":false,"ajaxurl":"https://prospect24.am/wp-admin/admin-ajax.php","prefix":"wc_order_attribution_","allowTracking":true},"fields":{"source_type":"current.typ","referrer":"current_add.rf","utm_campaign":"current.cmp","utm_source":"current.src","utm_medium":"current.mdm","utm_content":"current.cnt","utm_id":"current.id","utm_term":"current.trm","utm_source_platform":"current.plt","utm_creative_format":"current.fmt","utm_marketing_tactic":"current.tct","session_entry":"current_add.ep","session_start_time":"current_add.fd","session_pages":"session.pgs","session_count":"udata.vst","user_agent":"udata.uag"}};
+//# sourceURL=wc-order-attribution-js-extra
+</script>
+<script id="wc-order-attribution-js" src="https://prospect24.am/wp-content/plugins/woocommerce/assets/js/frontend/order-attribution.min.js?ver=11.1.0"></script>
+<script id="wpo_min-footer-31-js" src="https://prospect24.am/wp-content/cache/wpo-minify/1789458291/assets/wpo-minify-footer-googlesitekit-events-provider-contact-form-71789458253.min.js"></script>
+<script id="wpo_min-footer-32-js" src="https://prospect24.am/wp-content/cache/wpo-minify/1789458291/assets/wpo-minify-footer-googlesitekit-events-provider-content-events1789458253.min.js"></script>
+<script id="woocommerce-js-extra">
+var woocommerce_params = {"ajax_url":"/wp-admin/admin-ajax.php","wc_ajax_url":"/?wc-ajax=%%endpoint%%","i18n_password_show":"Show password","i18n_password_hide":"Hide password"};
+//# sourceURL=woocommerce-js-extra
+</script>
+<script data-wp-strategy="defer" id="woocommerce-js" src="https://prospect24.am/wp-content/plugins/woocommerce/assets/js/frontend/woocommerce.min.js?ver=11.1.0"></script>
+<script id="wpo_min-footer-34-js" src="https://prospect24.am/wp-content/cache/wpo-minify/1789458291/assets/wpo-minify-footer-googlesitekit-events-provider-woocommerce1789458253.min.js"></script>
+<script></script></body>
+</html>
+<!-- Cached by WP-Optimize (gzip) - https://teamupdraft.com/wp-optimize/ - Last modified: October 20, 2026 9:35 pm (UTC:0) -->

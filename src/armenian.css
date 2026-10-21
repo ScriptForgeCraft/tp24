@@ -1,0 +1,64 @@
+/* Locally bundled Armenian glyphs; Latin typography retains the original faces. */
+.hero > .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; border: 0; }
+html[lang=hy] { font-family: 'Noto Sans Armenian', Manrope, sans-serif; }
+html[lang=hy] .display,
+html[lang=hy] .intro-text h3,
+html[lang=hy] .project-info h3,
+html[lang=hy] .partnership-photo figcaption h3,
+html[lang=hy] .news-item h3,
+html[lang=hy] .mobile-menu nav > a,
+html[lang=hy] .preview-overview h1,
+html[lang=hy] .preview-overview h2 { font-family: 'Noto Serif Armenian', 'Cormorant Garamond', serif; }
+html[lang=hy] .display { letter-spacing: -.025em; line-height: 1.2; }
+html[lang=hy] .line-mask { padding-bottom: .14em; margin-bottom: -.11em; }
+html[lang=hy] .hero-title { font-size: clamp(24px, 2.85vw, 55px); line-height: 1.22; }
+html[lang=hy] .eyebrow { letter-spacing: .035em; }
+html[lang=hy] .action { white-space: normal; }
+html[lang=hy] .hero-buttons { flex-wrap: wrap; }
+html[lang=hy] .hero-buttons .action { gap: 14px; }
+/* The longer scroll label crosses the comparison divider; keep its badge above it. */
+html[lang=hy] .hero-bottom { z-index: 3; }
+html[lang=hy] .intro .display { font-size: clamp(24px, 2.35vw, 44px); }
+html[lang=hy] .development .display { font-size: clamp(24px, 2.55vw, 48px); }
+html[lang=hy] .packages .display { font-size: clamp(24px, 2.65vw, 48px); }
+html[lang=hy] .expertise .display { font-size: clamp(24px, 3.1vw, 55px); }
+html[lang=hy] .process .display { font-size: clamp(23px, 3.2vw, 54px); }
+html[lang=hy] .cta-content .display { font-size: clamp(28px, 4.8vw, 85px); }
+html[lang=hy] .partner-2 { font: 500 18px/1.5 'Noto Sans Armenian', Manrope, sans-serif; }
+html[lang=hy] .p24-editor,
+html[lang=hy] .p24-reset,
+html[lang=hy] [data-editor-ui] { font-family: 'Noto Sans Armenian', Manrope, sans-serif; }
+html[lang=hy] .p24-tools { flex-wrap: wrap; }
+html[lang=hy] .p24-field label,
+html[lang=hy] .p24-dimension label { overflow-wrap: anywhere; }
+html[lang=hy] .preview-mini-hero strong { font-size: 17px; }
+@media (min-width: 1024px) and (max-width: 1439px) {
+  html[lang=hy] .desktop-nav { gap: 12px; }
+  html[lang=hy] .desktop-nav a { font-size: 11px; }
+}
+@media (max-width: 850px) {
+  html[lang=hy] .hero-title { font-size: 3.3vw; }
+  html[lang=hy] .intro .display { font-size: 3.7vw; }
+}
+@media (min-width: 601px) and (max-width: 1100px) {
+  html[lang=hy] .timeline { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+  html[lang=hy] .stage,
+  html[lang=hy] .stage-content > div { min-width: 0; }
+  html[lang=hy] .stage h3,
+  html[lang=hy] .stage p { hyphens: auto; overflow-wrap: anywhere; }
+}
+@media (max-width: 600px) {
+  html[lang=hy] .hero-title { font-size: clamp(20px, 4.8vw, 29px); }
+  html[lang=hy] .intro .display,
+  html[lang=hy] .development .display,
+  html[lang=hy] .packages .display,
+  html[lang=hy] .expertise .display { font-size: clamp(21px, 5.4vw, 32px); }
+  html[lang=hy] .process .display { font-size: clamp(22px, 5.5vw, 32px); }
+  html[lang=hy] .cta-content .display { font-size: clamp(22px, 5.8vw, 35px); }
+  html[lang=hy] .mobile-menu nav > a { font-size: 24px; }
+  html[lang=hy] .modal-body .display { font-size: 28px; overflow-wrap: anywhere; }
+}
+@media (max-width: 700px) {
+  html[lang=hy] .portfolio-section .portfolio-card-info > p.portfolio-mobile-reference { line-height: 1.65; letter-spacing: 0; }
+  html[lang=hy] .portfolio-explore { width: fit-content; min-width: 200px; }
+}

@@ -280,6 +280,7 @@
       "name": "Overview desktop",
       "violations": [],
       "manualReview": [
+        "aria-prohibited-attr",
         "color-contrast"
       ]
     },
@@ -287,6 +288,7 @@
       "name": "Overview mobile",
       "violations": [],
       "manualReview": [
+        "aria-prohibited-attr",
         "color-contrast"
       ]
     }

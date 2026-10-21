@@ -35,7 +35,7 @@ async function solidButtonContrast(page, selector) {
   });
   assert.ok(ratio >= 4.5, `${selector}: ${ratio.toFixed(2)}:1`);
 }
-const expectedSections = ['home', 'approach', 'development', 'packages', 'projects', 'process', 'about', 'news', ''];
+const expectedSections = ['home', 'approach', 'development', 'packages', 'projects', 'process', 'about', 'news', 'conversation'];
 const original = {};
 try {
   // Compare palettes against the current shared homepage, including its navbar controls.

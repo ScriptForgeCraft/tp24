@@ -15,11 +15,15 @@
     "test:preview-contrast": "node scripts/verify-preview-photo-contrast.mjs",
     "test:preview-build": "node scripts/verify-preview-build.mjs",
     "test:preview-motion": "node scripts/verify-preview-motion.mjs",
-    "test:editor": "node scripts/verify-editor.mjs"
+    "test:editor": "node scripts/verify-editor.mjs",
+    "test:armenian": "node scripts/verify-armenian.mjs",
+    "audit:armenian": "node scripts/write-localization-audit.mjs"
   },
   "dependencies": {
     "@fontsource/cormorant-garamond": "^5.2.5",
     "@fontsource/manrope": "^5.2.8",
+    "@fontsource/noto-sans-armenian": "^5.3.0",
+    "@fontsource/noto-serif-armenian": "^5.3.0",
     "@vitejs/plugin-react": "^5.0.0",
     "fflate": "^0.8.3",
     "react": "^19.1.0",

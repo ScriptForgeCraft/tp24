@@ -1,30 +1,5 @@
 {
-  "checks": [
-    {
-      "width": 1440,
-      "instantSwitches": 6,
-      "retainedScrollAndState": true,
-      "refresh": true,
-      "responsiveLanguages": [
-        "en",
-        "hy"
-      ]
-    },
-    {
-      "width": 390,
-      "instantSwitches": 6,
-      "retainedScrollAndState": true,
-      "refresh": true,
-      "responsiveLanguages": [
-        "en",
-        "hy"
-      ]
-    },
-    {
-      "directPreviewRoute": true,
-      "keyboardSelection": true
-    }
-  ],
+  "checks": [],
   "scans": [
     {
       "width": 1440,
@@ -54,41 +29,6 @@
     {
       "width": 1440,
       "theme": "06",
-      "violations": []
-    },
-    {
-      "width": 390,
-      "theme": "01",
-      "violations": []
-    },
-    {
-      "width": 390,
-      "theme": "02",
-      "violations": []
-    },
-    {
-      "width": 390,
-      "theme": "03",
-      "violations": []
-    },
-    {
-      "width": 390,
-      "theme": "04",
-      "violations": []
-    },
-    {
-      "width": 390,
-      "theme": "05",
-      "violations": []
-    },
-    {
-      "width": 390,
-      "theme": "06",
-      "violations": []
-    },
-    {
-      "width": 390,
-      "state": "open selector",
       "violations": []
     }
   ],
