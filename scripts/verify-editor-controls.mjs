@@ -130,6 +130,19 @@ try {
   await page.getByRole("button", { name: "Reset Section", exact: true }).click();
   await target(`${card}.description`).waitFor({ state: "visible" });
   check("Section reset restores deleted descendants", true);
+  await select("footer.copyright");
+  await number("Width", 220);
+  await page.getByRole("button", { name: "Delete element", exact: true }).click();
+  await target("footer.copyright").waitFor({ state: "hidden" });
+  check("Deleting resized inline text overrides its display style", true);
+  await toolbar("Undo").click();
+  await target("footer.copyright").waitFor({ state: "visible" });
+  await select("news.section");
+  await page.getByRole("button", { name: "Delete element", exact: true }).click();
+  await target("news.section").waitFor({ state: "hidden" });
+  check("Deleted sections disable their navigation links", await frame.locator('a[href="#news"][aria-disabled="true"]').count() > 0);
+  await toolbar("Undo").click();
+  await target("news.section").waitFor({ state: "visible" });
   check("No browser runtime errors", errors.length === 0);
 } finally {
   await browser.close();
